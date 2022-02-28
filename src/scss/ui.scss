@@ -33,7 +33,6 @@ p {
     justify-content: center;
     width: 100%;
     transition: .3s;
-    margin-bottom: 10px;
     &__light {
         background-color: $graybackground100;
         padding: 10px 0;
@@ -215,4 +214,155 @@ p {
 
 .no-scrollbar::-webkit-scrollbar {
     display: none;
+}
+
+input,
+textarea {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    padding: 15px 10px;
+    color: $darkcolor;
+    border: 1px solid #e4e4e4;
+    font-size: 14px;
+    outline: none;
+    transition: .3s;
+    border-radius: 4px;
+    &:focus {
+        border-color: $darkcolor;
+    }
+    &::placeholder {
+        font-size: 14px;
+        color: $graycolor400;
+    }
+    &.filled {
+        border: none;
+        background-color: $graycolor100;
+        &::placeholder {
+            color: $graycolor500;
+        }
+    }
+}
+
+small.error {
+    color: $errorcolor;
+    font-size: 12px;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: $darkcolor;
+}
+
+.checkbox-symbol {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.checkbox-container {
+    box-sizing: border-box;
+    background: #ffffff;
+    color: #222;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.checkbox-container * {
+    box-sizing: border-box;
+}
+
+.checkbox-input {
+    position: absolute;
+    visibility: hidden;
+}
+
+.checkbox {
+    user-select: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+}
+
+.checkbox:not(:last-child) {
+    margin-right: 6px;
+}
+
+.checkbox-container.accent .checkbox:hover {
+    background: rgba(241, 93, 34, 0.1);
+}
+
+.checkbox span {
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+}
+
+.checkbox span:first-child {
+    position: relative;
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    transform: scale(1);
+    border: 1px solid #cccfdb;
+    transition: all 0.3s ease;
+}
+
+.checkbox span:first-child svg {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transform: translate3d(0, 0, 0);
+}
+
+.checkbox span:last-child {
+    padding-left: 8px;
+}
+
+.checkbox-container.accent .checkbox:hover span:first-child {
+    border-color: $orangecolor;
+}
+
+.checkbox-container .checkbox:hover span:first-child {
+    border-color: $darkcolor;
+}
+
+.checkbox-container.accent .checkbox-input:checked+.checkbox span:first-child {
+    background: $orangecolor;
+    border-color: $orangecolor;
+    animation: zoom-in-out 0.3s ease;
+}
+
+.checkbox-input:checked+.checkbox span:first-child {
+    background: $darkcolor;
+    border-color: $darkcolor;
+    animation: zoom-in-out 0.3s ease;
+}
+
+.checkbox-input:checked+.checkbox span:first-child svg {
+    stroke-dashoffset: 0;
+}
+
+@keyframes zoom-in-out {
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+.get-call {
+    cursor: pointer;
 }

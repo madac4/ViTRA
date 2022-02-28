@@ -1,0 +1,81 @@
+.upper-header {
+    padding: 15px 0;
+    background-color: #000;
+    font-size: 14px;
+    color: #fff;
+    &__container {
+        @include adaptiv-value('gap', 30, 15, 1);
+        display: flex;
+        align-items: center;
+    }
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        a {
+            img {
+                transition: .3s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    &__nav {
+        flex: 1;
+        ul {
+            @include adaptiv-value('gap', 30, 15, 1);
+            display: flex;
+            align-items: center;
+            li {
+                a {
+                    color: #fff;
+                    transition: .3s;
+                    &:hover {
+                        color: $orangecolor;
+                    }
+                }
+            }
+        }
+    }
+    .get-call {
+        @include adaptiv-value('margin-right', 100, 0, 1);
+        transition: .3s;
+        @media (max-width: $tablet) {
+            margin-right: 0;
+        }
+        &:hover {
+            color: $graycolor300;
+        }
+    }
+    .upper-info {
+        @include adaptiv-value('gap', 20, 10, 1);
+        display: flex;
+        align-items: center;
+        .get-call {
+            margin: 0;
+        }
+        &__call {
+            display: flex;
+            align-items: center;
+            a {
+                @include adaptiv-value('margin-left', 20, 10, 1);
+                color: #fff;
+                display: block;
+                transition: .3s;
+                &:hover {
+                    color: $graycolor300;
+                }
+            }
+        }
+        .language {
+            &__current {
+                cursor: pointer;
+                transition: .3s;
+                &:hover {
+                    color: $graycolor300;
+                }
+            }
+        }
+    }
+}
