@@ -327,6 +327,7 @@ p {
   width: 100%;
   transition: 0.3s;
   position: relative;
+  color: #2B2B2B;
 }
 .button__light {
   background-color: #EDF1F7;
