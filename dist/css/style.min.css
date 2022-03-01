@@ -964,6 +964,7 @@ input[type=radio] {
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
+  overflow: auto;
 }
 @media (max-width: 1420px) {
   .header-left .menu-nav {
@@ -1018,6 +1019,7 @@ input[type=radio] {
 .header-right--mobile .menu-nav--mobile {
   position: fixed;
   width: 70%;
+  overflow: auto;
   height: 100%;
   background-color: #fff;
   z-index: 3;

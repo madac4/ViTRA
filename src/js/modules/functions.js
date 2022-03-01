@@ -17,6 +17,7 @@ export function isWebp() {
 
 export function burger(burger, menu, headerH) {
     menu.style.top = `${headerH}px`
+    menu.style.paddingBottom = `${headerH+10}px`
     burger.addEventListener('click', () => {
         burger.classList.toggle('active');
         menu.classList.toggle('active');
