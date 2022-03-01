@@ -58,9 +58,20 @@
             </div>
         </div>
 
+        <section class="category-list">
+            <div class="category-list__container">
+                <div class="category-list__header">
+                    <h3>Categorii</h3>
+                </div>
+                <div class="category-list__body">
+                    @@include('./components/category-v1.html', {'name': 'retail', 'color': '#EE2624', 'image': '@img/cat1-v1.jpg'}) @@include('./components/category-v1.html', {'name': 'logistics', 'color': '#62C7F1', 'image': '@img/cat2-v1.jpg'}) @@include('./components/category-v1.html',
+                    {'name': 'horeca', 'color': '#353B97', 'image': '@img/cat3-v1.jpg'}) @@include('./components/category-v1.html', {'name': 'life', 'color': '#07AD4B', 'image': '@img/cat1-v1.jpg'})
+                </div>
+            </div>
+        </section>
         <div class="overlay"></div>
     </main>
-    @@include('./components/footer.html')
+    @@include('./components/bottomNavigation.html') @@include('./components/footer.html')
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>

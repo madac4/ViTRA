@@ -33,6 +33,7 @@ p {
     justify-content: center;
     width: 100%;
     transition: .3s;
+    position: relative;
     &__light {
         background-color: $graybackground100;
         padding: 10px 0;
@@ -409,5 +410,24 @@ input[type="radio"] {
     &.active {
         opacity: 1;
         visibility: visible;
+    }
+}
+
+.dot.not-empty {
+    position: absolute;
+    top: 20%;
+    right: 35%;
+    width: 8px;
+    height: 8px;
+    background-color: $orangecolor;
+    border-radius: 50%;
+    @media (max-width: $mobile) {
+        right: 30%;
+    }
+    @media (max-width: $mobileMedium) {
+        right: 25%;
+    }
+    @media (max-width: $mobileSmall) {
+        right: 20%;
     }
 }

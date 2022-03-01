@@ -1,4 +1,5 @@
 .page__main-slider {
+    @include adaptiv-value('margin-bottom', 80, 50, 1);
     .main-slider__body {
         .main-slider__slider {
             position: relative;
@@ -40,7 +41,7 @@
                             left: 10px !important;
                             transform: none !important;
                             @media (min-width: $mobileMedium) {
-                                display: none;
+                                display: none !important;
                             }
                         }
                         @media (max-width: $tablet) {
@@ -97,6 +98,20 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.category-list {
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: $mobileSmall) {
+            gap: 10px;
         }
     }
 }

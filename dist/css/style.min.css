@@ -326,6 +326,7 @@ p {
   justify-content: center;
   width: 100%;
   transition: 0.3s;
+  position: relative;
 }
 .button__light {
   background-color: #EDF1F7;
@@ -704,6 +705,31 @@ input[type=radio] {
 .overlay.active {
   opacity: 1;
   visibility: visible;
+}
+
+.dot.not-empty {
+  position: absolute;
+  top: 20%;
+  right: 35%;
+  width: 8px;
+  height: 8px;
+  background-color: #F15D22;
+  border-radius: 50%;
+}
+@media (max-width: 47.99875rem) {
+  .dot.not-empty {
+    right: 30%;
+  }
+}
+@media (max-width: 39.99875rem) {
+  .dot.not-empty {
+    right: 25%;
+  }
+}
+@media (max-width: 29.99875rem) {
+  .dot.not-empty {
+    right: 20%;
+  }
 }
 
 .footer {
@@ -1236,6 +1262,147 @@ input[type=radio] {
   }
 }
 
+.bottom-navigation {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 15px;
+  justify-content: space-between;
+}
+@media (min-width: 61.99875rem) {
+  .bottom-navigation {
+    display: none;
+  }
+}
+@media (max-width: 29.99875rem) {
+  .bottom-navigation {
+    padding: 15px 10px;
+  }
+}
+.bottom-navigation a.button:first-child {
+  width: 100%;
+}
+.bottom-navigation a.button {
+  width: 40%;
+  padding: 10px;
+}
+@media (max-width: 29.99875rem) {
+  .bottom-navigation a.button {
+    width: 100%;
+  }
+  .bottom-navigation a.button .button-text {
+    display: none;
+  }
+}
+
+.category-secondary {
+  width: 100%;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+@media (max-width: 39.99875rem) {
+  .category-secondary {
+    padding: 0;
+  }
+}
+.category-secondary::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 39.99875rem) {
+  .category-secondary::after {
+    display: none;
+  }
+}
+.category-secondary:hover::after {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.category-secondary:hover .category-secondary__content {
+  background-color: #F3FBF6;
+}
+@media (max-width: 39.99875rem) {
+  .category-secondary:hover .category-secondary__content {
+    border: 1px solid #E4E4E4;
+  }
+}
+.category-secondary img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.category-secondary__content {
+  z-index: 2;
+  background-color: rgba(247, 252, 254, 0.8);
+  transition: 0.3s;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 16px;
+  border-radius: 8px;
+  letter-spacing: 1.8px;
+  padding: 30px 40px;
+}
+.category-secondary__content svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 117px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+@media (max-width: 29.99875rem) {
+  .category-secondary__content svg {
+    max-width: 70px;
+  }
+}
+@media (max-width: 39.99875rem) {
+  .category-secondary__content {
+    width: 100%;
+    height: 100%;
+    padding: 50px 40px;
+    border: 1px solid transparent;
+  }
+}
+@media (max-width: 39.99875rem) {
+  .category-secondary__content {
+    padding: 20px;
+  }
+}
+.category-secondary__content::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+}
+
+.page__main-slider {
+  margin-bottom: 80px;
+}
+@media (max-width: 1420px) {
+  .page__main-slider {
+    margin-bottom: calc( 50px + 30 * ((100vw - 320px) / 1100));
+  }
+}
 .page__main-slider .main-slider__body .main-slider__slider {
   position: relative;
 }
@@ -1290,7 +1457,7 @@ input[type=radio] {
 }
 @media (min-width: 39.99875rem) {
   .page__main-slider .main-slider__body .main-slider__slider .slider-main__body .slider-main__slide .swiper-slide__content--mobile {
-    display: none;
+    display: none !important;
   }
 }
 @media (max-width: 61.99875rem) {
@@ -1345,4 +1512,20 @@ input[type=radio] {
 }
 .page__main-slider .main-slider__body .main-slider__slider .slider-main-controls__arrows .slider-arrow__next {
   right: 20px;
+}
+
+.category-list__body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+@media (max-width: 61.99875rem) {
+  .category-list__body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 29.99875rem) {
+  .category-list__body {
+    gap: 10px;
+  }
 }
