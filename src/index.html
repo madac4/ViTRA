@@ -69,8 +69,44 @@
                 </div>
             </div>
         </section>
-        <div class="overlay"></div>
+
+        <section class="filter">
+            <div class="filter__container">
+                <div class="filter__header">
+                    <h3>Reduceri %</h3>
+                </div>
+
+                <div class="filter__body filter-body">
+                    <div class="filter-body__main">
+                        <div class="filter-desktop filter-desktop--category">
+                            <span class="filter-lable">
+                                Categorie:
+                            </span>
+                            <div class="filter-buttons">
+                                <button class="button button__filter">Retail</button>
+                                <button class="button button__filter active">Logistics</button>
+                                <button class="button button__filter">Horeca</button>
+                                <button class="button button__filter">Life</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-mobile__body">
+                        <div class="filter-mobile filter-mobile--category">
+                            <span class="icon-category"></span>
+                            <div class="filter-mobile__text">
+                                <p>Categorie:</p>
+                                <p>Logistics</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        @@include('./components/banner.html')
+
     </main>
+    <div class="overlay"></div>
     @@include('./components/bottomNavigation.html') @@include('./components/footer.html')
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

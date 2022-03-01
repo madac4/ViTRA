@@ -5,10 +5,10 @@
     flex-direction: column;
     @include adaptiv-value('gap', 60, 50, 1);
     background-color: #000;
-    padding: 60px 0;
+    padding: 60px 15px;
     @include adaptiv-value('margin-top', 80, 50, 1);
-    @media (max-width: $mobileSmall) {
-        padding: 60px 15px;
+    @media(max-width: $tablet) {
+        padding-bottom: 120px;
     }
     .footer-header {
         text-align: center;
@@ -26,9 +26,10 @@
     .footer-nav {
         display: flex;
         align-items: center;
-        @include adaptiv-value('gap', 50, 30, 1);
+        @include adaptiv-value('gap', 50, 10, 1);
         li {
             a {
+                @include adaptiv-value('font-size', 16, 14, 1);
                 transition: .2s;
                 color: #fff;
                 &:hover {
@@ -39,6 +40,7 @@
         @media(max-width: $tablet) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
         }
         @media(max-width: $mobile) {}
     }
