@@ -1,0 +1,37 @@
+.filter {
+    h3 {
+        margin-bottom: 20px;
+    }
+    .filter-body {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 20px;
+        background-color: #EDF1F7;
+        border-radius: 8px;
+        .filter-lable {
+            padding: 15px 30px;
+            margin-right: 15px;
+            color: $darkcolor;
+            font-weight: 600;
+            background-color: #E4E9F2;
+            border-radius: 4px;
+            @media(max-width: $mobile) {
+                display: none;
+            }
+        }
+        .filter-buttons {
+            display: flex;
+            gap: 15px;
+            @media(max-width: $mobile) {
+                display: none;
+            }
+        }
+        .filter-mobile {
+            display: none;
+            @media(max-width: $mobile) {
+                display: flex;
+            }
+        }
+    }
+}
