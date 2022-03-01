@@ -61,7 +61,8 @@
             a {
                 @include adaptiv-value('margin-left', 20, 10, 1);
                 color: #fff;
-                display: block;
+                display: flex;
+                gap: 20px;
                 transition: .3s;
                 &:hover {
                     color: $graycolor300;
@@ -75,6 +76,63 @@
                 &:hover {
                     color: $graycolor300;
                 }
+            }
+        }
+    }
+}
+
+.header {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
+    &-right {
+        @include adaptiv-value('gap', 30, 10, 1);
+        display: flex;
+        align-items: center;
+        &__logo {
+            img {
+                width: 176px;
+                height: 30px;
+            }
+        }
+        .menu-nav {
+            &__block {
+                h5 {}
+                ul {
+                    li {
+                        a {
+                            span {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        button {}
+        &__search {
+            position: relative;
+            input {
+                @include adaptiv-value('width', 240, 140, 1);
+                height: 52px;
+            }
+            button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 10px;
+                font-size: 24px;
             }
         }
     }
