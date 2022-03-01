@@ -44,6 +44,20 @@ p {
             background-color: darken($color: $graybackground100, $amount: 8);
         }
     }
+    &__white {
+        background-color: #fff;
+        width: fit-content;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 14px;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+        &:hover {
+            background-color: darken($color: #fff, $amount: 3);
+        }
+        &:active {
+            background-color: darken($color: #fff, $amount: 5);
+        }
+    }
     &__chip {
         padding: 10px 0;
         background-color: $graybackground100;
@@ -161,11 +175,11 @@ p {
 
 .burger {
     display: none;
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
         display: block;
         margin-left: auto;
         position: relative;
-        width: 30px;
+        width: 26px;
         height: 18px;
         cursor: pointer;
         z-index: 5;
@@ -182,17 +196,19 @@ p {
             border-radius: 5px;
         }
         &::before {
-            top: 4px;
+            top: 2px;
         }
         &::after {
-            bottom: 4px;
+            bottom: 2px;
         }
         span {
             top: calc(50% - 1px);
         }
         &.active {
             span {
-                transform: scale(0);
+                transform: translateX(30px);
+                opacity: 0;
+                visibility: hidden;
             }
             &::before {
                 transform: rotate(-45deg);
@@ -364,4 +380,34 @@ input[type="radio"] {
 
 .get-call {
     cursor: pointer;
+}
+
+.slider-arrow {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    font-size: 20px;
+    transition: .3s;
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    &.swiper-button-disabled {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
 }
