@@ -1093,7 +1093,7 @@ section [class*=__header] {
   overflow: auto;
   height: 100%;
   background-color: #fff;
-  z-index: 3;
+  z-index: 5;
   padding: 0 15px;
   right: -70%;
   transition: 0.3s;
@@ -1375,7 +1375,7 @@ section [class*=__header] {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 4;
   padding: 15px;
   justify-content: space-between;
 }
