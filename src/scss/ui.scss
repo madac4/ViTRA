@@ -27,6 +27,10 @@ p {
     line-height: 160%;
 }
 
+a {
+    line-height: 160%;
+}
+
 .button {
     display: flex;
     align-items: center;
@@ -172,6 +176,29 @@ p {
         }
         &:active {
             background-color: $darkcolor;
+        }
+    }
+    &__control {
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #E4E4E4;
+        font-size: 24px;
+        color: $graycolor300;
+        &:hover {
+            color: $orangecolor;
+        }
+        &:active {
+            transform: scale(0.9);
+        }
+        &.added {
+            background-color: $darkcolor;
+            border-color: $darkcolor;
+            color: #fff;
+            &.icon-heart__filled {
+                background-color: transparent;
+                color: $orangecolor;
+                border-color: #E4E4E4;
+            }
         }
     }
 }

@@ -1,5 +1,4 @@
 .banner {
-    @include adaptiv-value('margin-top', 80, 50, 1);
     .banner-body {
         @include adaptiv-value('border-radius', 8, 4, 1);
         @include adaptiv-value('padding-top', 45, 40, 1);
