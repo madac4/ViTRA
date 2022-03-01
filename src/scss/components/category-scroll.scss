@@ -1,0 +1,15 @@
+.scroll-category {
+    margin: 20px 0;
+    &__container {
+        overscroll-behavior-x: contain;
+    }
+    &__body {
+        @include adaptiv-value('border-radius', 8, 4, 1);
+        background: $graybackground100;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        scroll-snap-align: start;
+        gap: 10px;
+    }
+}

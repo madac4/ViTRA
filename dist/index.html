@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ViTRA - Home</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
@@ -47,29 +48,70 @@
     </div>
 
 </div>
+
 <header class="header">
     <div class="header__container">
-        <div class="header__right header-right">
-            <a class="header-right__logo">
+        <div class="header__left header-left">
+            <a class="header-left__logo">
                 <img src="img/logos/logo.svg" alt="ViTRA">
             </a>
-            <div class="header-right__menu header-menu">
+            <div class="header-left__menu header-menu">
                 <button class="button button__gray header-menu__burger"><span class="icon-hamburger"></span>Toate categoriile</button>
 
-                <!-- <nav class="header-menu__nav menu-nav">
-                    <div class="menu-nav__block">
-                        <h5 style="color: #EE2924">RETAIL</h5>
-                        <ul>
-                            <li><a href="#">Echipamente frigorifice <span class="icon-chevron--right"></span></a></li>
-                            <li><a href="#">Mobilier Comercial  <span class="icon-chevron--right"></span></a></li>
-                            <li><a href="#">Mese de marcat, coșuri și cărucioare <span class="icon-chevron--right"></span></a></li>
-                        </ul>
+                <nav class="header-menu__nav menu-nav">
+                    <div class="menu-nav__left">
+                        <div class="menu-nav__block">
+                            <h5 style="color: #EE2924">RETAIL</h5>
+                            <ul>
+                                <li><a href="#">Echipamente frigorifice <span class="icon-chevron--right"></span></a></li>
+                                <li><a href="#">Mobilier Comercial  <span class="icon-chevron--right"></span></a></li>
+                                <li><a href="#">Mese de marcat, coșuri și cărucioare <span class="icon-chevron--right"></span></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="menu-nav__block">
+                            <h5 style="color: #07AD4B">LIFE</h5>
+                            <ul>
+                                <li><a href="#">Echipamente frigorifice <span class="icon-chevron--right"></span></a></li>
+                                <li><a href="#">Mobilier Comercial  <span class="icon-chevron--right"></span></a></li>
+                                <li><a href="#">Mese de marcat, coșuri și cărucioare <span class="icon-chevron--right"></span></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="menu-nav__block">
+                            <h5 style="color: #61C7F1">LOGISTICS</h5>
+                            <ul>
+                                <li><a href="#">Echipamente frigorifice <span class="icon-chevron--right"></span></a></li>
+                                <li><a href="#">Mobilier Comercial  <span class="icon-chevron--right"></span></a></li>
+                                <li><a href="#">Mese de marcat, coșuri și cărucioare <span class="icon-chevron--right"></span></a></li>
+                            </ul>
+                        </div>
                     </div>
-                </nav> -->
+
+
+                    <div class="menu-nav__right">
+                        <div class="menu-nav__block">
+                            <h5 style="color: #343B97">HORECA</h5>
+                            <ul>
+                                <li><a href="#">Echipamente frigorifice <span class="icon-chevron--right"></span></a></li>
+                                <li><a href="#">Mobilier Comercial  <span class="icon-chevron--right"></span></a></li>
+                                <li><a href="#">Mese de marcat, coșuri și cărucioare <span class="icon-chevron--right"></span></a></li>
+                                <li><a href="#">Echipamente frigorifice <span class="icon-chevron--right"></span></a></li>
+                                <li><a href="#">Mobilier Comercial  <span class="icon-chevron--right"></span></a></li>
+                                <li><a href="#">Mese de marcat, coșuri și cărucioare <span class="icon-chevron--right"></span></a></li>
+                                <li><a href="#">Echipamente frigorifice <span class="icon-chevron--right"></span></a></li>
+                                <li><a href="#">Mobilier Comercial  <span class="icon-chevron--right"></span></a></li>
+                                <li><a href="#">Mese de marcat, coșuri și cărucioare <span class="icon-chevron--right"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </nav>
             </div>
         </div>
-        <div class="header__left header-left">
-            <form action="#" class="header-left__search">
+
+        <div class="header__right header-right">
+            <form action="#" class="header-right__search">
                 <input class="filled" type="text" placeholder="Căutare">
                 <button class="icon-search"></button>
             </form>
@@ -85,9 +127,56 @@
                 <span class="icon-user"></span>
             </button>
         </div>
-
+        <div class="header__right header-right--mobile">
+            <button type="button" class="burger">
+                <span></span>
+            </button>
+            <nav class="menu-nav--mobile">
+                <div class="menu-block">
+                    <h5>HORECA</h5>
+                    <ul>
+                        <li><a href="#">Echipamente pentru baruri și restaurante<span class="icon-chevron--right"></span></a></li>
+                        <li><a href="#">Mese frigorifice<span class="icon-chevron--right"></span></a></li>
+                        <li><a href="#">Echipamente preparare caldă<span class="icon-chevron--right"></span></a></li>
+                        <li><a href="#">Echipamente procesare și preparare<span class="icon-chevron--right"></span></a></li>
+                        <li><a href="#">Mobilier din inox<span class="icon-chevron--right"></span></a></li>
+                        <li><a href="#">Echipamente pizza<span class="icon-chevron--right"></span></a></li>
+                        <li><a href="#">Echipamente fast-food<span class="icon-chevron--right"></span></a></li>
+                        <li><a href="#">Utilaje autoservire și echipamente catering<span class="icon-chevron--right"></span></a></li>
+                        <li><a href="#">Vidare-ambalare<span class="icon-chevron--right"></span></a></li>
+                        <li><a href="#">Veselă profesională<span class="icon-chevron--right"></span></a></li>
+                        <li><a href="#">Capcane de insecte<span class="icon-chevron--right"></span></a></li>
+                    </ul>
+                </div>
+                <div class="menu-block">
+                    <h5>LOGISTICS</h5>
+                    <ul>
+                        <li><a href="#">Rafturi universale<span class="icon-chevron--right"></span></a></li>
+                        <li><a href="#">Rafturi depozitare<span class="icon-chevron--right"></span></a></li>
+                        <li><a href="#">Scări, echipamente manipulare marfă<span class="icon-chevron--right"></span></a></li>
+                    </ul>
+                </div>
+                <div class="menu-block">
+                    <h5>RETAIL</h5>
+                    <ul>
+                        <li><a href="#">Echipamente frigorifice<span class="icon-chevron--right"></span></a></li>
+                        <li><a href="#">Mobilier Comercial<span class="icon-chevron--right"></span></a></li>
+                        <li><a href="#">Mese de marcat, coșuri și cărucioare<span class="icon-chevron--right"></span></a></li>
+                    </ul>
+                </div>
+                <div class="menu-block">
+                    <h5>LIFE</h5>
+                    <ul>
+                        <li><a href="#">Mobilier casă, birou<span class="icon-chevron--right"></span></a></li>
+                        <li><a href="#">Curățenie și întreținere<span class="icon-chevron--right"></span></a></li>
+                        <li><a href="#">Coșuri tradiționale împletite<span class="icon-chevron--right"></span></a></li>
+                        <li><a href="#">Mobilier metalic<span class="icon-chevron--right"></span></a></li>
+                        <li><a href="#">Mese și scaune<span class="icon-chevron--right"></span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </div>
-
 </header> <svg class="checkbox-symbol">
     <symbol id="check" viewbox="0 0 12 10">
       <polyline
@@ -99,12 +188,100 @@
     </symbol>
   </svg>
     <main>
+        <div class="scroll-category">
+    <div class="scroll-category__container">
+        <div class="scroll-category__body no-scrollbar">
+            <a href="#" class="button button__white">#scaune</a>
+            <a href="#" class="button button__white">#mese</a>
+            <a href="#" class="button button__white">#coș</a>
+            <a href="#" class="button button__white">#softbox</a>
+            <a href="#" class="button button__white">#comode</a>
+            <a href="#" class="button button__white">#cutie</a>
+            <a href="#" class="button button__white">#filtru</a>
+            <a href="#" class="button button__white">#scaune</a>
+            <a href="#" class="button button__white">#mese</a>
+            <a href="#" class="button button__white">#coș</a>
+            <a href="#" class="button button__white">#softbox</a>
+            <a href="#" class="button button__white">#comode</a>
+            <a href="#" class="button button__white">#cutie</a>
+            <a href="#" class="button button__white">#filtru</a>
+            <a href="#" class="button button__white">#scaune</a>
+            <a href="#" class="button button__white">#mese</a>
+            <a href="#" class="button button__white">#coș</a>
+            <a href="#" class="button button__white">#softbox</a>
+            <a href="#" class="button button__white">#comode</a>
+            <a href="#" class="button button__white">#cutie</a>
+            <a href="#" class="button button__white">#filtru</a>
+            <a href="#" class="button button__white">#scaune</a>
+            <a href="#" class="button button__white">#mese</a>
+            <a href="#" class="button button__white">#coș</a>
+            <a href="#" class="button button__white">#softbox</a>
+            <a href="#" class="button button__white">#comode</a>
+            <a href="#" class="button button__white">#cutie</a>
+            <a href="#" class="button button__white">#filtru</a>
+        </div>
+    </div>
+</div>
+        <div class="page__main-slider main-slider">
+            <div class="main-slider__container">
+                <div class="main-slider__body">
+                    <div class="main-slider__slider">
+                        <div class="slider-main__body swiper">
+                            <div class="slider-main__slide" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.3) 100%), url(img/slider-bg.jpg) 50% 50% / cover no-repeat;">
+                                <div class="swiper-slide__content">
+                                    <h2 class="big">Unităţile frigorifice YATO</h2>
+                                    <p>ViTRA îţi pune la dispoziţie o gamă generoasă de unităţi frigorifice de la YATO, cunoscute în special pentru calitatea lor profesională şi performanţa excelentă. </p>
+                                </div>
+                                <div class="swiper-slide__content swiper-slide__content--mobile">
+                                    <h5>Unităţile frigorifice YATO</h5>
+                                </div>
+
+                                <a href="#"></a>
+                            </div>
+                            <div class="slider-main__slide" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.3) 100%), url(img/slider-bg.jpg) 50% 50% / cover no-repeat;">
+                                <div class="swiper-slide__content">
+                                    <h2 class="big">Unităţile frigorifice POLAR</h2>
+                                    <p>ViTRA îţi pune la dispoziţie o gamă generoasă de unităţi frigorifice de la POLAR, cunoscute în special pentru calitatea lor profesională şi performanţa excelentă. </p>
+                                </div>
+                                <div class="swiper-slide__content swiper-slide__content--mobile">
+                                    <h5>Unităţile frigorifice POLAR</h5>
+                                </div>
+
+                                <a href="#"></a>
+                            </div>
+                            <div class="slider-main__slide" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.3) 100%), url(img/slider-bg.jpg) 50% 50% / cover no-repeat;">
+                                <div class="swiper-slide__content">
+                                    <h2 class="big">Unităţile frigorifice</h2>
+                                    <p>ViTRA îţi pune la dispoziţie o gamă generoasă de unităţi frigorifice, cunoscute în special pentru calitatea lor profesională şi performanţa excelentă. </p>
+                                </div>
+                                <div class="swiper-slide__content swiper-slide__content--mobile">
+                                    <h5>Unităţile frigorifice</h5>
+                                </div>
+
+                                <a href="#"></a>
+                            </div>
+                        </div>
+
+                        <div class="slider-main-controls">
+                            <div class="slider-main-controls__dots"></div>
+                            <div class="slider-main-controls__arrows slider-arrows">
+                                <button type="button" class="slider-arrow slider-arrow__prev icon-chevron--left"></button>
+                                <button type="button" class="slider-arrow slider-arrow__next icon-chevron--right"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay"></div>
     </main>
     <footer class="footer">
 
 </footer>
 
 
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
 </body>
 

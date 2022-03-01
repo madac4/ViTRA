@@ -15,7 +15,8 @@ export function isWebp() {
     });
 }
 
-export function burger(burger, menu) {
+export function burger(burger, menu, headerH) {
+    menu.style.top = `${headerH}px`
     burger.addEventListener('click', () => {
         burger.classList.toggle('active');
         menu.classList.toggle('active');

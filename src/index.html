@@ -5,9 +5,64 @@
 <body>
     @@include('./components/header.html') @@include('./components/check.html')
     <main>
+        @@include('./components/category-scroll.html')
+        <div class="page__main-slider main-slider">
+            <div class="main-slider__container">
+                <div class="main-slider__body">
+                    <div class="main-slider__slider">
+                        <div class="slider-main__body swiper">
+                            <div class="slider-main__slide" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.3) 100%), url(@img/slider-bg.jpg) 50% 50% / cover no-repeat;">
+                                <div class="swiper-slide__content">
+                                    <h2 class="big">Unităţile frigorifice YATO</h2>
+                                    <p>ViTRA îţi pune la dispoziţie o gamă generoasă de unităţi frigorifice de la YATO, cunoscute în special pentru calitatea lor profesională şi performanţa excelentă. </p>
+                                </div>
+                                <div class="swiper-slide__content swiper-slide__content--mobile">
+                                    <h5>Unităţile frigorifice YATO</h5>
+                                </div>
+
+                                <a href="#"></a>
+                            </div>
+                            <div class="slider-main__slide" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.3) 100%), url(@img/slider-bg.jpg) 50% 50% / cover no-repeat;">
+                                <div class="swiper-slide__content">
+                                    <h2 class="big">Unităţile frigorifice POLAR</h2>
+                                    <p>ViTRA îţi pune la dispoziţie o gamă generoasă de unităţi frigorifice de la POLAR, cunoscute în special pentru calitatea lor profesională şi performanţa excelentă. </p>
+                                </div>
+                                <div class="swiper-slide__content swiper-slide__content--mobile">
+                                    <h5>Unităţile frigorifice POLAR</h5>
+                                </div>
+
+                                <a href="#"></a>
+                            </div>
+                            <div class="slider-main__slide" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.3) 100%), url(@img/slider-bg.jpg) 50% 50% / cover no-repeat;">
+                                <div class="swiper-slide__content">
+                                    <h2 class="big">Unităţile frigorifice</h2>
+                                    <p>ViTRA îţi pune la dispoziţie o gamă generoasă de unităţi frigorifice, cunoscute în special pentru calitatea lor profesională şi performanţa excelentă. </p>
+                                </div>
+                                <div class="swiper-slide__content swiper-slide__content--mobile">
+                                    <h5>Unităţile frigorifice</h5>
+                                </div>
+
+                                <a href="#"></a>
+                            </div>
+                        </div>
+
+                        <div class="slider-main-controls">
+                            <div class="slider-main-controls__dots"></div>
+                            <div class="slider-main-controls__arrows slider-arrows">
+                                <button type="button" class="slider-arrow slider-arrow__prev icon-chevron--left"></button>
+                                <button type="button" class="slider-arrow slider-arrow__next icon-chevron--right"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay"></div>
     </main>
     @@include('./components/footer.html')
 
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
 </body>
 
