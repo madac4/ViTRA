@@ -109,6 +109,7 @@ p {
     }
     &__filter {
         width: fit-content;
+        line-height: 100%;
         padding: 15px 30px;
         border-radius: 4px;
         background-color: rgba(255, 255, 255, 0.4);
@@ -410,4 +411,14 @@ input[type="radio"] {
         opacity: 1;
         visibility: visible;
     }
+}
+
+section {
+    [class*="__header"] {
+        margin-bottom: 20px;
+    }
+}
+
+.fullscreen {
+    height: 100vh;
 }

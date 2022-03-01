@@ -12,7 +12,6 @@ const menuMobile = document.querySelector('.menu-nav--mobile');
 
 document.addEventListener('DOMContentLoaded', () => {
     var headerH = document.querySelector('.header').offsetHeight;
-    console.log(headerH);
     flsFunctions.burger(burgerMobile, menuMobile, headerH);
 })
 if (burgerDesktop) {
@@ -91,3 +90,19 @@ function adaptive_function() {
     adaptive_header(w, h);
 }
 adaptive_function();
+
+const filterMobile = document.querySelectorAll('.filter-mobile__body .filter-mobile');
+const filterDesktop = document.querySelectorAll('.filter-body__main .filter-desktop')
+
+for (let index = 0; index < filterMobile.length; index++) {
+    filterMobile[index].addEventListener('click', () => {
+        if (filterDesktop[index].classList.contains('modal-filter')) {
+            filterDesktop[index].classList.remove('modal-filter')
+        } else {
+            filterDesktop.forEach(el => {
+                el.classList.remove('modal-filter')
+            })
+            filterDesktop[index].classList.add('modal-filter')
+        }
+    })
+}
