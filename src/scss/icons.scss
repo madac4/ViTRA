@@ -20,6 +20,18 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-category:before {
+    content: "\e914";
+}
+
+.icon-import:before {
+    content: "\e915";
+}
+
+.icon-location:before {
+    content: "\e916";
+}
+
 .icon-cart:before {
     content: "\e900";
 }
@@ -38,28 +50,6 @@
 
 .icon-chevron__long:before {
     content: "\e904";
-}
-
-.icon-chevron--right:before {
-    content: "\e905";
-}
-
-.icon-chevron--left:before {
-    content: "\e905";
-    display: inline-block;
-    transform: rotate(180deg);
-}
-
-.icon-chevron--up:before {
-    content: "\e905";
-    display: inline-block;
-    transform: rotate(-90deg);
-}
-
-.icon-chevron--down:before {
-    content: "\e905";
-    display: inline-block;
-    transform: rotate(90deg);
 }
 
 .icon-close:before {
@@ -116,4 +106,26 @@
 
 .icon-user:before {
     content: "\e913";
+}
+
+.icon-chevron--right:before {
+    content: "\e905";
+}
+
+.icon-chevron--left:before {
+    content: "\e905";
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+.icon-chevron--up:before {
+    content: "\e905";
+    display: inline-block;
+    transform: rotate(-90deg);
+}
+
+.icon-chevron--down:before {
+    content: "\e905";
+    display: inline-block;
+    transform: rotate(90deg);
 }
