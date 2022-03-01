@@ -110,6 +110,8 @@ $mobileSmall: rem(479.98px);
 // Conectarea stilurilor pentru blocuri aparte
 @import 'components/footer.scss';
 @import 'components/header.scss';
+@import 'components/banner.scss';
+@import 'components/filter.scss';
 @import 'components/category-scroll.scss';
 // Conectarea stilurilor pentru pagini
 @import 'home';
