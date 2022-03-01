@@ -1,5 +1,5 @@
 .banner {
-    margin: 80px 0;
+    @include adaptiv-value('margin-top', 80, 50, 1);
     .banner-body {
         display: flex;
         align-items: center;
