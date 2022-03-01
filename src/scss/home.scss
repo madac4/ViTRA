@@ -31,10 +31,10 @@
                             display: none;
                         }
                         &--mobile {
-                            display: block;
+                            display: block !important;
                             background-color: transparent;
                             padding: 0;
-                            top: calc(100% - 40px);
+                            top: calc(100% - 60px) !important;
                             color: #fff;
                             z-index: 2;
                             left: 10px !important;

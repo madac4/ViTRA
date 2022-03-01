@@ -48,6 +48,7 @@
   font-size: 16px;
   font-weight: normal;
   font-variant: normal;
+  color: #2B2B2B;
   text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
@@ -931,6 +932,7 @@ input[type=radio] {
   background: #FFFFFF;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   padding: 20px 0;
+  margin-bottom: 20px;
 }
 .header__container {
   display: flex;
@@ -1277,10 +1279,10 @@ input[type=radio] {
   }
 }
 .page__main-slider .main-slider__body .main-slider__slider .slider-main__body .slider-main__slide .swiper-slide__content--mobile {
-  display: block;
+  display: block !important;
   background-color: transparent;
   padding: 0;
-  top: calc(100% - 40px);
+  top: calc(100% - 60px) !important;
   color: #fff;
   z-index: 2;
   left: 10px !important;

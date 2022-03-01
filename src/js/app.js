@@ -12,7 +12,6 @@ const menuMobile = document.querySelector('.menu-nav--mobile');
 
 document.addEventListener('DOMContentLoaded', () => {
     var headerH = document.querySelector('.header').offsetHeight;
-    console.log(headerH);
     flsFunctions.burger(burgerMobile, menuMobile, headerH);
 })
 if (burgerDesktop) {
