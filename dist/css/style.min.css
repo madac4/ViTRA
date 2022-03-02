@@ -1809,8 +1809,8 @@ section [class*=__header] a span {
 }
 
 .product {
-  background: #FFFFFF;
-  border: 1px solid #E4E4E4;
+  background: #ffffff;
+  border: 1px solid #e4e4e4;
   transition: 0.3s;
   padding: 10px;
   position: relative;
@@ -1840,7 +1840,7 @@ section [class*=__header] a span {
 @media (max-width: 39.99875rem) {
   .product__images {
     width: 100%;
-    height: 120px;
+    height: 120px !important;
   }
 }
 .product__images .product-images__image {
@@ -1968,7 +1968,7 @@ section [class*=__header] a span {
 }
 
 .product-mock {
-  background-color: #EFEFEF;
+  background-color: #efefef;
   width: 100%;
   height: 100%;
   transition: 0.3s;

@@ -1,7 +1,7 @@
 .product {
-    background: #FFFFFF;
-    border: 1px solid #E4E4E4;
-    transition: .3s;
+    background: #ffffff;
+    border: 1px solid #e4e4e4;
+    transition: 0.3s;
     padding: 10px;
     position: relative;
     height: 100%;
@@ -27,7 +27,7 @@
         position: relative;
         @media (max-width: $mobileMedium) {
             width: 100%;
-            height: 120px;
+            height: 120px !important;
         }
         .product-images__image {
             width: 100%;
@@ -35,7 +35,7 @@
             object-fit: cover;
             opacity: 0;
             visibility: hidden;
-            transition: .4s;
+            transition: 0.4s;
             position: absolute;
             @media (max-width: $mobileMedium) {
                 width: 120px;
@@ -68,7 +68,7 @@
             width: 100%;
             height: 1px;
             background-color: $graycolor400;
-            transition: .3s;
+            transition: 0.3s;
             &--active {
                 background-color: $orangecolor;
             }
@@ -137,10 +137,10 @@
 }
 
 .product-mock {
-    background-color: #EFEFEF;
+    background-color: #efefef;
     width: 100%;
     height: 100%;
-    transition: .3s;
+    transition: 0.3s;
     display: block;
     text-transform: uppercase;
     @include adaptiv-value('font-size', 18, 16, 1);
