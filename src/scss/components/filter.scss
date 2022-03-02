@@ -1,5 +1,6 @@
 .filter {
     @include adaptiv-value('margin-top', 80, 50, 1);
+    margin-bottom: 20px;
     &__body {
         position: relative;
         z-index: 4;

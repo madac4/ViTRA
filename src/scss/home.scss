@@ -115,3 +115,37 @@
         }
     }
 }
+
+.product-slider {
+    &__container {
+        .page__product-slider {
+            .product-slider__body {
+                .product-slider__slider {
+                    position: relative;
+                    .slider-product__body {
+                        padding: 20px 0;
+                        .slider-product__slide {
+                            height: 100%;
+                        }
+                    }
+                    .slider-product-controls {
+                        &__arrows {
+                            .slider-arrow {
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                z-index: 2;
+                                &__prev {
+                                    left: -10px;
+                                }
+                                &__next {
+                                    right: -10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

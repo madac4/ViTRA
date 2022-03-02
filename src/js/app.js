@@ -46,7 +46,6 @@ if (document.querySelector('.slider-main__body')) {
         spaceBetween: 10,
         autoHeight: true,
         speed: 800,
-        // loop: true,
         preloadImages: false,
         lazy: true,
         pagination: {
@@ -60,49 +59,110 @@ if (document.querySelector('.slider-main__body')) {
     })
 }
 
+if (document.querySelector('.slider-product__body')) {
+    new Swiper('.slider-product__body', {
+        grabCursor: true,
+        observer: true,
+        observeParents: true,
+        slidesPerView: 4,
+        spaceBetween: 20,
+        speed: 800,
+        preloadImages: false,
+        lazy: true,
+        navigation: {
+            prevEl: '.slider-product-controls__arrows .slider-arrow__prev',
+            nextEl: '.slider-product-controls__arrows .slider-arrow__next',
+        },
+    })
+}
+
 const headerSearch = document.querySelector('.header-right__search');
-window.addEventListener('resize', () => {
-    adaptive_function();
-});
+if (headerSearch) {
+    window.addEventListener('resize', () => {
+        adaptive_function();
+    });
 
-function adaptive_header(w, h) {
-    var headerRight = document.querySelector('.header-right');
+    function adaptive_header(w, h) {
+        var headerRight = document.querySelector('.header-right');
 
-    var result = headerSearch.classList.contains('done');
-    if (w < 992) {
-        headerSearch.querySelector('input').classList.remove('filled')
-        if (!result) {
-            headerSearch.classList.add('done');
-            menuMobile.insertBefore(headerSearch, menuMobile.firstChild);
-        }
-    } else {
-        headerSearch.querySelector('input').classList.add('filled')
-        if (result) {
-            headerSearch.classList.remove('done');
-            headerRight.insertBefore(headerSearch, headerRight.firstChild);
+        var result = headerSearch.classList.contains('done');
+        if (w < 992) {
+            headerSearch.querySelector('input').classList.remove('filled')
+            if (!result) {
+                headerSearch.classList.add('done');
+                menuMobile.insertBefore(headerSearch, menuMobile.firstChild);
+            }
+        } else {
+            headerSearch.querySelector('input').classList.add('filled')
+            if (result) {
+                headerSearch.classList.remove('done');
+                headerRight.insertBefore(headerSearch, headerRight.firstChild);
+            }
         }
     }
-}
 
-function adaptive_function() {
-    var w = window.innerWidth;
-    var h = window.innerHeight;
-    adaptive_header(w, h);
+    function adaptive_function() {
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        adaptive_header(w, h);
+    }
+    adaptive_function();
 }
-adaptive_function();
 
 const filterMobile = document.querySelectorAll('.filter-mobile__body .filter-mobile');
 const filterDesktop = document.querySelectorAll('.filter-body__main .filter-desktop')
 
-for (let index = 0; index < filterMobile.length; index++) {
-    filterMobile[index].addEventListener('click', () => {
-        if (filterDesktop[index].classList.contains('modal-filter')) {
-            filterDesktop[index].classList.remove('modal-filter')
-        } else {
-            filterDesktop.forEach(el => {
-                el.classList.remove('modal-filter')
-            })
-            filterDesktop[index].classList.add('modal-filter')
+if (filterMobile[0] && filterDesktop[0]) {
+    for (let index = 0; index < filterMobile.length; index++) {
+        filterMobile[index].addEventListener('click', () => {
+            if (filterDesktop[index].classList.contains('modal-filter')) {
+                filterDesktop[index].classList.remove('modal-filter')
+            } else {
+                filterDesktop.forEach(el => {
+                    el.classList.remove('modal-filter')
+                })
+                filterDesktop[index].classList.add('modal-filter')
+            }
+        })
+    }
+}
+
+const products = document.querySelectorAll('.product');
+
+if (products[0]) {
+    products.forEach(product => {
+        const productImages = product.querySelectorAll('.product__images img');
+        const productPagination = product.querySelector('.product__pagination');
+        for (let index = 0; index < productImages.length; index++) {
+            productPagination.innerHTML += '<div class="pagination-item"></div>';
         }
+        const productPaginationItem = productPagination.querySelectorAll('.pagination-item')
+        productPaginationItem[0].classList.add('pagination-item--active')
+
+        if (productImages.length > 1) {
+            product.addEventListener('mouseenter', () => {
+                var i = 0;
+                var imageSwitch = setInterval(function() {
+                    productImages[i].classList.remove('product-images__image--active')
+                    productPaginationItem[i].classList.remove('pagination-item--active')
+                    i++
+                    productImages[i].classList.add('product-images__image--active')
+                    productPaginationItem[i].classList.add('pagination-item--active')
+                    if (i >= productImages.length - 1) {
+                        clearInterval(imageSwitch);
+                    }
+
+                }, 1000);
+
+                product.addEventListener('mouseleave', () => {
+                    clearInterval(imageSwitch);
+                    productImages[i].classList.remove('product-images__image--active')
+                    productPaginationItem[i].classList.remove('pagination-item--active')
+                    productImages[0].classList.add('product-images__image--active')
+                    productPaginationItem[0].classList.add('pagination-item--active')
+                })
+            })
+        }
+
     })
 }

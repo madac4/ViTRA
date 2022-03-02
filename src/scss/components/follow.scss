@@ -1,6 +1,64 @@
 .follow {
-    &__container {
+    .follow-body {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 20px;
         background-color: #000;
         border-radius: 8px;
+        padding: 70px 0;
+        @media (max-width: $tablet) {
+            padding: 50px 15px;
+        }
+        @media (max-width: $mobileMedium) {
+            flex-direction: column;
+            align-items: initial;
+        }
+        h2 {
+            max-width: 325px;
+            font-size: 30px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            @media (max-width: $mobileMedium) {
+                max-width: 100%
+            }
+        }
+        .follow-form {
+            h3,
+            p {
+                color: #fff;
+                line-height: 140%;
+                margin-bottom: 10px;
+            }
+            p {
+                max-width: 453px;
+                margin-bottom: 23px;
+            }
+            form {
+                display: flex;
+                gap: 10px;
+                @media (max-width: $tablet) {
+                    flex-direction: column;
+                }
+                input {
+                    width: 200px;
+                    @media (max-width: $tablet) {
+                        width: 100%;
+                    }
+                }
+                input[type="submit"] {
+                    width: fit-content;
+                    background-color: $orangecolor;
+                    border-color: $orangecolor;
+                    color: #fff;
+                    font-weight: 600;
+                    padding: 15px 30px;
+                    @media (max-width: $mobile) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
 }
