@@ -298,12 +298,13 @@ function productSliders() {
 
 
 
-
-Ellipsis({
-    className: '.product-name',
-    lines: 2
-});
-Ellipsis({
-    className: '.post-article__title',
-    lines: 2
-});
+if (document.querySelector('.product-name') || document.querySelector('.prost-article__title')) {
+    Ellipsis({
+        className: '.product-name',
+        lines: 2
+    });
+    Ellipsis({
+        className: '.post-article__title',
+        lines: 2
+    });
+}
