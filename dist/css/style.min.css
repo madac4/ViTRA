@@ -1497,6 +1497,11 @@ section [class*=__header] {
   inset: 0;
 }
 
+.follow__container {
+  background-color: #000;
+  border-radius: 8px;
+}
+
 .page__main-slider {
   margin-bottom: 80px;
 }
