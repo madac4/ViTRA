@@ -112,6 +112,9 @@ a {
         &:active {
             background-color: $graycolor300;
         }
+        &.active {
+            background-color: $graycolor300;
+        }
     }
     &__filter {
         width: fit-content;

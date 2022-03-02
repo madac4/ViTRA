@@ -15,13 +15,15 @@ export function isWebp() {
     });
 }
 
-export function burger(burger, menu, headerH) {
+export function burger(burger, menu, headerH, headerM) {
     menu.style.top = `${headerH}px`
     menu.style.paddingBottom = `${headerH+10}px`
     burger.addEventListener('click', () => {
-        burger.classList.toggle('active');
-        menu.classList.toggle('active');
-        document.body.classList.toggle('lock');
+        if (!headerM.classList.contains('active')) {
+            burger.classList.toggle('active');
+            menu.classList.toggle('active');
+            document.body.classList.toggle('lock');
+        }
     })
 }
 

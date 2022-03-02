@@ -3,9 +3,19 @@
     border: 1px solid #E4E4E4;
     transition: .3s;
     padding: 10px;
-    max-width: 340px;
     position: relative;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @media (max-width: $mobileMedium) {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+    @media (max-width: $mobileSmall) {
+        max-width: 90%;
+        margin: 0 auto;
+    }
     &__labels {
         display: flex;
         align-items: center;
@@ -23,14 +33,25 @@
         margin-top: 10px;
         height: 260px;
         position: relative;
+        @media (max-width: $mobileSmall) {
+            height: 160px;
+        }
         .product-images__image {
             width: 100%;
-            height: 260px;
+            height: 100%;
             object-fit: cover;
             opacity: 0;
             visibility: hidden;
             transition: .4s;
             position: absolute;
+            @media (max-width: $tablet) {
+                position: initial;
+                display: none;
+                &:first-child {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
             top: 0;
             &--active {
                 opacity: 1;
@@ -43,6 +64,9 @@
         display: flex;
         align-items: center;
         gap: 3px;
+        @media (max-width: $tablet) {
+            display: none;
+        }
         .pagination-item {
             width: 100%;
             height: 1px;
@@ -56,8 +80,13 @@
     &-footer {
         display: flex;
         align-items: flex-end;
-        gap: 15px;
+        @include adaptiv-value('gap', 15, 10, 1);
+        flex: 1;
+        @media (max-width: $tablet) {
+            margin-top: 20px;
+        }
         &__info {
+            flex: 1;
             .product-name {
                 display: block;
                 margin-bottom: 5px;
@@ -73,12 +102,16 @@
                 display: block;
                 font-size: 14px;
                 color: $graycolor400;
+                @media (max-width: $mobileSmall) {
+                    display: none;
+                }
             }
             .product-price {
                 margin-top: 20px;
                 display: flex;
                 align-items: center;
-                @include adaptiv-value('gap', 15, 5, 1);
+                flex-wrap: wrap;
+                gap: 5px;
                 &--old {
                     font-size: 14px;
                     letter-spacing: 0.03em;

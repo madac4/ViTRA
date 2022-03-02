@@ -9,7 +9,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 4;
+    z-index: 6;
     padding: 15px;
     justify-content: space-between;
     @media (min-width: $tablet) {
@@ -18,10 +18,10 @@
     @media (max-width: $mobileSmall) {
         padding: 15px 10px;
     }
-    a.button:first-child {
+    .button:first-child {
         width: 100%;
     }
-    a.button {
+    .button {
         width: 40%;
         padding: 10px;
         @media (max-width: $mobileSmall) {

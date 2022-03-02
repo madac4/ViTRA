@@ -10,10 +10,24 @@ const burgerDesktop = document.querySelector('.header-menu__burger');
 const menuDesktop = document.querySelector('.menu-nav');
 const menuMobile = document.querySelector('.menu-nav--mobile');
 
+const headerMobile = document.querySelector('.upper-header--mobile');
+const headerMobileToggler = document.querySelector('.bottom-navigation--toggle');
+
 document.addEventListener('DOMContentLoaded', () => {
     var headerH = document.querySelector('.header').offsetHeight;
-    flsFunctions.burger(burgerMobile, menuMobile, headerH);
+    headerMobile.style.top = `${headerH}px`
+    headerMobile.style.paddingBottom = `${headerH}px`
+    flsFunctions.burger(burgerMobile, menuMobile, headerH, headerMobile);
 })
+if (headerMobile && headerMobileToggler) {
+    headerMobileToggler.addEventListener('click', () => {
+        if (!menuMobile.classList.contains('active')) {
+            headerMobile.classList.toggle('active')
+            headerMobileToggler.classList.toggle('active')
+            document.body.classList.toggle('lock')
+        }
+    })
+}
 if (burgerDesktop) {
     burgerDesktop.addEventListener('click', () => {
         menuDesktop.classList.toggle('menu-open');
@@ -21,7 +35,6 @@ if (burgerDesktop) {
         document.body.classList.toggle('lock')
     })
 }
-
 
 if (document.querySelector('.slider-main__body')) {
     new Swiper('.slider-main__body', {
@@ -64,14 +77,28 @@ if (document.querySelector('.slider-product__body')) {
         grabCursor: true,
         observer: true,
         observeParents: true,
-        slidesPerView: 4,
-        spaceBetween: 20,
+        autoHeight: true,
         speed: 800,
+        spaceBetween: 20,
         preloadImages: false,
         lazy: true,
         navigation: {
             prevEl: '.slider-product-controls__arrows .slider-arrow__prev',
             nextEl: '.slider-product-controls__arrows .slider-arrow__next',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            640: {
+                slidesPerView: 2,
+            },
+            860: {
+                slidesPerView: 3,
+            },
+            1200: {
+                slidesPerView: 4,
+            },
         },
     })
 }
@@ -127,42 +154,51 @@ if (filterMobile[0] && filterDesktop[0]) {
     }
 }
 
-const products = document.querySelectorAll('.product');
+window.addEventListener('DOMContentLoaded', () => {
+    const w = window.innerWidth;
+    console.log(w);
+    if (w >= 992) {
+        productSliders();
+    }
+});
 
-if (products[0]) {
-    products.forEach(product => {
-        const productImages = product.querySelectorAll('.product__images img');
-        const productPagination = product.querySelector('.product__pagination');
-        for (let index = 0; index < productImages.length; index++) {
-            productPagination.innerHTML += '<div class="pagination-item"></div>';
-        }
-        const productPaginationItem = productPagination.querySelectorAll('.pagination-item')
-        productPaginationItem[0].classList.add('pagination-item--active')
+function productSliders() {
+    const products = document.querySelectorAll('.product');
+    if (products[0]) {
+        products.forEach(product => {
+            const productImages = product.querySelectorAll('.product__images img');
+            const productPagination = product.querySelector('.product__pagination');
+            for (let index = 0; index < productImages.length; index++) {
+                productPagination.innerHTML += '<div class="pagination-item"></div>';
+            }
+            const productPaginationItem = productPagination.querySelectorAll('.pagination-item')
+            productPaginationItem[0].classList.add('pagination-item--active')
 
-        if (productImages.length > 1) {
-            product.addEventListener('mouseenter', () => {
-                var i = 0;
-                var imageSwitch = setInterval(function() {
-                    productImages[i].classList.remove('product-images__image--active')
-                    productPaginationItem[i].classList.remove('pagination-item--active')
-                    i++
-                    productImages[i].classList.add('product-images__image--active')
-                    productPaginationItem[i].classList.add('pagination-item--active')
-                    if (i >= productImages.length - 1) {
+            if (productImages.length > 1) {
+                product.addEventListener('mouseenter', () => {
+                    var i = 0;
+                    var imageSwitch = setInterval(function() {
+                        productImages[i].classList.remove('product-images__image--active')
+                        productPaginationItem[i].classList.remove('pagination-item--active')
+                        i++
+                        productImages[i].classList.add('product-images__image--active')
+                        productPaginationItem[i].classList.add('pagination-item--active')
+                        if (i >= productImages.length - 1) {
+                            clearInterval(imageSwitch);
+                        }
+
+                    }, 1000);
+
+                    product.addEventListener('mouseleave', () => {
                         clearInterval(imageSwitch);
-                    }
-
-                }, 1000);
-
-                product.addEventListener('mouseleave', () => {
-                    clearInterval(imageSwitch);
-                    productImages[i].classList.remove('product-images__image--active')
-                    productPaginationItem[i].classList.remove('pagination-item--active')
-                    productImages[0].classList.add('product-images__image--active')
-                    productPaginationItem[0].classList.add('pagination-item--active')
+                        productImages[i].classList.remove('product-images__image--active')
+                        productPaginationItem[i].classList.remove('pagination-item--active')
+                        productImages[0].classList.add('product-images__image--active')
+                        productPaginationItem[0].classList.add('pagination-item--active')
+                    })
                 })
-            })
-        }
+            }
 
-    })
+        })
+    }
 }
