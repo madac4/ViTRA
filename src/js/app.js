@@ -264,7 +264,7 @@ checkLabels(products);
 
 
 
-Ellipsis({
-    className: '.product-name',
-    lines: 2
-})
+// Ellipsis({
+//     className: '.product-name',
+//     lines: 2
+// })
