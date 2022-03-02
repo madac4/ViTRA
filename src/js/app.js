@@ -15,8 +15,6 @@ const headerMobileToggler = document.querySelector('.bottom-navigation--toggle')
 
 document.addEventListener('DOMContentLoaded', () => {
     var headerH = document.querySelector('.header').offsetHeight;
-    headerMobile.style.top = `${headerH}px`
-    headerMobile.style.paddingBottom = `${headerH}px`
     flsFunctions.burger(burgerMobile, menuMobile, headerH, headerMobile);
 })
 if (headerMobile && headerMobileToggler) {
@@ -262,9 +260,7 @@ function checkLabels(products) {
 
 checkLabels(products);
 
-
-
-// Ellipsis({
-//     className: '.product-name',
-//     lines: 2
-// })
+new Cuttr('.product-name', {
+    truncate: 'letters',
+    length: 60
+});

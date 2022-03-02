@@ -37,7 +37,7 @@ a {
     align-items: center;
     justify-content: center;
     width: 100%;
-    transition: .3s;
+    transition: 0.3s;
     position: relative;
     color: $maincolor;
     &__light {
@@ -81,7 +81,7 @@ a {
             border-color: $orangecolor;
         }
         &--big {
-            color: #BDBDBD;
+            color: #bdbdbd;
             font-weight: 600;
             &:hover {
                 color: $orangecolor;
@@ -185,7 +185,7 @@ a {
     &__control {
         background-color: #fff;
         padding: 10px;
-        border: 1px solid #E4E4E4;
+        border: 1px solid #e4e4e4;
         font-size: 24px;
         color: $graycolor300;
         &:hover {
@@ -201,7 +201,7 @@ a {
             &.icon-heart__filled {
                 background-color: transparent;
                 color: $orangecolor;
-                border-color: #E4E4E4;
+                border-color: #e4e4e4;
             }
         }
     }
@@ -216,12 +216,12 @@ a {
         width: 26px;
         height: 18px;
         cursor: pointer;
-        z-index: 5;
+        z-index: 4;
         span,
         &::before,
         &::after {
             content: '';
-            transition: all .3s ease 0s;
+            transition: all 0.3s ease 0s;
             left: 0;
             position: absolute;
             width: 100%;
@@ -240,7 +240,7 @@ a {
         }
         &.active {
             span {
-                transform: translateX(30px);
+                transform: translateX(-30px);
                 opacity: 0;
                 visibility: hidden;
             }
@@ -275,7 +275,7 @@ textarea {
     border: 1px solid #e4e4e4;
     font-size: 14px;
     outline: none;
-    transition: .3s;
+    transition: 0.3s;
     border-radius: 4px;
     &:focus {
         border-color: $darkcolor;
@@ -298,7 +298,7 @@ small.error {
     font-size: 12px;
 }
 
-input[type="radio"] {
+input[type='radio'] {
     width: 20px;
     height: 20px;
     accent-color: $darkcolor;
@@ -390,19 +390,19 @@ input[type="radio"] {
     border-color: $darkcolor;
 }
 
-.checkbox-container.accent .checkbox-input:checked+.checkbox span:first-child {
+.checkbox-container.accent .checkbox-input:checked + .checkbox span:first-child {
     background: $orangecolor;
     border-color: $orangecolor;
     animation: zoom-in-out 0.3s ease;
 }
 
-.checkbox-input:checked+.checkbox span:first-child {
+.checkbox-input:checked + .checkbox span:first-child {
     background: $darkcolor;
     border-color: $darkcolor;
     animation: zoom-in-out 0.3s ease;
 }
 
-.checkbox-input:checked+.checkbox span:first-child svg {
+.checkbox-input:checked + .checkbox span:first-child svg {
     stroke-dashoffset: 0;
 }
 
@@ -421,7 +421,7 @@ input[type="radio"] {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
     font-size: 20px;
-    transition: .3s;
+    transition: 0.3s;
     &:hover {
         background-color: rgba(0, 0, 0, 0.8);
     }
@@ -439,7 +439,7 @@ input[type="radio"] {
     z-index: 3;
     opacity: 0;
     visibility: hidden;
-    transition: .3s;
+    transition: 0.3s;
     &.active {
         opacity: 1;
         visibility: visible;
@@ -466,7 +466,7 @@ input[type="radio"] {
 }
 
 section {
-    [class*="__header"] {
+    [class*='__header'] {
         margin-bottom: 20px;
     }
 }

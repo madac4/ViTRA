@@ -213,9 +213,7 @@
                 transform: translateY(0);
             }
             &__block {
-                &:not(:last-child) {
-                    margin-bottom: 50px;
-                }
+                padding-bottom: 50px;
                 h5 {
                     text-transform: uppercase;
                     margin-bottom: 20px;
@@ -257,7 +255,7 @@
                 overflow: auto;
                 height: 100%;
                 background-color: #fff;
-                z-index: 5;
+                z-index: 7;
                 padding: 0 15px;
                 right: -70%;
                 transition: 0.3s;
