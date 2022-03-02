@@ -88,7 +88,14 @@ if (document.querySelector('.slider-product__body')) {
         },
         breakpoints: {
             320: {
-                slidesPerView: 1,
+                slidesPerView: 1.4,
+                spaceBetween: 10,
+                freeMode: true
+            },
+            500: {
+                slidesPerView: 2.5,
+                spaceBetween: 10,
+                freeMode: true
             },
             640: {
                 slidesPerView: 2,

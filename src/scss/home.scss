@@ -129,6 +129,9 @@
                         }
                     }
                     .slider-product-controls {
+                        @media (max-width: $mobileMedium) {
+                            display: none;
+                        }
                         &__arrows {
                             .slider-arrow {
                                 position: absolute;

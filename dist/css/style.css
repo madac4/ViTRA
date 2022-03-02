@@ -1621,18 +1621,6 @@ section [class*=__header] {
   flex-direction: column;
   width: 100%;
 }
-@media (max-width: 39.99875rem) {
-  .product {
-    max-width: 70%;
-    margin: 0 auto;
-  }
-}
-@media (max-width: 29.99875rem) {
-  .product {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-}
 .product__labels {
   display: flex;
   align-items: center;
@@ -1651,9 +1639,10 @@ section [class*=__header] {
   height: 260px;
   position: relative;
 }
-@media (max-width: 29.99875rem) {
+@media (max-width: 39.99875rem) {
   .product__images {
-    height: 160px;
+    width: 100%;
+    height: 120px;
   }
 }
 .product__images .product-images__image {
@@ -1665,6 +1654,12 @@ section [class*=__header] {
   transition: 0.4s;
   position: absolute;
   top: 0;
+}
+@media (max-width: 39.99875rem) {
+  .product__images .product-images__image {
+    width: 120px;
+    margin: 0 auto;
+  }
 }
 @media (max-width: 61.99875rem) {
   .product__images .product-images__image {
@@ -1723,6 +1718,12 @@ section [class*=__header] {
   display: block;
   margin-bottom: 5px;
 }
+@media (max-width: 39.99875rem) {
+  .product-footer__info .product-name {
+    font-size: 14px;
+    line-height: 140%;
+  }
+}
 .product-footer__info .product-name::after {
   content: "";
   position: absolute;
@@ -1735,7 +1736,7 @@ section [class*=__header] {
   font-size: 14px;
   color: #BDBDBD;
 }
-@media (max-width: 29.99875rem) {
+@media (max-width: 39.99875rem) {
   .product-footer__info .product-code {
     display: none;
   }
@@ -1746,6 +1747,11 @@ section [class*=__header] {
   align-items: center;
   flex-wrap: wrap;
   gap: 5px;
+}
+@media (max-width: 39.99875rem) {
+  .product-footer__info .product-price {
+    font-size: 18px;
+  }
 }
 .product-footer__info .product-price--old {
   font-size: 14px;
@@ -1906,6 +1912,11 @@ section [class*=__header] {
 }
 .product-slider__container .page__product-slider .product-slider__body .product-slider__slider .slider-product__body .slider-product__slide {
   height: 100%;
+}
+@media (max-width: 39.99875rem) {
+  .product-slider__container .page__product-slider .product-slider__body .product-slider__slider .slider-product-controls {
+    display: none;
+  }
 }
 .product-slider__container .page__product-slider .product-slider__body .product-slider__slider .slider-product-controls__arrows .slider-arrow {
   position: absolute;

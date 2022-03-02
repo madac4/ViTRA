@@ -8,14 +8,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    @media (max-width: $mobileMedium) {
-        max-width: 70%;
-        margin: 0 auto;
-    }
-    @media (max-width: $mobileSmall) {
-        max-width: 90%;
-        margin: 0 auto;
-    }
     &__labels {
         display: flex;
         align-items: center;
@@ -33,8 +25,9 @@
         margin-top: 10px;
         height: 260px;
         position: relative;
-        @media (max-width: $mobileSmall) {
-            height: 160px;
+        @media (max-width: $mobileMedium) {
+            width: 100%;
+            height: 120px;
         }
         .product-images__image {
             width: 100%;
@@ -44,6 +37,10 @@
             visibility: hidden;
             transition: .4s;
             position: absolute;
+            @media (max-width: $mobileMedium) {
+                width: 120px;
+                margin: 0 auto;
+            }
             @media (max-width: $tablet) {
                 position: initial;
                 display: none;
@@ -90,6 +87,10 @@
             .product-name {
                 display: block;
                 margin-bottom: 5px;
+                @media (max-width: $mobileMedium) {
+                    font-size: 14px;
+                    line-height: 140%;
+                }
                 &::after {
                     content: '';
                     position: absolute;
@@ -102,7 +103,7 @@
                 display: block;
                 font-size: 14px;
                 color: $graycolor400;
-                @media (max-width: $mobileSmall) {
+                @media (max-width: $mobileMedium) {
                     display: none;
                 }
             }
@@ -112,6 +113,9 @@
                 align-items: center;
                 flex-wrap: wrap;
                 gap: 5px;
+                @media (max-width: $mobileMedium) {
+                    font-size: 18px;
+                }
                 &--old {
                     font-size: 14px;
                     letter-spacing: 0.03em;
