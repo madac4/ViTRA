@@ -227,15 +227,35 @@ if (filterMobile[0] && filterDesktop[0]) {
     }
 }
 
+const products = document.querySelectorAll('.product');
 window.addEventListener('DOMContentLoaded', () => {
     const w = window.innerWidth;
-    console.log(w);
     if (w >= 992) {
         productSliders();
     }
+    if (w <= 640) {
+        checkLabelsMobile(products);
+    }else{
+        checkLabels(products)
+    }
+    function checkLabels(products) {
+        products.forEach(product => {
+            if (!product.querySelector('.product__labels')) {
+                product.querySelector('.product__images').style.marginTop = '0';
+                product.querySelector('.product__images').style.height = '298px';
+            }
+        })
+    }
+    function checkLabelsMobile(products) {
+        products.forEach(product => {
+            if (!product.querySelector('.product__labels')) {
+                product.querySelector('.product__images').style.marginTop = '38px';
+            }
+        })
+    }
+    
 });
 
-const products = document.querySelectorAll('.product');
 function productSliders() {
     if (products[0]) {
         products.forEach(product => {
@@ -277,16 +297,7 @@ function productSliders() {
 }
 
 
-function checkLabels(products) {
-    products.forEach(product => {
-        if (!product.querySelector('.product__labels')) {
-            product.querySelector('.product__images').style.marginTop = '0';
-            product.querySelector('.product__images').style.height = '298px';
-        }
-    })
-}
 
-checkLabels(products);
 
 Ellipsis({
     className: '.product-name',
