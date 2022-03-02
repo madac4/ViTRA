@@ -206,7 +206,6 @@
             visibility: hidden;
             transition: 0.3s;
             max-height: 580px;
-            overflow: auto;
             &.menu-open {
                 opacity: 1;
                 visibility: visible;
@@ -252,7 +251,6 @@
             .menu-nav--mobile {
                 position: fixed;
                 width: 70%;
-                overflow: auto;
                 height: 100%;
                 background-color: #fff;
                 z-index: 7;
