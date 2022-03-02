@@ -1,58 +1,78 @@
-.blog-single-container {
-    max-width: 1060px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-.blog-single__header {
-    .blog-single__tags {
-        display: flex;
-        gap: 10px;
-        margin: 20px 0;
-        .button {
-            width: 100px;
-            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
-        }
+.blog-single {
+    .blog-single-container {
+        max-width: 1060px;
+        margin: 0 auto;
+        padding: 0 15px;
     }
-}
-
-.blog-single__main {
-    .intro-img {
-        display: block;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        margin-bottom: 30px;
-    }
-    p {}
-    .blog-single__block {
-        p {
-            &:not(:last-child) {
-                margin-bottom: 30px;
+    .blog-single__header {
+        .blog-single__tags {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            .button {
+                width: 100px;
+                box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
             }
         }
-        ul {
+    }
+    .blog-single__main {
+        .intro-img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
             margin-bottom: 30px;
-            li {
-                margin-left: 30px;
-                list-style: disc;
-                font-size: 16px;
-                line-height: 160%;
-                &::marker {
-                    font-size: 12px;
-                }
+        }
+        .blog-single__block {
+            &:not(:first-of-type) {
+                margin-top: 50px;
+            }
+            h3 {
+                margin-bottom: 20px;
+            }
+            p {
                 &:not(:last-child) {
-                    margin-bottom: 15px;
+                    margin-bottom: 30px;
                 }
+            }
+            ul {
+                margin-bottom: 30px;
+                li {
+                    margin-left: 30px;
+                    list-style: disc;
+                    font-size: 16px;
+                    line-height: 160%;
+                    &::marker {
+                        font-size: 12px;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+                max-width: 530px;
+            }
+            span {
+                display: block;
+                text-align: center;
+                font-size: 14px;
+                line-height: 100%;
+                margin-top: 20px;
+                color: $graycolor400;
             }
         }
     }
-}
-
-.blog-sigle__products {
-    margin-top: 30px;
-    .blog-sigle__products-body {
-        display: flex;
-        gap: 20px;
+    .blog-sigle__products {
+        margin-top: 30px;
+        .blog-sigle__products-body {
+            display: flex;
+            gap: 20px;
+        }
+    }
+    .follow {
+        margin-top: 80px;
     }
 }
