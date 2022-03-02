@@ -1,4 +1,5 @@
 .follow {
+    @include adaptiv-value('margin-bottom', 80, 50, 1);
     .follow-body {
         display: flex;
         align-items: center;
@@ -19,9 +20,9 @@
             font-size: 30px;
             line-height: 140%;
             text-transform: uppercase;
-            color: #FFFFFF;
+            color: #ffffff;
             @media (max-width: $mobileMedium) {
-                max-width: 100%
+                max-width: 100%;
             }
         }
         .follow-form {
@@ -47,15 +48,10 @@
                         width: 100%;
                     }
                 }
-                input[type="submit"] {
-                    width: fit-content;
-                    background-color: $orangecolor;
-                    border-color: $orangecolor;
-                    color: #fff;
-                    font-weight: 600;
-                    padding: 15px 30px;
-                    @media (max-width: $mobile) {
-                        width: 100%;
+                button {
+                    max-width: 130px;
+                    @media (max-width: $mobileMedium) {
+                        max-width: 100%;
                     }
                 }
             }

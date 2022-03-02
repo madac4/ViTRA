@@ -117,6 +117,7 @@
 }
 
 .product-slider {
+    @include adaptiv-value('margin-bottom', 80, 50, 1);
     &__container {
         .page__product-slider {
             .product-slider__body {
@@ -151,4 +152,138 @@
             }
         }
     }
+}
+
+.category-masonry {
+    @include adaptiv-value('margin-bottom', 80, 50, 1);
+    @media (max-width: $mobile) {
+        display: none;
+    }
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        @include adaptiv-value('grid-gap', 20, 10, 1);
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: $mobileSmall) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .category-primary {
+            &:nth-child(6) {
+                grid-column: 2 span;
+                @media (max-width: $tablet) {
+                    grid-column: 1 span;
+                }
+            }
+            @media (max-width: $tablet) {
+                &:nth-child(7) {
+                    grid-column: 3 span;
+                }
+            }
+            @media (max-width: $mobile) {
+                &:nth-child(7) {
+                    grid-column: 2 span;
+                }
+            }
+            @media (max-width: $mobileSmall) {
+                &:nth-child(7) {
+                    grid-column: 1 span;
+                }
+            }
+        }
+    }
+}
+
+.offers {
+    &-body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        @media (max-width: $mobileMedium) {
+            display: none;
+        }
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            border-radius: 8px;
+            @include adaptiv-value('height', 450, 180, 1);
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+                background-color: rgba(0, 0, 0, 0.4);
+                transition: 0.3s;
+                opacity: 0;
+                visibility: hidden;
+                @media (max-width: $tablet) {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                @media (max-width: $mobileMedium) {
+                    display: none;
+                }
+            }
+            @media (any-hover: hover) {
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    a {
+                        transform: scale(1);
+                    }
+                }
+            }
+            a {
+                transform: scale(0);
+                position: relative;
+                z-index: 2;
+                transition: 0.3s;
+                @media (max-width: $tablet) {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+    .page__offers-slider {
+        @media (min-width: $mobileMedium) {
+            display: none;
+        }
+        .offers-slider__body {
+            .offers-slider__slider {
+                position: relative;
+                .slider-offers-controls {
+                    &__arrows {
+                        .slider-arrow {
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            z-index: 2;
+                            &__prev {
+                                left: 10px;
+                            }
+                            &__next {
+                                right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#map {
+    @include adaptiv-value('margin-bottom', 80, 50, 1);
+    border-radius: 8px;
 }
