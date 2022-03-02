@@ -138,6 +138,7 @@
                     }
                     button {
                         transition: 0.3s;
+                        color: $maincolor;
                         &:hover {
                             color: #000;
                         }

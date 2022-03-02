@@ -467,7 +467,26 @@ input[type='radio'] {
 
 section {
     [class*='__header'] {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         margin-bottom: 20px;
+        a {
+            font-size: 16px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: 0.3s;
+            &:hover {
+                color: $orangecolor;
+            }
+            span {
+                color: $orangecolor;
+                font-size: 18px;
+                transform: translateY(-1px);
+            }
+        }
     }
 }
 

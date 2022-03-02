@@ -102,6 +102,34 @@ if (document.querySelector('.slider-offers__body')) {
     })
 }
 
+if (document.querySelector('.slider-articles__body')) {
+    new Swiper('.slider-articles__body', {
+        grabCursor: true,
+        observer: true,
+        observeParents: true,
+        slidesPerView: 3,
+        spaceBetween: 20,
+        speed: 800,
+        preloadImages: false,
+        lazy: true,
+        navigation: {
+            prevEl: '.slider-articles-controls__arrows .slider-arrow__prev',
+            nextEl: '.slider-articles-controls__arrows .slider-arrow__next',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            767: {
+                slidesPerView: 2,
+            },
+            1200: {
+                slidesPerView: 3,
+            },
+        },
+    })
+}
+
 const productSlider = document.querySelectorAll('.slider-product__body');
 
 if (productSlider.length >= 1) {
@@ -260,7 +288,11 @@ function checkLabels(products) {
 
 checkLabels(products);
 
-new Cuttr('.product-name', {
-    truncate: 'letters',
-    length: 60
+Ellipsis({
+    className: '.product-name',
+    lines: 2
+});
+Ellipsis({
+    className: '.post-article__title',
+    lines: 2
 });
