@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 @use '../../node_modules/sass-rem' as *;
 // Conectarea MIXINURILOR ==============================================================================================================
 @import 'base/mixin.scss';
@@ -8,20 +8,20 @@
 @import 'icons.scss';
 // Main Font =======================================================================================================================
 $fontFamily: 'Galano Grotesque';
-$fontSize: rem(16px); // 14 - marimea textului din maket 
+$fontSize: rem(16px); // 14 - marimea textului din maket
 // Culorile de baza ======================================================================================================================
-$maincolor: #2B2B2B;
-$darkcolor: #3C3C3C;
-$graycolor100: #F4F4F4;
-$graycolor200: #F0F0F0;
-$graycolor300: #D9D9D9;
-$graycolor400: #BDBDBD;
+$maincolor: #2b2b2b;
+$darkcolor: #3c3c3c;
+$graycolor100: #f4f4f4;
+$graycolor200: #f0f0f0;
+$graycolor300: #d9d9d9;
+$graycolor400: #bdbdbd;
 $graycolor500: #757575;
-$graybackground100: #EDF1F7;
+$graybackground100: #edf1f7;
 // $graybackground200: #E4E9F2; darken
-$orangecolor: #F15D22;
-$redcolor: #EE2924;
-$errorcolor: #FF655E;
+$orangecolor: #f15d22;
+$redcolor: #ee2924;
+$errorcolor: #ff655e;
 // Setarile =================================================================================================================================
 // Marimea minima a ecranului
 $minWidth: 320;
@@ -36,9 +36,9 @@ $containerPadding: 30;
 // 2 - containerului are breakpoints(isi schimba marimea dupa breakpoint)
 $responsiveType: 1;
 // Marimea cand lucreaza primul breakpoint
-$containerWidth: $maxWidthContainer+$containerPadding;
+$containerWidth: $maxWidthContainer + $containerPadding;
 // Breakpoints
-$pc: rem($containerWidth+px);
+$pc: rem($containerWidth + px);
 $tablet: rem(991.98px);
 $mobile: rem(767.98px);
 $mobileMedium: rem(639.98px);
@@ -51,11 +51,11 @@ $mobileSmall: rem(479.98px);
     flex-direction: column;
     overflow: hidden;
     // Impingem footerul jos
-    >main {
+    > main {
         flex: 1 1 auto;
     }
     // Fixarea sliderurilor
-    >* {
+    > * {
         min-width: 0;
     }
 }
@@ -65,27 +65,24 @@ $mobileSmall: rem(479.98px);
 /* Stilurile vor merge cu toate clasele care contin: __container
    Exemplu: header__container, main__container, __container */
 
-@if($responsiveType==1) {
-    [class*="__container"] {
-        @if($maxWidthContainer>0) {
-            max-width: rem($maxWidthContainer+px);
+@if ($responsiveType==1) {
+    [class*='__container'] {
+        @if ($maxWidthContainer>0) {
+            max-width: rem($maxWidthContainer + px);
             box-sizing: content-box;
             margin: 0 auto;
         }
         @if ($containerPadding>0) {
-            padding: 0 rem(math.div($containerPadding, 2)+px);
+            padding: 0 rem(math.div($containerPadding, 2) + px);
         }
     }
-}
-
-@else {
-    [class*="__container"] {
+} @else {
+    [class*='__container'] {
         margin: 0 auto;
-        @if($maxWidthContainer>0) {
+        @if ($maxWidthContainer>0) {
             max-width: rem($maxWidthContainer);
             box-sizing: content-box;
-        }
-        @else {
+        } @else {
             @if ($containerPadding>0) {
                 padding: 0 rem(math.div($containerPadding, 2));
             }
@@ -115,8 +112,11 @@ $mobileSmall: rem(479.98px);
 @import 'components/category-scroll.scss';
 @import 'components/bottomNavigation.scss';
 @import 'components/category.scss';
+@import 'components/follow.scss';
 @import 'components/product.scss';
+@import 'components/breadcrumbs';
 // Conectarea stilurilor pentru pagini
 @import 'home';
 @import 'production';
 @import 'cart';
+@import 'blog-single';

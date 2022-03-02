@@ -1,0 +1,58 @@
+.blog-single-container {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.blog-single__header {
+    .blog-single__tags {
+        display: flex;
+        gap: 10px;
+        margin: 20px 0;
+        .button {
+            width: 100px;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+.blog-single__main {
+    .intro-img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 30px;
+    }
+    p {}
+    .blog-single__block {
+        p {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+        ul {
+            margin-bottom: 30px;
+            li {
+                margin-left: 30px;
+                list-style: disc;
+                font-size: 16px;
+                line-height: 160%;
+                &::marker {
+                    font-size: 12px;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+.blog-sigle__products {
+    margin-top: 30px;
+    .blog-sigle__products-body {
+        display: flex;
+        gap: 20px;
+    }
+}

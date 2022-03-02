@@ -282,3 +282,8 @@
         }
     }
 }
+
+#map {
+    @include adaptiv-value('margin-bottom', 80, 50, 1);
+    border-radius: 8px;
+}
