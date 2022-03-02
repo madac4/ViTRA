@@ -1149,14 +1149,15 @@ section [class*=__header] {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   top: calc(100% + 10px);
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
   transform: translateY(-30px);
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
-  max-height: 580px;
+  max-height: 550px;
+  display: flex;
+  justify-content: space-between;
+  overflow-y: scroll;
+  gap: 20px;
 }
 @media (max-width: 1420px) {
   .header-left .menu-nav {
@@ -1167,6 +1168,19 @@ section [class*=__header] {
   .header-left .menu-nav {
     padding: calc( 30px + 20 * ((100vw - 320px) / 1100));
   }
+}
+.header-left .menu-nav::-webkit-scrollbar {
+  width: 10px;
+}
+.header-left .menu-nav::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.header-left .menu-nav::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 20px;
+}
+.header-left .menu-nav::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 .header-left .menu-nav.menu-open {
   opacity: 1;
@@ -1217,6 +1231,7 @@ section [class*=__header] {
   padding: 0 15px;
   right: -70%;
   transition: 0.3s;
+  overflow: auto;
 }
 .header-right--mobile .menu-nav--mobile.active {
   right: 0;
