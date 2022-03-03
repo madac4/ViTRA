@@ -242,7 +242,7 @@ window.addEventListener('DOMContentLoaded', () => {
         products.forEach(product => {
             if (!product.querySelector('.product__labels')) {
                 product.querySelector('.product__images').style.marginTop = '0';
-                product.querySelector('.product__images').style.maxHeight = '298px';
+                product.querySelector('.product__images').style.height = '298px';
             }
         })
     }

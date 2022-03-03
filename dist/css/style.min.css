@@ -330,6 +330,10 @@ a {
   line-height: 160%;
 }
 
+main {
+  min-height: 50vh;
+}
+
 .button {
   display: flex;
   align-items: center;
@@ -365,7 +369,8 @@ a {
   background-color: #f2f2f2;
 }
 .button__chip {
-  padding: 10px 0;
+  padding: 10px 20px;
+  width: fit-content;
   background-color: #edf1f7;
   gap: 10px;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
@@ -2563,4 +2568,87 @@ section [class*=__header] a span {
 }
 .single .follow {
   margin-top: 80px;
+}
+
+.product-page .product-header__controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.product-page .product-header__filter {
+  width: fit-content;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.product-page .product-header__filter span {
+  font-size: 18px;
+  transform: translateY(-1px);
+}
+.product-page .product-header__sort {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.product-page .product-header__sort .product-sort__main {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media (max-width: 1420px) {
+  .product-page .product-header__sort .product-sort__main {
+    gap: calc( 10px + 10 * ((100vw - 320px) / 1100));
+  }
+}
+.product-page .product-header__sort .product-sort__main span {
+  color: #bdbdbd;
+  font-size: 14px;
+}
+.product-page .product-header__sort .product-sort__main a {
+  font-size: 14px;
+  transition: 0.3s;
+}
+.product-page .product-header__sort .product-sort__main a.active {
+  text-decoration: underline;
+}
+.product-page .product-header__sort .product-sort__main a:hover {
+  color: #f15d22;
+}
+.product-page .product-header__sort .product-sort__result {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #bdbdbd;
+}
+.product-page .product-header__sort .product-sort__result strong {
+  font-weight: 600;
+  color: #f15d22;
+}
+.product-page .product-header__options {
+  margin-bottom: 20px;
+}
+.product-page .product-page__main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin-bottom: 30px;
+}
+@media (max-width: 1110px) {
+  .product-page .product-page__main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 47.99875rem) {
+  .product-page .product-page__main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-page .product-page__main .product__images {
+    height: 200px;
+  }
 }
