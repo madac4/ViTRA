@@ -129,6 +129,11 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            button {
+                @media (max-width: $mobileSmall) {
+                    font-size: 18px;
+                }
+            }
         }
     }
     &:hover {
