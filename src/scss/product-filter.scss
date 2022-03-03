@@ -178,13 +178,14 @@
                 .product-sort__options {
                     opacity: 1;
                     visibility: visible;
-                    top: 100%;
+                    top: 140%;
                 }
             }
             .product-sort__header {
-                a {
+                button {
                     color: $orangecolor;
                     text-decoration: underline;
+                    font-size: 14px;
                 }
             }
             .product-sort__options {
@@ -202,8 +203,12 @@
                         display: block;
                         padding: 8px;
                         text-decoration: none;
+                        transition: 0.3s;
                         &.active {
                             background-color: rgba(241, 93, 34, 0.2);
+                        }
+                        &:hover {
+                            color: $orangecolor;
                         }
                     }
                 }

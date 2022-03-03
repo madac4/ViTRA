@@ -2789,11 +2789,12 @@ section [class*=__header] a span {
 .product-page .product-header .product-sort--mobile.open .product-sort__options {
   opacity: 1;
   visibility: visible;
-  top: 100%;
+  top: 140%;
 }
-.product-page .product-header .product-sort--mobile .product-sort__header a {
+.product-page .product-header .product-sort--mobile .product-sort__header button {
   color: #f15d22;
   text-decoration: underline;
+  font-size: 14px;
 }
 .product-page .product-header .product-sort--mobile .product-sort__options {
   position: absolute;
@@ -2811,9 +2812,13 @@ section [class*=__header] a span {
   display: block;
   padding: 8px;
   text-decoration: none;
+  transition: 0.3s;
 }
 .product-page .product-header .product-sort--mobile .product-sort__options li a.active {
   background-color: rgba(241, 93, 34, 0.2);
+}
+.product-page .product-header .product-sort--mobile .product-sort__options li a:hover {
+  color: #f15d22;
 }
 .product-page .product-header__options {
   margin-bottom: 20px;

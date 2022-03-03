@@ -235,6 +235,11 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     if (w <= 640) {
         checkLabelsMobile(products);
+        const mobileSortToggler = document.querySelector('.product-sort--mobile .product-sort__header button');
+        const mobileSort = document.querySelector('.product-sort--mobile');
+        mobileSortToggler.addEventListener('click', () =>{
+            mobileSort.classList.toggle('open')
+        })
     }else{
         checkLabels(products)
     }
@@ -335,6 +340,7 @@ if (filterItem.length > 0) {
         })
     })
 }
+
 
 
 const scrollContainer = document.querySelector('.scroll-category__body');
