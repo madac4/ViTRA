@@ -101,6 +101,13 @@ main {
             }
         }
     }
+    &__primary--outline {
+        padding: 14px 20px;
+        background-color: transparent;
+        border: 1px solid $orangecolor;
+        border-radius: 4px;
+        color: $orangecolor;
+    }
     &__gray {
         width: fit-content;
         padding: 14px;
@@ -321,7 +328,6 @@ input[type='radio'] {
     box-sizing: border-box;
     background: #ffffff;
     color: #222;
-    height: 64px;
     display: flex;
     justify-content: center;
     align-items: center;
