@@ -314,20 +314,34 @@ const filters = document.querySelector('.product-filter__options');
 const filterItem = document.querySelectorAll('.filter-body__option');
 
 
-filterToggler.addEventListener('click', () =>{
-    filters.classList.add('open');
-    overlay.classList.add('active');
-    filters.querySelector('.filter-footer__close').addEventListener('click', () =>{
-        filters.classList.remove('open')
-        overlay.classList.remove('active')
+if (filterToggler && filters)  {
+    filterToggler.addEventListener('click', () =>{
+        filters.classList.add('open');
+        overlay.classList.add('active');
+        filters.querySelector('.filter-footer__close').addEventListener('click', () =>{
+            filters.classList.remove('open')
+            overlay.classList.remove('active')
+        })
+        overlay.addEventListener('click', () =>{
+            filters.classList.remove('open')
+            overlay.classList.remove('active')
+        })
     })
-    overlay.addEventListener('click', () =>{
-        filters.classList.remove('open')
-        overlay.classList.remove('active')
+}
+if (filterItem.length > 0) {
+    filterItem.forEach(item =>{
+        item.querySelector('.filter-option__header').addEventListener('click', () =>{
+            item.classList.toggle('open');
+        })
     })
-})
-filterItem.forEach(item =>{
-    item.querySelector('.filter-option__header').addEventListener('click', () =>{
-        item.classList.toggle('open');
-    })
-})
+}
+
+
+const scrollContainer = document.querySelector('.scroll-category__body');
+
+    if (scrollContainer) {
+        scrollContainer.addEventListener('wheel', (evt) => {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+        });
+    }
