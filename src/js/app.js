@@ -237,9 +237,11 @@ window.addEventListener('DOMContentLoaded', () => {
         checkLabelsMobile(products);
         const mobileSortToggler = document.querySelector('.product-sort--mobile .product-sort__header button');
         const mobileSort = document.querySelector('.product-sort--mobile');
-        mobileSortToggler.addEventListener('click', () =>{
-            mobileSort.classList.toggle('open')
-        })
+        if (mobileSortToggler && mobileSort) {
+            mobileSortToggler.addEventListener('click', () =>{
+                mobileSort.classList.toggle('open')
+            })
+        }
     }else{
         checkLabels(products)
     }

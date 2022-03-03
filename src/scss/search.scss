@@ -1,0 +1,21 @@
+.search {
+    &-empty {
+        .search__results {
+            h1 {
+                margin-bottom: 30px;
+            }
+            a {
+                max-width: 30%;
+                @media (max-width: $tablet) {
+                    max-width: 50%;
+                }
+                @media (max-width: $mobileMedium) {
+                    max-width: 80%;
+                }
+                @media (max-width: $mobileSmall) {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

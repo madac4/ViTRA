@@ -2852,3 +2852,25 @@ section [class*=__header] a span {
     height: 160px;
   }
 }
+
+.search-empty .search__results h1 {
+  margin-bottom: 30px;
+}
+.search-empty .search__results a {
+  max-width: 30%;
+}
+@media (max-width: 61.99875rem) {
+  .search-empty .search__results a {
+    max-width: 50%;
+  }
+}
+@media (max-width: 39.99875rem) {
+  .search-empty .search__results a {
+    max-width: 80%;
+  }
+}
+@media (max-width: 29.99875rem) {
+  .search-empty .search__results a {
+    max-width: 100%;
+  }
+}
