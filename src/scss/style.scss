@@ -114,9 +114,11 @@ $mobileSmall: rem(479.98px);
 @import 'components/category.scss';
 @import 'components/follow.scss';
 @import 'components/product.scss';
-@import 'components/breadcrumbs';
+@import 'components/breadcrumbs.scss';
+@import 'components/page-title.scss';
 // Conectarea stilurilor pentru pagini
 @import 'home';
 @import 'production';
 @import 'cart';
-@import 'blog-single';
+@import 'category';
+@import 'single';

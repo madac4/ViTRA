@@ -12,15 +12,21 @@
             color: rgba(0, 0, 0, 0.7);
             a {
                 &::after {
-                    content: "\e905";
+                    content: '\e905';
                     font-family: icomoon;
                     position: absolute;
-                    top: 3px;
-                    right: calc(-35px / 2);
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -21px;
                 }
             }
             &:last-child {
                 font-weight: 600;
+                display: block;
+                width: 160px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
         }
     }

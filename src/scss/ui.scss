@@ -1,17 +1,17 @@
 h1 {
-    @include adaptiv-value('font-size', 36, 32, 1);
+    @include adaptiv-value('font-size', 36, 28, 1);
     line-height: 140%;
     font-weight: 600;
 }
 
 h2 {
-    @include adaptiv-value('font-size', 32, 28, 1);
+    @include adaptiv-value('font-size', 32, 24, 1);
     line-height: 140%;
     font-weight: 600;
 }
 
 h3 {
-    @include adaptiv-value('font-size', 24, 20, 1);
+    @include adaptiv-value('font-size', 24, 18, 1);
     line-height: 140%;
     font-weight: 600;
 }
@@ -23,7 +23,7 @@ h5 {
 }
 
 p {
-    font-size: 16px;
+    @include adaptiv-value('font-size', 16, 14, 1);
     line-height: 160%;
 }
 

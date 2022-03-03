@@ -162,6 +162,7 @@
     &__body {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 240px);
         @include adaptiv-value('grid-gap', 20, 10, 1);
         @media (max-width: $tablet) {
             grid-template-columns: repeat(3, 1fr);
