@@ -68,20 +68,20 @@
             display: flex;
             gap: 20px;
             @media (max-width: $mobile) {
-                flex-direction: column;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 10px;
                 .product {
-                    max-width: 50%;
-                    margin: 0 auto;
-                }
-            }
-            @media (max-width: $mobileMedium) {
-                .product {
-                    max-width: 70%;
+                    &__images {
+                        height: 200px;
+                    }
                 }
             }
             @media (max-width: $mobileSmall) {
                 .product {
-                    max-width: 100%;
+                    &__images {
+                        height: 160px;
+                    }
                 }
             }
         }

@@ -1,53 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('./components/head.html', {'title': 'ViTRA - Nu sunt rezultate'})
+@@include('./components/head.html', {'title': 'ViTRA - Home'})
 
 <body>
-    @@include('./components/header.html')
+    @@include('./components/header.html') @@include('./components/check.html')
     <main>
-        <section class="search">
-            <div class="search__container">
-                <div class="search__header">
-                    <h1>După căutarea “Scaune” au fost găsite 11 elemente</h1>
+        
+        <div class="product-page">
+            <div class="product-page__container">
+                @@include('./components/breadcrumbs.html'})
+                <div class="filter">
+                    <div class="filter__header">
+                        <h3>Reduceri %</h3>
+                    </div>
+    
+                    <div class="filter__body filter-body">
+                        <div class="filter-body__main">
+                            <div class="filter-desktop filter-desktop--category">
+                                <span class="filter-lable">
+                                    Categorie:
+                                </span>
+                                <div class="filter-buttons">
+                                    <button class="button button__filter">Retail</button>
+                                    <button class="button button__filter active">Logistics</button>
+                                    <button class="button button__filter">Horeca</button>
+                                    <button class="button button__filter">Life</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="filter-mobile__body">
+                            <div class="filter-mobile filter-mobile--category">
+                                <span class="icon-category"></span>
+                                <div class="filter-mobile__text">
+                                    <p>Categorie:</p>
+                                    <p>Logistics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="product-header__options">
                         <button class="button button__chip">#rotundă <span class="icon-close"></span></button>
-                        <button class="button button__chip">#rotundă <span class="icon-close"></span></button>
-                        <button class="button button__chip">#rotundă <span class="icon-close"></span></button>
                     </div>
                 </div>
 
-                <div class="search__results search-results">
-                    <h3>Produse</h3>
-                   <div class="search-results__block product-grid">
-                    <div class="product">
-                        <div class="product__labels">
-                            <span class="label" style="background-color: #EE2924;">SALE </span>
-                            <span class="label" style="background-color: #FEA800;">Top vânzări</span>
-                        </div>
-
-                        <div class="product__images product-images">
-                            <img class="product-images__image product-images__image--active" src="@img/product1.png" alt="">
-                            <img class="product-images__image" src="@img/product2.png" alt="">
-                            <img class="product-images__image" src="@img/product3.png" alt="">
-                        </div>
-
-                        <div class="product__pagination"></div>
-
-                        <div class="product__footer product-footer">
-                            <div class="product-footer__info">
-                                <a href="#" class="product-name">
-                                    Optio qui sequi consequatur quia quod
-                                </a>
-                                <small class="product-code">Cod produs: 2103dc12</small>
-                                <h3 class="product-price">12 410 MDL <span class="product-price--old">14 210 MDL</span></h3>
-                            </div>
-                            <div class="product-footer__controls">
-                                <button class="button button__control icon-heart__filled"></button>
-                                <button class="button button__control icon-cart"></button>
-                            </div>
-                        </div>
-                    </div>
-                    
+                <div class="product-page__main product-grid">
                     <div class="product">
                         <div class="product__labels">
                             <span class="label" style="background-color: #EE2924;">SALE </span>
@@ -356,34 +354,47 @@
                             </div>
                         </div>
                     </div>
-                   </div>
-                   @@include('./components/pagination.html')
-                   
-                   
-                   <h3>Produse</h3>
-                   <div class="search-results__block">
-                    <div class="post">
-                        <img src="@img/post1.jpg" alt="">
-                        <div class="post-content">
-                            <div class="post-content__tags tags">
-                                <span># topic</span>
-                                <span># event</span>
-                                <span># logistics</span>
+                    <div class="product">
+                        <div class="product__labels">
+                            <span class="label" style="background-color: #EE2924;">SALE </span>
+                            <span class="label" style="background-color: #FEA800;">Top vânzări</span>
+                        </div>
+
+                        <div class="product__images product-images">
+                            <img class="product-images__image product-images__image--active" src="@img/product1.png" alt="">
+                            <img class="product-images__image" src="@img/product2.png" alt="">
+                            <img class="product-images__image" src="@img/product3.png" alt="">
+                        </div>
+
+                        <div class="product__pagination"></div>
+
+                        <div class="product__footer product-footer">
+                            <div class="product-footer__info">
+                                <a href="#" class="product-name">
+                                    Optio qui sequi consequatur quia quod
+                                </a>
+                                <small class="product-code">Cod produs: 2103dc12</small>
+                                <h3 class="product-price">12 410 MDL <span class="product-price--old">14 210 MDL</span></h3>
                             </div>
-                            <h3>Cum să faci un grătar perfect</h3>
-                            <time datetime="2019-06-7">November 3, 2012</time>
-                            <a href="single.html">Eveniet quis itaque voluptatum exercitationem esse temporibus repellendus non. Ipsam nemo aliquid laudantium voluptate. Voluptatibus dicta ea pariatur consequatur architecto. Fugiat non rem ut incidunt illum est illum necessitatibus
-                                unde. Sequi molestiae fuga distinctio. Placeat neque ut est voluptatibus voluptatem veritatis quas et aut.</a>
+                            <div class="product-footer__controls">
+                                <button class="button button__control icon-heart__filled"></button>
+                                <button class="button button__control icon-cart"></button>
+                            </div>
                         </div>
                     </div>
-                   </div>
+                </div>
+                <div class="product-page__footer">
+                    @@include('./components/pagination.html')
                 </div>
             </div>
-        </section>
+        </div>
+       
     </main>
     <div class="overlay"></div>
     @@include('./components/bottomNavigation.html') @@include('./components/footer.html')
 
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ellipsis.js@0.1.3/ellipsis.min.js"></script>
     <script src="js/app.min.js"></script>
 </body>
 

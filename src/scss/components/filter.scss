@@ -1,6 +1,11 @@
-.filter {
+section.filter {
     @include adaptiv-value('margin-top', 80, 50, 1);
+}
+.filter {
     margin-bottom: 20px;
+    &__header {
+        margin-bottom: 20px;
+    }
     &__body {
         position: relative;
         z-index: 4;
@@ -18,7 +23,7 @@
         padding: 20px;
         background-color: $graybackground100;
         border-radius: 8px;
-        @media(max-width: $mobile) {
+        @media (max-width: $mobile) {
             padding: 0;
         }
     }
@@ -26,13 +31,13 @@
         display: flex;
         flex-wrap: wrap;
         gap: 15px;
-        @media(max-width: $mobile) {
+        @media (max-width: $mobile) {
             opacity: 0;
             visibility: hidden;
             position: absolute;
             transform: translateY(30px);
             border-radius: 8px;
-            transition: .3s;
+            transition: 0.3s;
             background-color: $graybackground100;
             width: 100%;
             top: 100%;
@@ -50,9 +55,9 @@
             margin-right: 15px;
             color: $darkcolor;
             font-weight: 600;
-            background-color: #E4E9F2;
+            background-color: #e4e9f2;
             border-radius: 4px;
-            @media(max-width: $mobile) {
+            @media (max-width: $mobile) {
                 display: none;
             }
         }
@@ -60,9 +65,10 @@
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
-            @media(max-width: $mobile) {}
+            @media (max-width: $mobile) {
+            }
             .button {
-                @media(max-width: 458px) {
+                @media (max-width: 458px) {
                     padding: 10px 15px;
                 }
             }
@@ -75,7 +81,7 @@
         }
         .filter-mobile {
             padding: 15px 0;
-            border: 1px solid #E4E4E4;
+            border: 1px solid #e4e4e4;
             align-items: center;
             justify-content: center;
             display: flex;
