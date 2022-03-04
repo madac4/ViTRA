@@ -2041,10 +2041,14 @@ section [class*=__header] a span {
   margin-bottom: 30px;
 }
 
+.pagination {
+  max-width: calc(50% + 125px);
+  margin-left: auto;
+}
 .pagination-body {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .pagination-body .pagination-button {
   width: 220px;
@@ -2062,6 +2066,7 @@ section [class*=__header] a span {
   min-width: 44px;
   background-color: #F1F1F1;
   border-radius: 6px;
+  transition: 0.3s;
 }
 .pagination-body .pagination-list li a {
   line-height: 100%;
@@ -2072,6 +2077,9 @@ section [class*=__header] a span {
   inset: 0;
   width: 100%;
   height: 100%;
+}
+.pagination-body .pagination-list li:hover, .pagination-body .pagination-list li.active {
+  background-color: #DBDBDB;
 }
 
 .page__main-slider {
