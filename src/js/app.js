@@ -29,7 +29,7 @@ if (headerMobile && headerMobileToggler) {
 if (burgerDesktop) {
     burgerDesktop.addEventListener('click', () => {
         menuDesktop.classList.toggle('menu-open');
-        overlay.classList.toggle('active');
+        overlay.classList.add('active');
         document.body.classList.toggle('lock')
     })
     overlay.addEventListener('click', () =>{
@@ -235,6 +235,13 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     if (w <= 640) {
         checkLabelsMobile(products);
+        const mobileSortToggler = document.querySelector('.product-sort--mobile .product-sort__header button');
+        const mobileSort = document.querySelector('.product-sort--mobile');
+        if (mobileSortToggler && mobileSort) {
+            mobileSortToggler.addEventListener('click', () =>{
+                mobileSort.classList.toggle('open')
+            })
+        }
     }else{
         checkLabels(products)
     }
@@ -308,3 +315,41 @@ if (document.querySelector('.product-name') || document.querySelector('.prost-ar
         lines: 2
     });
 }
+
+const filterToggler = document.querySelector('.product-filter__button');
+const filters = document.querySelector('.product-filter__options');
+const filterItem = document.querySelectorAll('.filter-body__option');
+
+
+if (filterToggler && filters)  {
+    filterToggler.addEventListener('click', () =>{
+        filters.classList.add('open');
+        overlay.classList.add('active');
+        filters.querySelector('.filter-footer__close').addEventListener('click', () =>{
+            filters.classList.remove('open')
+            overlay.classList.remove('active')
+        })
+        overlay.addEventListener('click', () =>{
+            filters.classList.remove('open')
+            overlay.classList.remove('active')
+        })
+    })
+}
+if (filterItem.length > 0) {
+    filterItem.forEach(item =>{
+        item.querySelector('.filter-option__header').addEventListener('click', () =>{
+            item.classList.toggle('open');
+        })
+    })
+}
+
+
+
+const scrollContainer = document.querySelector('.scroll-category__body');
+
+    if (scrollContainer) {
+        scrollContainer.addEventListener('wheel', (evt) => {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+        });
+    }

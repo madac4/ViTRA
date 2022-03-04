@@ -269,25 +269,336 @@
         <div class="product-page">
             <div class="product-page__container">
                 <div class="product-page__header product-header">
-                    <div class="product-header__controls">
-                        <button class="button button__outline product-header__filter"><span class="icon-filter"></span> Filtre</button>
-                        <div class="product-header__sort product-sort">
-                            <div class="product-sort__main">
-                                <span>Sortează după:</span>
-                                <a href="#" class="active">Populare</a>
-                                <a href="#">Produse noi</a>
-                                <a href="#">Reducere</a>
-                            </div>
-                            <div class="product-sort__result">
-                                <strong>320</strong>
-                                produse
-                            </div>
-                        </div>
+    <div class="product-header__controls">
+        <div class="product-header__filter product-filter">
+            <button class="button button__outline product-filter__button"><span class="icon-filter"></span> Filtre</button>
+
+            <div class="product-filter__options filter-options">
+                <div class="filter-options__body filter-body">
+                    <div class="filter-body__option filter-option">
+                        <div class="filter-option__header">Culoare <span class="icon-chevron--down"></span></div>
+                        <ul class="filter-option__list">
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="alb" type="checkbox" />
+                                    <label class="checkbox" for="alb">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Alb</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="negru" type="checkbox" />
+                                    <label class="checkbox" for="negru">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Negru</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="rosu" type="checkbox" />
+                                    <label class="checkbox" for="rosu">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Roșu</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="gri" type="checkbox" />
+                                    <label class="checkbox" for="gri">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Gri</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="albastru" type="checkbox" />
+                                    <label class="checkbox" for="albastru">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Albastru</span>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="product-header__options">
-                        <button class="button button__chip">#rotundă <span class="icon-close"></span></button>
+                    <div class="filter-body__option filter-option">
+                        <div class="filter-option__header">Formă <span class="icon-chevron--down"></span></div>
+                        <ul class="filter-option__list">
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="alb" type="checkbox" />
+                                    <label class="checkbox" for="alb">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Alb</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="negru" type="checkbox" />
+                                    <label class="checkbox" for="negru">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Negru</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="rosu" type="checkbox" />
+                                    <label class="checkbox" for="rosu">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Roșu</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="gri" type="checkbox" />
+                                    <label class="checkbox" for="gri">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Gri</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="albastru" type="checkbox" />
+                                    <label class="checkbox" for="albastru">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Albastru</span>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter-body__option filter-option">
+                        <div class="filter-option__header">Culoare <span class="icon-chevron--down"></span></div>
+                        <ul class="filter-option__list">
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="alb" type="checkbox" />
+                                    <label class="checkbox" for="alb">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Alb</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="negru" type="checkbox" />
+                                    <label class="checkbox" for="negru">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Negru</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="rosu" type="checkbox" />
+                                    <label class="checkbox" for="rosu">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Roșu</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="gri" type="checkbox" />
+                                    <label class="checkbox" for="gri">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Gri</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="albastru" type="checkbox" />
+                                    <label class="checkbox" for="albastru">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Albastru</span>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter-body__option filter-option">
+                        <div class="filter-option__header">Formă <span class="icon-chevron--down"></span></div>
+                        <ul class="filter-option__list">
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="alb" type="checkbox" />
+                                    <label class="checkbox" for="alb">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Alb</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="negru" type="checkbox" />
+                                    <label class="checkbox" for="negru">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Negru</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="rosu" type="checkbox" />
+                                    <label class="checkbox" for="rosu">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Roșu</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="gri" type="checkbox" />
+                                    <label class="checkbox" for="gri">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Gri</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-container accent">
+                                    <input class="checkbox-input" id="albastru" type="checkbox" />
+                                    <label class="checkbox" for="albastru">
+                                      <span>
+                                        <svg width="12px" height="10px">
+                                          <use xlink:href="#check"></use>
+                                        </svg>
+                                      </span>
+                                      <span>Albastru</span>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+                <div class="filter-options__footer filter-footer">
+                    <button class="button button__primary--outline filter-footer__reset">Resetează</button>
+                    <button class="button button__outline filter-footer__close">Închide filtre</button>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="product-header__sort product-sort">
+            <div class="product-sort__main">
+                <span>Sortează după:</span>
+                <a href="#" class="active">Populare</a>
+                <a href="#">Produse noi</a>
+                <a href="#">Reducere</a>
+            </div>
+            <div class="product-sort__result">
+                <strong>320</strong>
+                produse
+            </div>
+        </div>
+
+        <div class="product-header__sort product-sort--mobile">
+            <div class="product-sort__header">
+                <span>Sortează după:</span>
+                <button>Populare</button>
+            </div>
+            <ul class="product-sort__options">
+                <li><a href="#" class="active">Populare</a></li>
+                <li><a href="#" >Produse noi</a></li>
+                <li><a href="#" >Reducere</a></li>
+                <li><a href="#" >Preț</a></li>
+            </ul>
+            <div class="product-sort__result">
+                <strong>320</strong>
+                produse
+            </div>
+        </div>
+    </div>
+    <div class="product-header__options">
+        <button class="button button__chip">#rotundă <span class="icon-close"></span></button>
+    </div>
+</div>
 
                 <div class="product-page__main">
                     <div class="product">
@@ -628,7 +939,33 @@
                     </div>
                 </div>
                 <div class="product-page__footer">
-                    
+                    <div class="pagination">
+    <div class="pagination__container">
+        <div class="pagination-body">
+            <button class="button button__light pagination-button">
+                Vezi mai multe
+            </button>
+            <ul class="pagination-list">
+                <li>
+                    <a href="">1</a>
+                </li>
+                <li>
+                    <a href="">2</a>
+                </li>
+                <li>
+                    <a href="">3</a>
+                </li>
+                <li>
+                    ...
+                </li>
+                <li>
+                    <a href="">16</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
                 </div>
             </div>
         </div>

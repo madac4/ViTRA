@@ -5,16 +5,124 @@
             align-items: center;
             gap: 20px;
             margin-bottom: 20px;
+            position: relative;
+
+            @media (max-width: $mobileMedium) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
-        &__filter {
-            width: fit-content;
-            padding: 14px 28px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            span {
-                font-size: 18px;
-                transform: translateY(-1px);
+        .product-filter {
+            @media (max-width: $mobileMedium) {
+                width: 100%;
+            }
+            &__button {
+                width: fit-content;
+                padding: 14px 28px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                @media (max-width: $mobileMedium) {
+                    width: 30%;
+                }
+                @media (max-width: $mobileSmall) {
+                    width: 100%;
+                }
+                span {
+                    font-size: 18px;
+                    transform: translateY(-1px);
+                }
+            }
+            .filter-options {
+                position: absolute;
+                background-color: #fff;
+                z-index: 4;
+                top: calc(100% + 10px);
+                border-radius: 4px;
+                border: 1px solid #e4e4e4;
+                border-top: none;
+                width: 100%;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.3s;
+                @media (max-width: $mobileMedium) {
+                    top: 60%;
+                }
+                &.open {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .filter-body {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    margin-bottom: 30px;
+                    @media (max-width: $mobile) {
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                    @media (max-width: $mobileMedium) {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    @media (max-width: $mobileSmall) {
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+                    .filter-option {
+                        position: relative;
+                        &.open {
+                            .filter-option__header {
+                                color: $orangecolor;
+                                span {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                            .filter-option__list {
+                                opacity: 1;
+                                visibility: visible;
+                                top: 100%;
+                            }
+                        }
+                        &__header {
+                            @include adaptiv-value('padding-top', 30, 15, 1);
+                            @include adaptiv-value('padding-bottom', 30, 15, 1);
+                            border: 1px solid #e4e4e4;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 10px;
+                            font-size: 18px;
+                            transition: 0.3s;
+                            cursor: pointer;
+                            span {
+                                transition: 0.3s;
+                            }
+                        }
+                        &__list {
+                            position: absolute;
+                            width: 100%;
+                            top: 110%;
+                            z-index: 5;
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            flex-direction: column;
+                            gap: 15px;
+                            background-color: #fff;
+                            padding: 20px;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+                &__footer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                    padding-bottom: 30px;
+                    button {
+                        width: fit-content;
+                    }
+                }
             }
         }
         &__sort {
@@ -22,25 +130,28 @@
             align-items: center;
             justify-content: space-between;
             width: 100%;
+            @media (max-width: $mobileMedium) {
+                display: none;
+            }
             .product-sort__main {
                 @include adaptiv-value('gap', 20, 10, 1);
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
                 width: 100%;
-                span {
-                    color: $graycolor400;
-                    font-size: 14px;
+            }
+            span {
+                color: $graycolor400;
+                font-size: 14px;
+            }
+            a {
+                font-size: 14px;
+                transition: 0.3s;
+                &.active {
+                    text-decoration: underline;
                 }
-                a {
-                    font-size: 14px;
-                    transition: 0.3s;
-                    &.active {
-                        text-decoration: underline;
-                    }
-                    &:hover {
-                        color: $orangecolor;
-                    }
+                &:hover {
+                    color: $orangecolor;
                 }
             }
             .product-sort__result {
@@ -55,6 +166,55 @@
                 }
             }
         }
+        .product-sort--mobile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            @media (min-width: $mobileMedium) {
+                display: none;
+            }
+            &.open {
+                .product-sort__options {
+                    opacity: 1;
+                    visibility: visible;
+                    top: 140%;
+                }
+            }
+            .product-sort__header {
+                button {
+                    color: $orangecolor;
+                    text-decoration: underline;
+                    font-size: 14px;
+                }
+            }
+            .product-sort__options {
+                position: absolute;
+                background-color: #fff;
+                border-radius: 4px;
+                width: 180px;
+                left: 0;
+                top: 50px;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.3s;
+                li {
+                    a {
+                        display: block;
+                        padding: 8px;
+                        text-decoration: none;
+                        transition: 0.3s;
+                        &.active {
+                            background-color: rgba(241, 93, 34, 0.2);
+                        }
+                        &:hover {
+                            color: $orangecolor;
+                        }
+                    }
+                }
+                z-index: 3;
+            }
+        }
         &__options {
             margin-bottom: 20px;
         }
@@ -62,7 +222,7 @@
     .product-page__main {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 20px;
+        @include adaptiv-value('grid-gap', 20, 10, 1);
         margin-bottom: 30px;
         @media (max-width: 1110px) {
             grid-template-columns: repeat(3, 1fr);
@@ -78,6 +238,11 @@
         @media (max-width: $mobileMedium) {
         }
         @media (max-width: $mobileSmall) {
+            .product {
+                &__images {
+                    height: 160px;
+                }
+            }
         }
     }
 }

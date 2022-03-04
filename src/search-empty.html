@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./components/head.html', {'title': 'ViTRA - Nu sunt rezultate'})
+
+<body>
+    @@include('./components/header.html')
+    <main>
+        <section class="search search-empty">
+            <div class="search__container">
+                <div class="search__results">
+                    <h1>După căutarea “Fdsf dsf” au fost găsite 0 produse</h1>
+                    <a href="/" class="button button__primary">Revină la pagina principală</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="overlay"></div>
+    @@include('./components/bottomNavigation.html') @@include('./components/footer.html')
+
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
