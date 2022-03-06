@@ -278,6 +278,11 @@ main {
     display: none;
 }
 
+textarea {
+    resize: none;
+    height: 100px;
+}
+
 input,
 textarea {
     width: 100%;
@@ -329,7 +334,6 @@ input[type='radio'] {
     background: #ffffff;
     color: #222;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-flow: row wrap;
 }
@@ -346,7 +350,8 @@ input[type='radio'] {
 .checkbox {
     user-select: none;
     cursor: pointer;
-    padding: 6px 8px;
+    // padding: 6px 8px;
+    padding: 1px;
     border-radius: 6px;
     overflow: hidden;
     transition: all 0.3s ease;
