@@ -168,17 +168,25 @@
                 <input class="filled" type="text" placeholder="Căutare">
                 <button class="icon-search"></button>
             </form>
-            <button class="button button__gray">
-                <span class="icon-heart"></span>
-                Favorite (0)
-            </button>
-            <button class="button button__gray">
-                <span class="icon-cart"></span>
-                Coș (0)
-            </button>
-            <button class="button button__gray">
-                <span class="icon-user"></span>
-            </button>
+            <div class="header-right__block header-right__favorite">
+                <button class="button button__gray">
+                    <span class="icon-heart"></span>
+                    Favorite (1)
+                </button>
+                @@include('./fav-modal.html')
+            </div>
+            <div class="header-right__block header-right__cart">
+                <button class="button button__gray">
+                    <span class="icon-cart"></span>
+                    Coș (4)
+                </button>
+                @@include('./cart-modal.html')
+            </div>
+            <div class="header-right__block header-right__user">
+                <button class="button button__gray">
+                    <span class="icon-user"></span>
+                </button>
+            </div>
         </div>
         <div class="header__right header-right--mobile">
             <button type="button" class="burger">

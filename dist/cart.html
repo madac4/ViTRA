@@ -180,17 +180,141 @@
                 <input class="filled" type="text" placeholder="Căutare">
                 <button class="icon-search"></button>
             </form>
-            <button class="button button__gray">
-                <span class="icon-heart"></span>
-                Favorite (0)
-            </button>
-            <button class="button button__gray">
-                <span class="icon-cart"></span>
-                Coș (0)
-            </button>
-            <button class="button button__gray">
-                <span class="icon-user"></span>
-            </button>
+            <div class="header-right__block header-right__favorite">
+                <button class="button button__gray">
+                    <span class="icon-heart"></span>
+                    Favorite (1)
+                </button>
+                <div class="fav-modal">
+    <div class="fav-modal__header">
+        <h3>Favorite</h3>
+        <button class="button button__outline--gray">Șterge tot</button>
+    </div>
+    <div class="fav-modal__body">
+        <div class="cart-product">
+            <img class="cart-product__image" src="img/product1.png" />
+            <div class="cart-product__content product-content">
+                <p class="product-content__name">
+                    Fotoliu de birou Royal Lux Split Piele negru, denumire pe două rânduri
+                </p>
+                <div class="product-content__meta product-meta">
+                    <h3>1200 mdl</h3>
+
+                    <div class="product-controls">
+                        <button class="product-controls__delete icon-close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fav-modal__footer">
+        <a href="../product-filter.html" class="button button__dark">Spre pagina produselor</a>
+    </div>
+</div>
+            </div>
+            <div class="header-right__block header-right__cart">
+                <button class="button button__gray">
+                    <span class="icon-cart"></span>
+                    Coș (4)
+                </button>
+                <div class="cart-modal">
+    <div class="cart-modal__header">
+        <h3>Coșul</h3>
+        <button class="button button__outline--gray">Șterge tot</button>
+    </div>
+    <div class="cart-modal__body">
+        <div class="cart-product">
+            <img class="cart-product__image" src="img/product1.png" />
+            <div class="cart-product__content product-content">
+                <p class="product-content__name">
+                    Fotoliu de birou Royal Lux Split Piele negru, denumire pe două rânduri
+                </p>
+                <div class="product-content__meta product-meta">
+                    <h3>1200 mdl</h3>
+
+                    <div class="product-controls">
+                        <div class="product-controls__counter">
+                            <button class="icon-minus"></button>
+                            1
+                            <button class="icon-plus"></button>
+                        </div>
+                        <button class="product-controls__delete icon-close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-product">
+            <img class="cart-product__image" src="img/product1.png" />
+            <div class="cart-product__content product-content">
+                <p class="product-content__name">
+                    Fotoliu de birou Royal Lux Split Piele negru, denumire pe două rânduri
+                </p>
+                <div class="product-content__meta product-meta">
+                    <h3>1200 mdl</h3>
+
+                    <div class="product-controls">
+                        <div class="product-controls__counter">
+                            <button class="icon-minus"></button>
+                            1
+                            <button class="icon-plus"></button>
+                        </div>
+                        <button class="product-controls__delete icon-close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-product">
+            <img class="cart-product__image" src="img/product1.png" />
+            <div class="cart-product__content product-content">
+                <p class="product-content__name">
+                    Fotoliu de birou Royal Lux Split Piele negru, denumire pe două rânduri
+                </p>
+                <div class="product-content__meta product-meta">
+                    <h3>1200 mdl</h3>
+
+                    <div class="product-controls">
+                        <div class="product-controls__counter">
+                            <button class="icon-minus"></button>
+                            1
+                            <button class="icon-plus"></button>
+                        </div>
+                        <button class="product-controls__delete icon-close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-product">
+            <img class="cart-product__image" src="img/product1.png" />
+            <div class="cart-product__content product-content">
+                <p class="product-content__name">
+                    Fotoliu de birou Royal Lux Split Piele negru, denumire pe două rânduri
+                </p>
+                <div class="product-content__meta product-meta">
+                    <h3>1200 mdl</h3>
+
+                    <div class="product-controls">
+                        <div class="product-controls__counter">
+                            <button class="icon-minus"></button>
+                            1
+                            <button class="icon-plus"></button>
+                        </div>
+                        <button class="product-controls__delete icon-close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart-modal__footer">
+        <h3>8400 mdl</h3>
+        <a href="../cart.html" class="button button__primary">Spre achitare</a>
+    </div>
+</div>
+            </div>
+            <div class="header-right__block header-right__user">
+                <button class="button button__gray">
+                    <span class="icon-user"></span>
+                </button>
+            </div>
         </div>
         <div class="header__right header-right--mobile">
             <button type="button" class="burger">
@@ -590,6 +714,178 @@
                             </div>
                         </div>
                     </aside>
+
+                </div>
+
+                <div class="product-slider">
+                    <h3>Produse recomandate</h3>
+                    <div class="product-slider__container">
+                        <div class="page__product-slider product-slider">
+                            <div class="product-slider__body">
+                                <div class="product-slider__slider">
+                                    <div class="slider-product__body swiper">
+                                        <div class="slider-product__slide">
+                                            <div class="product">
+                                                <div class="product__labels">
+                                                    <span class="label" style="background-color: #EE2924;">SALE </span>
+                                                    <span class="label" style="background-color: #FEA800;">Top vânzări</span>
+                                                </div>
+        
+                                                <div class="product__images product-images">
+                                                    <img class="product-images__image product-images__image--active" src="img/product1.png" alt="">
+                                                    <img class="product-images__image" src="img/product2.png" alt="">
+                                                    <img class="product-images__image" src="img/product3.png" alt="">
+                                                </div>
+        
+                                                <div class="product__pagination"></div>
+        
+                                                <div class="product__footer product-footer">
+                                                    <div class="product-footer__info">
+                                                        <a href="#" class="product-name">
+                                                            Optio qui sequi consequatur quia quod
+                                                        </a>
+                                                        <small class="product-code">Cod produs: 2103dc12</small>
+                                                        <h3 class="product-price">12 410 MDL <span class="product-price--old">14 210 MDL</span></h3>
+                                                    </div>
+                                                    <div class="product-footer__controls">
+                                                        <button class="button button__control icon-heart__filled"></button>
+                                                        <button class="button button__control icon-cart"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider-product__slide">
+                                            <div class="product">
+                                                <div class="product__labels">
+                                                    <span class="label" style="background-color: #EE2924;">SALE </span>
+                                                </div>
+        
+                                                <div class="product__images">
+                                                    <img class="product-images__image product-images__image--active" src="img/product4.png" alt="">
+                                                    <img class="product-images__image" src="img/product5.png" alt="">
+                                                    <img class="product-images__image" src="img/product6.png" alt="">
+                                                    <img class="product-images__image" src="img/product7.png" alt="">
+                                                    <img class="product-images__image" src="img/product8.png" alt="">
+                                                </div>
+        
+                                                <div class="product__pagination"></div>
+        
+                                                <div class="product__footer product-footer">
+                                                    <div class="product-footer__info">
+                                                        <a href="#" class="product-name">
+                                                            Optio qui sequi consequatur quia quod
+                                                        </a>
+                                                        <small class="product-code">Cod produs: 2103dc12</small>
+                                                        <h3 class="product-price">Află prețul</span>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="product-footer__controls">
+                                                        <button class="button button__control icon-heart__filled added"></button>
+                                                        <button class="button button__control icon-cart added"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider-product__slide">
+                                            <div class="product">
+                                                <div class="product__labels">
+                                                    <span class="label" style="background-color: #EE2924;">SALE </span>
+                                                    <span class="label" style="background-color: #FEA800;">Top vânzări</span>
+                                                </div>
+        
+                                                <div class="product__images product-images">
+                                                    <img class="product-images__image product-images__image--active" src="img/product9.png" alt="">
+                                                    <img class="product-images__image" src="img/product10.png" alt="">
+                                                    <img class="product-images__image" src="img/product11.png" alt="">
+                                                </div>
+        
+                                                <div class="product__pagination"></div>
+        
+                                                <div class="product__footer product-footer">
+                                                    <div class="product-footer__info">
+                                                        <a href="#" class="product-name">
+                                                            Optio qui sequi consequatur quia quod
+                                                        </a>
+                                                        <small class="product-code">Cod produs: 2103dc12</small>
+                                                        <h3 class="product-price">12 410 MDL <span class="product-price--old">14 210 MDL</span></h3>
+                                                    </div>
+                                                    <div class="product-footer__controls">
+                                                        <button class="button button__control icon-heart__filled"></button>
+                                                        <button class="button button__control icon-cart"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider-product__slide">
+                                            <div class="product">
+                                                <div class="product__labels">
+                                                    <span class="label" style="background-color: #EE2924;">SALE </span>
+                                                </div>
+        
+                                                <div class="product__images">
+                                                    <img class="product-images__image product-images__image--active" src="img/product2.png" alt="">
+                                                </div>
+        
+                                                <div class="product__pagination"></div>
+        
+                                                <div class="product__footer product-footer">
+                                                    <div class="product-footer__info">
+                                                        <a href="#" class="product-name">
+                                                            Optio qui sequi consequatur quia quod
+                                                        </a>
+                                                        <small class="product-code">Cod produs: 2103dc12</small>
+                                                        <h3 class="product-price">Află prețul</span>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="product-footer__controls">
+                                                        <button class="button button__control icon-heart__filled "></button>
+                                                        <button class="button button__control icon-cart "></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider-product__slide">
+                                            <div class="product">
+                                                <div class="product__images">
+                                                    <img class="product-images__image product-images__image--active" src="img/product3.png" alt="">
+                                                    <img class="product-images__image product-images__image--active" src="img/product7.png" alt="">
+                                                </div>
+        
+                                                <div class="product__pagination"></div>
+        
+                                                <div class="product__footer product-footer">
+                                                    <div class="product-footer__info">
+                                                        <a href="#" class="product-name">
+                                                            Optio qui sequi consequatur qui consequatur qui consequatur quia quod
+                                                        </a>
+                                                        <small class="product-code">Cod produs: 2103dc12</small>
+                                                        <h3 class="product-price">Află prețul</span>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="product-footer__controls">
+                                                        <button class="button button__control icon-heart__filled"></button>
+                                                        <button class="button button__control icon-cart"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider-product__slide">
+                                            <a href="#" class="product-mock">
+                                                Vezi Toate reducerile
+                                            </a>
+                                        </div>
+                                    </div>
+        
+                                    <div class="slider-product-controls">
+                                        <div class="slider-product-controls__arrows slider-arrows">
+                                            <button type="button" class="slider-arrow slider-arrow__prev icon-chevron--left"></button>
+                                            <button type="button" class="slider-arrow slider-arrow__next icon-chevron--right"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

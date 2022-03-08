@@ -92,6 +92,12 @@ main {
                 color: $orangecolor;
             }
         }
+        &--gray {
+            border: 1px solid #bdbdbd;
+            color: #bdbdbd;
+            padding: 14px 20px;
+            border-radius: 0;
+        }
         &--option {
             width: fit-content;
             padding: 10px 15px;
@@ -179,6 +185,7 @@ main {
     }
     &[disabled] {
         background-color: $graycolor400;
+        pointer-events: none;
         cursor: not-allowed;
     }
     &__dark {
