@@ -7,8 +7,7 @@
             height: 100%
         }
         .blog-introduction__post {
-            top: 20px;
-            left: 20px;
+            position: relative;
             max-width: 570px;
             width: 100%;
             @include adaptiv-value('padding', 40, 20, 1);
@@ -16,9 +15,20 @@
             .post-introduction__tags {
                 margin-bottom: 10px;
             }
-            h1 {
-                margin-bottom: 10px;
+            a {
+                display: block;
+                font-size: 36px;
+                font-weight: 600;
                 line-height: 120%;
+                color: #3C3C3C;
+                margin-bottom: 10px;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    inset: 0;
+                    height: 100%;
+                    width: 100%;
+                }
             }
             p {
                 margin-top: 20px;

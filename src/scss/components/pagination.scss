@@ -1,12 +1,24 @@
 .pagination {
     max-width: calc(50% + 125px);
     margin-left: auto;
+    @media (max-width: $mobile) {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
     &-body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 20px;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
         .pagination-button {
             width: 220px;
+            @media (max-width: $mobileSmall) {
+                width: 100%;
+            }
         }
         .pagination-list {
             display: flex;
