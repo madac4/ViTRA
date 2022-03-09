@@ -21,6 +21,9 @@
             gap: 20px;
         }
         &__related {
+            @media (max-width: $mobile) {
+                display: none;
+            }
             h3 {
                 margin-top: 30px;
                 margin-bottom: 20px;
@@ -29,20 +32,6 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 @include adaptiv-value('gap', 20, 10, 1);
-                @media (max-width: $mobile) {
-                    .product {
-                        &__images {
-                            height: 200px;
-                        }
-                    }
-                }
-                @media (max-width: $mobileSmall) {
-                    .product {
-                        &__images {
-                            height: 160px;
-                        }
-                    }
-                }
             }
         }
     }
@@ -129,6 +118,16 @@
             .checkbox-container span a {
                 color: #3362ab;
             }
+        }
+    }
+
+    .product-slider {
+        display: none;
+        h3 {
+            margin-top: 30px;
+        }
+        @media (max-width: $mobile) {
+            display: block;
         }
     }
 }

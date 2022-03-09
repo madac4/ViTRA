@@ -29,13 +29,16 @@ if (headerMobile && headerMobileToggler) {
 if (burgerDesktop) {
     burgerDesktop.addEventListener('click', () => {
         menuDesktop.classList.toggle('menu-open');
-        overlay.classList.add('active');
+        overlay.classList.toggle('active');
         document.body.classList.toggle('lock')
     })
     overlay.addEventListener('click', () =>{
-        menuDesktop.classList.remove('menu-open');
+        menuDesktop && menuDesktop.classList.remove('menu-open');
         overlay.classList.remove('active');
         document.body.classList.remove('lock')
+        cartModal && cartModal.classList.remove('active')
+        filters && filters.classList.remove('open')
+        favModal && favModal.classList.remove('active');
     })
 }
 
@@ -329,10 +332,6 @@ if (filterToggler && filters)  {
             filters.classList.remove('open')
             overlay.classList.remove('active')
         })
-        overlay.addEventListener('click', () =>{
-            filters.classList.remove('open')
-            overlay.classList.remove('active')
-        })
     })
 }
 if (filterItem.length > 0) {
@@ -347,9 +346,25 @@ if (filterItem.length > 0) {
 
 const scrollContainer = document.querySelector('.scroll-category__body');
 
-    if (scrollContainer) {
-        scrollContainer.addEventListener('wheel', (evt) => {
-            evt.preventDefault();
-            scrollContainer.scrollLeft += evt.deltaY;
-        });
-    }
+if (scrollContainer) {
+    scrollContainer.addEventListener('wheel', (evt) => {
+        evt.preventDefault();
+        scrollContainer.scrollLeft += evt.deltaY;
+    });
+}
+
+const headerCart = document.querySelector('.header-right__cart button');
+const cartModal = document.querySelector('.cart-modal');
+
+headerCart.addEventListener('click', () =>{
+    cartModal.classList.toggle('active');
+    overlay.classList.toggle('active')
+})
+
+const headerFav = document.querySelector('.header-right__favorite button');
+const favModal = document.querySelector('.fav-modal');
+
+headerFav.addEventListener('click', () =>{
+    favModal.classList.toggle('active');
+    overlay.classList.toggle('active')
+})

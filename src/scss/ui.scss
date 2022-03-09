@@ -92,6 +92,12 @@ main {
                 color: $orangecolor;
             }
         }
+        &--gray {
+            border: 1px solid #bdbdbd;
+            color: #bdbdbd;
+            padding: 14px 20px;
+            border-radius: 0;
+        }
         &--option {
             width: fit-content;
             padding: 10px 15px;
@@ -179,6 +185,7 @@ main {
     }
     &[disabled] {
         background-color: $graycolor400;
+        pointer-events: none;
         cursor: not-allowed;
     }
     &__dark {
@@ -406,19 +413,19 @@ input[type='radio'] {
     border-color: $darkcolor;
 }
 
-.checkbox-container.accent .checkbox-input:checked + .checkbox span:first-child {
+.checkbox-container.accent .checkbox-input:checked+.checkbox span:first-child {
     background: $orangecolor;
     border-color: $orangecolor;
     animation: zoom-in-out 0.3s ease;
 }
 
-.checkbox-input:checked + .checkbox span:first-child {
+.checkbox-input:checked+.checkbox span:first-child {
     background: $darkcolor;
     border-color: $darkcolor;
     animation: zoom-in-out 0.3s ease;
 }
 
-.checkbox-input:checked + .checkbox span:first-child svg {
+.checkbox-input:checked+.checkbox span:first-child svg {
     stroke-dashoffset: 0;
 }
 

@@ -258,6 +258,9 @@
         display: flex;
         align-items: center;
         gap: 15px;
+        &__block {
+            position: relative;
+        }
         &--mobile {
             display: block;
             @media (min-width: $tablet) {
