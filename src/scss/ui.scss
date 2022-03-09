@@ -469,14 +469,23 @@ input[type='radio'] {
     }
 }
 
-.dot.not-empty {
+.dot {
     position: absolute;
     top: 20%;
     right: 35%;
     width: 8px;
     height: 8px;
-    background-color: $orangecolor;
     border-radius: 50%;
+    &.not-empty {
+        background-color: $orangecolor;
+    }
+    &.logged {
+        background-color: #07ad4b;
+        right: 20%;
+        @media (max-width: $mobileSmall) {
+            display: block !important;
+        }
+    }
     @media (max-width: $mobile) {
         right: 30%;
     }

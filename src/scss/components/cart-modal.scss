@@ -11,10 +11,23 @@
     visibility: hidden;
     z-index: 4;
     transition: 0.3s;
+    @media (max-width: $tablet) {
+        position: fixed;
+        width: 100% !important;
+        height: 100%;
+        top: 10%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 6;
+    }
     &.active {
         opacity: 1;
         visibility: visible;
         top: 130%;
+        @media (max-width: $tablet) {
+            top: 0;
+        }
     }
     &__header {
         display: flex;
@@ -40,6 +53,11 @@
         min-height: 300px;
         overflow: auto;
         padding-right: 10px;
+        @media (max-width: $tablet) {
+            max-height: 70vh;
+            min-height: auto;
+            padding-right: 0;
+        }
         &::-webkit-scrollbar {
             width: 8px;
         }

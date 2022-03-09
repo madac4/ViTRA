@@ -260,6 +260,9 @@
         gap: 15px;
         &__block {
             position: relative;
+            @media (max-width: $tablet) {
+                position: initial;
+            }
         }
         &--mobile {
             display: block;

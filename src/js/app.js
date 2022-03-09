@@ -354,17 +354,33 @@ if (scrollContainer) {
 }
 
 const headerCart = document.querySelector('.header-right__cart button');
+const bottomNavigationCart = document.querySelector('.bottom-navigation__cart');
 const cartModal = document.querySelector('.cart-modal');
 
 headerCart.addEventListener('click', () =>{
     cartModal.classList.toggle('active');
     overlay.classList.toggle('active')
 })
+bottomNavigationCart.addEventListener('click', () =>{
+    cartModal.classList.toggle('active');
+    bottomNavigationCart.classList.toggle('active');
+    document.body.classList.toggle('lock')
+    favModal.classList.remove('active');
+    bottomNavigationFav.classList.remove('active')
+})
 
 const headerFav = document.querySelector('.header-right__favorite button');
+const bottomNavigationFav = document.querySelector('.bottom-navigation__fav');
 const favModal = document.querySelector('.fav-modal');
 
 headerFav.addEventListener('click', () =>{
     favModal.classList.toggle('active');
     overlay.classList.toggle('active')
+})
+bottomNavigationFav.addEventListener('click', () =>{
+    favModal.classList.toggle('active');
+    bottomNavigationFav.classList.toggle('active')
+    document.body.classList.toggle('lock')
+    cartModal.classList.remove('active');
+    bottomNavigationCart.classList.remove('active');
 })
