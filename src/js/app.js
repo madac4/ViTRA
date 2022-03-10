@@ -28,6 +28,9 @@ if (headerMobile && headerMobileToggler) {
 }
 if (burgerDesktop) {
     burgerDesktop.addEventListener('click', () => {
+        callModal.classList.remove('open')
+        overlay.classList.remove('active')  
+        document.body.classList.remove('lock')
         menuDesktop.classList.toggle('menu-open');
         overlay.classList.toggle('active');
         document.body.classList.toggle('lock')
@@ -39,6 +42,7 @@ if (burgerDesktop) {
         cartModal && cartModal.classList.remove('active')
         filters && filters.classList.remove('open')
         favModal && favModal.classList.remove('active');
+        callModal&& callModal.classList.remove('open')
     })
 }
 
@@ -357,30 +361,56 @@ const headerCart = document.querySelector('.header-right__cart button');
 const bottomNavigationCart = document.querySelector('.bottom-navigation__cart');
 const cartModal = document.querySelector('.cart-modal');
 
-headerCart.addEventListener('click', () =>{
-    cartModal.classList.toggle('active');
-    overlay.classList.toggle('active')
-})
-bottomNavigationCart.addEventListener('click', () =>{
-    cartModal.classList.toggle('active');
-    bottomNavigationCart.classList.toggle('active');
-    document.body.classList.toggle('lock')
-    favModal.classList.remove('active');
-    bottomNavigationFav.classList.remove('active')
-})
+if (cartModal) {
+    headerCart.addEventListener('click', () =>{
+        cartModal.classList.toggle('active');
+        overlay.classList.toggle('active')
+    }) 
+    bottomNavigationCart.addEventListener('click', () =>{
+        cartModal.classList.toggle('active');
+        bottomNavigationCart.classList.toggle('active');
+        document.body.classList.toggle('lock')
+        favModal.classList.remove('active');
+        bottomNavigationFav.classList.remove('active')
+    })
+}
 
 const headerFav = document.querySelector('.header-right__favorite button');
 const bottomNavigationFav = document.querySelector('.bottom-navigation__fav');
 const favModal = document.querySelector('.fav-modal');
 
-headerFav.addEventListener('click', () =>{
-    favModal.classList.toggle('active');
-    overlay.classList.toggle('active')
-})
-bottomNavigationFav.addEventListener('click', () =>{
-    favModal.classList.toggle('active');
-    bottomNavigationFav.classList.toggle('active')
-    document.body.classList.toggle('lock')
-    cartModal.classList.remove('active');
-    bottomNavigationCart.classList.remove('active');
-})
+if (favModal) {
+    headerFav.addEventListener('click', () =>{
+        favModal.classList.toggle('active');
+        overlay.classList.toggle('active')
+    })
+    bottomNavigationFav.addEventListener('click', () =>{
+        favModal.classList.toggle('active');
+        bottomNavigationFav.classList.toggle('active')
+        document.body.classList.toggle('lock')
+        cartModal.classList.remove('active');
+        bottomNavigationCart.classList.remove('active');
+    })
+}
+
+const getCall = document.querySelectorAll('.get-call');
+const callModal = document.querySelector('.call-modal');
+const callModalClose = document.querySelector('.call-modal .icon-close');
+
+if (callModal) {
+    getCall.forEach(callButton =>{
+        callButton.addEventListener('click', () =>{
+            headerMobile && headerMobile.classList.remove('active')
+            headerMobileToggler && headerMobileToggler.classList.remove('active')
+            callModal.classList.toggle('open')
+            overlay.classList.toggle('active')
+            document.body.classList.toggle('lock')
+        })
+    })
+    
+    callModalClose.addEventListener('click', () =>{
+        callModal.classList.remove('open')
+        overlay.classList.remove('active')
+        document.body.classList.remove('lock')
+    })
+}

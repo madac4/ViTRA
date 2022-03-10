@@ -235,7 +235,7 @@ label,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
+  font-family: "Galano Grotesque";
   font-size: 100%;
   line-height: 1.15;
 }
@@ -2086,13 +2086,31 @@ section.filter {
   max-width: calc(50% + 125px);
   margin-left: auto;
 }
+@media (max-width: 47.99875rem) {
+  .pagination {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
 .pagination-body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 47.99875rem) {
+  .pagination-body {
+    flex-direction: column;
+  }
 }
 .pagination-body .pagination-button {
   width: 220px;
+}
+@media (max-width: 29.99875rem) {
+  .pagination-body .pagination-button {
+    width: 100%;
+  }
 }
 .pagination-body .pagination-list {
   display: flex;
@@ -2488,6 +2506,72 @@ section.filter {
   font-size: 14px;
   margin-bottom: 20px;
   display: block;
+}
+
+.call-modal {
+  padding: 30px;
+  background-color: #fff;
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 480px;
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+@media (max-width: 1420px) {
+  .call-modal {
+    padding: calc( 15px + 15 * ((100vw - 320px) / 1100));
+  }
+}
+.call-modal.open {
+  opacity: 1;
+  visibility: visible;
+  top: 50%;
+}
+.call-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+@media (max-width: 1420px) {
+  .call-modal__header {
+    gap: calc( 15px + 15 * ((100vw - 320px) / 1100));
+  }
+}
+@media (max-width: 1420px) {
+  .call-modal__header {
+    margin-bottom: calc( 30px + 20 * ((100vw - 320px) / 1100));
+  }
+}
+.call-modal__header button {
+  font-size: 32px;
+}
+.call-modal__body form {
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1420px) {
+  .call-modal__body form {
+    gap: calc( 10px + 20 * ((100vw - 320px) / 1100));
+  }
+}
+.call-modal__body form label {
+  font-weight: 600;
+}
+.call-modal__body form label input,
+.call-modal__body form label textarea {
+  margin-top: 5px;
+}
+.call-modal__body form button {
+  max-width: fit-content;
+  padding: 14px 28px;
 }
 
 .page__main-slider {
@@ -3487,8 +3571,7 @@ section.filter {
   }
 }
 .blog-introduction__body .blog-introduction__post {
-  top: 20px;
-  left: 20px;
+  position: relative;
   max-width: 570px;
   width: 100%;
   padding: 40px;
@@ -3502,9 +3585,20 @@ section.filter {
 .blog-introduction__body .blog-introduction__post .post-introduction__tags {
   margin-bottom: 10px;
 }
-.blog-introduction__body .blog-introduction__post h1 {
-  margin-bottom: 10px;
+.blog-introduction__body .blog-introduction__post a {
+  display: block;
+  font-size: 36px;
+  font-weight: 600;
   line-height: 120%;
+  color: #3C3C3C;
+  margin-bottom: 10px;
+}
+.blog-introduction__body .blog-introduction__post a::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  height: 100%;
+  width: 100%;
 }
 .blog-introduction__body .blog-introduction__post p {
   margin-top: 20px;
@@ -3615,4 +3709,83 @@ section.filter {
   .search__results h3 {
     margin-top: calc( 50px + 20 * ((100vw - 320px) / 1100));
   }
+}
+
+.profile-body {
+  display: flex;
+}
+.profile-body h3 {
+  margin-bottom: 50px;
+}
+.profile-body .profile-form form {
+  width: 660px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+.profile-body .profile-form form label {
+  color: #3C3C3C;
+}
+.profile-body .profile-form form label:nth-child(2) {
+  grid-row: 2 span;
+}
+.profile-body .profile-form form label:nth-child(2) input:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+.profile-body .profile-form form label h5 {
+  font-size: 18px;
+  line-height: 100%;
+  margin-bottom: 15px;
+}
+.profile-body .profile-form form a {
+  display: block;
+  margin-left: auto;
+  grid-column: 2 span;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration-line: underline;
+  color: #2C5282;
+}
+.profile-body .profile-form form .form-btns {
+  margin-left: auto;
+  grid-column: 2 span;
+}
+.profile-body .profile-form form .form-btn {
+  width: 215px;
+}
+.profile-body .profile-form form .form-btn:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+.profile-body .profile-form form .button__primary {
+  background-color: #f15d22;
+}
+.profile-body .profile-form form .button__back {
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  padding: 15px 0;
+  font-weight: 600;
+  color: #bdbdbd;
+}
+.profile-body .profile-history__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.profile-body .profile-history__body .profile-history__item {
+  position: relative;
+  width: 580px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #F0F0F0;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+.profile-body .profile-history__body .profile-history__item .icon-chevron--down {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
 }

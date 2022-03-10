@@ -413,19 +413,19 @@ input[type='radio'] {
     border-color: $darkcolor;
 }
 
-.checkbox-container.accent .checkbox-input:checked + .checkbox span:first-child {
+.checkbox-container.accent .checkbox-input:checked+.checkbox span:first-child {
     background: $orangecolor;
     border-color: $orangecolor;
     animation: zoom-in-out 0.3s ease;
 }
 
-.checkbox-input:checked + .checkbox span:first-child {
+.checkbox-input:checked+.checkbox span:first-child {
     background: $darkcolor;
     border-color: $darkcolor;
     animation: zoom-in-out 0.3s ease;
 }
 
-.checkbox-input:checked + .checkbox span:first-child svg {
+.checkbox-input:checked+.checkbox span:first-child svg {
     stroke-dashoffset: 0;
 }
 
