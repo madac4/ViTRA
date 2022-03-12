@@ -106,6 +106,30 @@ main {
                 border-color: $orangecolor;
             }
         }
+        &--color {
+            width: 28px;
+            height: 28px;
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+            padding: 0;
+            border: none;
+            border-radius: 50%;
+            position: relative;
+            &.active {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    z-index: -1;
+                    inset: 0;
+                    left: -2px;
+                    top: -2px;
+                    width: calc(100% + 4px);
+                    height: calc(100% + 4px);
+                    background-color: #fff;
+                    border-radius: 50%;
+                    border: 1px solid $maincolor;
+                }
+            }
+        }
     }
     &__primary--outline {
         padding: 14px 20px;
@@ -413,19 +437,19 @@ input[type='radio'] {
     border-color: $darkcolor;
 }
 
-.checkbox-container.accent .checkbox-input:checked+.checkbox span:first-child {
+.checkbox-container.accent .checkbox-input:checked + .checkbox span:first-child {
     background: $orangecolor;
     border-color: $orangecolor;
     animation: zoom-in-out 0.3s ease;
 }
 
-.checkbox-input:checked+.checkbox span:first-child {
+.checkbox-input:checked + .checkbox span:first-child {
     background: $darkcolor;
     border-color: $darkcolor;
     animation: zoom-in-out 0.3s ease;
 }
 
-.checkbox-input:checked+.checkbox span:first-child svg {
+.checkbox-input:checked + .checkbox span:first-child svg {
     stroke-dashoffset: 0;
 }
 
@@ -469,14 +493,23 @@ input[type='radio'] {
     }
 }
 
-.dot.not-empty {
+.dot {
     position: absolute;
     top: 20%;
     right: 35%;
     width: 8px;
     height: 8px;
-    background-color: $orangecolor;
     border-radius: 50%;
+    &.not-empty {
+        background-color: $orangecolor;
+    }
+    &.logged {
+        background-color: #07ad4b;
+        right: 20%;
+        @media (max-width: $mobileSmall) {
+            display: block !important;
+        }
+    }
     @media (max-width: $mobile) {
         right: 30%;
     }

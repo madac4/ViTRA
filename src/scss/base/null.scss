@@ -63,10 +63,12 @@ button {
 
 button,
 input,
+form,
+label,
 optgroup,
 select,
 textarea {
-    font-family: inherit;
+    font-family: $fontFamily;
     font-size: 100%;
     line-height: 1.15;
 }
