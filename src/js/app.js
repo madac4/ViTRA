@@ -32,7 +32,7 @@ if (burgerDesktop) {
         overlay.classList.toggle('active');
         document.body.classList.toggle('lock')
     })
-    overlay.addEventListener('click', () =>{
+    overlay.addEventListener('click', () => {
         menuDesktop && menuDesktop.classList.remove('menu-open');
         overlay.classList.remove('active');
         document.body.classList.remove('lock')
@@ -136,10 +136,10 @@ if (document.querySelector('.slider-articles__body')) {
 const productSlider = document.querySelectorAll('.slider-product__body');
 
 if (productSlider.length >= 1) {
-    for( let i = 0; i < productSlider.length; i++) {
+    for (let i = 0; i < productSlider.length; i++) {
         productSlider[i].classList.add(`slider-product__body--${i}`);
         productSlider[i].parentNode.querySelector('.slider-product-controls__arrows').classList.add(`slider-product-${i}-controls__arrows`);
-    
+
         new Swiper(`.slider-product__body--${i}`, {
             grabCursor: true,
             observer: true,
@@ -175,7 +175,7 @@ if (productSlider.length >= 1) {
                 },
             },
         })
-    
+
     }
 }
 
@@ -241,13 +241,14 @@ window.addEventListener('DOMContentLoaded', () => {
         const mobileSortToggler = document.querySelector('.product-sort--mobile .product-sort__header button');
         const mobileSort = document.querySelector('.product-sort--mobile');
         if (mobileSortToggler && mobileSort) {
-            mobileSortToggler.addEventListener('click', () =>{
+            mobileSortToggler.addEventListener('click', () => {
                 mobileSort.classList.toggle('open')
             })
         }
-    }else{
+    } else {
         checkLabels(products)
     }
+
     function checkLabels(products) {
         products.forEach(product => {
             if (!product.querySelector('.product__labels')) {
@@ -256,6 +257,7 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         })
     }
+
     function checkLabelsMobile(products) {
         products.forEach(product => {
             if (!product.querySelector('.product__labels')) {
@@ -263,7 +265,7 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         })
     }
-    
+
 });
 
 function productSliders() {
@@ -324,19 +326,19 @@ const filters = document.querySelector('.product-filter__options');
 const filterItem = document.querySelectorAll('.filter-body__option');
 
 
-if (filterToggler && filters)  {
-    filterToggler.addEventListener('click', () =>{
+if (filterToggler && filters) {
+    filterToggler.addEventListener('click', () => {
         filters.classList.add('open');
         overlay.classList.add('active');
-        filters.querySelector('.filter-footer__close').addEventListener('click', () =>{
+        filters.querySelector('.filter-footer__close').addEventListener('click', () => {
             filters.classList.remove('open')
             overlay.classList.remove('active')
         })
     })
 }
 if (filterItem.length > 0) {
-    filterItem.forEach(item =>{
-        item.querySelector('.filter-option__header').addEventListener('click', () =>{
+    filterItem.forEach(item => {
+        item.querySelector('.filter-option__header').addEventListener('click', () => {
             item.classList.toggle('open');
         })
     })
@@ -356,7 +358,7 @@ if (scrollContainer) {
 const headerCart = document.querySelector('.header-right__cart button');
 const cartModal = document.querySelector('.cart-modal');
 
-headerCart.addEventListener('click', () =>{
+headerCart.addEventListener('click', () => {
     cartModal.classList.toggle('active');
     overlay.classList.toggle('active')
 })
@@ -364,7 +366,25 @@ headerCart.addEventListener('click', () =>{
 const headerFav = document.querySelector('.header-right__favorite button');
 const favModal = document.querySelector('.fav-modal');
 
-headerFav.addEventListener('click', () =>{
+headerFav.addEventListener('click', () => {
     favModal.classList.toggle('active');
     overlay.classList.toggle('active')
 })
+
+const historyContent = document.querySelector('.profile-history__item')
+const itemControl = document.querySelector('.item-header__control')
+
+if (historyContent[0]) {
+    for (let index = 0; index < historyContent.length; index++) {
+        historyContent[index].addEventListener('click', () => {
+            if (filterDesktop[index].classList.contains('open')) {
+                filterDesktop[index].classList.remove('open')
+            } else {
+                // filterDesktop.forEach(el => {
+                //     el.classList.remove('modal-filter')
+                // })
+                // filterDesktop[index].classList.add('modal-filter')
+            }
+        })
+    }
+}
