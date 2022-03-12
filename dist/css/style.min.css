@@ -3971,6 +3971,7 @@ section.filter {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 1;
 }
 .product-single .product-main .product-slider--mobile .page__mobile-slider .mobile-slider__body .mobile-slider__slider .slider-mobile-controls__arrows .slider-arrow__prev {
   left: 10px;
@@ -3993,6 +3994,7 @@ section.filter {
 @media (max-width: 47.99875rem) {
   .product-single .product-main .product-options {
     max-height: 380px;
+    min-height: 380px;
   }
 }
 .product-single .product-main .product-options::-webkit-scrollbar {

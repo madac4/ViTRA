@@ -139,6 +139,7 @@
                                     position: absolute;
                                     top: 50%;
                                     transform: translateY(-50%);
+                                    z-index: 1;
                                     &__prev {
                                         left: 10px;
                                     }
@@ -160,6 +161,7 @@
             @include adaptiv-value('padding', 20, 10, 1);
             @media (max-width: $mobile) {
                 max-height: 380px;
+                min-height: 380px;
             }
             &::-webkit-scrollbar {
                 width: 10px;
