@@ -268,6 +268,28 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     }
     
+    if (w <= 767) {
+        if (document.querySelector('.slider-mobile__body')) {
+            new Swiper('.slider-mobile__body', {
+                grabCursor: true,
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 10,
+                speed: 800,
+                preloadImages: false,
+                lazy: true,
+                pagination: {
+                    el: ".slider-mobile-controls__fraction",
+                    type: "fraction",
+                  },
+                navigation: {
+                    prevEl: '.slider-mobile-controls__arrows .slider-arrow__prev',
+                    nextEl: '.slider-mobile-controls__arrows .slider-arrow__next',
+                },
+            })
+        }
+    }
 });
 
 function productSliders() {
@@ -412,5 +434,62 @@ if (callModal) {
         callModal.classList.remove('open')
         overlay.classList.remove('active')
         document.body.classList.remove('lock')
+    })
+}
+
+const tabs = document.querySelector('.tabs');
+const tabsButtons = document.querySelectorAll('.tabs__button');
+const tabsContents = document.querySelectorAll('.tabs__content');
+
+if (tabs) {
+    tabs.addEventListener('click', (e) => {
+        if (e.target.classList.contains('tabs__button')) {
+            const tabsPath = e.target.dataset.tabsPath;
+            tabsHandler(tabsPath);
+        }
+    })
+}
+
+const tabsHandler = (path) => {
+    tabsButtons.forEach(button => {
+        button.classList.remove('tabs__button--active')
+    })
+    document.querySelector(`[data-tabs-path="${path}"]`).classList.add('tabs__button--active');
+
+    tabsContents.forEach(content => {
+        content.classList.remove('tabs__content--active')
+    })
+    document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
+}
+
+if (document.querySelector('.slider-single__body')) {
+    const thumb = new Swiper('.slider-thumb__body', {
+        grabCursor: true,
+        observer: true,
+        observeParents: true,
+        slidesPerView: 5,
+        spaceBetween: 10,
+        speed: 800,
+        preloadImages: false,
+        lazy: true,
+        freeMode: true,
+        watchSlidesProgress: true,
+        direction: "vertical",
+    })
+
+    new Swiper('.slider-single__body', {
+        grabCursor: true,
+        observer: true,
+        observeParents: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        speed: 800,
+        preloadImages: false,
+        lazy: true,
+        spaceBetween: 10,  
+        autoHeight: true,
+        thumbs: {
+          swiper: thumb,
+        },
     })
 }
