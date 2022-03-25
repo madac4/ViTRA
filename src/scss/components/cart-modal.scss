@@ -20,6 +20,7 @@
         bottom: 0;
         left: 0;
         z-index: 6;
+        padding-bottom: 80px;
     }
     &.active {
         opacity: 1;
@@ -54,7 +55,7 @@
         overflow: auto;
         padding-right: 10px;
         @media (max-width: $tablet) {
-            max-height: 70vh;
+            max-height: 60vh;
             min-height: auto;
             padding-right: 0;
         }

@@ -1,4 +1,7 @@
 .search {
+    .product-header__options {
+        flex-wrap: wrap;
+    }
     &-empty {
         .search__results {
             h1 {

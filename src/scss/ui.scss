@@ -339,6 +339,14 @@ textarea {
             color: $graycolor500;
         }
     }
+    &.dark {
+        background-color: rgba(255, 255, 255, 0.16);
+        padding: 10px 14px;
+        color: #fff;
+        &::placeholder {
+            color: $graycolor500;
+        }
+    }
 }
 
 small.error {
@@ -548,4 +556,10 @@ section {
 
 .fullscreen {
     height: 100vh;
+}
+
+.grid-5 {
+    display: grid;
+    @include adaptiv-value('gap', 100, 20, 1);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }

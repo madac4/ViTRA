@@ -1,11 +1,20 @@
 .scroll-category {
     margin: 20px 0;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    @media (max-width: $mobile) {
+        position: relative;
+    }
     &__container {
         overscroll-behavior-x: contain;
     }
     &__body {
         @include adaptiv-value('border-radius', 8, 4, 1);
-        background: $graybackground100;
+        background: rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(4px);
         padding: 10px;
         display: flex;
         align-items: center;
