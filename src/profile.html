@@ -10,17 +10,17 @@
                 <div class="profile-body">
                     <div class="profile-form">
                         <h3>Date personale</h3>
-                        <form>
+                        <form action="#">
                             <label for="name">
                                 <h5>Nume</h5>
                                 <input type="text" name="name" id="name" placeholder="Alexandru">
                             </label>
                             <label for="password">
                                 <h5>Schimbare parolă</h5>
-                                <input type="password" name="password" id="password" placeholder="Parola veche"> 
-                                <input type="password" name="password" id="new-password" placeholder="Parola nouă"> 
-                                <input type="password" name="password" id="confirm-password" placeholder="Confirmare parolă"> 
-    
+                                <input type="password" name="password" id="password" placeholder="Parola veche">
+                                <input type="password" name="password" id="new-password" placeholder="Parola nouă">
+                                <input type="password" name="password" id="confirm-password"
+                                    placeholder="Confirmare parolă">
                             </label>
                             <label for="num">
                                 <h5>Nr. de telefon</h5>
@@ -28,14 +28,14 @@
                             </label>
                             <a href="#">Ai uitat parola?</a>
 
-                            <label class="form-btns" for="">
-                                <button class="button form-btn button__primary">
+                            <p class="form-btns">
+                                <button type="submit" class="button form-btn button__primary">
                                     Salvează modificări
                                 </button>
-                                <button class="button form-btn button__back">
+                                <button class="button form-btn button__outline button__outline--gray rounded">
                                     Înapoi la cumpărături
                                 </button>
-                            </label>
+                            </p>
                         </form>
                     </div>
                     <div class="profile-history">
@@ -54,7 +54,8 @@
                                             <td><img src="@img/history.png" alt=""></td>
                                             <td>
                                                 <span class="history-product__name">1x Scaun bla bla</span>
-                                                <div class="history-product__code">Cod produs: <span>2103dc12</span></div>
+                                                <div class="history-product__code">Cod produs: <span>2103dc12</span>
+                                                </div>
                                             </td>
                                             <td>1000 mdl</td>
                                         </tr>

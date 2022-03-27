@@ -1,6 +1,7 @@
 .page__main-slider {
     position: relative;
     @include adaptiv-value('margin-bottom', 80, 50, 1);
+    margin-top: -20px;
     .main-slider__body {
         .main-slider__slider {
             position: relative;

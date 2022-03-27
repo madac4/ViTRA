@@ -385,6 +385,7 @@ main {
   border-radius: 4px;
 }
 .button__outline:hover {
+  color: #f15d22;
   border-color: #f15d22;
 }
 .button__outline--big {
@@ -496,7 +497,7 @@ main {
   font-weight: 600;
 }
 .button__primary:hover {
-  background-color: #f36f3a;
+  background-color: #eb4e0f;
 }
 .button__primary:active {
   background-color: #f15d22;
@@ -546,6 +547,10 @@ main {
   background-color: transparent;
   color: #f15d22;
   border-color: #e4e4e4;
+}
+
+.rounded {
+  border-radius: 4px;
 }
 
 .burger {
@@ -1000,6 +1005,7 @@ section [class*=__header] a span {
   background-color: #000;
   font-size: 14px;
   color: #fff;
+  margin-bottom: 20px;
 }
 @media (max-width: 61.99875rem) {
   .upper-header {
@@ -2754,6 +2760,7 @@ section.filter {
 .page__main-slider {
   position: relative;
   margin-bottom: 80px;
+  margin-top: -20px;
 }
 @media (max-width: 1420px) {
   .page__main-slider {
@@ -3974,16 +3981,6 @@ section.filter {
 }
 .profile-body .profile-form form .form-btn:not(:last-of-type) {
   margin-bottom: 15px;
-}
-.profile-body .profile-form form .button__primary {
-  background-color: #f15d22;
-}
-.profile-body .profile-form form .button__back {
-  border: 1px solid #bdbdbd;
-  border-radius: 4px;
-  padding: 15px 0;
-  font-weight: 600;
-  color: #bdbdbd;
 }
 .profile-body .profile-history__body {
   display: flex;

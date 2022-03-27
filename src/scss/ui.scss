@@ -83,6 +83,7 @@ main {
         border: 1px solid $graycolor300;
         border-radius: 4px;
         &:hover {
+            color: $orangecolor;
             border-color: $orangecolor;
         }
         &--big {
@@ -196,7 +197,7 @@ main {
         color: #fff;
         font-weight: 600;
         &:hover {
-            background-color: lighten($color: $orangecolor, $amount: 5);
+            background-color: darken($orangecolor, 5);
         }
         &:active {
             background-color: $orangecolor;
@@ -248,6 +249,10 @@ main {
             }
         }
     }
+}
+
+.rounded{
+    border-radius: 4px;
 }
 
 .burger {
