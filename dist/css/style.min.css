@@ -3760,6 +3760,7 @@ section.filter {
 @media (max-width: 29.99875rem) {
   .blog__container {
     max-width: 100%;
+    height: 100%;
   }
 }
 .blog .blog-introduction__post {
@@ -3808,10 +3809,7 @@ section.filter {
   left: 30px;
   background-color: #fff;
   padding: 40px;
-<<<<<<< HEAD
-=======
   background-color: #fff;
->>>>>>> 345f037c6fa1ee0a7bf92abd336d3326d9080a57
 }
 @media (max-width: 1420px) {
   .blog .blog-introduction__post .introduction-post__contect {
@@ -3911,6 +3909,82 @@ section.filter {
 .blog-posts__body {
   margin: 30px 0;
 }
+.blog-posts__body .post {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+@media (max-width: 47.99875rem) {
+  .blog-posts__body .post {
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: initial;
+  }
+  .blog-posts__body .post:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .blog-posts__body .post::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0.24%, rgba(0, 0, 0, 0.9) 100%), linear-gradient(0deg, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4));
+  }
+}
+@media (max-width: 39.99875rem) {
+  .blog-posts__body .post {
+    max-width: 100%;
+  }
+}
+.blog-posts__body .post img {
+  max-width: 377px;
+}
+@media (max-width: 47.99875rem) {
+  .blog-posts__body .post img {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 47.99875rem) {
+  .blog-posts__body .post-content {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 5;
+  }
+  .blog-posts__body .post-content * {
+    color: #fff !important;
+  }
+}
+.blog-posts__body .post-content h3 {
+  margin: 5px 0;
+}
+@media (max-width: 47.99875rem) {
+  .blog-posts__body .post-content time {
+    display: inline-block;
+    margin-top: 55px;
+  }
+}
+.blog-posts__body .post-content a {
+  display: block;
+  margin-top: 20px;
+}
+@media (max-width: 47.99875rem) {
+  .blog-posts__body .post-content a {
+    display: none;
+  }
+}
+.blog-posts__body .post-content a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
 .blog-posts__body .follow {
   margin-bottom: 30px;
 }
@@ -3933,30 +4007,8 @@ section.filter {
   }
 }
 @media (max-width: 47.99875rem) {
-<<<<<<< HEAD
-  .blog-posts__body .post {
-    margin: 0 auto;
-=======
   .post {
->>>>>>> 345f037c6fa1ee0a7bf92abd336d3326d9080a57
     flex-direction: column;
-    align-items: initial;
-  }
-  .blog-posts__body .post:not(:last-child) {
-    margin-bottom: 20px;
-  }
-  .blog-posts__body .post::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0.24%, rgba(0, 0, 0, 0.9) 100%), linear-gradient(0deg, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4));
-  }
-}
-@media (max-width: 39.99875rem) {
-  .blog-posts__body .post {
-    max-width: 100%;
   }
 }
 .post time {
@@ -3973,59 +4025,20 @@ section.filter {
   width: 100%;
 }
 @media (max-width: 47.99875rem) {
-<<<<<<< HEAD
-  .blog-posts__body .post img {
-    position: relative;
-=======
   .post img {
->>>>>>> 345f037c6fa1ee0a7bf92abd336d3326d9080a57
     max-width: 100%;
     width: 100%;
   }
 }
-<<<<<<< HEAD
-@media (max-width: 47.99875rem) {
-  .blog-posts__body .post-content {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    z-index: 5;
-  }
-  .blog-posts__body .post-content * {
-    color: #fff !important;
-  }
-}
-.blog-posts__body .post-content h3 {
-=======
 .post-content h3 {
->>>>>>> 345f037c6fa1ee0a7bf92abd336d3326d9080a57
   margin: 5px 0;
   margin-top: 5px !important;
 }
-<<<<<<< HEAD
-@media (max-width: 47.99875rem) {
-  .blog-posts__body .post-content time {
-    display: inline-block;
-    margin-top: 55px;
-  }
-}
-.blog-posts__body .post-content a {
-  display: block;
-  margin-top: 20px;
-}
-@media (max-width: 47.99875rem) {
-  .blog-posts__body .post-content a {
-    display: none;
-  }
-}
-.blog-posts__body .post-content a::after {
-=======
 .post-content a {
   display: block;
   margin-top: 20px;
 }
 .post-content a::after {
->>>>>>> 345f037c6fa1ee0a7bf92abd336d3326d9080a57
   content: "";
   position: absolute;
   inset: 0;

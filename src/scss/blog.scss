@@ -4,11 +4,8 @@
             max-width: 80%;
         }
         @media (max-width: $mobileSmall) {
-<<<<<<< HEAD
             max-width: 100%;
-=======
             height: 100%;
->>>>>>> 345f037c6fa1ee0a7bf92abd336d3326d9080a57
         }
     }
     .blog-introduction__post {
@@ -48,7 +45,6 @@
             @include adaptiv-value('left', 30, 10, 1);
             background-color: #fff;
             @include adaptiv-value('padding', 40, 20, 1);
-<<<<<<< HEAD
             @media (max-width: $tablet) {
                 height: 90%;
                 bottom: 30px
@@ -65,9 +61,7 @@
                     margin-top: 55px;
                 }
             }
-=======
             background-color: #fff;
->>>>>>> 345f037c6fa1ee0a7bf92abd336d3326d9080a57
             .post-introduction__tags {
                 margin-bottom: 10px;
             }
@@ -123,7 +117,6 @@
     &-posts {
         &__body {
             margin: 30px 0;
-<<<<<<< HEAD
             .post {
                 position: relative;
                 display: flex;
@@ -192,8 +185,6 @@
                     }
                 }
             }
-=======
->>>>>>> 345f037c6fa1ee0a7bf92abd336d3326d9080a57
             .follow {
                 margin-bottom: 30px;
             }
