@@ -1,11 +1,12 @@
 .page__main-slider {
+    position: relative;
     @include adaptiv-value('margin-bottom', 80, 50, 1);
     .main-slider__body {
         .main-slider__slider {
             position: relative;
             .slider-main__body {
                 .slider-main__slide {
-                    @include adaptiv-value('height', 530, 250, 1);
+                    @include adaptiv-value('height', 740, 250, 1);
                     border-radius: 8px;
                     position: relative;
                     a {
@@ -21,8 +22,8 @@
                     .swiper-slide__content {
                         @include adaptiv-value('padding', 30, 15, 1);
                         position: absolute;
-                        top: 50px;
-                        left: 120px;
+                        top: 30%;
+                        left: 20%;
                         max-width: 530px;
                         background: rgba(255, 255, 255, 0.9);
                         border-radius: 8px 8px 0px 8px;
@@ -105,7 +106,7 @@
 .category-list {
     &__body {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
         @media (max-width: $tablet) {
             grid-template-columns: repeat(2, 1fr);
@@ -347,7 +348,27 @@
     }
 }
 
-#map {
+.partners {
     @include adaptiv-value('margin-bottom', 80, 50, 1);
+    &__header {
+        margin-bottom: 30px;
+    }
+    &__body {
+        img {
+            transition: 0.3s;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+            @media (any-hover: hover) {
+                filter: grayscale(100%);
+                &:hover {
+                    filter: grayscale(0%);
+                }
+            }
+        }
+    }
+}
+
+#map {
     border-radius: 8px;
 }

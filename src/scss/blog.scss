@@ -4,7 +4,11 @@
             max-width: 80%;
         }
         @media (max-width: $mobileSmall) {
+<<<<<<< HEAD
             max-width: 100%;
+=======
+            height: 100%;
+>>>>>>> 345f037c6fa1ee0a7bf92abd336d3326d9080a57
         }
     }
     .blog-introduction__post {
@@ -44,6 +48,7 @@
             @include adaptiv-value('left', 30, 10, 1);
             background-color: #fff;
             @include adaptiv-value('padding', 40, 20, 1);
+<<<<<<< HEAD
             @media (max-width: $tablet) {
                 height: 90%;
                 bottom: 30px
@@ -60,6 +65,9 @@
                     margin-top: 55px;
                 }
             }
+=======
+            background-color: #fff;
+>>>>>>> 345f037c6fa1ee0a7bf92abd336d3326d9080a57
             .post-introduction__tags {
                 margin-bottom: 10px;
             }
@@ -68,14 +76,14 @@
                 @include adaptiv-value('font-size', 36, 24, 1);
                 font-weight: 600;
                 line-height: 120%;
-                color: #3C3C3C;
+                color: #3c3c3c;
                 margin-bottom: 10px;
                 @media (max-width: $mobile) {
                     font-size: 24px
                 }
                 &::after {
                     position: absolute;
-                    content: "";
+                    content: '';
                     inset: 0;
                     height: 100%;
                     width: 100%;
@@ -115,6 +123,7 @@
     &-posts {
         &__body {
             margin: 30px 0;
+<<<<<<< HEAD
             .post {
                 position: relative;
                 display: flex;
@@ -183,10 +192,23 @@
                     }
                 }
             }
+=======
+>>>>>>> 345f037c6fa1ee0a7bf92abd336d3326d9080a57
             .follow {
                 margin-bottom: 30px;
             }
         }
+    }
+}
+
+.post {
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include adaptiv-value('gap', 30, 20, 1);
+    @include adaptiv-value('margin-bottom', 30, 20, 1);
+    @media (max-width: $mobile) {
+        flex-direction: column;
     }
     time {
         color: $graycolor400;
@@ -196,5 +218,30 @@
         display: flex;
         align-items: center;
         gap: 10px;
+    }
+    img {
+        max-width: 377px;
+        width: 100%;
+        @media (max-width: $mobile) {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    &-content {
+        h3 {
+            margin: 5px 0;
+            margin-top: 5px !important;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
 }

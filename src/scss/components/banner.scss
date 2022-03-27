@@ -1,29 +1,38 @@
 .banner {
+    &__header {
+        margin-bottom: 20px;
+    }
     .banner-body {
         @include adaptiv-value('border-radius', 8, 4, 1);
-        @include adaptiv-value('padding-top', 45, 40, 1);
-        @include adaptiv-value('padding-bottom', 45, 40, 1);
+        @include adaptiv-value('padding-top', 160, 80, 1);
+        @include adaptiv-value('padding-bottom', 160, 80, 1);
+        margin-bottom: 30px;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        color: #fff;
+        h1 {
+            @include adaptiv-value('font-size', 48, 32, 1);
+        }
         a {
-            max-width: 390px;
+            max-width: 220px;
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
             gap: 10px;
-            font-size: 24px;
+            font-size: 16px;
             font-weight: 600;
-            font-size: 24px;
             color: #fff;
-            padding: 30px 0;
+            padding: 15px 0;
             background-color: rgba(241, 93, 34, 0.6);
-            transition: .3s;
+            transition: 0.3s;
             border-radius: 8px;
             @media (max-width: $mobileSmall) {
-                margin: 0 35px
+                margin: 0 35px;
             }
             &:hover {
                 background-color: $orangecolor;
