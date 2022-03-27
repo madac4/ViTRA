@@ -413,23 +413,16 @@ headerFav.addEventListener('click', () => {
     overlay.classList.toggle('active')
 })
 
-const historyContent = document.querySelector('.profile-history__item')
-const itemControl = document.querySelector('.item-header__control')
+const historyItem = document.querySelectorAll('.profile-history__item');
+const itemControl = document.querySelectorAll('.item-header__control');
 
-if (historyContent[0]) {
-    for (let index = 0; index < historyContent.length; index++) {
-        historyContent[index].addEventListener('click', () => {
-            if (filterDesktop[index].classList.contains('open')) {
-                filterDesktop[index].classList.remove('open')
-            } else {
-                // filterDesktop.forEach(el => {
-                //     el.classList.remove('modal-filter')
-                // })
-                // filterDesktop[index].classList.add('modal-filter')
-            }
-        })
-    }
+
+if (historyItem) {
+    itemControl.addEventListener('click', () => {
+        historyItem.classList.add('open')
+    })
 }
+
 if (favModal) {
     headerFav.addEventListener('click', () => {
         favModal.classList.toggle('active');
