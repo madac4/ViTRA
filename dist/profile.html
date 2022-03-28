@@ -426,24 +426,30 @@
             <div class="profile__container">
                 <div class="profile-body">
                     <div class="profile-mobile__tabs">
-
+                        <ul class="tabs__list">
+                            <li class="tabs__item">
+                                <button class="tabs__button tabs__button--active" data-tabs-path="tab1">Date personale</button>
+                            </li>
+                            <li class="tabs__item">
+                                <button class="tabs__button" data-tabs-path="tab2">Istoricul cumpărăturilor</button>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="profile-form">
+                    <div class="profile-form tabs__content tabs__content--active" data-tabs-target="tab1">
                         <h3>Date personale</h3>
                         <form>
                             <label for="name">
-                                <h5>Nume</h5>
+                                Nume
                                 <input type="text" name="name" id="name" placeholder="Alexandru">
                             </label>
                             <label for="password">
-                                <h5>Schimbare parolă</h5>
+                                Schimbare parolă
                                 <input type="password" name="password" id="password" placeholder="Parola veche"> 
                                 <input type="password" name="new-password" id="new-password" placeholder="Parola nouă"> 
                                 <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirmare parolă"> 
-    
                             </label>
                             <label for="num">
-                                <h5>Nr. de telefon</h5>
+                                Nr. de telefon
                                 <input type="number" name="num" id="num" placeholder="+ (373) 069 352 170">
                             </label>
                             <a href="#">Ai uitat parola?</a>
@@ -458,7 +464,7 @@
                             </label>
                         </form>
                     </div>
-                    <div class="profile-history">
+                    <div class="profile-history tabs__content" data-tabs-target="tab2">
                         <h3>Istoricul cumpărăturilor</h3>
                         <div class="profile-history__body">
                             <div class="profile-history__item">
