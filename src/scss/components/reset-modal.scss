@@ -1,0 +1,92 @@
+.reset-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% - 20px), -50%);
+    z-index: 5;
+    background-color: #fff;
+    max-width: 470px;
+    width: 100%;
+    margin: 0 20px;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    @include adaptiv-value('padding-top', 30, 16, 1);
+    @include adaptiv-value('padding-bottom', 30, 16, 1);
+    @include adaptiv-value('padding-left', 50, 20, 1);
+    @include adaptiv-value('padding-right', 50, 20, 1);
+    &--first {
+        &.open {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+        .reset-header__title {
+            @include adaptiv-value('margin-bottom', 40, 20, 1);
+            h3 {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 10px;
+                button {
+                    font-size: 24px;
+                }
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+        .reset-header__close {
+            font-size: 32px;
+        }
+    }
+    .reset-modal__body {
+        form {
+            label {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                @include adaptiv-value('margin-bottom', 25, 12, 1);
+                p {
+                    position: relative;
+                    .type-switch {
+                        position: absolute;
+                        top: 50%;
+                        right: 15px;
+                        transform: translateY(-50%);
+                        font-size: 20px;
+                        color: #bdbdbd;
+                    }
+                }
+            }
+            .form-buttons {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+                span {
+                    button {
+                        color: #2c5282;
+                    }
+                }
+            }
+            button {
+                max-width: 150px;
+            }
+        }
+    }
+    &__footer {
+        margin-top: 30px;
+        font-size: 14px;
+        color: #8f9bb3;
+        a {
+            color: #2c5282;
+        }
+    }
+}

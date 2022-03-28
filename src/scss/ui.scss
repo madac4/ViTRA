@@ -572,22 +572,21 @@ section {
 .ajs-message {
     color: #fff;
     font-weight: 600;
-    max-width: 420px;
+    @include adaptiv-value('max-width', 420, 280, 1);
+    @include adaptiv-value('min-width', 420, 280, 1);
     font-size: 14px;
     width: 100%;
     line-height: 160%;
-    min-width: 420px;
 }
 
-.ajs-message .ajs-success {
-    background: #63ba87 !important;
-    opacity: 1;
+.alertify-notifier .ajs-message.ajs-error {
+    background: #ff6a6a;
 }
-.ajs-message .ajs-error {
-    background: #ff6a6a !important;
-    opacity: 1;
+
+.alertify-notifier .ajs-message.ajs-success {
+    background: #63ba87;
 }
 
 .alertify-notifier.ajs-right .ajs-message.ajs-visible {
-    right: 420px;
+    @include adaptiv-value('right', 420, 280, 1);
 }

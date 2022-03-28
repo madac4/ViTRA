@@ -46,6 +46,7 @@ if (burgerDesktop) {
         filters && filters.classList.remove('open')
         favModal && favModal.classList.remove('active');
         callModal && callModal.classList.remove('open')
+        resetModal && resetModal.classList.remove('open')
     })
 }
 
@@ -301,7 +302,12 @@ window.addEventListener('DOMContentLoaded', () => {
             })
         }
     }
-
+    alertify.defaults = {
+        notifier:{
+            delay:10,
+            position:'top-right',
+        },
+    };
     products.forEach(product =>{
         const addToCart = product.querySelector('.product-footer__controls .icon-cart');
         const addToFav = product.querySelector('.product-footer__controls .icon-heart__filled');
@@ -569,4 +575,19 @@ const tabsProfileHandler = (path) => {
         content.classList.remove('tabs__content--active')
     })
     document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
+}
+
+const resetModal = document.querySelector('.reset-modal--first');
+const forgetButton = document.querySelector('.forget');
+
+if (forgetButton) {
+    forgetButton.addEventListener('click', () =>{
+        resetModal.classList.add('open')
+        overlay.classList.add('active')
+    })
+    
+    resetModal.querySelector('.reset-header__close').addEventListener('click',()=>{
+        resetModal.classList.remove('open')
+        overlay.classList.remove('active')
+    } )
 }
