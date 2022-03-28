@@ -1,30 +1,82 @@
 .profile {
     &-body {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        @include adaptiv-value('gap', 120, 30, 1);
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            justify-content: stretch;
+            align-items: center;
+        }
         h3 {
             margin-bottom: 50px;
+            @media (max-width: $mobileMedium) {
+                display: none;
+            }
         }
-        .profile-form {
-            form {
-                width: 660px;
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-gap: 30px;
-                label {
-                    color: #3C3C3C;
-                    &:nth-child(2) {
-                        grid-row: 2 span;
-                        input {
-                            &:not(:last-of-type) {
-                                margin-bottom: 15px;
+        .profile-mobile__tabs {
+            display: none;
+            @media (max-width: $mobileMedium) {
+                display: block;
+                .tabs__list {
+                    display: flex;
+                    align-items: center;
+                    gap: 30px;
+                    .tabs__item {
+                        button {
+                            font-weight: 600;
+                            color: #BDBDBD;
+                            transition: .3s;
+                            &.tabs__button--active {
+                                color: $maincolor;
+                                text-decoration: underline
                             }
                         }
                     }
-                    h5 {
-                        font-size: 18px;
-                        line-height: 100%;
+                }
+            }
+        }
+        .profile-form {
+            @include adaptiv-value('width', 660, 250, 1);
+            @media (max-width: $tablet) {
+                grid-template-columns: repeat(1, 1fr);
+                max-width: 80%;
+                width: 100%;
+                margin: 0 auto;
+            }
+            @media (max-width: $mobile) {
+                max-width: 100%;
+            }
+            @media (max-width: $mobileMedium) {
+                display: none;
+            }
+            &.tabs__content--active {
+                display: block;
+            }
+            form {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                @include adaptiv-value('grid-gap', 30, 10, 1);
+                @include adaptiv-value('width', 660, 250, 1);
+                @media (max-width: $tablet) {
+                    grid-template-columns: repeat(1, 1fr);
+                    width: auto;
+                }
+                label {
+                    color: #3C3C3C;
+                    font-weight: 600;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    @include adaptiv-value('font-size', 18, 16, 1);
+                    &:not(:last-child) {
                         margin-bottom: 15px;
+                    }
+                    &:nth-child(2) {
+                        grid-row: 2 span;
+                    }
+                    @media (max-width: $tablet) {
+                        grid-column: 2 span;
                     }
                 }
                 a {
@@ -35,58 +87,98 @@
                     line-height: 14px;
                     text-decoration-line: underline;
                     color: #2C5282;
+                    @media (max-width: $mobileSmall) {
+                        margin: 0;
+                    }
                 }
                 .form-btns {
                     margin-left: auto;
                     grid-column: 2 span;
+                    @media (max-width: $mobileSmall) {
+                        width: 100%;
+                        margin: 0;
+                    }
                 }
                 .form-btn {
                     width: 215px;
-                    &:not(:last-of-type) {
-                        margin-bottom: 15px;
+                    @media (max-width: $mobileSmall) {
+                        width: 100%;
                     }
                 }
             }
         }
         .profile-history {
+            width: 100%;
+            @media (max-width: $tablet) {
+                max-width: 80%;
+            }
+            @media (max-width: $mobile) {
+                max-width: 100%;
+            }
+            @media (max-width: $mobileMedium) {
+                display: none;
+            }
+            &.tabs__content--active {
+                display: block;
+            }
             &__body {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
+                display: block;
                 .profile-history__item {
+                    cursor: pointer;
                     background-color: #F0F0F0;
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
                     &.open {
                         .icon-chevron--down {
-                            transform: translateY(-50%) rotate(180deg);
+                            transform: rotate(180deg);
+                            @media (max-width: $mobileSmall) {
+                                transform: translateY(-50%) rotate(180deg);
+                            }
                         }
                         .history-item__content {
-                            opacity: 1;
-                            visibility: visible;
-                            height: 100%;
+                            display: inline-block;
                         }
                     }
                     .history-item__header {
-                        position: relative;
-                        width: 580px;
                         display: flex;
                         align-items: center;
-                        gap: 20px;
+                        justify-content: space-between;
                         border-radius: 4px;
                         padding: 10px 20px;
+                        position: relative;
+                        @media (max-width: $tablet) {
+                            padding: 10px 15px;
+                        }
+                        @media (max-width: $mobileSmall) {
+                            display: block;
+                        }
+                        time {
+                            font-size: 14px;
+                        }
+                        img {
+                            width: 55px;
+                            height: 55px;
+                            @media (max-width: $mobileSmall) {
+                                display: none;
+                            }
+                        }
                     }
                     .icon-chevron--down {
-                        cursor: pointer;
-                        position: absolute;
-                        right: 20px;
-                        top: 50%;
-                        transform: translateY(-50%);
                         font-size: 18px;
+                        @media (max-width: $mobileSmall) {
+                            background-color: #fff;
+                            padding: 10px;
+                            border-radius: 4px;
+                            position: absolute;
+                            top: 50%;
+                            right: 15px;
+                            transform: translateY(-50%);
+                        }
                     }
                     .history-item__content {
-                        opacity: 0;
-                        visibility: hidden;
-                        height: 0;
-                        transition: .2s;
+                        display: none;
+                        width: 100%;
                         table,
                         tr,
                         td {
@@ -125,7 +217,11 @@
                         .item-content__desc {
                             padding: 15px 20px;
                             display: flex;
-                            gap: 50px;
+                            @include adaptiv-value('gap', 50, 20, 1);
+                            width: 100%;
+                            @media (max-width: $mobileSmall) {
+                                flex-direction: column;
+                            }
                             &:not(:last-child) {
                                 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                             }

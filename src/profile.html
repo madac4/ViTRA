@@ -8,22 +8,31 @@
         <div class="profile">
             <div class="profile__container">
                 <div class="profile-body">
-                    <div class="profile-form">
+                    <div class="profile-mobile__tabs">
+                        <ul class="tabs__list">
+                            <li class="tabs__item">
+                                <button class="tabs__button tabs__button--active" data-tabs-path="tab1">Date personale</button>
+                            </li>
+                            <li class="tabs__item">
+                                <button class="tabs__button" data-tabs-path="tab2">Istoricul cumpărăturilor</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="profile-form tabs__content tabs__content--active" data-tabs-target="tab1">
                         <h3>Date personale</h3>
                         <form action="#">
                             <label for="name">
-                                <h5>Nume</h5>
+                                Nume
                                 <input type="text" name="name" id="name" placeholder="Alexandru">
                             </label>
                             <label for="password">
-                                <h5>Schimbare parolă</h5>
-                                <input type="password" name="password" id="password" placeholder="Parola veche">
-                                <input type="password" name="password" id="new-password" placeholder="Parola nouă">
-                                <input type="password" name="password" id="confirm-password"
-                                    placeholder="Confirmare parolă">
+                                Schimbare parolă
+                                <input type="password" name="password" id="password" placeholder="Parola veche"> 
+                                <input type="password" name="new-password" id="new-password" placeholder="Parola nouă"> 
+                                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirmare parolă"> 
                             </label>
                             <label for="num">
-                                <h5>Nr. de telefon</h5>
+                                Nr. de telefon
                                 <input type="number" name="num" id="num" placeholder="+ (373) 069 352 170">
                             </label>
                             <a href="#">Ai uitat parola?</a>
@@ -38,7 +47,7 @@
                             </p>
                         </form>
                     </div>
-                    <div class="profile-history">
+                    <div class="profile-history tabs__content" data-tabs-target="tab2">
                         <h3>Istoricul cumpărăturilor</h3>
                         <div class="profile-history__body">
                             <div class="profile-history__item">
@@ -56,6 +65,82 @@
                                                 <span class="history-product__name">1x Scaun bla bla</span>
                                                 <div class="history-product__code">Cod produs: <span>2103dc12</span>
                                                 </div>
+                                            </td>
+                                            <td>1000 mdl</td>
+                                        </tr>
+                                    </table>
+                                    <div class="item-content__desc">
+                                        <div class="content-desc__block">
+                                            <h5>Livrarea:</h5>
+                                            <p>Livrare prin curier <span>(50 mdl)</span></p>
+                                        </div>
+                                        <div class="content-desc__block">
+                                            <h5>Adresa livrării:</h5>
+                                            <p>or. Chișinău, str. Calea Orheiului, 113/1</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="item-content__desc">
+                                        <div class="content-desc__block">
+                                            <h5>Achitarea:</h5>
+                                            <p>Achitare cu cardul bancar</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="profile-history__item">
+                                <div class="history-item__header">
+                                    <time datetime="2021-11-10">10 noiembrie 2021</time>
+                                    <img src="@img/history.png" alt="">
+                                    <p>1 produs în sumă de: <span>1400 mdl</span></p>
+                                    <span class="icon-chevron--down item-header__control"></span>
+                                </div>
+                                <div class="history-item__content">
+                                    <table>
+                                        <tr>
+                                            <td><img src="@img/history.png" alt=""></td>
+                                            <td>
+                                                <span class="history-product__name">1x Scaun bla bla</span>
+                                                <div class="history-product__code">Cod produs: <span>2103dc12</span></div>
+                                            </td>
+                                            <td>1000 mdl</td>
+                                        </tr>
+                                    </table>
+                                    <div class="item-content__desc">
+                                        <div class="content-desc__block">
+                                            <h5>Livrarea:</h5>
+                                            <p>Livrare prin curier <span>(50 mdl)</span></p>
+                                        </div>
+                                        <div class="content-desc__block">
+                                            <h5>Adresa livrării:</h5>
+                                            <p>or. Chișinău, str. Calea Orheiului, 113/1</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="item-content__desc">
+                                        <div class="content-desc__block">
+                                            <h5>Achitarea:</h5>
+                                            <p>Achitare cu cardul bancar</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="profile-history__item">
+                                <div class="history-item__header">
+                                    <time datetime="2021-11-10">10 noiembrie 2021</time>
+                                    <img src="@img/history.png" alt="">
+                                    <p>1 produs în sumă de: <span>1400 mdl</span></p>
+                                    <span class="icon-chevron--down item-header__control"></span>
+                                </div>
+                                <div class="history-item__content">
+                                    <table>
+                                        <tr>
+                                            <td><img src="@img/history.png" alt=""></td>
+                                            <td>
+                                                <span class="history-product__name">1x Scaun bla bla</span>
+                                                <div class="history-product__code">Cod produs: <span>2103dc12</span></div>
                                             </td>
                                             <td>1000 mdl</td>
                                         </tr>

@@ -1,27 +1,80 @@
 .blog {
-    &-introduction__body {
-        @include adaptiv-value('height', 590, 500, 1);
-        @include adaptiv-value('padding', 30, 10, 1);
-        margin-bottom: 30px;
+    &__container {
+        @media (max-width: $mobile) {
+            max-width: 80%;
+        }
         @media (max-width: $mobileSmall) {
+            max-width: 100%;
             height: 100%;
         }
-        .blog-introduction__post {
-            position: relative;
-            max-width: 570px;
+    }
+    .blog-introduction__post {
+        position: relative;
+        width: 100%;
+        margin-bottom: 30px;
+        @media (max-width: $mobile) {
+            @include adaptiv-value('height', 737, 300, 1);
+        }
+        @media (max-width: $mobile) {
+            margin: 0 auto 30px;
+            z-index: 5;
+            * {
+                color: #fff !important;
+            }
+            background: transparent;
+            order: 2;
+            img {}
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0.24%, rgba(0, 0, 0, 0.9) 100%), linear-gradient(0deg, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4));
+            }
+        }
+        img {
+            display: block;
             width: 100%;
+            height: 100%;
+        }
+        .introduction-post__contect {
+            max-width: 570px;
+            position: absolute;
+            @include adaptiv-value('top', 30, 10, 1);
+            @include adaptiv-value('left', 30, 10, 1);
+            background-color: #fff;
             @include adaptiv-value('padding', 40, 20, 1);
+            @media (max-width: $tablet) {
+                height: 90%;
+                bottom: 30px
+            }
+            @media (max-width: $mobile) {
+                background-color: transparent;
+                z-index: 6;
+                p {
+                    display: none;
+                }
+                .introduction-post__time {
+                    order: -1;
+                    display: inline-block;
+                    margin-top: 55px;
+                }
+            }
             background-color: #fff;
             .post-introduction__tags {
                 margin-bottom: 10px;
             }
             a {
                 display: block;
-                font-size: 36px;
+                @include adaptiv-value('font-size', 36, 24, 1);
                 font-weight: 600;
                 line-height: 120%;
                 color: #3c3c3c;
                 margin-bottom: 10px;
+                @media (max-width: $mobile) {
+                    font-size: 24px
+                }
                 &::after {
                     position: absolute;
                     content: '';
@@ -32,6 +85,13 @@
             }
             p {
                 margin-top: 20px;
+                @include adaptiv-value('margin-top', 20, 10, 1);
+                @media (max-width: $tablet) {
+                    height: 100%;
+                    white-space: wrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
             }
         }
     }
@@ -57,6 +117,74 @@
     &-posts {
         &__body {
             margin: 30px 0;
+            .post {
+                position: relative;
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                margin-bottom: 30px;
+                @media (max-width: $mobile) {
+                    margin: 0 auto;
+                    flex-direction: column;
+                    align-items: initial;
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0.24%, rgba(0, 0, 0, 0.9) 100%), linear-gradient(0deg, rgba(28, 28, 28, 0.4), rgba(28, 28, 28, 0.4));
+                    }
+                }
+                @media (max-width: $mobileMedium) {
+                    max-width: 100%;
+                }
+                img {
+                    max-width: 377px;
+                    @media (max-width: $mobile) {
+                        position: relative;
+                        max-width: 100%;
+                        width: 100%;
+                    }
+                }
+                &-content {
+                    @media (max-width: $mobile) {
+                        position: absolute;
+                        top: 30px;
+                        left: 30px;
+                        z-index: 5;
+                        * {
+                            color: #fff !important;
+                        }
+                    }
+                    h3 {
+                        margin: 5px 0;
+                    }
+                    time {
+                        @media (max-width: $mobile) {
+                            display: inline-block;
+                            margin-top: 55px;
+                        }
+                    }
+                    a {
+                        @media (max-width: $mobile) {
+                            display: none;
+                        }
+                        display: block;
+                        margin-top: 20px;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            inset: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
             .follow {
                 margin-bottom: 30px;
             }

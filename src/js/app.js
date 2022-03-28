@@ -31,7 +31,7 @@ if (burgerDesktop) {
         menuDesktop.classList.toggle('menu-open');
         overlay.classList.toggle('active');
         document.body.classList.toggle('lock')
-        
+
         document.body.classList.remove('lock')
         cartModal && cartModal.classList.remove('active')
         filters && filters.classList.remove('open')
@@ -332,7 +332,7 @@ function productSliders() {
             if (productImages.length > 1) {
                 product.addEventListener('mouseenter', () => {
                     var i = 0;
-                    var imageSwitch = setInterval(function () {
+                    var imageSwitch = setInterval(function() {
                         productImages[i].classList.remove('product-images__image--active')
                         productPaginationItem[i].classList.remove('pagination-item--active')
                         i++
@@ -535,4 +535,38 @@ if (document.querySelector('.slider-single__body')) {
             swiper: thumb,
         },
     })
+}
+
+const profileItem = document.querySelectorAll('.profile-history__item');
+
+profileItem.forEach(el => {
+    el.addEventListener("click", () => {
+        el.classList.toggle('open');
+    });
+});
+
+
+const tabsProfile = document.querySelector('.tabs__list');
+const tabsProfileButtons = document.querySelectorAll('.tabs__button');
+const tabsProfileContents = document.querySelectorAll('.tabs__content');
+
+if (tabsProfile) {
+    tabsProfile.addEventListener('click', (e) => {
+        if (e.target.classList.contains('tabs__button')) {
+            const tabsPath = e.target.dataset.tabsPath;
+            tabsProfileHandler(tabsPath);
+        }
+    })
+}
+
+const tabsProfileHandler = (path) => {
+    tabsProfileButtons.forEach(button => {
+        button.classList.remove('tabs__button--active')
+    })
+    document.querySelector(`[data-tabs-path="${path}"]`).classList.add('tabs__button--active');
+
+    tabsProfileContents.forEach(content => {
+        content.classList.remove('tabs__content--active')
+    })
+    document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
 }
