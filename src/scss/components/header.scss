@@ -180,6 +180,9 @@
     background: #ffffff;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px 0;
+    @media (max-width: $tablet) {
+        margin-bottom: 20px;
+    }
     &__container {
         display: flex;
         align-items: center;
@@ -359,7 +362,7 @@
                 }
             }
         }
-        button.button {
+        button.button__gray, a.button__gray {
             display: none;
             @media (min-width: $tablet) {
                 display: flex;

@@ -279,7 +279,6 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-
     if (w <= 767) {
         if (document.querySelector('.slider-mobile__body')) {
             new Swiper('.slider-mobile__body', {
@@ -302,6 +301,21 @@ window.addEventListener('DOMContentLoaded', () => {
             })
         }
     }
+
+    products.forEach(product =>{
+        const addToCart = product.querySelector('.product-footer__controls .icon-cart');
+        const addToFav = product.querySelector('.product-footer__controls .icon-heart__filled');
+        const productName = product.querySelector('.product-name').textContent;
+        addToCart.addEventListener('click', () =>{
+            // alertify.success(`Produsul ${productName} a fost adaugat în coș`);
+            alertify.error('Error message');
+            // alertify.error(`Produsul ${productName} nu a fost adaugat în coș`);
+        })
+
+        addToFav.addEventListener('click', () =>{
+            alertify.success(`Produsul ${productName} a fost adaugat la favorite`);
+        })
+    })
 });
 
 function productSliders() {

@@ -251,7 +251,7 @@ main {
     }
 }
 
-.rounded{
+.rounded {
     border-radius: 4px;
 }
 
@@ -567,4 +567,27 @@ section {
     display: grid;
     @include adaptiv-value('gap', 100, 20, 1);
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.ajs-message {
+    color: #fff;
+    font-weight: 600;
+    max-width: 420px;
+    font-size: 14px;
+    width: 100%;
+    line-height: 160%;
+    min-width: 420px;
+}
+
+.ajs-message .ajs-success {
+    background: #63ba87 !important;
+    opacity: 1;
+}
+.ajs-message .ajs-error {
+    background: #ff6a6a !important;
+    opacity: 1;
+}
+
+.alertify-notifier.ajs-right .ajs-message.ajs-visible {
+    right: 420px;
 }

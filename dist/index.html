@@ -5,9 +5,11 @@
     <title>ViTRA - Home</title>
     <link rel="shortcut icon" href="img/logos/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
+
 
 <body>
     <header class="header">
@@ -119,7 +121,7 @@
         <button class="button button__outline--gray">Șterge tot</button>
     </div>
     <div class="fav-modal__body">
-        <div class="cart-product">
+        <div class="cart-product cart-product--modal">
             <img class="cart-product__image" src="img/product1.png" />
             <div class="cart-product__content product-content">
                 <p class="product-content__name">
@@ -139,6 +141,7 @@
         <a href="../product-filter.html" class="button button__dark">Spre pagina produselor</a>
     </div>
 </div>
+
             </div>
             <div class="header-right__block header-right__cart">
                 <button class="button button__gray">
@@ -151,7 +154,7 @@
         <button class="button button__outline--gray">Șterge tot</button>
     </div>
     <div class="cart-modal__body">
-        <div class="cart-product">
+        <div class="cart-product cart-product--modal">
             <img class="cart-product__image" src="img/product1.png" />
             <div class="cart-product__content product-content">
                 <p class="product-content__name">
@@ -171,7 +174,7 @@
                 </div>
             </div>
         </div>
-        <div class="cart-product">
+        <div class="cart-product cart-product--modal">
             <img class="cart-product__image" src="img/product1.png" />
             <div class="cart-product__content product-content">
                 <p class="product-content__name">
@@ -191,7 +194,7 @@
                 </div>
             </div>
         </div>
-        <div class="cart-product">
+        <div class="cart-product cart-product--modal">
             <img class="cart-product__image" src="img/product1.png" />
             <div class="cart-product__content product-content">
                 <p class="product-content__name">
@@ -211,7 +214,7 @@
                 </div>
             </div>
         </div>
-        <div class="cart-product">
+        <div class="cart-product cart-product--modal">
             <img class="cart-product__image" src="img/product1.png" />
             <div class="cart-product__content product-content">
                 <p class="product-content__name">
@@ -425,39 +428,38 @@
     <main>
         <div class="page__main-slider main-slider">
             <div class="scroll-category">
-    <div class="scroll-category__container">
-        <div class="scroll-category__body no-scrollbar">
-            <a href="../product-filter.html" class="button button__white">#scaune</a>
-            <a href="../product-filter.html" class="button button__white">#mese</a>
-            <a href="../product-filter.html" class="button button__white">#coș</a>
-            <a href="../product-filter.html" class="button button__white">#softbox</a>
-            <a href="../product-filter.html" class="button button__white">#comode</a>
-            <a href="../product-filter.html" class="button button__white">#cutie</a>
-            <a href="../product-filter.html" class="button button__white">#filtru</a>
-            <a href="../product-filter.html" class="button button__white">#scaune</a>
-            <a href="../product-filter.html" class="button button__white">#mese</a>
-            <a href="../product-filter.html" class="button button__white">#coș</a>
-            <a href="../product-filter.html" class="button button__white">#softbox</a>
-            <a href="../product-filter.html" class="button button__white">#comode</a>
-            <a href="../product-filter.html" class="button button__white">#cutie</a>
-            <a href="../product-filter.html" class="button button__white">#filtru</a>
-            <a href="../product-filter.html" class="button button__white">#scaune</a>
-            <a href="../product-filter.html" class="button button__white">#mese</a>
-            <a href="../product-filter.html" class="button button__white">#coș</a>
-            <a href="../product-filter.html" class="button button__white">#softbox</a>
-            <a href="../product-filter.html" class="button button__white">#comode</a>
-            <a href="../product-filter.html" class="button button__white">#cutie</a>
-            <a href="../product-filter.html" class="button button__white">#filtru</a>
-            <a href="../product-filter.html" class="button button__white">#scaune</a>
-            <a href="../product-filter.html" class="button button__white">#mese</a>
-            <a href="../product-filter.html" class="button button__white">#coș</a>
-            <a href="../product-filter.html" class="button button__white">#softbox</a>
-            <a href="../product-filter.html" class="button button__white">#comode</a>
-            <a href="../product-filter.html" class="button button__white">#cutie</a>
-            <a href="../product-filter.html" class="button button__white">#filtru</a>
-        </div>
+    <div class="scroll-category__body no-scrollbar">
+        <a href="../product-filter.html" class="button button__white">#scaune</a>
+        <a href="../product-filter.html" class="button button__white">#mese</a>
+        <a href="../product-filter.html" class="button button__white">#coș</a>
+        <a href="../product-filter.html" class="button button__white">#softbox</a>
+        <a href="../product-filter.html" class="button button__white">#comode</a>
+        <a href="../product-filter.html" class="button button__white">#cutie</a>
+        <a href="../product-filter.html" class="button button__white">#filtru</a>
+        <a href="../product-filter.html" class="button button__white">#scaune</a>
+        <a href="../product-filter.html" class="button button__white">#mese</a>
+        <a href="../product-filter.html" class="button button__white">#coș</a>
+        <a href="../product-filter.html" class="button button__white">#softbox</a>
+        <a href="../product-filter.html" class="button button__white">#comode</a>
+        <a href="../product-filter.html" class="button button__white">#cutie</a>
+        <a href="../product-filter.html" class="button button__white">#filtru</a>
+        <a href="../product-filter.html" class="button button__white">#scaune</a>
+        <a href="../product-filter.html" class="button button__white">#mese</a>
+        <a href="../product-filter.html" class="button button__white">#coș</a>
+        <a href="../product-filter.html" class="button button__white">#softbox</a>
+        <a href="../product-filter.html" class="button button__white">#comode</a>
+        <a href="../product-filter.html" class="button button__white">#cutie</a>
+        <a href="../product-filter.html" class="button button__white">#filtru</a>
+        <a href="../product-filter.html" class="button button__white">#scaune</a>
+        <a href="../product-filter.html" class="button button__white">#mese</a>
+        <a href="../product-filter.html" class="button button__white">#coș</a>
+        <a href="../product-filter.html" class="button button__white">#softbox</a>
+        <a href="../product-filter.html" class="button button__white">#comode</a>
+        <a href="../product-filter.html" class="button button__white">#cutie</a>
+        <a href="../product-filter.html" class="button button__white">#filtru</a>
     </div>
 </div>
+
             <div class="main-slider__body">
                 <div class="main-slider__slider">
                     <div class="slider-main__body swiper">
@@ -494,10 +496,8 @@
                     <div class="slider-main-controls">
                         <div class="slider-main-controls__dots"></div>
                         <div class="slider-main-controls__arrows slider-arrows">
-                            <button type="button"
-                                class="slider-arrow slider-arrow__prev icon-chevron--left"></button>
-                            <button type="button"
-                                class="slider-arrow slider-arrow__next icon-chevron--right"></button>
+                            <button type="button" class="slider-arrow slider-arrow__prev icon-chevron--left"></button>
+                            <button type="button" class="slider-arrow slider-arrow__next icon-chevron--right"></button>
                         </div>
                     </div>
                 </div>
@@ -551,7 +551,7 @@
         </svg> logistics
     </div>
     <span>Voluptatibus temporibus aut est voluptatem. Praesentium illo amet enim eius itaque quaerat. Fugit nisi totam blanditiis quod esse fuga earum dolorum minima. Et molestiae enim illo quae. Quos unde enim accusamus assumenda.</span>
-</a> 
+</a>
                     <a href="../category.html" class="category-secondary">
     <img src="img/cat3-v1.jpg" alt="horeca">
     <div class="category-secondary__content" style="color: #353B97">
@@ -641,16 +641,16 @@
                             <span class="label" style="background-color: #EE2924;">SALE </span>
                             <span class="label" style="background-color: #FEA800;">Top vânzări</span>
                         </div>
-            
+
                         <div class="product__images product-images">
-                            <img class="product-images__image product-images__image--active"
-                                src="img/product1.png" alt="">
+                            <img class="product-images__image product-images__image--active" src="img/product1.png"
+                                alt="">
                             <img class="product-images__image" src="img/product2.png" alt="">
                             <img class="product-images__image" src="img/product3.png" alt="">
                         </div>
-            
+
                         <div class="product__pagination"></div>
-            
+
                         <div class="product__footer product-footer">
                             <div class="product-footer__info">
                                 <a href="./product-single.html" class="product-name">
@@ -670,18 +670,18 @@
                         <div class="product__labels">
                             <span class="label" style="background-color: #EE2924;">SALE </span>
                         </div>
-            
+
                         <div class="product__images">
-                            <img class="product-images__image product-images__image--active"
-                                src="img/product4.png" alt="">
+                            <img class="product-images__image product-images__image--active" src="img/product4.png"
+                                alt="">
                             <img class="product-images__image" src="img/product5.png" alt="">
                             <img class="product-images__image" src="img/product6.png" alt="">
                             <img class="product-images__image" src="img/product7.png" alt="">
                             <img class="product-images__image" src="img/product8.png" alt="">
                         </div>
-            
+
                         <div class="product__pagination"></div>
-            
+
                         <div class="product__footer product-footer">
                             <div class="product-footer__info">
                                 <a href="./product-single.html" class="product-name">
@@ -692,8 +692,7 @@
                                 </h3>
                             </div>
                             <div class="product-footer__controls">
-                                <button
-                                    class="button button__control icon-heart__filled added"></button>
+                                <button class="button button__control icon-heart__filled added"></button>
                                 <button class="button button__control icon-cart added"></button>
                             </div>
                         </div>
@@ -703,16 +702,16 @@
                             <span class="label" style="background-color: #EE2924;">SALE </span>
                             <span class="label" style="background-color: #FEA800;">Top vânzări</span>
                         </div>
-            
+
                         <div class="product__images product-images">
-                            <img class="product-images__image product-images__image--active"
-                                src="img/product9.png" alt="">
+                            <img class="product-images__image product-images__image--active" src="img/product9.png"
+                                alt="">
                             <img class="product-images__image" src="img/product10.png" alt="">
                             <img class="product-images__image" src="img/product11.png" alt="">
                         </div>
-            
+
                         <div class="product__pagination"></div>
-            
+
                         <div class="product__footer product-footer">
                             <div class="product-footer__info">
                                 <a href="./product-single.html" class="product-name">
@@ -728,14 +727,15 @@
                             </div>
                         </div>
                     </div>
-                    <a href="./product-sort.html" class="product-mock" style="background: url('img/discount.jpg') 50% 50% / cover no-repeat;">
+                    <a href="./product-sort.html" class="product-mock"
+                        style="background: url('img/discount.jpg') 50% 50% / cover no-repeat;">
                         Vezi Toate reducerile
                     </a>
                 </div>
-                
+
             </div>
         </div>
-        
+
         <div class="banner">
     <div class="banner__container">
         <div class="banner__header">
@@ -915,7 +915,8 @@
                                     </div>
                                 </div>
                                 <div class="slider-product__slide">
-                                    <a href="./product-filter.html" class="product-mock" style="background: url('img/discount.jpg') 50% 50% / cover no-repeat;">
+                                    <a href="./product-filter.html" class="product-mock"
+                                        style="background: url('img/discount.jpg') 50% 50% / cover no-repeat;">
                                         Vezi Toate produsele
                                     </a>
                                 </div>
@@ -1250,7 +1251,7 @@
         <button class="button button__outline--gray">Șterge tot</button>
     </div>
     <div class="cart-modal__body">
-        <div class="cart-product">
+        <div class="cart-product cart-product--modal">
             <img class="cart-product__image" src="img/product1.png" />
             <div class="cart-product__content product-content">
                 <p class="product-content__name">
@@ -1270,7 +1271,7 @@
                 </div>
             </div>
         </div>
-        <div class="cart-product">
+        <div class="cart-product cart-product--modal">
             <img class="cart-product__image" src="img/product1.png" />
             <div class="cart-product__content product-content">
                 <p class="product-content__name">
@@ -1290,7 +1291,7 @@
                 </div>
             </div>
         </div>
-        <div class="cart-product">
+        <div class="cart-product cart-product--modal">
             <img class="cart-product__image" src="img/product1.png" />
             <div class="cart-product__content product-content">
                 <p class="product-content__name">
@@ -1310,7 +1311,7 @@
                 </div>
             </div>
         </div>
-        <div class="cart-product">
+        <div class="cart-product cart-product--modal">
             <img class="cart-product__image" src="img/product1.png" />
             <div class="cart-product__content product-content">
                 <p class="product-content__name">
@@ -1343,7 +1344,7 @@
         <button class="button button__outline--gray">Șterge tot</button>
     </div>
     <div class="fav-modal__body">
-        <div class="cart-product">
+        <div class="cart-product cart-product--modal">
             <img class="cart-product__image" src="img/product1.png" />
             <div class="cart-product__content product-content">
                 <p class="product-content__name">
@@ -1363,6 +1364,7 @@
         <a href="../product-filter.html" class="button button__dark">Spre pagina produselor</a>
     </div>
 </div>
+
     <div class="call-modal">
     <div class="call-modal__header">
         <p>Indicați datele personale și unul dintre operatorii noștri în scurt timp vă vor apela</p>
@@ -1497,6 +1499,7 @@
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ellipsis.js@0.1.3/ellipsis.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script src="js/app.min.js"></script>
 </body>
 
