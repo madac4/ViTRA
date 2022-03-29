@@ -249,6 +249,24 @@ main {
             }
         }
     }
+    &__facebook {
+        width: 205px;
+        background: #1877F2;
+        border-radius: 10px;
+        padding: 15px 0;
+        font-weight: 700;
+        gap: 15px;
+        color: #FFFFFF;
+    }
+    &__google {
+        padding: 15px 0;
+        width: 206px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        gap: 15px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.54);
+    }
 }
 
 .rounded {
@@ -450,19 +468,19 @@ input[type='radio'] {
     border-color: $darkcolor;
 }
 
-.checkbox-container.accent .checkbox-input:checked + .checkbox span:first-child {
+.checkbox-container.accent .checkbox-input:checked+.checkbox span:first-child {
     background: $orangecolor;
     border-color: $orangecolor;
     animation: zoom-in-out 0.3s ease;
 }
 
-.checkbox-input:checked + .checkbox span:first-child {
+.checkbox-input:checked+.checkbox span:first-child {
     background: $darkcolor;
     border-color: $darkcolor;
     animation: zoom-in-out 0.3s ease;
 }
 
-.checkbox-input:checked + .checkbox span:first-child svg {
+.checkbox-input:checked+.checkbox span:first-child svg {
     stroke-dashoffset: 0;
 }
 

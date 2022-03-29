@@ -15,17 +15,16 @@
     transition: .3s;
     &.open {
         top: 40%;
-
         opacity: 1;
         visibility: visible;
     }
-    &-tabs{
+    &-tabs {
         margin-bottom: 45px;
-        &__list{
+        &__list {
             display: flex;
             align-items: center;
             gap: 30px;
-            .login-tabs__item{
+            .login-tabs__item {
                 button {
                     color: #BDBDBD;
                     transition: .3s;
@@ -36,28 +35,33 @@
                     }
                 }
             }
-            
         }
     }
-    &-body{
-        form{
+    &-body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        form {
             display: flex;
             flex-direction: column;
             gap: 20px;
-            .person{
-                p{
+            .person {
+                p {
                     margin-bottom: 12px;
                 }
-                &-body{
+                &-body {
                     display: flex;
                     align-items: center;
                     gap: 30px;
                 }
             }
-            label{
-                .form-password{
+            label {
+                input {
+                    margin-top: 10px;
+                }
+                .form-password {
                     position: relative;
-                    .icon-eye{
+                    .icon-eye {
                         cursor: pointer;
                         position: absolute;
                         font-size: 20px;
@@ -68,13 +72,46 @@
                         transition: .2s;
                     }
                 }
+                span {
+                    color: $redcolor;
+                    font-size: 12px;
+                    line-height: 14px;
+                }
             }
-            .checkbox-label{
+            .checkbox-label {
                 display: flex;
                 gap: 7px;
-                input[type="checkbox"]{
+                input[type="checkbox"] {
                     width: auto;
                 }
+            }
+            a {
+                font-size: 14px;
+                line-height: 100%;
+                text-decoration-line: underline;
+                color: #3362AB;
+            }
+            .button {
+                width: 157px !important;
+            }
+        }
+        .login-separator {
+            display: block;
+            height: 100%;
+            &::before,
+            &::after {
+                content: "";
+                display: block;
+                margin: 0 auto;
+                height: 150px;
+                width: 1px;
+                background-color: #E4E4E4;
+            }
+            &::before {
+                margin: 0 auto 10px;
+            }
+            &::after {
+                margin: 10px auto 0;
             }
         }
     }
