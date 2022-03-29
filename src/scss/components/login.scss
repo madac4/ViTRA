@@ -14,7 +14,7 @@
     z-index: 10;
     transition: 0.3s;
     &.open {
-        top: 40%;
+        top: 50%;
         opacity: 1;
         visibility: visible;
     }
@@ -60,7 +60,7 @@
     }
     .form-password {
         position: relative;
-        .icon-eye {
+        span {
             cursor: pointer;
             position: absolute;
             font-size: 20px;
@@ -71,61 +71,79 @@
             transition: 0.2s;
         }
     }
-    &-body {
+    .login-separator {
+        display: block;
+        height: 100%;
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            margin: 0 auto;
+            height: 150px;
+            width: 1px;
+            background-color: #e4e4e4;
+        }
+        &::before {
+            margin: 0 auto 10px;
+        }
+        &::after {
+            margin: 10px auto 0;
+        }
+    }
+    .enter-acc {
+        width: 157px !important;
+    }
+    .login-tab {
         display: none;
-        align-items: center;
-        justify-content: space-between;
-        form {
+        &-body {
             display: flex;
-            flex-direction: column;
-            gap: 20px;
-            label {
-                span {
-                    color: $redcolor;
-                    font-size: 12px;
-                    line-height: 14px;
+            align-items: center;
+            justify-content: space-between;
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                label {
+                    span {
+                        color: $redcolor;
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+                }
+                a {
+                    font-size: 14px;
+                    line-height: 100%;
+                    text-decoration-line: underline;
+                    color: #3362ab;
                 }
             }
-            a {
-                font-size: 14px;
-                line-height: 100%;
-                text-decoration-line: underline;
-                color: #3362ab;
-            }
-            .button {
-                width: 157px !important;
-            }
         }
-        .login-separator {
-            display: block;
-            height: 100%;
-            &::before,
-            &::after {
-                content: '';
-                display: block;
-                margin: 0 auto;
-                height: 150px;
-                width: 1px;
-                background-color: #e4e4e4;
-            }
-            &::before {
-                margin: 0 auto 10px;
-            }
-            &::after {
-                margin: 10px auto 0;
+        .login-persoana__juridica {
+            display: none;
+            .persoana-juridica__form {
+                width: fit-content;
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
             }
         }
     }
-    .registration-body {
-        .registration-form {
-            width: fit-content;
-            margin-top: 30px;
+    .registration-tab {
+        .registration-fizica {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .persoana-fizica__form,
+        .persoana-juridica__form {
+            margin-top: 20px;
             display: flex;
             flex-direction: column;
             gap: 30px;
-            .button {
-                width: 157px !important;
-            }
+        }
+        .registration-juridica {
+            width: auto;
         }
     }
 }

@@ -435,23 +435,6 @@ const headerFav = document.querySelector('.header-right__favorite button');
 const bottomNavigationFav = document.querySelector('.bottom-navigation__fav');
 const favModal = document.querySelector('.fav-modal');
 
-// const historyContent = document.querySelectorAll('.Login-history__item')
-// const itemControl = document.querySelector('.item-header__control')
-
-// if (historyContent.length > 0) {
-//     for (let index = 0; index < historyContent.length; index++) {
-//         historyContent[index].addEventListener('click', () => {
-//             if (filterDesktop[index].classList.contains('open')) {
-//                 filterDesktop[index].classList.remove('open')
-//             } else {
-//                 filterDesktop.forEach(el => {
-//                     el.classList.remove('modal-filter')
-//                 })
-//                 filterDesktop[index].classList.add('modal-filter')
-//             }
-//         })
-//     }
-// }
 if (favModal) {
     headerFav.addEventListener('click', () => {
         favModal.classList.toggle('active');
@@ -465,6 +448,24 @@ if (favModal) {
         bottomNavigationCart.classList.remove('active');
     })
 }
+
+// const headerAccount = document.querySelector('.header-right__user button');
+// const bottomNavigationAccount = document.querySelector('.bottom-navigation__account');
+// const accountModal = document.querySelector('.profile-modal');
+
+// if (accountModal) {
+//     headerAccount.addEventListener('click', () => {
+//         accountModal.classList.toggle('active');
+//         overlay.classList.toggle('active')
+//     })
+//     bottomNavigationAccount.addEventListener('click', () => {
+//         accountModal.classList.toggle('active');
+//         bottomNavigationAccount.classList.toggle('active')
+//         document.body.classList.toggle('lock')
+//         cartModal.classList.remove('active');
+//         bottomNavigationCart.classList.remove('active');
+//     })
+// }
 
 const getCall = document.querySelectorAll('.get-call');
 const callModal = document.querySelector('.call-modal');
@@ -579,6 +580,16 @@ const tabsProfileHandler = (path) => {
     document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
 }
 
+
+const user = document.querySelector('.header-right__user')
+const login = document.querySelector('.login')
+
+
+user.addEventListener('click', () => {
+    login.classList.toggle('open');
+    overlay.classList.toggle('active');
+})
+
 const tabsLogin = document.querySelector('.login-tabs__list');
 const tabsLoginButtons = document.querySelectorAll('.login-tabs__button');
 const tabsLoginContents = document.querySelectorAll('.login-tabs__content');
@@ -592,41 +603,41 @@ if (tabsLogin) {
     })
 }
 
-const user = document.querySelector('.header-right__user')
-const login = document.querySelector('.login')
+
+// const tabsLoginHandler = (path) => {
+//     tabsLoginButtons.forEach(button => {
+//         button.classList.remove('login-tabs__button--active')
+//     })
+//     document.querySelector(`[data-tabs-path="${path}"]`).classList.add('login-tabs__button--active');
+
+//     tabsLoginContents.forEach(content => {
+//         content.classList.remove('login-tabs__content--active')
+//     })
+//     document.querySelector(`[data-tabs-target="${path}"]`).classList.add('login-tabs__content--active');
+// }
 
 
-user.addEventListener('click', () => {
-    login.classList.toggle('open');
-    overlay.classList.toggle('active');
-})
 
-const tabsLoginHandler = (path) => {
-    tabsLoginButtons.forEach(button => {
-        button.classList.remove('login-tabs__button--active')
-    })
-    document.querySelector(`[data-tabs-path="${path}"]`).classList.add('login-tabs__button--active');
+const formPassword = document.querySelectorAll('.form-password')
 
-    tabsLoginContents.forEach(content => {
-        content.classList.remove('tabs__content--active')
-    })
-    document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
+if (formPassword.length > 0) {
+    formPassword.forEach(pass => {
+        const passwordInput = pass.querySelector('input');
+        const typeSwitch = pass.querySelector('.icon-eye');
+        typeSwitch.addEventListener('click', () => {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text"
+                typeSwitch.style.color = '#3C3C3C'
+                typeSwitch.classList.replace('icon-eye', 'icon-eye-slash')
+            } else {
+                typeSwitch.style.color = '#BDBDBD'
+                passwordInput.type = "password"
+                typeSwitch.classList.replace('icon-eye-slash', 'icon-eye')
+
+            }
+        })
+    });
 }
-
-const changeType = document.querySelector('.change-type');
-const passInput = document.querySelector('#pass')
-
-passInput.forEach(pass => {
-    changeType.addEventListener('click', () => {
-        if (passInput.type === "password") {
-            passInput.type = "text"
-            document.querySelector('.icon-eye').style.color = '#3C3C3C'
-        } else {
-            document.querySelector('.icon-eye').style.color = '#BDBDBD'
-            passInput.type = "password"
-        }
-    })
-});
 
 
 

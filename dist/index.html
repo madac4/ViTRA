@@ -243,10 +243,6 @@
 
             </div>
             <div class="header-right__block header-right__user">
-                <!-- <a href="../profile.html" class="button button__gray">
-                    <span class="icon-user"></span>
-                    <span class="dot logged"></span>
-                </a> -->
                 <button type="button" class="button button__gray">
                     <span class="icon-user"></span>
                     <span class="dot logged"></span>
@@ -1259,7 +1255,7 @@
             </section>
             </section>
     </main>
-        <div class="cart-modal">
+     <div class="cart-modal">
     <div class="cart-modal__header">
         <h3>Coșul</h3>
         <button class="button button__outline--gray">Șterge tot</button>
@@ -1351,8 +1347,7 @@
         <a href="../cart.html" class="button button__primary">Spre achitare</a>
     </div>
 </div>
-
-    <div class="fav-modal">
+ <div class="fav-modal">
     <div class="fav-modal__header">
         <h3>Favorite</h3>
         <button class="button button__outline--gray">Șterge tot</button>
@@ -1378,8 +1373,7 @@
         <a href="../product-filter.html" class="button button__dark">Spre pagina produselor</a>
     </div>
 </div>
-
-    <div class="call-modal">
+ <div class="call-modal">
     <div class="call-modal__header">
         <p>Indicați datele personale și unul dintre operatorii noștri în scurt timp vă vor apela</p>
         <button class="icon-close"></button>
@@ -1402,8 +1396,7 @@
             <button type="submit" class="button button__primary">Solicită apel</button>
         </form>
     </div>
-</div>
-    <div class="reset-modal reset-modal--first">
+</div> <div class="reset-modal reset-modal--first">
     <div class="reset-modal__header reset-header">
         <div class="reset-header__title">
             <h3>Recuperare parolă</h3>
@@ -1470,15 +1463,14 @@
             </div>
         </form>
     </div>
-</div>
-    <div class="login open">
+</div> <div class="login open">
     <div class="login-tabs">
         <ul class="login-tabs__list">
             <li class="login-tabs__item">
                 <button class="login-tabs__button login-tabs__button--active" data-tabs-path="tab1">Logare</button>
             </li>
             <li class="login-tabs__item">
-                <button class="login-tabs__button login-tabs__button" data-tabs-path="tab1">Înregistrare</button>
+                <button class="login-tabs__button login-tabs__button" data-tabs-path="tab2">Înregistrare</button>
             </li>
         </ul>
     </div>
@@ -1495,88 +1487,174 @@
             </label>
         </div>
     </form>
-    <div class="login-body">
-        <form action="/" class="persoana-fizica">
+    <div class="login-tab">
+        <div class="login-body log-persoana__fizica">
+            <form action="/" class="persoana-fizica__form">
 
-            <label for="tel">
-                Nr. de telefon
-                <input type="tel" name="tel" id="tel" placeholder="+ (373) 069 300 100" class="input-field">
-            </label>
-            <label for="pass">
-                Parola
-                <p class="form-password">
-                    <input type="password" name="pass" id="pass" class="input-field">
-                    <span class="icon-eye change-type"></span>
-                </p>
-                <span>Parola Parolă greșită</span>
-            </label>
-            <a href="#">
-                Ai uitat parola?
-            </a>
-            <buttom class="button button__primary">
-                Intră în cont
-            </buttom>
-        </form>
-        <div class="login-separator">
-            <p>sau</p>
+                <label for="tel">
+                    Nr. de telefon
+                    <input type="tel" name="tel" id="tel" placeholder="+ (373) 069 300 100" class="input-field">
+                </label>
+                <label for="pass">
+                    Parola
+                    <p class="form-password">
+                        <input type="password" name="pass" id="pass" class="input-field password-input">
+                        <span class="icon-eye change-type"></span>
+                    </p>
+                    <span>Parola Parolă greșită</span>
+                </label>
+                <a href="#">
+                    Ai uitat parola?
+                </a>
+                <buttom class="button button__primary enter-acc">
+                    Intră în cont
+                </buttom>
+            </form>
+            <div class="login-separator">
+                <p>sau</p>
+            </div>
+            <div class="login-us-user">
+                <button class="button button__facebook">
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" transform="translate(0 0.5)" fill="#1877F2" />
+                        <path
+                            d="M23.5 12.5699C23.5 6.2186 18.3513 1.06988 12 1.06988C5.64872 1.06988 0.5 6.2186 0.5 12.5699C0.5 18.3099 4.70538 23.0674 10.2031 23.9302V15.8941H7.2832V12.5699H10.2031V10.0363C10.2031 7.1541 11.92 5.56207 14.5468 5.56207C15.805 5.56207 17.1211 5.78668 17.1211 5.78668V8.61675H15.671C14.2424 8.61675 13.7969 9.50322 13.7969 10.4127V12.5699H16.9863L16.4765 15.8941H13.7969V23.9302C19.2946 23.0674 23.5 18.3099 23.5 12.5699Z"
+                            fill="white" />
+                    </svg>
+                    Facebook
+                </button>
+                <button class="button button__google">
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" transform="translate(0 0.5)" fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M23.04 12.7613C23.04 11.9459 22.9668 11.1618 22.8309 10.4091H12V14.8575H18.1891C17.9225 16.295 17.1123 17.5129 15.8943 18.3284V21.2138H19.6109C21.7855 19.2118 23.04 16.2636 23.04 12.7613Z"
+                            fill="#4285F4" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M11.9995 23.9998C15.1045 23.9998 17.7077 22.97 19.6104 21.2137L15.8938 18.3282C14.864 19.0182 13.5467 19.4259 11.9995 19.4259C9.00425 19.4259 6.46902 17.403 5.5647 14.6848H1.72266V17.6644C3.61493 21.4228 7.50402 23.9998 11.9995 23.9998Z"
+                            fill="#34A853" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M5.56523 14.6851C5.33523 13.9951 5.20455 13.2581 5.20455 12.5001C5.20455 11.7422 5.33523 11.0051 5.56523 10.3151V7.33557H1.72318C0.944318 8.88807 0.5 10.6444 0.5 12.5001C0.5 14.3558 0.944318 16.1122 1.72318 17.6647L5.56523 14.6851Z"
+                            fill="#FBBC05" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M11.9995 5.57386C13.6879 5.57386 15.2038 6.15409 16.3956 7.29364L19.694 3.99523C17.7024 2.13955 15.0992 1 11.9995 1C7.50402 1 3.61493 3.57705 1.72266 7.33545L5.5647 10.315C6.46902 7.59682 9.00425 5.57386 11.9995 5.57386Z"
+                            fill="#EA4335" />
+                    </svg>
+                    Google
+                </button>
+            </div>
         </div>
-        <div class="login-us-user">
-            <button class="button button__facebook">
-                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="24" height="24" transform="translate(0 0.5)" fill="#1877F2" />
-                    <path
-                        d="M23.5 12.5699C23.5 6.2186 18.3513 1.06988 12 1.06988C5.64872 1.06988 0.5 6.2186 0.5 12.5699C0.5 18.3099 4.70538 23.0674 10.2031 23.9302V15.8941H7.2832V12.5699H10.2031V10.0363C10.2031 7.1541 11.92 5.56207 14.5468 5.56207C15.805 5.56207 17.1211 5.78668 17.1211 5.78668V8.61675H15.671C14.2424 8.61675 13.7969 9.50322 13.7969 10.4127V12.5699H16.9863L16.4765 15.8941H13.7969V23.9302C19.2946 23.0674 23.5 18.3099 23.5 12.5699Z"
-                        fill="white" />
-                </svg>
-                Facebook
-            </button>
-            <button class="button button__google">
-                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="24" height="24" transform="translate(0 0.5)" fill="white" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M23.04 12.7613C23.04 11.9459 22.9668 11.1618 22.8309 10.4091H12V14.8575H18.1891C17.9225 16.295 17.1123 17.5129 15.8943 18.3284V21.2138H19.6109C21.7855 19.2118 23.04 16.2636 23.04 12.7613Z"
-                        fill="#4285F4" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M11.9995 23.9998C15.1045 23.9998 17.7077 22.97 19.6104 21.2137L15.8938 18.3282C14.864 19.0182 13.5467 19.4259 11.9995 19.4259C9.00425 19.4259 6.46902 17.403 5.5647 14.6848H1.72266V17.6644C3.61493 21.4228 7.50402 23.9998 11.9995 23.9998Z"
-                        fill="#34A853" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M5.56523 14.6851C5.33523 13.9951 5.20455 13.2581 5.20455 12.5001C5.20455 11.7422 5.33523 11.0051 5.56523 10.3151V7.33557H1.72318C0.944318 8.88807 0.5 10.6444 0.5 12.5001C0.5 14.3558 0.944318 16.1122 1.72318 17.6647L5.56523 14.6851Z"
-                        fill="#FBBC05" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M11.9995 5.57386C13.6879 5.57386 15.2038 6.15409 16.3956 7.29364L19.694 3.99523C17.7024 2.13955 15.0992 1 11.9995 1C7.50402 1 3.61493 3.57705 1.72266 7.33545L5.5647 10.315C6.46902 7.59682 9.00425 5.57386 11.9995 5.57386Z"
-                        fill="#EA4335" />
-                </svg>
-                Google
-            </button>
+        <div class="login-body login-persoana__juridica">
+            <form action="#" class="persoana-juridica__form">
+                <label for="">
+                    Cod fiscal
+                    <input type="text" name="" id="" class="input-field">
+                </label>
+                <label for="pass">
+                    Parola
+                    <p class="form-password">
+                        <input type="password" name="pass" id="pass" class="input-field password-input">
+                        <span class="icon-eye change-type"></span>
+                    </p>
+                </label>
+                <buttom class="button button__primary enter-acc">
+                    Intră în cont
+                </buttom>
+            </form>
         </div>
     </div>
-    <div class="registration-body">
-        <form action="#" class="registration-form">
-            <label for="">
-                Cod fiscal
-                <input type="text" name="" id="" class="input-field">
-            </label>
-            <label for="pass">
-                Parola
-                <p class="form-password">
-                    <input type="password" name="pass" id="pass" class="input-field">
-                    <span class="icon-eye change-type"></span>
-                </p>
-            </label>
-            <buttom class="button button__primary">
-                Intră în cont
-            </buttom>
-        </form>
+    <div class="registration-tab">
+        <div class="registration-fizica">
+            <form action="/" class="persoana-fizica__form">
+                <label for="name">
+                    Nume
+                    <input type="text" name="name">
+                </label>
+                <label for="tel">
+                    Nr. de telefon
+                    <input type="tel" name="tel" id="tel" class="input-field">
+                </label>
+                <label for="pass">
+                    Parola
+                    <p class="form-password">
+                        <input type="password" name="pass" id="pass" class="input-field password-input">
+                        <span class="icon-eye change-type"></span>
+                    </p>
+                </label>
+                <buttom class="button button__primary enter-acc">
+                    Crează cont
+                </buttom>
+            </form>
+            <div class="login-separator">
+                <p>sau</p>
+            </div>
+            <div class="login-us-user">
+                <button class="button button__facebook">
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" transform="translate(0 0.5)" fill="#1877F2" />
+                        <path
+                            d="M23.5 12.5699C23.5 6.2186 18.3513 1.06988 12 1.06988C5.64872 1.06988 0.5 6.2186 0.5 12.5699C0.5 18.3099 4.70538 23.0674 10.2031 23.9302V15.8941H7.2832V12.5699H10.2031V10.0363C10.2031 7.1541 11.92 5.56207 14.5468 5.56207C15.805 5.56207 17.1211 5.78668 17.1211 5.78668V8.61675H15.671C14.2424 8.61675 13.7969 9.50322 13.7969 10.4127V12.5699H16.9863L16.4765 15.8941H13.7969V23.9302C19.2946 23.0674 23.5 18.3099 23.5 12.5699Z"
+                            fill="white" />
+                    </svg>
+                    Facebook
+                </button>
+                <button class="button button__google">
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" transform="translate(0 0.5)" fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M23.04 12.7613C23.04 11.9459 22.9668 11.1618 22.8309 10.4091H12V14.8575H18.1891C17.9225 16.295 17.1123 17.5129 15.8943 18.3284V21.2138H19.6109C21.7855 19.2118 23.04 16.2636 23.04 12.7613Z"
+                            fill="#4285F4" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M11.9995 23.9998C15.1045 23.9998 17.7077 22.97 19.6104 21.2137L15.8938 18.3282C14.864 19.0182 13.5467 19.4259 11.9995 19.4259C9.00425 19.4259 6.46902 17.403 5.5647 14.6848H1.72266V17.6644C3.61493 21.4228 7.50402 23.9998 11.9995 23.9998Z"
+                            fill="#34A853" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M5.56523 14.6851C5.33523 13.9951 5.20455 13.2581 5.20455 12.5001C5.20455 11.7422 5.33523 11.0051 5.56523 10.3151V7.33557H1.72318C0.944318 8.88807 0.5 10.6444 0.5 12.5001C0.5 14.3558 0.944318 16.1122 1.72318 17.6647L5.56523 14.6851Z"
+                            fill="#FBBC05" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M11.9995 5.57386C13.6879 5.57386 15.2038 6.15409 16.3956 7.29364L19.694 3.99523C17.7024 2.13955 15.0992 1 11.9995 1C7.50402 1 3.61493 3.57705 1.72266 7.33545L5.5647 10.315C6.46902 7.59682 9.00425 5.57386 11.9995 5.57386Z"
+                            fill="#EA4335" />
+                    </svg>
+                    Google
+                </button>
+            </div>
+        </div>
+        <div class="registration-juridica">
+            <form action="" class="persoana-juridica__form">
+                <label for="company">
+                    Denumire companie
+                    <input type="text" placeholder="Introduceți nume existent" class="input-field">
+                </label>
+                <label for="codfiscal">
+                    Cod fiscal
+                    <input type="text" placeholder="############" class="input-field">
+                </label>
+                <label for="jurtel">
+                    Nr. de telefon
+                    <input type="tel" class="input-field">
+                </label>
+                <label for="jurpass">
+                    Parolă
+                    <input type="password" class="input-field">
+                </label>
+                <label for="jurpassconfirm" class="input-field">
+                    Confirmă parolă
+                    <input type="password" class="input-field">
+                </label>
+                <button class="button button__primary enter-acc">
+                    Crează cont
+                </button>
+            </form>
+        </div>
     </div>
 </div>
-    <div class="overlay"></div>
 
-    <div class="bottom-navigation">
-    <a href="../profile.html" class="button button__gray">
+<div class="overlay"></div>
+
+<div class="bottom-navigation">
+    <button class="button button__gray bottom-navigation__account">
         <span class="icon-user"></span>
         <span class="button-text">whhroo</span>
         <span class="dot logged"></span>
-    </a>
+    </button>
     <a href="#" class="button button__gray">
         <span class="icon-chat"></span>
     </a>
@@ -1592,60 +1670,60 @@
     </button>
 </div>
 
-    <footer class="footer">
-        <div class="footer-header">
-            <a href="/">
-                <img src="img/logos/logo-white.svg" alt="">
-            </a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+<footer class="footer">
+    <div class="footer-header">
+        <a href="/">
+            <img src="img/logos/logo-white.svg" alt="">
+        </a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+    </div>
+    <ul class="footer-nav">
+        <li>
+            <a href="#">Servicii</a>
+        </li>
+        <li>
+            <a href="#">Clienții noștri</a>
+        </li>
+        <li>
+            <a href="#">Portfoliu</a>
+        </li>
+        <li>
+            <a href="#">Companie</a>
+        </li>
+        <li>
+            <a href="#">Evenimente</a>
+        </li>
+        <li>
+            <a href="#">Carieră</a>
+        </li>
+        <li>
+            <a href="../blog.html">Blog</a>
+        </li>
+        <li>
+            <a href="#">Contacte</a>
+        </li>
+        <li>
+            <a href="#">Cataloage</a>
+        </li>
+        <li>
+            <a href="#">Credit</a>
+        </li>
+    </ul>
+    <div class="footer-links">
+        <div class="footer-links__card">
+            <img src="img/logos/mastercard.svg" alt="mastercard">
+            <img src="img/logos/visa.svg" alt="visa">
         </div>
-        <ul class="footer-nav">
-            <li>
-                <a href="#">Servicii</a>
-            </li>
-            <li>
-                <a href="#">Clienții noștri</a>
-            </li>
-            <li>
-                <a href="#">Portfoliu</a>
-            </li>
-            <li>
-                <a href="#">Companie</a>
-            </li>
-            <li>
-                <a href="#">Evenimente</a>
-            </li>
-            <li>
-                <a href="#">Carieră</a>
-            </li>
-            <li>
-                <a href="../blog.html">Blog</a>
-            </li>
-            <li>
-                <a href="#">Contacte</a>
-            </li>
-            <li>
-                <a href="#">Cataloage</a>
-            </li>
-            <li>
-                <a href="#">Credit</a>
-            </li>
-        </ul>
-        <div class="footer-links">
-            <div class="footer-links__card">
-                <img src="img/logos/mastercard.svg" alt="mastercard">
-                <img src="img/logos/visa.svg" alt="visa">
-            </div>
-            <div class="footer-links__socials">
-                <a href="#">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="footer-links__socials">
+            <a href="#">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM13.2508 12.5271V19.0557H10.5495V12.5274H9.2V10.2776H10.5495V8.92678C10.5495 7.0914 11.3116 6 13.4766 6H15.279V8.25006H14.1524C13.3096 8.25006 13.2538 8.56447 13.2538 9.15125L13.2508 10.2773H15.2918L15.053 12.5271H13.2508Z"
                             fill="white" />
                     </svg>
-                </a>
-                <a href="#">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            </a>
+            <a href="#">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12Z"
                             fill="white" />
@@ -1661,26 +1739,26 @@
                                 fill="black" />
                         </g>
                     </svg>
-                </a>
-                <a href="#">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            </a>
+            <a href="#">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM17.0008 7.87466C17.5516 8.0258 17.9853 8.47111 18.1325 9.03661C18.4 10.0615 18.4 12.2 18.4 12.2C18.4 12.2 18.4 14.3384 18.1325 15.3634C17.9853 15.9289 17.5516 16.3742 17.0008 16.5254C16.0027 16.8 12 16.8 12 16.8C12 16.8 7.99731 16.8 6.99913 16.5254C6.44836 16.3742 6.01462 15.9289 5.86742 15.3634C5.6 14.3384 5.6 12.2 5.6 12.2C5.6 12.2 5.6 10.0615 5.86742 9.03661C6.01462 8.47111 6.44836 8.0258 6.99913 7.87466C7.99731 7.6 12 7.6 12 7.6C12 7.6 16.0027 7.6 17.0008 7.87466Z"
                             fill="white" />
                         <path d="M10.8008 14.3999V10.3999L14.0008 12.4L10.8008 14.3999Z" fill="white" />
                     </svg>
-                </a>
-            </div>
+            </a>
         </div>
-        <p class="copyright">
-            Copyright © 2021. ViTRA. All rights reserved.
-        </p>
-    </footer>
+    </div>
+    <p class="copyright">
+        Copyright © 2021. ViTRA. All rights reserved.
+    </p>
+</footer>
 
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/ellipsis.js@0.1.3/ellipsis.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
-    <script src="js/app.min.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ellipsis.js@0.1.3/ellipsis.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+<script src="js/app.min.js"></script>
 </body>
 
 </html>
