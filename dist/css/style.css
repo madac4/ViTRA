@@ -1444,6 +1444,9 @@ section [class*=__header] a span {
     position: initial;
   }
 }
+.header-right__user {
+  z-index: 10;
+}
 .header-right--mobile {
   display: block;
 }
@@ -2900,6 +2903,78 @@ section.filter {
 .call-modal__body form button {
   max-width: fit-content;
   padding: 14px 28px;
+}
+
+.login {
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  max-width: 715px;
+  width: 100%;
+  padding: 35px 50px 40px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 10;
+  transition: 0.3s;
+}
+.login.open {
+  top: 40%;
+  opacity: 1;
+  visibility: visible;
+}
+.login-tabs {
+  margin-bottom: 45px;
+}
+.login-tabs__list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.login-tabs__list .login-tabs__item button {
+  color: #BDBDBD;
+  transition: 0.3s;
+  font-size: 24px;
+}
+.login-tabs__list .login-tabs__item button.login-tabs__button--active {
+  color: #2b2b2b;
+  text-decoration: underline;
+}
+.login-body form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.login-body form .person p {
+  margin-bottom: 12px;
+}
+.login-body form .person-body {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.login-body form label .form-password {
+  position: relative;
+}
+.login-body form label .form-password .icon-eye {
+  cursor: pointer;
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: #BDBDBD;
+  transition: 0.2s;
+}
+.login-body form .checkbox-label {
+  display: flex;
+  gap: 7px;
+}
+.login-body form .checkbox-label input[type=checkbox] {
+  width: auto;
 }
 
 .reset-modal {
