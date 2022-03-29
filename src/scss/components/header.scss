@@ -302,6 +302,9 @@
                 position: initial;
             }
         }
+        &__user{
+            z-index: 10;
+        }
         &--mobile {
             display: block;
             @media (max-width: $mobileSmall) {

@@ -45,7 +45,8 @@ if (burgerDesktop) {
         cartModal && cartModal.classList.remove('active')
         filters && filters.classList.remove('open')
         favModal && favModal.classList.remove('active');
-        callModal && callModal.classList.remove('open')
+        callModal && callModal.classList.remove('open');
+        login && login.classList.remove('open')
     })
 }
 
@@ -318,7 +319,7 @@ function productSliders() {
             if (productImages.length > 1) {
                 product.addEventListener('mouseenter', () => {
                     var i = 0;
-                    var imageSwitch = setInterval(function() {
+                    var imageSwitch = setInterval(function () {
                         productImages[i].classList.remove('product-images__image--active')
                         productPaginationItem[i].classList.remove('pagination-item--active')
                         i++
@@ -413,7 +414,7 @@ const headerFav = document.querySelector('.header-right__favorite button');
 const bottomNavigationFav = document.querySelector('.bottom-navigation__fav');
 const favModal = document.querySelector('.fav-modal');
 
-// const historyContent = document.querySelectorAll('.profile-history__item')
+// const historyContent = document.querySelectorAll('.Login-history__item')
 // const itemControl = document.querySelector('.item-header__control')
 
 // if (historyContent.length > 0) {
@@ -556,3 +557,51 @@ const tabsProfileHandler = (path) => {
     })
     document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
 }
+
+const tabsLogin = document.querySelector('.login-tabs__list');
+const tabsLoginButtons = document.querySelectorAll('.login-tabs__button');
+const tabsLoginContents = document.querySelectorAll('.login-tabs__content');
+
+if (tabsLogin) {
+    tabsLogin.addEventListener('click', (e) => {
+        if (e.target.classList.contains('login-tabs__button')) {
+            const tabsPath = e.target.dataset.tabsPath;
+            tabsLoginHandler(tabsPath);
+        }
+    })
+}
+
+const user = document.querySelector('.header-right__user')
+const login = document.querySelector('.login')
+
+
+user.addEventListener('click', () => {
+    login.classList.toggle('open');
+    overlay.classList.toggle('active');
+})
+
+const tabsLoginHandler = (path) => {
+    tabsLoginButtons.forEach(button => {
+        button.classList.remove('login-tabs__button--active')
+    })
+    document.querySelector(`[data-tabs-path="${path}"]`).classList.add('login-tabs__button--active');
+
+    tabsLoginContents.forEach(content => {
+        content.classList.remove('tabs__content--active')
+    })
+    document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
+}
+
+const changeType = document.querySelector('.change-type');
+const passInput = document.querySelector('#pass')
+
+changeType.addEventListener('click', () => {
+    if (passInput.type === "password") {
+        passInput.type = "text"
+        document.querySelector('.icon-eye').style.color = '#3C3C3C'
+    } else {
+        document.querySelector('.icon-eye').style.color = '#BDBDBD'
+        passInput.type = "password"
+    }
+})
+
