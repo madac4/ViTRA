@@ -459,6 +459,10 @@ main {
 .button__gray.active {
   background-color: #d9d9d9;
 }
+.button__gray.transparent {
+  background-color: #fff;
+  border: 1px solid #f4f4f4;
+}
 .button__filter {
   width: fit-content;
   line-height: 100%;
@@ -1444,9 +1448,6 @@ section [class*=__header] a span {
     position: initial;
   }
 }
-.header-right__user {
-  z-index: 10;
-}
 .header-right--mobile {
   display: block;
 }
@@ -1505,11 +1506,13 @@ section [class*=__header] a span {
 .header-right--mobile .menu-nav--mobile .menu-block ul li a:hover {
   color: #f15d22;
 }
-.header-right button.button__gray, .header-right a.button__gray {
+.header-right button.button__gray,
+.header-right a.button__gray {
   display: none;
 }
 @media (min-width: 61.99875rem) {
-  .header-right button.button__gray, .header-right a.button__gray {
+  .header-right button.button__gray,
+.header-right a.button__gray {
     display: flex;
   }
 }
@@ -3090,6 +3093,90 @@ section.filter {
 }
 .reset-modal__footer a {
   color: #2c5282;
+}
+
+.profile-modal {
+  position: absolute;
+  max-width: 375px;
+  width: 100%;
+  right: 15px;
+  top: 80px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 30px 15px;
+  z-index: 4;
+  transition: 0.3s;
+  max-height: 760px;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+}
+.profile-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 61.99875rem) {
+  .profile-modal {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    z-index: 7;
+  }
+  .profile-modal.active {
+    right: 0;
+  }
+}
+@media (max-width: 39.99875rem) {
+  .profile-modal {
+    height: calc(100% - 70px);
+    z-index: 4;
+  }
+}
+.profile-modal p {
+  font-size: 14px;
+}
+.profile-modal .modal-account {
+  margin-bottom: 20px;
+}
+.profile-modal .modal-account__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+.profile-modal .modal-account__header .account-header__left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profile-modal .modal-account__header .account-header__left span {
+  font-size: 14px;
+  color: #bdbdbd;
+}
+.profile-modal__info {
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.profile-modal__footer {
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profile-modal__footer img {
+  max-width: 180px;
+  margin: 0 auto;
 }
 
 .page__main-slider {

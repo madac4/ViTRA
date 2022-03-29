@@ -159,6 +159,10 @@ main {
         &.active {
             background-color: $graycolor300;
         }
+        &.transparent {
+            background-color: #fff;
+            border: 1px solid $graycolor100;
+        }
     }
     &__filter {
         width: fit-content;

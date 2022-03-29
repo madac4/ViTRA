@@ -435,23 +435,6 @@ const headerFav = document.querySelector('.header-right__favorite button');
 const bottomNavigationFav = document.querySelector('.bottom-navigation__fav');
 const favModal = document.querySelector('.fav-modal');
 
-// const historyContent = document.querySelectorAll('.Login-history__item')
-// const itemControl = document.querySelector('.item-header__control')
-
-// if (historyContent.length > 0) {
-//     for (let index = 0; index < historyContent.length; index++) {
-//         historyContent[index].addEventListener('click', () => {
-//             if (filterDesktop[index].classList.contains('open')) {
-//                 filterDesktop[index].classList.remove('open')
-//             } else {
-//                 filterDesktop.forEach(el => {
-//                     el.classList.remove('modal-filter')
-//                 })
-//                 filterDesktop[index].classList.add('modal-filter')
-//             }
-//         })
-//     }
-// }
 if (favModal) {
     headerFav.addEventListener('click', () => {
         favModal.classList.toggle('active');
@@ -465,6 +448,24 @@ if (favModal) {
         bottomNavigationCart.classList.remove('active');
     })
 }
+
+// const headerAccount = document.querySelector('.header-right__user button');
+// const bottomNavigationAccount = document.querySelector('.bottom-navigation__account');
+// const accountModal = document.querySelector('.profile-modal');
+
+// if (accountModal) {
+//     headerAccount.addEventListener('click', () => {
+//         accountModal.classList.toggle('active');
+//         overlay.classList.toggle('active')
+//     })
+//     bottomNavigationAccount.addEventListener('click', () => {
+//         accountModal.classList.toggle('active');
+//         bottomNavigationAccount.classList.toggle('active')
+//         document.body.classList.toggle('lock')
+//         cartModal.classList.remove('active');
+//         bottomNavigationCart.classList.remove('active');
+//     })
+// }
 
 const getCall = document.querySelectorAll('.get-call');
 const callModal = document.querySelector('.call-modal');
@@ -640,3 +641,4 @@ if (forgetButton) {
         overlay.classList.remove('active')
     })
 }
+

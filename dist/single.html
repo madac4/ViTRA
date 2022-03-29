@@ -243,10 +243,6 @@
 
             </div>
             <div class="header-right__block header-right__user">
-                <!-- <a href="../profile.html" class="button button__gray">
-                    <span class="icon-user"></span>
-                    <span class="dot logged"></span>
-                </a> -->
                 <button type="button" class="button button__gray">
                     <span class="icon-user"></span>
                     <span class="dot logged"></span>
@@ -824,14 +820,58 @@
         </form>
     </div>
 </div>
+    <div class="login">
+    <div class="login-tabs">
+        <ul class="login-tabs__list">
+            <li class="login-tabs__item">
+                <button class="login-tabs__button login-tabs__button--active" data-tabs-path="tab1">Logare</button>
+            </li>
+            <li class="login-tabs__item">
+                <button class="login-tabs__button login-tabs__button" data-tabs-path="tab1">Înregistrare</button>
+            </li>
+        </ul>
+    </div>
+    <div class="login-body">
+        <form action="/">
+            <div class="person">
+                <p>Persoana</p>
+                <div class="person-body">
+                    <label class="checkbox-label">
+                        <input type="radio">
+                        Fizică
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="radio">
+                        Juridică
+                    </label>
+                </div>
+            </div>
+            <label for="tel">
+                Nr. de telefon
+                <input type="tel" name="tel" id="tel" placeholder="+ (373) 069 300 100">
+            </label>
+            <label for="pass">
+                Parola
+                <p class="form-password">
+                    <input type="password" name="pass" id="pass">
+                    <span class="icon-eye change-type"></span>
+                </p>
+                <span>Parola Parolă greșită</span>
+
+            </label>
+        </form>
+    </div>
+</div>
+
+    
     <div class="overlay"></div>
 
     <div class="bottom-navigation">
-    <a href="../profile.html" class="button button__gray">
+    <button class="button button__gray bottom-navigation__account">
         <span class="icon-user"></span>
         <span class="button-text">whhroo</span>
         <span class="dot logged"></span>
-    </a>
+    </button>
     <a href="#" class="button button__gray">
         <span class="icon-chat"></span>
     </a>
