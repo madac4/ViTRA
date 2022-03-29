@@ -8,11 +8,11 @@
     max-width: 715px;
     width: 100%;
     padding: 35px 50px 40px;
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     z-index: 10;
-    transition: .3s;
+    transition: 0.3s;
     &.open {
         top: 40%;
         opacity: 1;
@@ -26,70 +26,71 @@
             gap: 30px;
             .login-tabs__item {
                 button {
-                    color: #BDBDBD;
-                    transition: .3s;
+                    color: #bdbdbd;
+                    transition: 0.3s;
                     font-size: 24px;
                     &.login-tabs__button--active {
                         color: $maincolor;
-                        text-decoration: underline
+                        text-decoration: underline;
                     }
                 }
             }
         }
     }
+    .person {
+        p {
+            margin-bottom: 12px;
+        }
+        &-body {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            .checkbox-label {
+                display: flex;
+                gap: 7px;
+                input[type='checkbox'] {
+                    width: auto;
+                }
+            }
+        }
+    }
+    .input-field {
+        margin-top: 10px;
+        @include adaptiv-value('width', 280, 200, 1);
+    }
+    .form-password {
+        position: relative;
+        .icon-eye {
+            cursor: pointer;
+            position: absolute;
+            font-size: 20px;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            color: #bdbdbd;
+            transition: 0.2s;
+        }
+    }
     &-body {
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: space-between;
         form {
             display: flex;
             flex-direction: column;
             gap: 20px;
-            .person {
-                p {
-                    margin-bottom: 12px;
-                }
-                &-body {
-                    display: flex;
-                    align-items: center;
-                    gap: 30px;
-                }
-            }
             label {
-                input {
-                    margin-top: 10px;
-                }
-                .form-password {
-                    position: relative;
-                    .icon-eye {
-                        cursor: pointer;
-                        position: absolute;
-                        font-size: 20px;
-                        top: 50%;
-                        right: 15px;
-                        transform: translateY(-50%);
-                        color: #BDBDBD;
-                        transition: .2s;
-                    }
-                }
                 span {
                     color: $redcolor;
                     font-size: 12px;
                     line-height: 14px;
                 }
             }
-            .checkbox-label {
-                display: flex;
-                gap: 7px;
-                input[type="checkbox"] {
-                    width: auto;
-                }
-            }
             a {
                 font-size: 14px;
                 line-height: 100%;
                 text-decoration-line: underline;
-                color: #3362AB;
+                color: #3362ab;
             }
             .button {
                 width: 157px !important;
@@ -100,18 +101,30 @@
             height: 100%;
             &::before,
             &::after {
-                content: "";
+                content: '';
                 display: block;
                 margin: 0 auto;
                 height: 150px;
                 width: 1px;
-                background-color: #E4E4E4;
+                background-color: #e4e4e4;
             }
             &::before {
                 margin: 0 auto 10px;
             }
             &::after {
                 margin: 10px auto 0;
+            }
+        }
+    }
+    .registration-body {
+        .registration-form {
+            width: fit-content;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            .button {
+                width: 157px !important;
             }
         }
     }

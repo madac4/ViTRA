@@ -9,29 +9,30 @@
             </li>
         </ul>
     </div>
+    <form action="#" class="person">
+        <p>Persoana</p>
+        <div class="person-body">
+            <label class="checkbox-label">
+                <input type="radio" name="pers">
+                Fizică
+            </label>
+            <label class="checkbox-label">
+                <input type="radio" name="pers">
+                Juridică
+            </label>
+        </div>
+    </form>
     <div class="login-body">
-        <form action="/">
-            <div class="person">
-                <p>Persoana</p>
-                <div class="person-body">
-                    <label class="checkbox-label">
-                        <input type="radio" name="pers">
-                        Fizică
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" name="pers">
-                        Juridică
-                    </label>
-                </div>
-            </div>
+        <form action="/" class="persoana-fizica">
+
             <label for="tel">
                 Nr. de telefon
-                <input type="tel" name="tel" id="tel" placeholder="+ (373) 069 300 100">
+                <input type="tel" name="tel" id="tel" placeholder="+ (373) 069 300 100" class="input-field">
             </label>
             <label for="pass">
                 Parola
                 <p class="form-password">
-                    <input type="password" name="pass" id="pass">
+                    <input type="password" name="pass" id="pass" class="input-field">
                     <span class="icon-eye change-type"></span>
                 </p>
                 <span>Parola Parolă greșită</span>
@@ -75,5 +76,23 @@
                 Google
             </button>
         </div>
+    </div>
+    <div class="registration-body">
+        <form action="#" class="registration-form">
+            <label for="">
+                Cod fiscal
+                <input type="text" name="" id="" class="input-field">
+            </label>
+            <label for="pass">
+                Parola
+                <p class="form-password">
+                    <input type="password" name="pass" id="pass" class="input-field">
+                    <span class="icon-eye change-type"></span>
+                </p>
+            </label>
+            <buttom class="button button__primary">
+                Intră în cont
+            </buttom>
+        </form>
     </div>
 </div>

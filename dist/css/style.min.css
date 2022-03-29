@@ -2933,7 +2933,7 @@ section.filter {
   max-width: 715px;
   width: 100%;
   padding: 35px 50px 40px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   z-index: 10;
@@ -2953,7 +2953,7 @@ section.filter {
   gap: 30px;
 }
 .login-tabs__list .login-tabs__item button {
-  color: #BDBDBD;
+  color: #bdbdbd;
   transition: 0.3s;
   font-size: 24px;
 }
@@ -2961,8 +2961,45 @@ section.filter {
   color: #2b2b2b;
   text-decoration: underline;
 }
-.login-body {
+.login .person p {
+  margin-bottom: 12px;
+}
+.login .person-body {
   display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.login .person-body .checkbox-label {
+  display: flex;
+  gap: 7px;
+}
+.login .person-body .checkbox-label input[type=checkbox] {
+  width: auto;
+}
+.login .input-field {
+  margin-top: 10px;
+  width: 280px;
+}
+@media (max-width: 1420px) {
+  .login .input-field {
+    width: calc( 200px + 80 * ((100vw - 320px) / 1100));
+  }
+}
+.login .form-password {
+  position: relative;
+}
+.login .form-password .icon-eye {
+  cursor: pointer;
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: #bdbdbd;
+  transition: 0.2s;
+}
+.login-body {
+  display: none;
   align-items: center;
   justify-content: space-between;
 }
@@ -2971,47 +3008,16 @@ section.filter {
   flex-direction: column;
   gap: 20px;
 }
-.login-body form .person p {
-  margin-bottom: 12px;
-}
-.login-body form .person-body {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-.login-body form label input {
-  margin-top: 10px;
-}
-.login-body form label .form-password {
-  position: relative;
-}
-.login-body form label .form-password .icon-eye {
-  cursor: pointer;
-  position: absolute;
-  font-size: 20px;
-  top: 50%;
-  right: 15px;
-  transform: translateY(-50%);
-  color: #BDBDBD;
-  transition: 0.2s;
-}
 .login-body form label span {
   color: #ee2924;
   font-size: 12px;
   line-height: 14px;
 }
-.login-body form .checkbox-label {
-  display: flex;
-  gap: 7px;
-}
-.login-body form .checkbox-label input[type=checkbox] {
-  width: auto;
-}
 .login-body form a {
   font-size: 14px;
   line-height: 100%;
   text-decoration-line: underline;
-  color: #3362AB;
+  color: #3362ab;
 }
 .login-body form .button {
   width: 157px !important;
@@ -3026,13 +3032,23 @@ section.filter {
   margin: 0 auto;
   height: 150px;
   width: 1px;
-  background-color: #E4E4E4;
+  background-color: #e4e4e4;
 }
 .login-body .login-separator::before {
   margin: 0 auto 10px;
 }
 .login-body .login-separator::after {
   margin: 10px auto 0;
+}
+.login .registration-body .registration-form {
+  width: fit-content;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.login .registration-body .registration-form .button {
+  width: 157px !important;
 }
 
 .reset-modal {

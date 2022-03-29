@@ -340,7 +340,7 @@ function productSliders() {
             if (productImages.length > 1) {
                 product.addEventListener('mouseenter', () => {
                     var i = 0;
-                    var imageSwitch = setInterval(function () {
+                    var imageSwitch = setInterval(function() {
                         productImages[i].classList.remove('product-images__image--active')
                         productPaginationItem[i].classList.remove('pagination-item--active')
                         i++
@@ -616,15 +616,19 @@ const tabsLoginHandler = (path) => {
 const changeType = document.querySelector('.change-type');
 const passInput = document.querySelector('#pass')
 
-changeType.addEventListener('click', () => {
-    if (passInput.type === "password") {
-        passInput.type = "text"
-        document.querySelector('.icon-eye').style.color = '#3C3C3C'
-    } else {
-        document.querySelector('.icon-eye').style.color = '#BDBDBD'
-        passInput.type = "password"
-    }
-})
+passInput.forEach(pass => {
+    changeType.addEventListener('click', () => {
+        if (passInput.type === "password") {
+            passInput.type = "text"
+            document.querySelector('.icon-eye').style.color = '#3C3C3C'
+        } else {
+            document.querySelector('.icon-eye').style.color = '#BDBDBD'
+            passInput.type = "password"
+        }
+    })
+});
+
+
 
 const resetModal = document.querySelector('.reset-modal--first');
 const forgetButton = document.querySelector('.forget');
