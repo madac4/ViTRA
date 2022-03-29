@@ -21,7 +21,7 @@
                     </div>
                     <div class="profile-form tabs__content tabs__content--active" data-tabs-target="tab1">
                         <h3>Date personale</h3>
-                        <form>
+                        <form action="#">
                             <label for="name">
                                 Nume
                                 <input type="text" name="name" id="name" placeholder="Alexandru">
@@ -37,16 +37,16 @@
                                 Nr. de telefon
                                 <input type="number" name="tel" id="num" placeholder="+ (373) 069 352 170">
                             </label>
-                            <a href="#">Ai uitat parola?</a>
+                            <button type="button" class="forget">Ai uitat parola?</button>
 
-                            <label class="form-btns" for="">
-                                <button class="button form-btn button__primary">
+                            <p class="form-btns">
+                                <button type="submit" class="button form-btn button__primary">
                                     Salvează modificări
                                 </button>
-                                <button class="button form-btn button__back">
+                                <button class="button form-btn button__outline button__outline--gray rounded">
                                     Înapoi la cumpărături
                                 </button>
-                            </label>
+                            </p>
                         </form>
                     </div>
                     <div class="profile-history tabs__content" data-tabs-target="tab2">
@@ -174,14 +174,8 @@
                 </div>
             </div>
         </div>
-
     </main>
-    <div class="overlay"></div>
-    @@include('./components/bottomNavigation.html') @@include('./components/footer.html')
-
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/ellipsis.js@0.1.3/ellipsis.min.js"></script>
-    <script src="js/app.min.js"></script>
+    @@include('./components/footer.html')
 </body>
 
 </html>

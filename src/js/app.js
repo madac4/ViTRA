@@ -47,6 +47,8 @@ if (burgerDesktop) {
         favModal && favModal.classList.remove('active');
         callModal && callModal.classList.remove('open');
         login && login.classList.remove('open')
+        callModal && callModal.classList.remove('open')
+        resetModal && resetModal.classList.remove('open')
     })
 }
 
@@ -280,7 +282,6 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-
     if (w <= 767) {
         if (document.querySelector('.slider-mobile__body')) {
             new Swiper('.slider-mobile__body', {
@@ -303,6 +304,26 @@ window.addEventListener('DOMContentLoaded', () => {
             })
         }
     }
+    alertify.defaults = {
+        notifier: {
+            delay: 10,
+            position: 'top-right',
+        },
+    };
+    products.forEach(product => {
+        const addToCart = product.querySelector('.product-footer__controls .icon-cart');
+        const addToFav = product.querySelector('.product-footer__controls .icon-heart__filled');
+        const productName = product.querySelector('.product-name').textContent;
+        addToCart.addEventListener('click', () => {
+            // alertify.success(`Produsul ${productName} a fost adaugat în coș`);
+            alertify.error('Error message');
+            // alertify.error(`Produsul ${productName} nu a fost adaugat în coș`);
+        })
+
+        addToFav.addEventListener('click', () => {
+            alertify.success(`Produsul ${productName} a fost adaugat la favorite`);
+        })
+    })
 });
 
 function productSliders() {
@@ -605,3 +626,17 @@ changeType.addEventListener('click', () => {
     }
 })
 
+const resetModal = document.querySelector('.reset-modal--first');
+const forgetButton = document.querySelector('.forget');
+
+if (forgetButton) {
+    forgetButton.addEventListener('click', () => {
+        resetModal.classList.add('open')
+        overlay.classList.add('active')
+    })
+
+    resetModal.querySelector('.reset-header__close').addEventListener('click', () => {
+        resetModal.classList.remove('open')
+        overlay.classList.remove('active')
+    })
+}

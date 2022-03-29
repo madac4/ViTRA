@@ -150,7 +150,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 50%;
+    @include adaptiv-value('padding-right', 50, 20, 1);
+    @include adaptiv-value('padding-left', 50, 20, 1);
     font-weight: 600;
     text-align: center;
     color: #fff;

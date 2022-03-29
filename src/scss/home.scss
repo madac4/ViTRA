@@ -1,6 +1,11 @@
 .page__main-slider {
     position: relative;
     @include adaptiv-value('margin-bottom', 80, 50, 1);
+    margin-top: -20px;
+    @media (max-width: $mobile) {
+        margin-top: 0;
+        padding: 0 15px;
+    }
     .main-slider__body {
         .main-slider__slider {
             position: relative;
