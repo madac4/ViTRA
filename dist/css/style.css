@@ -561,6 +561,16 @@ main {
   gap: 15px;
   color: #FFFFFF;
 }
+@media (max-width: 39.99875rem) {
+  .button__facebook {
+    width: 165px;
+  }
+}
+@media (max-width: 39.99875rem) and (max-width: 1420px) {
+  .button__facebook {
+    width: calc( 150px + 15 * ((100vw - 320px) / 1100));
+  }
+}
 .button__google {
   padding: 15px 0;
   width: 206px;
@@ -569,6 +579,18 @@ main {
   gap: 15px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.54);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+  border-radius: 4px;
+}
+@media (max-width: 39.99875rem) {
+  .button__google {
+    width: 165px;
+  }
+}
+@media (max-width: 39.99875rem) and (max-width: 1420px) {
+  .button__google {
+    width: calc( 150px + 15 * ((100vw - 320px) / 1100));
+  }
 }
 
 .rounded {
@@ -2935,20 +2957,64 @@ section.filter {
   visibility: hidden;
   max-width: 715px;
   width: 100%;
-  padding: 35px 50px 40px;
+  padding: 35px 0 40px;
+  padding-left: 50px;
+  padding-right: 50px;
   background: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   z-index: 10;
   transition: 0.3s;
 }
+@media (max-width: 1420px) {
+  .login {
+    padding-left: calc( 15px + 35 * ((100vw - 320px) / 1100));
+  }
+}
+@media (max-width: 1420px) {
+  .login {
+    padding-right: calc( 15px + 35 * ((100vw - 320px) / 1100));
+  }
+}
+@media (max-width: 39.99875rem) {
+  .login {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
 .login.open {
   top: 50%;
   opacity: 1;
   visibility: visible;
 }
+.login-logo {
+  display: none;
+}
+@media (max-width: 39.99875rem) {
+  .login-logo {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.login-close {
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 35px;
+}
 .login-tabs {
   margin-bottom: 45px;
+}
+@media (max-width: 39.99875rem) {
+  .login-tabs {
+    margin-top: 70px;
+  }
 }
 .login-tabs__list {
   display: flex;
@@ -2963,6 +3029,9 @@ section.filter {
 .login-tabs__list .login-tabs__item button.login-tabs__button--active {
   color: #2b2b2b;
   text-decoration: underline;
+}
+.login .person {
+  margin-bottom: 20px;
 }
 .login .person p {
   margin-bottom: 12px;
@@ -2986,6 +3055,11 @@ section.filter {
 @media (max-width: 1420px) {
   .login .input-field {
     width: calc( 200px + 80 * ((100vw - 320px) / 1100));
+  }
+}
+@media (max-width: 39.99875rem) {
+  .login .input-field {
+    width: 100%;
   }
 }
 .login .form-password {
@@ -3019,28 +3093,58 @@ section.filter {
 .login .login-separator::after {
   margin: 10px auto 0;
 }
+@media (max-width: 39.99875rem) {
+  .login .login-separator {
+    display: none;
+  }
+}
+.login .login-us-user {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 39.99875rem) {
+  .login .login-us-user {
+    margin-top: 50px;
+    flex-direction: row;
+    gap: 15px;
+  }
+}
 .login .enter-acc {
   width: 157px !important;
 }
-.login .login-tab {
-  display: none;
+@media (max-width: 29.99875rem) {
+  .login .enter-acc {
+    width: 100% !important;
+  }
 }
-.login .login-tab-body {
+.login .login-tab .login-body {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.login .login-tab-body form {
+@media (max-width: 39.99875rem) {
+  .login .login-tab .login-body {
+    flex-direction: column;
+  }
+}
+.login .login-tab .login-body form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.login .login-tab-body form label span {
+@media (max-width: 39.99875rem) {
+  .login .login-tab .login-body form {
+    width: 100%;
+  }
+}
+.login .login-tab .login-body form label span {
   color: #ee2924;
   font-size: 12px;
   line-height: 14px;
 }
-.login .login-tab-body form a {
+.login .login-tab .login-body form a {
   font-size: 14px;
   line-height: 100%;
   text-decoration-line: underline;
@@ -3056,6 +3160,9 @@ section.filter {
   flex-direction: column;
   gap: 30px;
 }
+.login .registration-tab {
+  display: none;
+}
 .login .registration-tab .registration-fizica {
   display: none;
   align-items: center;
@@ -3063,13 +3170,17 @@ section.filter {
 }
 .login .registration-tab .persoana-fizica__form,
 .login .registration-tab .persoana-juridica__form {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 .login .registration-tab .registration-juridica {
   width: auto;
+}
+@media (max-width: 39.99875rem) {
+  .login .registration-tab .registration-juridica {
+    width: 100%;
+  }
 }
 
 .reset-modal {

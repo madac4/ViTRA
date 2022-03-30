@@ -583,11 +583,18 @@ const tabsProfileHandler = (path) => {
 
 const user = document.querySelector('.header-right__user')
 const login = document.querySelector('.login')
-
+const loginClose = document.querySelector('.login-close')
 
 user.addEventListener('click', () => {
     login.classList.toggle('open');
     overlay.classList.toggle('active');
+    document.body.classList.toggle('lock');
+})
+
+loginClose.addEventListener('click', () => {
+    login.classList.remove('open');
+    overlay.classList.remove('active');
+    document.body.classList.remove('lock');
 })
 
 const tabsLogin = document.querySelector('.login-tabs__list');

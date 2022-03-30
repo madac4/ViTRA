@@ -7,19 +7,47 @@
     visibility: hidden;
     max-width: 715px;
     width: 100%;
-    padding: 35px 50px 40px;
+    padding: 35px 0 40px;
+    @include adaptiv-value('padding-left', 50, 15, 1);
+    @include adaptiv-value('padding-right', 50, 15, 1);
     background: #ffffff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     z-index: 10;
     transition: 0.3s;
+    @media (max-width: $mobileMedium) {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
     &.open {
         top: 50%;
         opacity: 1;
         visibility: visible;
     }
+    &-logo {
+        display: none;
+        @media (max-width: $mobileMedium) {
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &-close {
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 35px;
+    }
     &-tabs {
         margin-bottom: 45px;
+        @media (max-width: $mobileMedium) {
+            margin-top: 70px
+        }
         &__list {
             display: flex;
             align-items: center;
@@ -38,6 +66,7 @@
         }
     }
     .person {
+        margin-bottom: 20px;
         p {
             margin-bottom: 12px;
         }
@@ -57,6 +86,9 @@
     .input-field {
         margin-top: 10px;
         @include adaptiv-value('width', 280, 200, 1);
+        @media (max-width: $mobileMedium) {
+            width: 100%
+        }
     }
     .form-password {
         position: relative;
@@ -89,20 +121,42 @@
         &::after {
             margin: 10px auto 0;
         }
+        @media (max-width: $mobileMedium) {
+            display: none
+        }
+    }
+    .login-us-user {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        @media (max-width: $mobileMedium) {
+            margin-top: 50px;
+            flex-direction: row;
+            gap: 15px;
+        }
     }
     .enter-acc {
         width: 157px !important;
+        @media (max-width: $mobileSmall) {
+            width: 100% !important;
+        }
     }
     .login-tab {
-        display: none;
-        &-body {
+        .login-body {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            @media (max-width: $mobileMedium) {
+                flex-direction: column;
+            }
             form {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+                @media (max-width: $mobileMedium) {
+                    width: 100%;
+                }
                 label {
                     span {
                         color: $redcolor;
@@ -130,6 +184,7 @@
         }
     }
     .registration-tab {
+        display: none;
         .registration-fizica {
             display: none;
             align-items: center;
@@ -137,13 +192,15 @@
         }
         .persoana-fizica__form,
         .persoana-juridica__form {
-            margin-top: 20px;
             display: flex;
             flex-direction: column;
             gap: 30px;
         }
         .registration-juridica {
             width: auto;
+            @media (max-width: $mobileMedium) {
+                width: 100%;
+            }
         }
     }
 }
