@@ -1,5 +1,5 @@
 .recent {
-    @include adaptiv-value('margin-top', 80, 50, 1);
+    @include adaptiv-value('margin-top', 50, 40, 1);
     &-body {
         display: grid;
         grid-template-columns: repeat(4, 1fr);

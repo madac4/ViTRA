@@ -1,5 +1,5 @@
 .follow {
-    @include adaptiv-value('margin-bottom', 80, 50, 1);
+    @include adaptiv-value('margin-bottom', 50, 40, 1);
     .follow-body {
         display: flex;
         align-items: center;

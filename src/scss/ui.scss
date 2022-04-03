@@ -44,17 +44,21 @@ main {
     transition: 0.3s;
     position: relative;
     color: $maincolor;
+
     &__light {
         background-color: $graybackground100;
         padding: 10px 0;
         border-radius: 4px;
+
         &:hover {
             background-color: darken($color: $graybackground100, $amount: 5);
         }
+
         &:active {
             background-color: darken($color: $graybackground100, $amount: 8);
         }
     }
+
     &__white {
         background-color: #fff;
         width: fit-content;
@@ -62,13 +66,16 @@ main {
         border-radius: 4px;
         font-size: 14px;
         box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+
         &:hover {
             background-color: darken($color: #fff, $amount: 3);
         }
+
         &:active {
             background-color: darken($color: #fff, $amount: 5);
         }
     }
+
     &__chip {
         padding: 10px 20px;
         width: fit-content;
@@ -77,36 +84,44 @@ main {
         box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
         border-radius: 4px;
     }
+
     &__outline {
         padding: 14px 20px;
         background-color: transparent;
         border: 1px solid $graycolor300;
         border-radius: 4px;
+
         &:hover {
             color: $orangecolor;
             border-color: $orangecolor;
         }
+
         &--big {
             color: #bdbdbd;
             font-weight: 600;
+
             &:hover {
                 color: $orangecolor;
             }
         }
+
         &--gray {
             border: 1px solid #bdbdbd;
             color: #bdbdbd;
             padding: 14px 20px;
             border-radius: 0;
         }
+
         &--option {
             width: fit-content;
             padding: 10px 15px;
             font-size: 14px;
+
             &.active {
                 border-color: $orangecolor;
             }
         }
+
         &--color {
             width: 28px;
             height: 28px;
@@ -115,6 +130,7 @@ main {
             border: none;
             border-radius: 50%;
             position: relative;
+
             &.active {
                 &::before {
                     content: '';
@@ -132,6 +148,7 @@ main {
             }
         }
     }
+
     &__primary--outline {
         padding: 14px 20px;
         background-color: transparent;
@@ -139,6 +156,7 @@ main {
         border-radius: 4px;
         color: $orangecolor;
     }
+
     &__gray {
         width: fit-content;
         padding: 14px;
@@ -146,24 +164,30 @@ main {
         background-color: $graycolor100;
         border-radius: 4px;
         font-size: 14px;
+
         span[class^='icon-'],
         span[class*=' icon-'] {
             font-size: 24px;
         }
+
         &:hover {
             background-color: $graycolor200;
         }
+
         &:active {
             background-color: $graycolor300;
         }
+
         &.active {
             background-color: $graycolor300;
         }
+
         &.transparent {
             background-color: #fff;
             border: 1px solid $graycolor100;
         }
     }
+
     &__filter {
         width: fit-content;
         line-height: 100%;
@@ -171,28 +195,34 @@ main {
         border-radius: 4px;
         background-color: rgba(255, 255, 255, 0.4);
         border: 1px solid $graycolor300;
+
         &.active {
             background-color: #fff;
             border: 1px solid rgba(0, 0, 0, 0.5);
         }
+
         &:hover {
             background-color: #fff;
             border: 1px solid rgba(0, 0, 0, 0.5);
         }
     }
+
     &__black {
         width: fit-content;
         padding: 15px 30px;
         background-color: $maincolor;
         font-size: 18px;
         color: #fff;
+
         &:hover {
             background-color: lighten($color: $maincolor, $amount: 5);
         }
+
         &:active {
             background-color: $maincolor;
         }
     }
+
     &__primary {
         padding: 15px 0;
         background-color: $orangecolor;
@@ -200,52 +230,64 @@ main {
         letter-spacing: 0.03em;
         color: #fff;
         font-weight: 600;
+
         &:hover {
             background-color: darken($orangecolor, 5);
         }
+
         &:active {
             background-color: $orangecolor;
         }
+
         &--big {
             padding: 24px 0;
             border-radius: 0;
             font-weight: normal;
         }
     }
+
     &[disabled] {
         background-color: $graycolor400;
         pointer-events: none;
         cursor: not-allowed;
     }
+
     &__dark {
         background-color: $darkcolor;
         font-weight: 600;
         padding: 15px 30px;
         border-radius: 4px;
         color: #fff;
+
         &:hover {
             background-color: lighten($color: $darkcolor, $amount: 5);
         }
+
         &:active {
             background-color: $darkcolor;
         }
     }
+
     &__control {
         background-color: #fff;
         padding: 10px;
         border: 1px solid #e4e4e4;
         font-size: 24px;
         color: $graycolor300;
+
         &:hover {
             color: $orangecolor;
         }
+
         &:active {
             transform: scale(0.9);
         }
+
         &.added {
             background-color: $darkcolor;
             border-color: $darkcolor;
             color: #fff;
+
             &.icon-heart__filled {
                 background-color: transparent;
                 color: $orangecolor;
@@ -253,6 +295,7 @@ main {
             }
         }
     }
+
     &__facebook {
         width: 205px;
         background: #1877F2;
@@ -261,10 +304,20 @@ main {
         font-weight: 700;
         gap: 15px;
         color: #FFFFFF;
+
+        &:hover {
+            background-color: lighten($color: #1877F2, $amount: 6);
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
+
         @media (max-width: $mobileMedium) {
             @include adaptiv-value('width', 165, 150, 1);
         }
     }
+
     &__google {
         padding: 15px 0;
         width: 206px;
@@ -275,6 +328,15 @@ main {
         color: rgba(0, 0, 0, 0.54);
         box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
         border-radius: 4px;
+
+        &:hover {
+            background-color: darken($color: #fff, $amount: 3);
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
+
         @media (max-width: $mobileMedium) {
             @include adaptiv-value('width', 165, 150, 1);
         }
@@ -287,6 +349,7 @@ main {
 
 .burger {
     display: none;
+
     @media (max-width: $tablet) {
         display: block;
         margin-left: auto;
@@ -295,6 +358,7 @@ main {
         height: 18px;
         cursor: pointer;
         z-index: 4;
+
         span,
         &::before,
         &::after {
@@ -307,25 +371,31 @@ main {
             background-color: $maincolor;
             border-radius: 5px;
         }
+
         &::before {
             top: 2px;
         }
+
         &::after {
             bottom: 2px;
         }
+
         span {
             top: calc(50% - 1px);
         }
+
         &.active {
             span {
                 transform: translateX(-30px);
                 opacity: 0;
                 visibility: hidden;
             }
+
             &::before {
                 transform: rotate(-45deg);
                 top: calc(50% - 1px);
             }
+
             &::after {
                 transform: rotate(45deg);
                 top: calc(50% - 1px);
@@ -360,24 +430,30 @@ textarea {
     outline: none;
     transition: 0.3s;
     border-radius: 4px;
+
     &:focus {
         border-color: $darkcolor;
     }
+
     &::placeholder {
         font-size: 14px;
         color: $graycolor400;
     }
+
     &.filled {
         border: none;
         background-color: $graycolor100;
+
         &::placeholder {
             color: $graycolor500;
         }
     }
+
     &.dark {
         background-color: rgba(255, 255, 255, 0.16);
         padding: 10px 14px;
         color: #fff;
+
         &::placeholder {
             color: $graycolor500;
         }
@@ -512,9 +588,11 @@ input[type='radio'] {
     padding: 20px;
     font-size: 20px;
     transition: 0.3s;
+
     &:hover {
         background-color: rgba(0, 0, 0, 0.8);
     }
+
     &.swiper-button-disabled {
         background-color: rgba(0, 0, 0, 0.3);
     }
@@ -530,6 +608,7 @@ input[type='radio'] {
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
+
     &.active {
         opacity: 1;
         visibility: visible;
@@ -543,22 +622,28 @@ input[type='radio'] {
     width: 8px;
     height: 8px;
     border-radius: 50%;
+
     &.not-empty {
         background-color: $orangecolor;
     }
+
     &.logged {
         background-color: #07ad4b;
         right: 20%;
+
         @media (max-width: $mobileSmall) {
             display: block !important;
         }
     }
+
     @media (max-width: $mobile) {
         right: 30%;
     }
+
     @media (max-width: $mobileMedium) {
         right: 25%;
     }
+
     @media (max-width: $mobileSmall) {
         right: 20%;
     }
@@ -570,6 +655,7 @@ section {
         align-items: center;
         justify-content: space-between;
         margin-bottom: 20px;
+
         a {
             font-size: 16px;
             text-transform: uppercase;
@@ -577,9 +663,11 @@ section {
             align-items: center;
             gap: 5px;
             transition: 0.3s;
+
             &:hover {
                 color: $orangecolor;
             }
+
             span {
                 color: $orangecolor;
                 font-size: 18px;
