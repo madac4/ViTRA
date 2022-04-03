@@ -3428,13 +3428,8 @@ section.filter {
 
 .page__main-slider {
   position: relative;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
   margin-top: -20px;
-}
-@media (max-width: 1420px) {
-  .page__main-slider {
-    margin-bottom: calc( 50px + 30 * ((100vw - 320px) / 1100));
-  }
 }
 @media (max-width: 47.99875rem) {
   .page__main-slider {
@@ -3551,6 +3546,82 @@ section.filter {
 }
 .page__main-slider .main-slider__body .main-slider__slider .slider-main-controls__arrows .slider-arrow__next {
   right: 20px;
+}
+
+.main-tabs {
+  margin-bottom: 50px;
+}
+.main-tabs .tabs-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 39.99875rem) {
+  .main-tabs .tabs-list {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+@media (max-width: 39.99875rem) {
+  .main-tabs .tabs-list__item {
+    width: 100%;
+    text-align: center;
+  }
+}
+.main-tabs .tabs-list__item:first-child a {
+  border-radius: 8px 0 0 8px;
+}
+.main-tabs .tabs-list__item:last-child a {
+  border-radius: 0 8px 8px 0;
+}
+.main-tabs .tabs-list__item a {
+  padding: 20px 75px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 75px;
+  padding-left: 75px;
+  background-color: #f4f4f4;
+  display: block;
+  transition: 0.3s;
+  font-size: 20px;
+  font-weight: 600;
+}
+@media (max-width: 1420px) {
+  .main-tabs .tabs-list__item a {
+    padding-top: calc( 12px + 8 * ((100vw - 320px) / 1100));
+  }
+}
+@media (max-width: 1420px) {
+  .main-tabs .tabs-list__item a {
+    padding-bottom: calc( 12px + 8 * ((100vw - 320px) / 1100));
+  }
+}
+@media (max-width: 1420px) {
+  .main-tabs .tabs-list__item a {
+    padding-right: calc( 30px + 45 * ((100vw - 320px) / 1100));
+  }
+}
+@media (max-width: 1420px) {
+  .main-tabs .tabs-list__item a {
+    padding-left: calc( 30px + 45 * ((100vw - 320px) / 1100));
+  }
+}
+@media (max-width: 1420px) {
+  .main-tabs .tabs-list__item a {
+    font-size: calc( 16px + 4 * ((100vw - 320px) / 1100));
+  }
+}
+@media (max-width: 39.99875rem) {
+  .main-tabs .tabs-list__item a {
+    width: 100%;
+    border-radius: 4px !important;
+  }
+}
+.main-tabs .tabs-list__item:hover a {
+  background-color: #E4E4E4;
+}
+.main-tabs .tabs-list__item.active a {
+  background-color: #E4E4E4;
 }
 
 .category-list__body {
