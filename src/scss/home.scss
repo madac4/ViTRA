@@ -179,7 +179,7 @@
 }
 
 .product-slider {
-    @include adaptiv-value('margin-bottom', 80, 50, 1);
+    @include adaptiv-value('margin-bottom', 50, 40, 1);
     &__container {
         .page__product-slider {
             .product-slider__body {
@@ -217,7 +217,7 @@
 }
 
 .category-masonry {
-    @include adaptiv-value('margin-bottom', 80, 50, 1);
+    @include adaptiv-value('margin-bottom', 50, 40, 1);
     @media (max-width: $mobile) {
         display: none;
     }
@@ -347,7 +347,7 @@
 }
 
 .articles-home {
-    @include adaptiv-value('margin-bottom', 80, 50, 1);
+    @include adaptiv-value('margin-bottom', 50, 40, 1);
     &__body {
         .page__articles-slider {
             .articles-slider__body {
@@ -410,7 +410,7 @@
 }
 
 .partners {
-    @include adaptiv-value('margin-bottom', 80, 50, 1);
+    @include adaptiv-value('margin-bottom', 50, 40, 1);
     &__header {
         margin-bottom: 30px;
     }
