@@ -1,5 +1,5 @@
 .profile-modal {
-    position: absolute;
+    position: fixed;
     max-width: 375px;
     width: 100%;
     right: 15px;
@@ -14,38 +14,47 @@
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
+
     &.active {
         opacity: 1;
         visibility: visible;
     }
+
     @media (max-width: $tablet) {
         position: fixed;
         top: 0;
         right: -100%;
         height: calc(100%);
         z-index: 7;
+
         &.active {
             right: 0;
         }
     }
+
     @media (max-width: $mobileMedium) {
         height: calc(100% - 70px);
         z-index: 4;
     }
+
     p {
         font-size: 14px;
     }
+
     .modal-account {
         margin-bottom: 20px;
+
         &__header {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 26px;
+
             .account-header__left {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
+
                 span {
                     font-size: 14px;
                     color: $graycolor400;
@@ -53,6 +62,7 @@
             }
         }
     }
+
     &__info {
         background: $graycolor200;
         border-radius: 8px;
@@ -63,6 +73,7 @@
         gap: 10px;
         margin-bottom: 20px;
     }
+
     &__footer {
         background: $graycolor200;
         border-radius: 8px;
@@ -71,6 +82,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+
         img {
             max-width: 180px;
             margin: 0 auto;

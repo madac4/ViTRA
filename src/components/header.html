@@ -1,285 +1,288 @@
-<header class="header">
-    <div class="header__container">
-        <div class="header__left header-left">
-            <div class="header-left__menu header-menu">
-                <button class="button button__gray header-menu__burger">
-                    <span class="icon-hamburger"></span>Toate categoriile
+<div class="full-header">
+    <header class="header">
+        <div class="header__container">
+            <div class="header__left header-left">
+                <div class="header-left__menu header-menu">
+                    <button class="button button__gray header-menu__burger">
+                        <span class="icon-hamburger"></span>Toate categoriile
+                    </button>
+
+                    <nav class="header-menu__nav menu-nav">
+                        <div class="menu-nav__left">
+                            <div class="menu-nav__block">
+                                <h5 style="color: #EE2924">RETAIL</h5>
+                                <ul>
+                                    <li><a href="../product-filter.html">Echipamente frigorifice<span
+                                                class="icon-chevron--right"></span></a></li>
+                                    <li><a href="../product-filter.html">Mobilier Comercial<span
+                                                class="icon-chevron--right"></span></a></li>
+                                    <li><a href="../product-filter.html">Mese de marcat, coșuri și cărucioare <span
+                                                class="icon-chevron--right"></span></a></li>
+                                </ul>
+                            </div>
+
+                            <div class="menu-nav__block">
+                                <h5 style="color: #07AD4B">LIFE</h5>
+                                <ul>
+                                    <li><a href="../product-filter.html">Mobilier casă, birou<span
+                                                class="icon-chevron--right"></span></a></li>
+                                    <li><a href="../product-filter.html">Curățenie și întreținere<span
+                                                class="icon-chevron--right"></span></a></li>
+                                    <li><a href="../product-filter.html">Coșuri tradiționale împletite<span
+                                                class="icon-chevron--right"></span></a></li>
+                                    <li><a href="../product-filter.html">Mobilier metalic<span
+                                                class="icon-chevron--right"></span></a></li>
+                                    <li><a href="../product-filter.html">Mese și scaune<span
+                                                class="icon-chevron--right"></span></a></li>
+                                </ul>
+                            </div>
+
+                            <div class="menu-nav__block">
+                                <h5 style="color: #61C7F1">LOGISTICS</h5>
+                                <ul>
+                                    <li><a href="../product-filter.html">Rafturi universale<span
+                                                class="icon-chevron--right"></span></a></li>
+                                    <li><a href="../product-filter.html">Rafturi depozitare<span
+                                                class="icon-chevron--right"></span></a></li>
+                                    <li><a href="../product-filter.html">Scări, echipamente manipulare marfă<span
+                                                class="icon-chevron--right"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="menu-nav__right">
+                            <div class="menu-nav__block">
+                                <h5 style="color: #343B97">HORECA</h5>
+                                <ul>
+                                    <li>
+                                        <a href="../product-filter.html">Echipamente pentru baruri și restaurante<span
+                                                class="icon-chevron--right"></span></a>
+                                    </li>
+                                    <li><a href="../product-filter.html">Mese frigorifice<span
+                                                class="icon-chevron--right"></span></a></li>
+                                    <li><a href="../product-filter.html">Echipamente preparare caldă<span
+                                                class="icon-chevron--right"></span></a></li>
+                                    <li>
+                                        <a href="../product-filter.html">Echipamente procesare și preparare<span
+                                                class="icon-chevron--right"></span></a>
+                                    </li>
+                                    <li><a href="../product-filter.html">Mobilier din inox<span
+                                                class="icon-chevron--right"></span></a></li>
+                                    <li><a href="../product-filter.html">Echipamente pizza<span
+                                                class="icon-chevron--right"></span></a></li>
+                                    <li>
+                                        <a href="../product-filter.html">Echipamente fast-food<span
+                                                class="icon-chevron--right"></span></a>
+                                    </li>
+                                    <li><a href="../product-filter.html">Utilaje autoservire și echipamente
+                                            catering<span class="icon-chevron--right"></span></a></li>
+                                    <li><a href="../product-filter.html">Vidare-ambalare<span
+                                                class="icon-chevron--right"></span></a></li>
+                                    <li><a href="../product-filter.html">Veselă profesională<span
+                                                class="icon-chevron--right"></span></a></li>
+                                    <li><a href="../product-filter.html">Capcane de insecte<span
+                                                class="icon-chevron--right"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+
+            <a href="/" class="header-left__logo">
+                <img src="@img/logos/logo.svg" alt="ViTRA">
+                <span>Cel mai mare producător și distribuitor din Moldova a rafturilor metalice</span>
+            </a>
+
+            <div class="header__right header-right">
+                <div class="header-right__block header-right__favorite">
+                    <button class="button button__gray">
+                        <span class="icon-heart"></span>
+                        Favorite (1)
+                    </button>
+                    @@include('./fav-modal.html')
+                </div>
+                <div class="header-right__block header-right__cart">
+                    <button class="button button__gray">
+                        <span class="icon-cart"></span>
+                        Coș (4)
+                    </button>
+                    @@include('./cart-modal.html')
+                </div>
+                <div class="header-right__block header-right__user">
+                    <button type="button" class="button button__gray">
+                        <span class="icon-user"></span>
+                        <span class="dot logged"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="header__right header-right--mobile">
+                <button type="button" class="burger">
+                    <span></span>
                 </button>
-
-                <nav class="header-menu__nav menu-nav">
-                    <div class="menu-nav__left">
-                        <div class="menu-nav__block">
-                            <h5 style="color: #EE2924">RETAIL</h5>
-                            <ul>
-                                <li><a href="../product-filter.html">Echipamente frigorifice<span
-                                            class="icon-chevron--right"></span></a></li>
-                                <li><a href="../product-filter.html">Mobilier Comercial<span
-                                            class="icon-chevron--right"></span></a></li>
-                                <li><a href="../product-filter.html">Mese de marcat, coșuri și cărucioare <span
-                                            class="icon-chevron--right"></span></a></li>
-                            </ul>
-                        </div>
-
-                        <div class="menu-nav__block">
-                            <h5 style="color: #07AD4B">LIFE</h5>
-                            <ul>
-                                <li><a href="../product-filter.html">Mobilier casă, birou<span
-                                            class="icon-chevron--right"></span></a></li>
-                                <li><a href="../product-filter.html">Curățenie și întreținere<span
-                                            class="icon-chevron--right"></span></a></li>
-                                <li><a href="../product-filter.html">Coșuri tradiționale împletite<span
-                                            class="icon-chevron--right"></span></a></li>
-                                <li><a href="../product-filter.html">Mobilier metalic<span
-                                            class="icon-chevron--right"></span></a></li>
-                                <li><a href="../product-filter.html">Mese și scaune<span
-                                            class="icon-chevron--right"></span></a></li>
-                            </ul>
-                        </div>
-
-                        <div class="menu-nav__block">
-                            <h5 style="color: #61C7F1">LOGISTICS</h5>
-                            <ul>
-                                <li><a href="../product-filter.html">Rafturi universale<span
-                                            class="icon-chevron--right"></span></a></li>
-                                <li><a href="../product-filter.html">Rafturi depozitare<span
-                                            class="icon-chevron--right"></span></a></li>
-                                <li><a href="../product-filter.html">Scări, echipamente manipulare marfă<span
-                                            class="icon-chevron--right"></span></a></li>
-                            </ul>
-                        </div>
+                <nav class="menu-nav--mobile">
+                    <div class="menu-block">
+                        <h5>HORECA</h5>
+                        <ul>
+                            <li><a href="../product-filter.html">Echipamente pentru baruri și restaurante<span
+                                        class="icon-chevron--right"></span></a></li>
+                            <li><a href="../product-filter.html">Mese frigorifice<span
+                                        class="icon-chevron--right"></span></a></li>
+                            <li><a href="../product-filter.html">Echipamente preparare caldă<span
+                                        class="icon-chevron--right"></span></a></li>
+                            <li><a href="../product-filter.html">Echipamente procesare și preparare<span
+                                        class="icon-chevron--right"></span></a></li>
+                            <li><a href="../product-filter.html">Mobilier din inox<span
+                                        class="icon-chevron--right"></span></a></li>
+                            <li><a href="../product-filter.html">Echipamente pizza<span
+                                        class="icon-chevron--right"></span></a></li>
+                            <li><a href="../product-filter.html">Echipamente fast-food<span
+                                        class="icon-chevron--right"></span></a></li>
+                            <li><a href="../product-filter.html">Utilaje autoservire și echipamente catering<span
+                                        class="icon-chevron--right"></span></a></li>
+                            <li><a href="../product-filter.html">Vidare-ambalare<span
+                                        class="icon-chevron--right"></span></a></li>
+                            <li><a href="../product-filter.html">Veselă profesională<span
+                                        class="icon-chevron--right"></span></a></li>
+                            <li><a href="../product-filter.html">Capcane de insecte<span
+                                        class="icon-chevron--right"></span></a></li>
+                        </ul>
                     </div>
-
-
-                    <div class="menu-nav__right">
-                        <div class="menu-nav__block">
-                            <h5 style="color: #343B97">HORECA</h5>
-                            <ul>
-                                <li>
-                                    <a href="../product-filter.html">Echipamente pentru baruri și restaurante<span
-                                            class="icon-chevron--right"></span></a>
-                                </li>
-                                <li><a href="../product-filter.html">Mese frigorifice<span
-                                            class="icon-chevron--right"></span></a></li>
-                                <li><a href="../product-filter.html">Echipamente preparare caldă<span
-                                            class="icon-chevron--right"></span></a></li>
-                                <li>
-                                    <a href="../product-filter.html">Echipamente procesare și preparare<span
-                                            class="icon-chevron--right"></span></a>
-                                </li>
-                                <li><a href="../product-filter.html">Mobilier din inox<span
-                                            class="icon-chevron--right"></span></a></li>
-                                <li><a href="../product-filter.html">Echipamente pizza<span
-                                            class="icon-chevron--right"></span></a></li>
-                                <li>
-                                    <a href="../product-filter.html">Echipamente fast-food<span
-                                            class="icon-chevron--right"></span></a>
-                                </li>
-                                <li><a href="../product-filter.html">Utilaje autoservire și echipamente catering<span
-                                            class="icon-chevron--right"></span></a></li>
-                                <li><a href="../product-filter.html">Vidare-ambalare<span
-                                            class="icon-chevron--right"></span></a></li>
-                                <li><a href="../product-filter.html">Veselă profesională<span
-                                            class="icon-chevron--right"></span></a></li>
-                                <li><a href="../product-filter.html">Capcane de insecte<span
-                                            class="icon-chevron--right"></span></a></li>
-                            </ul>
-                        </div>
+                    <div class="menu-block">
+                        <h5>LOGISTICS</h5>
+                        <ul>
+                            <li><a href="../product-filter.html">Rafturi universale<span
+                                        class="icon-chevron--right"></span></a></li>
+                            <li><a href="../product-filter.html">Rafturi depozitare<span
+                                        class="icon-chevron--right"></span></a></li>
+                            <li><a href="../product-filter.html">Scări, echipamente manipulare marfă<span
+                                        class="icon-chevron--right"></span></a></li>
+                        </ul>
                     </div>
-
+                    <div class="menu-block">
+                        <h5>RETAIL</h5>
+                        <ul>
+                            <li><a href="../product-filter.html">Echipamente frigorifice<span
+                                        class="icon-chevron--right"></span></a></li>
+                            <li><a href="../product-filter.html">Mobilier Comercial<span
+                                        class="icon-chevron--right"></span></a></li>
+                            <li><a href="../product-filter.html">Mese de marcat, coșuri și cărucioare<span
+                                        class="icon-chevron--right"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-block">
+                        <h5>LIFE</h5>
+                        <ul>
+                            <li><a href="../product-filter.html">Mobilier casă, birou<span
+                                        class="icon-chevron--right"></span></a></li>
+                            <li><a href="../product-filter.html">Curățenie și întreținere<span
+                                        class="icon-chevron--right"></span></a></li>
+                            <li><a href="../product-filter.html">Coșuri tradiționale împletite<span
+                                        class="icon-chevron--right"></span></a></li>
+                            <li><a href="../product-filter.html">Mobilier metalic<span
+                                        class="icon-chevron--right"></span></a></li>
+                            <li><a href="../product-filter.html">Mese și scaune<span
+                                        class="icon-chevron--right"></span></a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
             </div>
         </div>
+    </header>
 
-        <a href="/" class="header-left__logo">
-            <img src="@img/logos/logo.svg" alt="ViTRA">
-            <span>Cel mai mare producător și distribuitor din Moldova a rafturilor metalice</span>
-        </a>
-
-        <div class="header__right header-right">
-            <div class="header-right__block header-right__favorite">
-                <button class="button button__gray">
-                    <span class="icon-heart"></span>
-                    Favorite (1)
-                </button>
-                @@include('./fav-modal.html')
-            </div>
-            <div class="header-right__block header-right__cart">
-                <button class="button button__gray">
-                    <span class="icon-cart"></span>
-                    Coș (4)
-                </button>
-                @@include('./cart-modal.html')
-            </div>
-            <div class="header-right__block header-right__user">
-                <button type="button" class="button button__gray">
-                    <span class="icon-user"></span>
-                    <span class="dot logged"></span>
-                </button>
-            </div>
-        </div>
-        <div class="header__right header-right--mobile">
-            <button type="button" class="burger">
-                <span></span>
-            </button>
-            <nav class="menu-nav--mobile">
-                <div class="menu-block">
-                    <h5>HORECA</h5>
-                    <ul>
-                        <li><a href="../product-filter.html">Echipamente pentru baruri și restaurante<span
-                                    class="icon-chevron--right"></span></a></li>
-                        <li><a href="../product-filter.html">Mese frigorifice<span
-                                    class="icon-chevron--right"></span></a></li>
-                        <li><a href="../product-filter.html">Echipamente preparare caldă<span
-                                    class="icon-chevron--right"></span></a></li>
-                        <li><a href="../product-filter.html">Echipamente procesare și preparare<span
-                                    class="icon-chevron--right"></span></a></li>
-                        <li><a href="../product-filter.html">Mobilier din inox<span
-                                    class="icon-chevron--right"></span></a></li>
-                        <li><a href="../product-filter.html">Echipamente pizza<span
-                                    class="icon-chevron--right"></span></a></li>
-                        <li><a href="../product-filter.html">Echipamente fast-food<span
-                                    class="icon-chevron--right"></span></a></li>
-                        <li><a href="../product-filter.html">Utilaje autoservire și echipamente catering<span
-                                    class="icon-chevron--right"></span></a></li>
-                        <li><a href="../product-filter.html">Vidare-ambalare<span
-                                    class="icon-chevron--right"></span></a></li>
-                        <li><a href="../product-filter.html">Veselă profesională<span
-                                    class="icon-chevron--right"></span></a></li>
-                        <li><a href="../product-filter.html">Capcane de insecte<span
-                                    class="icon-chevron--right"></span></a></li>
-                    </ul>
-                </div>
-                <div class="menu-block">
-                    <h5>LOGISTICS</h5>
-                    <ul>
-                        <li><a href="../product-filter.html">Rafturi universale<span
-                                    class="icon-chevron--right"></span></a></li>
-                        <li><a href="../product-filter.html">Rafturi depozitare<span
-                                    class="icon-chevron--right"></span></a></li>
-                        <li><a href="../product-filter.html">Scări, echipamente manipulare marfă<span
-                                    class="icon-chevron--right"></span></a></li>
-                    </ul>
-                </div>
-                <div class="menu-block">
-                    <h5>RETAIL</h5>
-                    <ul>
-                        <li><a href="../product-filter.html">Echipamente frigorifice<span
-                                    class="icon-chevron--right"></span></a></li>
-                        <li><a href="../product-filter.html">Mobilier Comercial<span
-                                    class="icon-chevron--right"></span></a></li>
-                        <li><a href="../product-filter.html">Mese de marcat, coșuri și cărucioare<span
-                                    class="icon-chevron--right"></span></a></li>
-                    </ul>
-                </div>
-                <div class="menu-block">
-                    <h5>LIFE</h5>
-                    <ul>
-                        <li><a href="../product-filter.html">Mobilier casă, birou<span
-                                    class="icon-chevron--right"></span></a></li>
-                        <li><a href="../product-filter.html">Curățenie și întreținere<span
-                                    class="icon-chevron--right"></span></a></li>
-                        <li><a href="../product-filter.html">Coșuri tradiționale împletite<span
-                                    class="icon-chevron--right"></span></a></li>
-                        <li><a href="../product-filter.html">Mobilier metalic<span
-                                    class="icon-chevron--right"></span></a></li>
-                        <li><a href="../product-filter.html">Mese și scaune<span class="icon-chevron--right"></span></a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="upper-header">
+        <div class="upper-header__container">
+            <nav class="upper-header__nav">
+                <ul>
+                    <li><a href="../production.html">Despre companie</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="#">Constructor</a></li>
+                </ul>
             </nav>
-        </div>
-    </div>
-</header>
 
-<div class="upper-header">
-    <div class="upper-header__container">
+            <div class="upper-header__form">
+                <form action="#" class="upper-header__search">
+                    <input class="filled dark" type="text" placeholder="Căutare">
+                    <button class="icon-search"></button>
+                </form>
+            </div>
+
+
+
+            <div class="upper-header__info upper-info">
+                <div class="upper-info__hours">
+                    <div class="dot logged"></div>
+                    <p>Astăzi lucrăm: 09:00 - 20:00</p>
+                </div>
+                <a href="tel:+37322944955" class="upper-info__call">
+                    +373 22 944 955
+                </a>
+                <div class="get-call">
+                    Solicită apel
+                </div>
+                <span class="devider">|</span>
+                <div class="upper-info__language language">
+                    <span class="language__current">Rusă</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="upper-header--mobile">
+        <h4>Link-uri utile</h4>
+
         <nav class="upper-header__nav">
             <ul>
-                <li><a href="../production.html">Despre companie</a></li>
+                <li><a href="#">Clienții noștri</a></li>
+                <li><a href="#">Portfoliu</a></li>
+                <li><a href="#">Companie</a></li>
+                <li><a href="#">Contacte</a></li>
+                <li><a href="#">Cataloage</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Evenimente</a></li>
                 <li><a href="../blog.html">Blog</a></li>
+                <li><a href="#">Carieră</a></li>
                 <li><a href="#">Constructor</a></li>
             </ul>
         </nav>
 
-        <div class="upper-header__form">
-            <form action="#" class="upper-header__search">
-                <input class="filled dark" type="text" placeholder="Căutare">
-                <button class="icon-search"></button>
-            </form>
-        </div>
-
-
-
-        <div class="upper-header__info upper-info">
-            <div class="upper-info__hours">
-                <div class="dot logged"></div>
-                <p>Astăzi lucrăm: 09:00 - 20:00</p>
+        <div class="upper-header__row header-row">
+            <div class="header-row__block">
+                <h4>Rețele</h4>
+                <div class="upper-header__social">
+                    <a href="#">
+                        <img src="@img/icons/facebook-black.svg" alt="facebook">
+                    </a>
+                    <a href="#">
+                        <img src="@img/icons/instagram-black.svg" alt="instagram">
+                    </a>
+                    <a href="#">
+                        <img src="@img/icons/youtube-black.svg" alt="youtube">
+                    </a>
+                </div>
             </div>
-            <a href="tel:+37322944955" class="upper-info__call">
-                +373 22 944 955
-            </a>
-            <div class="get-call">
-                Solicită apel
-            </div>
-            <span class="devider">|</span>
-            <div class="upper-info__language language">
-                <span class="language__current">Rusă</span>
+            <div class="header-row__block">
+                <h4>Limba</h4>
+                <ul>
+                    <li><button class="current">Română</button></li>
+                    <li><button>Rusă</button></li>
+                </ul>
             </div>
         </div>
-    </div>
 
-</div>
-
-<div class="upper-header--mobile">
-    <h4>Link-uri utile</h4>
-
-    <nav class="upper-header__nav">
-        <ul>
-            <li><a href="#">Clienții noștri</a></li>
-            <li><a href="#">Portfoliu</a></li>
-            <li><a href="#">Companie</a></li>
-            <li><a href="#">Contacte</a></li>
-            <li><a href="#">Cataloage</a></li>
-        </ul>
-        <ul>
-            <li><a href="#">Evenimente</a></li>
-            <li><a href="../blog.html">Blog</a></li>
-            <li><a href="#">Carieră</a></li>
-            <li><a href="#">Constructor</a></li>
-        </ul>
-    </nav>
-
-    <div class="upper-header__row header-row">
-        <div class="header-row__block">
-            <h4>Rețele</h4>
-            <div class="upper-header__social">
-                <a href="#">
-                    <img src="@img/icons/facebook-black.svg" alt="facebook">
-                </a>
-                <a href="#">
-                    <img src="@img/icons/instagram-black.svg" alt="instagram">
-                </a>
-                <a href="#">
-                    <img src="@img/icons/youtube-black.svg" alt="youtube">
-                </a>
+        <div class="upper-header__row header-row">
+            <div class="header-row__block">
+                <h4>Nr. de telefon</h4>
+                <a href="tel:+37322944955">+373 22 944 955</a>
             </div>
-        </div>
-        <div class="header-row__block">
-            <h4>Limba</h4>
-            <ul>
-                <li><button class="current">Română</button></li>
-                <li><button>Rusă</button></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="upper-header__row header-row">
-        <div class="header-row__block">
-            <h4>Nr. de telefon</h4>
-            <a href="tel:+37322944955">+373 22 944 955</a>
-        </div>
-        <div class="header-row__block">
-            <button class="button button__gray get-call">Solicită apel</button>
+            <div class="header-row__block">
+                <button class="button button__gray get-call">Solicită apel</button>
+            </div>
         </div>
     </div>
 </div>

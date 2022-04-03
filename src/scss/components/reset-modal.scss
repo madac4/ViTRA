@@ -15,36 +15,58 @@
     @include adaptiv-value('padding-bottom', 30, 16, 1);
     @include adaptiv-value('padding-left', 50, 20, 1);
     @include adaptiv-value('padding-right', 50, 20, 1);
+
     &--first {
         &.open {
             opacity: 1;
             visibility: visible;
         }
     }
+
+    &--second {
+        &.open {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &--third {
+        &.open {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
     &__header {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         gap: 20px;
+
         .reset-header__title {
             @include adaptiv-value('margin-bottom', 40, 20, 1);
+
             h3 {
                 display: flex;
                 align-items: center;
                 gap: 10px;
                 margin-bottom: 10px;
+
                 button {
                     font-size: 24px;
                 }
             }
+
             p {
                 font-size: 14px;
             }
         }
+
         .reset-header__close {
             font-size: 32px;
         }
     }
+
     .reset-modal__body {
         form {
             label {
@@ -52,8 +74,10 @@
                 flex-direction: column;
                 gap: 5px;
                 @include adaptiv-value('margin-bottom', 25, 12, 1);
+
                 p {
                     position: relative;
+
                     .type-switch {
                         position: absolute;
                         top: 50%;
@@ -64,27 +88,32 @@
                     }
                 }
             }
+
             .form-buttons {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 flex-wrap: wrap;
                 gap: 10px;
+
                 span {
                     button {
                         color: #2c5282;
                     }
                 }
             }
+
             button {
                 max-width: 150px;
             }
         }
     }
+
     &__footer {
         margin-top: 30px;
         font-size: 14px;
         color: #8f9bb3;
+
         a {
             color: #2c5282;
         }

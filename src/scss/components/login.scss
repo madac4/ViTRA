@@ -15,19 +15,23 @@
     border-radius: 4px;
     z-index: 10;
     transition: 0.3s;
+
     @media (max-width: $mobileMedium) {
         height: 100%;
         display: flex;
         justify-content: center;
         flex-direction: column;
     }
+
     &.open {
         top: 50%;
         opacity: 1;
         visibility: visible;
     }
+
     &-logo {
         display: none;
+
         @media (max-width: $mobileMedium) {
             display: block;
             position: absolute;
@@ -36,6 +40,7 @@
             transform: translateX(-50%);
         }
     }
+
     &-close {
         cursor: pointer;
         position: absolute;
@@ -43,20 +48,25 @@
         right: 15px;
         font-size: 35px;
     }
+
     &-tabs {
         margin-bottom: 45px;
+
         @media (max-width: $mobileMedium) {
             margin-top: 70px
         }
+
         &__list {
             display: flex;
             align-items: center;
             gap: 30px;
+
             .login-tabs__item {
                 button {
                     color: #bdbdbd;
                     transition: 0.3s;
                     font-size: 24px;
+
                     &.login-tabs__button--active {
                         color: $maincolor;
                         text-decoration: underline;
@@ -65,47 +75,45 @@
             }
         }
     }
+
     .person {
         margin-bottom: 20px;
+
         p {
             margin-bottom: 12px;
         }
+
         &-body {
             display: flex;
             align-items: center;
             gap: 30px;
+
             .checkbox-label {
                 display: flex;
                 gap: 7px;
+
                 input[type='checkbox'] {
                     width: auto;
                 }
             }
         }
     }
+
     .input-field {
         margin-top: 10px;
         @include adaptiv-value('width', 280, 200, 1);
+
         @media (max-width: $mobileMedium) {
             width: 100%
         }
     }
-    .form-password {
-        position: relative;
-        span {
-            cursor: pointer;
-            position: absolute;
-            font-size: 20px;
-            top: 50%;
-            right: 15px;
-            transform: translateY(-50%);
-            color: #bdbdbd;
-            transition: 0.2s;
-        }
-    }
+
+
+
     .login-separator {
         display: block;
         height: 100%;
+
         &::before,
         &::after {
             content: '';
@@ -115,65 +123,82 @@
             width: 1px;
             background-color: #e4e4e4;
         }
+
         &::before {
             margin: 0 auto 10px;
         }
+
         &::after {
             margin: 10px auto 0;
         }
+
         @media (max-width: $mobileMedium) {
             display: none
         }
     }
+
     .login-us-user {
         display: flex;
         align-items: center;
         flex-direction: column;
         gap: 20px;
+
         @media (max-width: $mobileMedium) {
             margin-top: 50px;
             flex-direction: row;
             gap: 15px;
         }
     }
+
     .enter-acc {
         width: 157px !important;
+
         @media (max-width: $mobileSmall) {
             width: 100% !important;
         }
     }
+
+
+
     .login-tab {
         .login-body {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             @media (max-width: $mobileMedium) {
                 flex-direction: column;
             }
+
             form {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+
                 @media (max-width: $mobileMedium) {
                     width: 100%;
                 }
+
                 label {
                     span {
-                        color: $redcolor;
-                        font-size: 12px;
+                        font-size: 20px;
                         line-height: 14px;
                     }
                 }
-                a {
+
+                button {
                     font-size: 14px;
+                    text-align: left;
                     line-height: 100%;
                     text-decoration-line: underline;
                     color: #3362ab;
                 }
             }
         }
+
         .login-persoana__juridica {
             display: none;
+
             .persoana-juridica__form {
                 width: fit-content;
                 margin-top: 30px;
@@ -183,24 +208,52 @@
             }
         }
     }
+
     .registration-tab {
-        display: none;
+
         .registration-fizica {
-            display: none;
+            display: flex;
             align-items: center;
             justify-content: space-between;
         }
+
         .persoana-fizica__form,
         .persoana-juridica__form {
             display: flex;
             flex-direction: column;
             gap: 30px;
         }
+
         .registration-juridica {
             width: auto;
+            display: none;
+
             @media (max-width: $mobileMedium) {
                 width: 100%;
             }
         }
+    }
+}
+
+.login-tabs__content {
+    display: none;
+
+    &--active {
+        display: block !important;
+    }
+}
+
+.form-password {
+    position: relative;
+
+    span {
+        cursor: pointer;
+        position: absolute;
+        font-size: 20px;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        color: #bdbdbd;
+        transition: 0.2s;
     }
 }
