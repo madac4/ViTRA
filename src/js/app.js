@@ -120,6 +120,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 login && login.classList.remove('open')
                 callModal && callModal.classList.remove('open')
                 resetModal && resetModal.classList.remove('open')
+                bottomNavigationCart && bottomNavigationCart.classList.remove('active')
+                bottomNavigationFav && bottomNavigationFav.classList.remove('active')
+                bottomNavigationAccount && bottomNavigationAccount.classList.remove('active')
+                accountModal && accountModal.classList.remove('active')
             }
         })
     }
@@ -270,7 +274,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     320: {
                         slidesPerView: 1.4,
                         spaceBetween: 10,
-                        freeMode: true
+                        freeMode: true,
+                        slidesPerGroup: 1,
                     },
                     500: {
                         slidesPerView: 2.5,
@@ -412,13 +417,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const addToCart = product.querySelector('.product-footer__controls .icon-cart');
         const addToFav = product.querySelector('.product-footer__controls .icon-heart__filled');
         const productName = product.querySelector('.product-name').textContent;
-        addToCart.addEventListener('click', () => {
-            // alertify.success(`Produsul ${productName} a fost adaugat în coș`);
-            alertify.error('Error message');
-            // alertify.error(`Produsul ${productName} nu a fost adaugat în coș`);
+        addToCart&&addToCart.addEventListener('click', () => {
+            alertify.success(`Produsul ${productName} a fost adaugat în coș`);
+            // alertify.error('Error message');
         })
 
-        addToFav.addEventListener('click', () => {
+        addToFav&&addToFav.addEventListener('click', () => {
             alertify.success(`Produsul ${productName} a fost adaugat la favorite`);
         })
     })
@@ -519,7 +523,12 @@ document.addEventListener('DOMContentLoaded', () => {
             bottomNavigationCart.classList.toggle('active');
             document.body.classList.toggle('lock')
             favModal.classList.remove('active');
-            bottomNavigationFav.classList.remove('active')
+
+            headerMobile&&headerMobile.classList.remove('active')
+            accountModal && accountModal.classList.remove('active')
+            bottomNavigationFav && bottomNavigationFav.classList.remove('active')
+            bottomNavigationAccount && bottomNavigationAccount.classList.remove('active')
+            headerMobileToggler && headerMobileToggler.classList.remove('active')
         })
     }
 
@@ -544,16 +553,20 @@ document.addEventListener('DOMContentLoaded', () => {
             cartModal.classList.remove('active');
             bottomNavigationCart.classList.remove('active');
 
+            headerMobile && headerMobile.classList.remove('active')
             menuDesktop && menuDesktop.classList.remove('menu-open');
             overlay.classList.remove('active');
             document.body.classList.remove('lock')
             cartModal && cartModal.classList.remove('active')
             filters && filters.classList.remove('open')
-            favModal && favModal.classList.remove('active');
             callModal && callModal.classList.remove('open');
             login && login.classList.remove('open')
             callModal && callModal.classList.remove('open')
             resetModal && resetModal.classList.remove('open')
+            bottomNavigationCart && bottomNavigationCart.classList.remove('active')
+            bottomNavigationAccount && bottomNavigationAccount.classList.remove('active')
+            headerMobileToggler && headerMobileToggler.classList.remove('active')
+            accountModal && accountModal.classList.remove('active')
         })
     }
 
@@ -575,9 +588,22 @@ document.addEventListener('DOMContentLoaded', () => {
         bottomNavigationAccount.addEventListener('click', () => {
             accountModal.classList.toggle('active');
             bottomNavigationAccount.classList.toggle('active')
-            document.body.classList.toggle('lock')
-            cartModal.classList.remove('active');
-            bottomNavigationCart.classList.remove('active');
+            document.body.classList.toggle('lock');
+
+
+            headerMobile && headerMobile.classList.remove('active')
+            menuDesktop && menuDesktop.classList.remove('menu-open');
+            overlay.classList.remove('active');
+            document.body.classList.remove('lock')
+            cartModal && cartModal.classList.remove('active')
+            filters && filters.classList.remove('open')
+            callModal && callModal.classList.remove('open');
+            login && login.classList.remove('open')
+            callModal && callModal.classList.remove('open')
+            resetModal && resetModal.classList.remove('open')
+            bottomNavigationCart && bottomNavigationCart.classList.remove('active')
+            bottomNavigationFav && bottomNavigationFav.classList.remove('active')
+            headerMobileToggler && headerMobileToggler.classList.remove('active')
         })
     }
 
