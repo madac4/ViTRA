@@ -1883,7 +1883,6 @@ section.filter {
   z-index: 2;
   left: 50%;
   transform: translateX(-50%);
-  padding: 0 15px;
   width: 100%;
 }
 @media (max-width: 47.99875rem) {
