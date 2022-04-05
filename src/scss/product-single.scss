@@ -311,9 +311,7 @@
                     background: #555;
                 }
                 ul {
-                    @media (max-width: $mobile) {
-                        padding-left: 10px;
-                    }
+                    padding-left: 10px;
                     li {
                         list-style: disc;
                         &:not(:last-child) {

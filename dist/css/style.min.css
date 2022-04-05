@@ -5658,10 +5658,8 @@ section.filter {
 .product-single .product-main .product-meta__info::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-@media (max-width: 47.99875rem) {
-  .product-single .product-main .product-meta__info ul {
-    padding-left: 10px;
-  }
+.product-single .product-main .product-meta__info ul {
+  padding-left: 10px;
 }
 .product-single .product-main .product-meta__info ul li {
   list-style: disc;
