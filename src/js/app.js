@@ -7,8 +7,8 @@ sliderFunction();
 document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.querySelector('.overlay');
     const header = document.querySelector('.full-header');
-
     flsFunctions.fixedHeader(header);
+
     const burgerMobile = document.querySelector('.burger');
     const menuMobile = document.querySelector('.menu-nav--mobile');
 
@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const scrollContainer = document.querySelector('.scroll-category__body');
 
-    const headerCart = document.querySelector('.header-right__cart button');
+    const headerCart = document.querySelector('.header-controls__cart button');
     const bottomNavigationCart = document.querySelector('.bottom-navigation__cart');
     const cartModal = document.querySelector('.cart-modal');
 
-    const headerFav = document.querySelector('.header-right__favorite button');
+    const headerFav = document.querySelector('.header-controls__favorite button');
     const bottomNavigationFav = document.querySelector('.bottom-navigation__fav');
     const favModal = document.querySelector('.fav-modal');
 
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabsProfileButtons = document.querySelectorAll('.tabs__button');
     const tabsProfileContents = document.querySelectorAll('.tabs__content');
 
-    const headerAccount = document.querySelector('.header-right__user button');
+    const headerAccount = document.querySelector('.header-controls__user button');
     const bottomNavigationAccount = document.querySelector('.bottom-navigation__account');
     const accountModal = document.querySelector('.profile-modal');
 
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const products = document.querySelectorAll('.product');
     const profileItem = document.querySelectorAll('.profile-history__item');
-    const user = document.querySelector('.header-right__user');
+    const user = document.querySelector('.header-controls__user');
     const formPassword = document.querySelectorAll('.form-password')
     var headerH = document.querySelector('.header').offsetHeight;
     const w = window.innerWidth;
@@ -516,7 +516,7 @@ document.addEventListener('DOMContentLoaded', () => {
             favModal && favModal.classList.remove('active')
             login && login.classList.remove('open')
             callModal && callModal.classList.remove('open')
-            resetModal && resetModal.classList.remove('open')
+            resetModal && resetModal.classList.remove('open');
         })
         bottomNavigationCart.addEventListener('click', () => {
             cartModal.classList.toggle('active');

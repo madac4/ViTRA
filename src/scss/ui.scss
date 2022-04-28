@@ -186,6 +186,16 @@ main {
             background-color: #fff;
             border: 1px solid $graycolor100;
         }
+
+        &--small {
+            padding: 9px 15px;
+            font-weight: 600;
+
+            span[class^='icon-'],
+            span[class*=' icon-'] {
+                font-size: 16px;
+            }
+        }
     }
 
     &__filter {
@@ -436,7 +446,7 @@ textarea {
     }
 
     &::placeholder {
-        font-size: 14px;
+        @include adaptiv-value('font-size', 14, 12, 1);
         color: $graycolor400;
     }
 
@@ -447,6 +457,10 @@ textarea {
         &::placeholder {
             color: $graycolor500;
         }
+    }
+
+    &.header-input {
+        padding: 10px 14px;
     }
 
     &.dark {

@@ -2,17 +2,14 @@
     padding: 15px 0;
     background-color: #000;
     font-size: 14px;
-    color: #fff;
     margin-bottom: 20px;
-
-
 
     @media (max-width: $tablet) {
         display: none;
     }
 
     &__container {
-        @include adaptiv-value('gap', 30, 15, 1);
+        @include adaptiv-value('gap', 30, 0, 1);
         display: flex;
         align-items: center;
     }
@@ -23,14 +20,14 @@
 
     &__search {
         position: relative;
-        width: fit-content;
+        width: 100%;
 
         @media (max-width: $tablet) {
             width: 100%;
         }
 
         input {
-            @include adaptiv-value('width', 210, 40, 1);
+            width: 100%;
 
             @media (max-width: $tablet) {
                 width: 100%;
@@ -40,8 +37,10 @@
         button {
             position: absolute;
             top: 50%;
-            color: #fff;
+            color: $darkcolor !important;
             transform: translateY(-50%);
+            padding-top: 10px;
+            padding-bottom: 10px;
             right: 10px;
             font-size: 24px;
         }
@@ -49,7 +48,7 @@
 
     &__nav {
         ul {
-            @include adaptiv-value('gap', 30, 15, 1);
+            @include adaptiv-value('gap', 30, 0, 1);
             display: flex;
             align-items: center;
 
@@ -66,37 +65,37 @@
         }
     }
 
-    .get-call {
-        @include adaptiv-value('margin-right', 100, 0, 1);
-        transition: 0.3s;
-
-        @media (max-width: $tablet) {
-            margin-right: 0;
-        }
-
-        &:hover {
-            color: $graycolor300;
-        }
-    }
-
     .upper-info {
         @include adaptiv-value('gap', 20, 10, 1);
         display: flex;
         align-items: center;
 
-        .get-call {
-            margin: 0;
-        }
-
         &__hours {
             position: relative;
-            &:hover{
-                .hours-info{
+
+            .desk {
+                display: block;
+
+                @media (max-width: 1200px) {
+                    display: none;
+                }
+            }
+
+            .main-hour {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                color: #fff;
+            }
+
+            &:hover {
+                .hours-info {
                     opacity: 1;
                     visibility: visible;
                     top: 120%;
                 }
             }
+
             .dot {
                 left: -15px;
                 top: 50%;
@@ -104,9 +103,10 @@
             }
 
             p {
-                @include adaptiv-value('font-size', 14, 12, 1);
+                @include adaptiv-value('font-size', 18, 12, 1);
             }
-            .hours-info{
+
+            .hours-info {
                 position: absolute;
                 z-index: 3;
                 background-color: #fff;
@@ -116,65 +116,97 @@
                 opacity: 0;
                 visibility: hidden;
                 top: 200%;
-                &__top{
+
+                &__top {
                     padding: 30px;
                     @include adaptiv-value('padding', 30, 15, 1);
                     @include adaptiv-value('padding-bottom', 20, 10, 1);
-                    h3{
+
+                    h3 {
                         @include adaptiv-value('margin-bottom', 20, 10, 1);
                     }
-                    p{
-                        &:not(:last-child){
+
+                    p {
+                        &:not(:last-child) {
                             @include adaptiv-value('margin-bottom', 20, 10, 1);
                         }
                     }
                 }
-                .separator{
+
+                .separator {
                     width: 100%;
                     height: 1px;
-                    background-color:  rgba(0, 0, 0, 0.1);
+                    background-color: rgba(0, 0, 0, 0.1);
                 }
-                &__bottom{
+
+                &__bottom {
                     padding: 30px;
                     @include adaptiv-value('padding', 30, 15, 1);
-                    a{
+
+                    a {
                         display: block;
                         transition: .3s;
-                        &:hover{
+
+                        &:hover {
                             color: $orangecolor;
                         }
-                        &:not(:last-child){
+
+                        &:not(:last-child) {
                             @include adaptiv-value('margin-bottom', 20, 10, 1);
                         }
                     }
-                }
-            }
-        }
-
-        &__call {
-            @include adaptiv-value('margin-left', 20, 10, 1);
-            color: #fff;
-            display: flex;
-            @include adaptiv-value('font-size', 14, 12, 1);
-            transition: 0.3s;
-            @include adaptiv-value('gap', 20, 10, 1);
-
-            &:hover {
-                color: $graycolor300;
-            }
-        }
-
-        .language {
-            &__current {
-                cursor: pointer;
-                transition: 0.3s;
-
-                &:hover {
-                    color: $graycolor300;
                 }
             }
         }
     }
+
+    .header-controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &__block {
+            position: relative;
+
+            @media (max-width: $tablet) {
+                position: initial;
+            }
+        }
+
+
+
+        button.button__gray,
+        a.button__gray {
+            display: none;
+
+            @media (min-width: $tablet) {
+                display: flex;
+            }
+        }
+
+        &__search {
+            position: relative;
+
+            input {
+                @include adaptiv-value('width', 240, 140, 1);
+                height: 52px;
+
+                @media (max-width: $tablet) {
+                    width: 100%;
+                }
+            }
+
+            button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 10px;
+                font-size: 24px;
+            }
+        }
+    }
+
+
 }
 
 .upper-header--mobile {
@@ -256,10 +288,7 @@
                 }
             }
 
-            .get-call {
-                font-weight: 600;
-                font-size: 16px;
-            }
+
         }
     }
 }
@@ -419,115 +448,116 @@
         }
     }
 
-    &-right {
+
+    &-info {
         display: flex;
+        @include adaptiv-value('gap', 20, 10, 1);
         align-items: center;
-        gap: 15px;
 
-        &__block {
-            position: relative;
+        @media (max-width: $tablet) {
+            display: none;
+        }
 
-            @media (max-width: $tablet) {
-                position: initial;
+        &__call {
+            text-align: center;
+
+            .get-call {
+                font-size: 18px;
+                text-decoration: underline;
+                margin-bottom: 5px;
+            }
+
+            a {
+                font-size: 18px;
             }
         }
 
-        &--mobile {
-            display: block;
+        .devider {
+            width: 1px;
+            height: 45px;
+            background-color: $maincolor;
+        }
+
+        .language {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            &__option {
+                font-size: 14px;
+
+                &--current {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .header-controls--mobile {
+        display: block;
+
+        @media (max-width: $mobileSmall) {
+            flex: 1;
+        }
+
+        @media (min-width: $tablet) {
+            display: none;
+        }
+
+        .menu-nav--mobile {
+            position: fixed;
+            width: 70%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 10;
+            padding: 15px;
+            right: -70%;
+            transition: 0.3s;
+            overflow: auto;
+
+            &.active {
+                right: 0;
+            }
+
+            @media (max-width: $mobileMedium) {
+                width: 85%;
+                right: -85%;
+            }
 
             @media (max-width: $mobileSmall) {
-                flex: 1;
+                width: 100%;
+                right: -100%;
             }
 
-            @media (min-width: $tablet) {
-                display: none;
+            form {
+                margin-bottom: 30px;
             }
 
-            .menu-nav--mobile {
-                position: fixed;
-                width: 70%;
-                height: 100%;
-                background-color: #fff;
-                z-index: 7;
-                padding: 15px;
-                right: -70%;
-                transition: 0.3s;
-                overflow: auto;
-
-                &.active {
-                    right: 0;
+            .menu-block {
+                &:not(:last-child) {
+                    margin-bottom: 50px;
                 }
 
-                @media (max-width: $mobileMedium) {
-                    width: 85%;
-                    right: -85%;
-                }
-
-                @media (max-width: $mobileSmall) {
-                    width: 100%;
-                    right: -100%;
-                }
-
-                form {
+                h5 {
                     margin-bottom: 30px;
                 }
 
-                .menu-block {
-                    &:not(:last-child) {
-                        margin-bottom: 50px;
-                    }
+                ul {
+                    li {
+                        &:not(:last-child) {
+                            margin-bottom: 30px;
+                        }
 
-                    h5 {
-                        margin-bottom: 30px;
-                    }
+                        a {
+                            line-height: 160%;
+                            transition: 0.3s;
 
-                    ul {
-                        li {
-                            &:not(:last-child) {
-                                margin-bottom: 30px;
-                            }
-
-                            a {
-                                line-height: 160%;
-                                transition: 0.3s;
-
-                                &:hover {
-                                    color: $orangecolor;
-                                }
+                            &:hover {
+                                color: $orangecolor;
                             }
                         }
                     }
                 }
-            }
-        }
-
-        button.button__gray,
-        a.button__gray {
-            display: none;
-
-            @media (min-width: $tablet) {
-                display: flex;
-            }
-        }
-
-        &__search {
-            position: relative;
-
-            input {
-                @include adaptiv-value('width', 240, 140, 1);
-                height: 52px;
-
-                @media (max-width: $tablet) {
-                    width: 100%;
-                }
-            }
-
-            button {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                right: 10px;
-                font-size: 24px;
             }
         }
     }
