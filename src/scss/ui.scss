@@ -286,7 +286,7 @@ main {
         color: $graycolor300;
 
         &:hover {
-            color: $orangecolor;
+            color: $orangecolor !important;
         }
 
         &:active {
@@ -296,11 +296,10 @@ main {
         &.added {
             background-color: $darkcolor;
             border-color: $darkcolor;
-            color: #fff;
 
             &.icon-heart__filled {
                 background-color: transparent;
-                color: $orangecolor;
+                color: $orangecolor !important;
                 border-color: #e4e4e4;
             }
         }
@@ -500,6 +499,7 @@ input[type='radio'] {
     display: flex;
     align-items: center;
     flex-flow: row wrap;
+    position: relative;
 }
 
 .checkbox-container * {
@@ -517,6 +517,7 @@ input[type='radio'] {
     // padding: 6px 8px;
     padding: 1px;
     border-radius: 6px;
+    align-items: center;
     overflow: hidden;
     transition: all 0.3s ease;
     display: flex;
@@ -721,4 +722,17 @@ section {
 
 .alertify-notifier.ajs-right .ajs-message.ajs-visible {
     @include adaptiv-value('right', 420, 280, 1);
+}
+
+.career-item__details {
+    span {
+        display: inline-flex;
+        gap: 5px;
+        color: $graycolor400;
+        @include adaptiv-value('font-size', 16, 12, 1);
+
+        &:first-of-type {
+            margin-right: 30px;
+        }
+    }
 }

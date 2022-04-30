@@ -8,10 +8,12 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+
     &__labels {
         display: flex;
         align-items: center;
         gap: 20px;
+
         span {
             color: #fff;
             font-size: 14px;
@@ -21,13 +23,16 @@
             width: fit-content;
         }
     }
+
     &__images {
         margin-top: 10px;
         height: 260px;
         position: relative;
+
         @media (max-width: $mobileMedium) {
             width: 100%;
         }
+
         .product-images__image {
             width: 100%;
             height: 100%;
@@ -36,6 +41,7 @@
             visibility: hidden;
             transition: 0.4s;
             position: absolute;
+
             // @media (max-width: $mobileMedium) {
             //     width: 140px;
             //     margin: 0 auto;
@@ -43,53 +49,66 @@
             @media (max-width: $tablet) {
                 position: initial;
                 display: none;
+
                 &:first-child {
                     display: block;
                     margin: 0 auto;
                 }
             }
+
             top: 0;
+
             &--active {
                 opacity: 1;
                 visibility: visible;
             }
         }
     }
+
     &__pagination {
         margin: 20px 0;
         display: flex;
         align-items: center;
         gap: 3px;
+
         @media (max-width: $tablet) {
             display: none;
         }
+
         .pagination-item {
             width: 100%;
             height: 1px;
             background-color: $graycolor400;
             transition: 0.3s;
+
             &--active {
                 background-color: $orangecolor;
             }
         }
     }
+
     &-footer {
         display: flex;
         align-items: flex-end;
         @include adaptiv-value('gap', 15, 10, 1);
         flex: 1;
+
         @media (max-width: $tablet) {
             margin-top: 20px;
         }
+
         &__info {
             flex: 1;
+
             .product-name {
                 display: block;
                 margin-bottom: 5px;
+
                 @media (max-width: $mobileMedium) {
                     font-size: 14px;
                     line-height: 140%;
                 }
+
                 &::after {
                     content: '';
                     position: absolute;
@@ -98,23 +117,28 @@
                     height: 100%;
                 }
             }
+
             .product-code {
                 display: block;
                 font-size: 14px;
                 color: $graycolor400;
+
                 @media (max-width: $mobileMedium) {
                     display: none;
                 }
             }
+
             .product-price {
                 margin-top: 20px;
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
                 gap: 5px;
+
                 @media (max-width: $mobileMedium) {
                     font-size: 18px;
                 }
+
                 &--old {
                     font-size: 14px;
                     letter-spacing: 0.03em;
@@ -123,17 +147,28 @@
                 }
             }
         }
+
         &__controls {
             display: flex;
             flex-direction: column;
             gap: 10px;
+
             button {
+                &:last-child {
+                    color: $maincolor !important;
+
+                    &.added {
+                        color: #fff !important;
+                    }
+                }
+
                 @media (max-width: $mobileSmall) {
                     font-size: 18px;
                 }
             }
         }
     }
+
     &:hover {
         border-color: transparent;
         box-shadow: 0px 0px 25px rgba(174, 174, 174, 0.3);
@@ -146,18 +181,32 @@
     transition: 0.3s;
     display: block;
     text-transform: uppercase;
+    position: relative;
     @include adaptiv-value('font-size', 18, 16, 1);
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
-    @include adaptiv-value('padding-right', 50, 20, 1);
-    @include adaptiv-value('padding-left', 50, 20, 1);
+    @include adaptiv-value('padding-right', 30, 15, 1);
+    @include adaptiv-value('padding-left', 30, 15, 1);
     font-weight: 600;
     text-align: center;
     color: #fff;
+    @include adaptiv-value('font-size', 32, 16, 1);
+    line-height: 140%;
+
+    p {
+        font-weight: normal;
+        @include adaptiv-value('font-size', 16, 14, 1);
+        text-transform: none;
+        position: absolute;
+        @include adaptiv-value('bottom', 30, 15, 1);
+    }
+
     @media (max-width: 1110px) {
         min-height: 240px;
     }
+
     &:hover {
         background-color: darken($color: #efefef, $amount: 4);
     }

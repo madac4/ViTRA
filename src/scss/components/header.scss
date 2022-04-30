@@ -127,6 +127,8 @@
                     }
 
                     p {
+                        font-size: 14px;
+
                         &:not(:last-child) {
                             @include adaptiv-value('margin-bottom', 20, 10, 1);
                         }
@@ -374,7 +376,7 @@
         }
 
         .menu-nav {
-            @include adaptiv-value('width', 820, 740, 1);
+            @include adaptiv-value('width', 1200, 600, 1);
             @include adaptiv-value('padding', 50, 30, 1);
             position: absolute;
             background: #ffffff;
@@ -415,6 +417,7 @@
             }
 
             &__block {
+                width: 100%;
                 padding-bottom: 50px;
 
                 h5 {
@@ -424,6 +427,8 @@
 
                 ul {
                     li {
+                        @include adaptiv-value('font-size', 16, 14, 1);
+
                         &:not(:last-child) {
                             margin-bottom: 20px;
                         }

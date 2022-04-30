@@ -1,0 +1,77 @@
+.career {
+    &__container {
+        display: grid;
+        grid-template-columns: 340px 1fr;
+        @include adaptiv-value('gap', 50, 20, 1);
+
+        @media (max-width: $tablet) {
+            display: block;
+        }
+    }
+
+    &__contacts {
+        width: 340px;
+        background-color: $graybackground100;
+        padding: 30px;
+        height: fit-content;
+
+        @media (max-width: $tablet) {
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+
+        &--item {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+            p {
+                font-weight: 600;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &-options {
+        width: 100%;
+
+        &__item {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            @include adaptiv-value('padding', 30, 20, 1);
+            transition: .2s;
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+            &:hover {
+                background-color: $graybackground100;
+
+                a {
+                    color: #3362AB;
+                    text-decoration: underline;
+                }
+            }
+
+            a {
+                display: block;
+                @include adaptiv-value('font-size', 20, 16, 1);
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
+        }
+
+        .pagination {
+            margin-top: 30px;
+
+            &-button {
+                display: none;
+            }
+        }
+    }
+}

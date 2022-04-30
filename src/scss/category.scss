@@ -3,24 +3,41 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 20px;
+
         .category-primary {
             height: 340px;
+
             @media (max-width: $mobileMedium) {
                 height: 280px;
             }
+
             @media (max-width: $mobileSmall) {
                 height: 160px;
             }
         }
+
         @media (max-width: 1110px) {
             grid-template-columns: repeat(3, 1fr);
         }
+
         @media (max-width: $mobile) {
             grid-template-columns: repeat(2, 1fr);
         }
 
         @media (max-width: $mobileSmall) {
             grid-gap: 10px;
+        }
+    }
+
+    &__catalog {
+        @include adaptiv-value('margin-top', 50, 40, 1);
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        a {
+            max-width: 235px;
         }
     }
 }
