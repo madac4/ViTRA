@@ -6202,6 +6202,16 @@ section.filter {
 .career-single .career-application__form .checkbox-container .checkbox span:last-child a {
   text-decoration: underline;
 }
+.career-single .career-application__form .uploaded-files {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: left;
+}
+.career-single .career-application__form .uploaded-files span {
+  cursor: pointer;
+}
 .career-single .career-application__form .grid-full {
   grid-column: 4 span;
   margin: 0;

@@ -57,6 +57,18 @@
                 }
             }
 
+            .uploaded-files {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 20px;
+                text-align: left;
+
+                span {
+                    cursor: pointer;
+                }
+            }
+
             .grid-full {
                 grid-column: 4 span;
                 margin: 0;

@@ -739,6 +739,24 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    const fileInput = document.querySelector('.career-application__form input[type=file]');
+    const uploaded = document.querySelector('.uploaded-files');
 
+    fileInput.addEventListener('change', () =>{
+        var fileList = fileInput.files;
+        console.log(fileList);
+        uploaded.innerHTML = `
+            ${fileList[0].name}
+            <span class="delete-file icon-close button button__white"></span>
+        `
+        const deleteFile = document.querySelector('.delete-file');
+
+        deleteFile && deleteFile.addEventListener('click', () =>{
+            fileInput.value = null;
+            uploaded.innerHTML = null;
+        })
+    })
+
+    
 })
 
