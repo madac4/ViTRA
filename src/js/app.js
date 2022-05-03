@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const headerCart = document.querySelector('.header-controls__cart button');
     const bottomNavigationCart = document.querySelector('.bottom-navigation__cart');
-    const cartModal = document.querySelector('.cart-modal');
+    let cartModal = document.querySelector('.cart-modal');
 
     const headerFav = document.querySelector('.header-controls__favorite button');
     const bottomNavigationFav = document.querySelector('.bottom-navigation__fav');
-    const favModal = document.querySelector('.fav-modal');
+    let favModal = document.querySelector('.fav-modal');
 
     const getCall = document.querySelectorAll('.get-call');
     const callModal = document.querySelector('.call-modal');
@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
     }
+
     if (overlay) {
         overlay.addEventListener('click', () => {
             menuDesktop && menuDesktop.classList.remove('menu-open');
@@ -351,6 +352,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (w >= 992) {
         productSliders();
+    }else{
+        cartModal = document.querySelector('.mobile-modals .cart-modal');
+        favModal = document.querySelector('.mobile-modals .fav-modal');
     }
 
     if (w <= 640) {
@@ -518,6 +522,9 @@ document.addEventListener('DOMContentLoaded', () => {
             callModal && callModal.classList.remove('open')
             resetModal && resetModal.classList.remove('open');
         })
+
+       
+        
         bottomNavigationCart.addEventListener('click', () => {
             cartModal.classList.toggle('active');
             bottomNavigationCart.classList.toggle('active');
@@ -589,7 +596,6 @@ document.addEventListener('DOMContentLoaded', () => {
             accountModal.classList.toggle('active');
             bottomNavigationAccount.classList.toggle('active')
             document.body.classList.toggle('lock');
-
 
             headerMobile && headerMobile.classList.remove('active')
             menuDesktop && menuDesktop.classList.remove('menu-open');
@@ -742,9 +748,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const fileInput = document.querySelector('.career-application__form input[type=file]');
     const uploaded = document.querySelector('.uploaded-files');
 
-    fileInput.addEventListener('change', () =>{
+    fileInput && fileInput.addEventListener('change', () =>{
         var fileList = fileInput.files;
-        console.log(fileList);
         uploaded.innerHTML = `
             ${fileList[0].name}
             <span class="delete-file icon-close button button__white"></span>
