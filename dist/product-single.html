@@ -568,67 +568,95 @@
                     </div>
 
                     <div class="produc-main__options product-options">
-                        <div class="product-options__group">
-                            <h5>Tip poliță:</h5>
-                            <div class="options-buttons">
-                                <button class="button button__outline button__outline--option active">Metalică</button>
-                                <button class="button button__outline button__outline--option">Din PAL</button>
-                                <button class="button button__outline button__outline--option">Metalică - perforată</button>
-                                <button class="button button__outline button__outline--option">Din plastic</button>
-                            </div>
-                        </div>
-                        <div class="product-options__group">
-                            <h5>Nr. de polițe:</h5>
-                            <div class="options-buttons">
-                                <button class="button button__outline button__outline--option">1</button>
-                                <button class="button button__outline button__outline--option">2</button>
-                                <button class="button button__outline button__outline--option">3</button>
-                                <button class="button button__outline button__outline--option active">4</button>
-                                <button class="button button__outline button__outline--option">5</button>
-                                <button class="button button__outline button__outline--option">6</button>
-                            </div>
-                        </div>
-                        <div class="product-options__group">
-                            <h5>Tip placă:</h5>
-                            <div class="options-buttons">
-                                <button class="button button__outline button__outline--option ">Metalică</button>
-                                <button class="button button__outline button__outline--option">Din PAL</button>
-                                <button class="button button__outline button__outline--option active">Metalică - perforată</button>
-                                <button class="button button__outline button__outline--option">Din plastic</button>
-                            </div>
-                        </div>
-                        <div class="product-options__group">
-                            <h5>Culoare placă:</h5>
-                            <div class="options-buttons">
-                                <button class="button button__outline button__outline--color active" style="background-color: #fff"></button>
-                                <button class="button button__outline button__outline--color" style="background-color: #3C3A3B"></button>
-                                <button class="button button__outline button__outline--color" style="background-color: #707070"></button>
-                            </div>
-                        </div>
-                        <div class="product-options__group">
-                            <h5>Montant, lungime x lățime x înălțime, mm:</h5>
-                            <div class="options-buttons">
-                                <button class="button button__outline button__outline--option ">915 x 31 x 31</button>
-                                <button class="button button__outline button__outline--option">1220 x 31 x 31</button>
-                                <button class="button button__outline button__outline--option">1530 x 31 x 31</button>
-                                <button class="button button__outline button__outline--option">1830 x 31 x 31</button>
-                                <button class="button button__outline button__outline--option active">2130 x 31 x 31</button>
-                                <button class="button button__outline button__outline--option">2440 x 31 x 31</button>
-                            </div>
-                        </div>
-                        <div class="product-options__group">
-                            <h5>Traversă, lungime x lățime x înălțime, mm:</h5>
-                            <div class="options-buttons">
-                                <button class="button button__outline button__outline--option ">915 x 15 x 52</button>
-                                <button class="button button__outline button__outline--option">1220 x 15 x 52</button>
-                                <button class="button button__outline button__outline--option">1530 x 15 x 52</button>
-                                <button class="button button__outline button__outline--option">1830 x 15 x 52</button>
-                                <button class="button button__outline button__outline--option">2130 x 15 x 52</button>
-                                <button class="button button__outline button__outline--option active">2440 x 15 x 52</button>
-                                <button class="button button__outline button__outline--option">1830 x 15 x 52</button>
-                                <button class="button button__outline button__outline--option">2130 x 15 x 52</button>
-                            </div>
-                        </div>
+                        <form action="#">
+                            <label>
+                                Tip poliță:
+                                <select name="type">
+                                    <option hidden value="">Selectați</option>
+                                    <option value="metalica">Metalică</option>
+                                    <option value="pal">Din PAL</option>
+                                    <option value="metalic-perforat">Metalică - perforată</option>
+                                    <option value="plastic">Din plastic</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                Traversă, lățime, mm:
+                                <select name="tip-polita">
+                                    <option hidden value="">Selectați</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                Nr. de polițe:
+                                <select name="number">
+                                    <option hidden value="">Selectați</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                Traversă, înălțime, mm:
+                                <select name="tip-polita">
+                                    <option hidden value="">Selectați</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                Tip poliță:
+                                <select name="tip-polita">
+                                    <option hidden value="">Selectați</option>
+                                    <option value="metalica">Metalică</option>
+                                    <option value="pal">Din PAL</option>
+                                    <option value="metalic-perforat">Metalică - perforată</option>
+                                    <option value="plastic">Din plastic</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                Montant, lungime, mm:
+                                <select name="tip-polita">
+                                    <option hidden value="">Selectați</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                Culoare placă:
+                                <select name="tip-polita">
+                                    <option hidden value="">Selectați</option>
+                                    <option value="negru">Negru</option>
+                                    <option value="alb">Alb</option>
+                                    <option value="metalic">Metalică</option>
+                                    <option value="orange">Orange</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                Montant, lățime, mm:
+                                <select name="tip-polita">
+                                    <option hidden value="">Selectați</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                Traversă, lungime, mm:
+                                <select name="tip-polita">
+                                    <option hidden value="">Selectați</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                Montant, înălțime, mm:
+                                <select name="tip-polita">
+                                    <option hidden value="">Selectați</option>
+                                </select>
+                            </label>
+                        </form>
                     </div>
 
                     <div class="product-main__meta product-meta">

@@ -678,7 +678,20 @@ textarea {
   height: 100px;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("data:image/svg+xml, <svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+  background-position: calc(100% - 0.75rem) center !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  padding-right: 2rem !important;
+}
+
 input,
+select,
 textarea {
   width: 100%;
   display: block;
@@ -691,40 +704,48 @@ textarea {
   border-radius: 4px;
 }
 input:focus,
+select:focus,
 textarea:focus {
   border-color: #3c3c3c;
 }
 input::placeholder,
+select::placeholder,
 textarea::placeholder {
   font-size: 14px;
   color: #bdbdbd;
 }
 @media (max-width: 1420px) {
   input::placeholder,
+select::placeholder,
 textarea::placeholder {
     font-size: calc( 12px + 2 * ((100vw - 320px) / 1100));
   }
 }
 input.filled,
+select.filled,
 textarea.filled {
   border: none;
   background-color: #f4f4f4;
 }
 input.filled::placeholder,
+select.filled::placeholder,
 textarea.filled::placeholder {
   color: #757575;
 }
 input.header-input,
+select.header-input,
 textarea.header-input {
   padding: 10px 14px;
 }
 input.dark,
+select.dark,
 textarea.dark {
   background-color: rgba(255, 255, 255, 0.16);
   padding: 10px 14px;
   color: #fff;
 }
 input.dark::placeholder,
+select.dark::placeholder,
 textarea.dark::placeholder {
   color: #757575;
 }
@@ -5598,6 +5619,20 @@ section.filter {
 }
 .product-single .product-main .product-options::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+.product-single .product-main .product-options form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.product-single .product-main .product-options form label {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.product-single .product-main .product-options form label select {
+  color: #757575;
 }
 .product-single .product-main .product-options__group:not(:last-child) {
   margin-bottom: 26px;
