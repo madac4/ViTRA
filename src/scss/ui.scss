@@ -307,15 +307,15 @@ main {
 
     &__facebook {
         width: 205px;
-        background: #1877F2;
+        background: #1877f2;
         border-radius: 10px;
         padding: 15px 0;
         font-weight: 700;
         gap: 15px;
-        color: #FFFFFF;
+        color: #ffffff;
 
         &:hover {
-            background-color: lighten($color: #1877F2, $amount: 6);
+            background-color: lighten($color: #1877f2, $amount: 6);
         }
 
         &:active {
@@ -330,7 +330,7 @@ main {
     &__google {
         padding: 15px 0;
         width: 206px;
-        background: #FFFFFF;
+        background: #ffffff;
         border-radius: 10px;
         gap: 15px;
         font-weight: 500;
@@ -432,14 +432,14 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url("data:image/svg+xml, <svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+    background: url("data:image/svg+xml, <svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>")
+        no-repeat;
     background-position: calc(100% - 0.75rem) center !important;
     -moz-appearance: none !important;
     -webkit-appearance: none !important;
     appearance: none !important;
     padding-right: 2rem !important;
 }
-
 
 input,
 select,
@@ -585,19 +585,19 @@ input[type='radio'] {
     border-color: $darkcolor;
 }
 
-.checkbox-container.accent .checkbox-input:checked+.checkbox span:first-child {
+.checkbox-container.accent .checkbox-input:checked + .checkbox span:first-child {
     background: $orangecolor;
     border-color: $orangecolor;
     animation: zoom-in-out 0.3s ease;
 }
 
-.checkbox-input:checked+.checkbox span:first-child {
+.checkbox-input:checked + .checkbox span:first-child {
     background: $darkcolor;
     border-color: $darkcolor;
     animation: zoom-in-out 0.3s ease;
 }
 
-.checkbox-input:checked+.checkbox span:first-child svg {
+.checkbox-input:checked + .checkbox span:first-child svg {
     stroke-dashoffset: 0;
 }
 
@@ -749,4 +749,23 @@ section {
             margin-right: 30px;
         }
     }
+}
+
+.mobile-modals {
+    display: none;
+}
+
+@media (max-width: $tablet) {
+    .mobile-modals {
+        display: block;
+    }
+}
+
+.logout-button {
+    font-size: 16px;
+    margin: 0 auto;
+    margin-top: 30px;
+    color: #bdbdbd;
+    text-decoration-line: underline;
+    display: block;
 }

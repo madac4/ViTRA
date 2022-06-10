@@ -112,7 +112,7 @@
                 background-color: #fff;
                 color: $maincolor;
                 width: 295px;
-                transition: .3s;
+                transition: 0.3s;
                 opacity: 0;
                 visibility: hidden;
                 top: 200%;
@@ -147,7 +147,7 @@
 
                     a {
                         display: block;
-                        transition: .3s;
+                        transition: 0.3s;
 
                         &:hover {
                             color: $orangecolor;
@@ -174,8 +174,6 @@
                 position: initial;
             }
         }
-
-
 
         button.button__gray,
         a.button__gray {
@@ -207,8 +205,6 @@
             }
         }
     }
-
-
 }
 
 .upper-header--mobile {
@@ -289,8 +285,6 @@
                     }
                 }
             }
-
-
         }
     }
 }
@@ -387,7 +381,8 @@
             opacity: 0;
             visibility: hidden;
             transition: 0.3s;
-            max-height: 550px;
+            // max-height: 550px;
+            max-height: 630px;
             display: flex;
             justify-content: space-between;
             overflow-y: scroll;
@@ -452,7 +447,6 @@
             }
         }
     }
-
 
     &-info {
         display: flex;

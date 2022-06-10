@@ -238,6 +238,10 @@
                             <a href="tel:+37322944955">+373 22 944 955</a>
                             <a href="mailto:example@gmail.com">example@gmail.com</a>
                         </div>
+                        <div class="separator"></div>
+                        <div class="hours-info__top">
+                            <p>Str. Uzinelor 4, Chişinău</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -390,7 +394,7 @@
             </div>
             <a href="../profile.html" class="button button__gray transparent"><span class="icon-edit"></span></a>
         </div>
-        <button class="button button__outline">Ieși din cont</button>
+        <a href="../profile.html" class="button button__outline">Istoricul Cumpărăturilor</a>
     </div>
     <div class="profile-modal__info">
         <h5>Bonus acumulat:</h5>
@@ -405,179 +409,10 @@
             Prezentați qr codul în magazinul nostru fizic pentru a beneficia de reducere
         </p>
     </div>
+    
+    <button class="logout-button">Ieși din cont</button>
 </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="upper-header--mobile">
-        <h4>Link-uri utile</h4>
-
-        <nav class="upper-header__nav">
-            <ul>
-                <li><a href="#">Clienții noștri</a></li>
-                <li><a href="#">Portfoliu</a></li>
-                <li><a href="../about.html">Companie</a></li>
-                <li><a href="#">Contacte</a></li>
-                <li><a href="#">Cataloage</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">Evenimente</a></li>
-                <li><a href="../blog.html">Blog</a></li>
-                <li><a href="../carrier.html">Carieră</a></li>
-                <li><a href="#">Constructor</a></li>
-            </ul>
-        </nav>
-
-        <div class="upper-header__row header-row">
-            <div class="header-row__block">
-                <h4>Rețele</h4>
-                <div class="upper-header__social">
-                    <a href="#">
-                        <img src="img/icons/facebook-black.svg" alt="facebook">
-                    </a>
-                    <a href="#">
-                        <img src="img/icons/instagram-black.svg" alt="instagram">
-                    </a>
-                    <a href="#">
-                        <img src="img/icons/youtube-black.svg" alt="youtube">
-                    </a>
-                </div>
-            </div>
-            <div class="header-row__block">
-                <h4>Limba</h4>
-                <ul>
-                    <li><button class="current">Română</button></li>
-                    <li><button>Rusă</button></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="upper-header__row header-row">
-            <div class="header-row__block">
-                <h4>Nr. de telefon</h4>
-                <a href="tel:+37322944955">+373 22 944 955</a>
-            </div>
-            <div class="header-row__block">
-                <button class="button button__gray get-call">Solicită apel</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<svg class="checkbox-symbol">
-    <symbol id="check" viewbox="0 0 12 10">
-      <polyline
-        points="1.5 6 4.5 9 10.5 1"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-      ></polyline>
-    </symbol>
-  </svg>
-
-    <main>
-        <div class="production">
-            <img src="img/production.jpg" alt="">
-        </div>
-    </main>
-    <div class="call-modal">
-    <div class="call-modal__header">
-        <p>Indicați datele personale și unul dintre operatorii noștri în scurt timp vă vor apela</p>
-        <button class="icon-close"></button>
-    </div>
-
-    <div class="call-modal__body">
-        <form action="#">
-            <label>
-                Numele:
-                <input type="text" placeholder="Numele/Prenumele">
-            </label>
-            <label>
-                Nr. de telefon:
-                <input type="tel" placeholder="+(373) ## ### ###">
-            </label>
-            <label>
-                Tema discuției:
-                <textarea name="theme" placeholder="Scriți tema discuției"></textarea>
-            </label>
-            <button type="submit" class="button button__primary">Solicită apel</button>
-        </form>
-    </div>
-</div>
- 
-<div class="reset-modal reset-modal--first">
-    <div class="reset-modal__header reset-header">
-        <div class="reset-header__title">
-            <h3>Recuperare parolă</h3>
-            <p>Pe numărul vostru de telefon va fi trimis un cod unic pentru recuperarea parolei.</p>
-        </div>
-        <button class="icon-close reset-header__close"></button>
-    </div>
-    <div class="reset-modal__body">
-        <form action="#">
-            <label>
-                Nr. de telefon
-                <input type="tel" placeholder="+373********">
-                <!-- <small class="error">Nu exista asa numar de telefon</small> -->
-            </label>
-            <div class="form-buttons">
-                <span>Ai deja cont? <button class="open-login">Loghează-te</button></span>
-                <button type="submit" class="button button__primary">Recuperează</button>
-            </div>
-        </form>
-    </div>
-    <div class="reset-modal__footer">
-        N-ai primit nimic pe e-mail? <a href="#">Click pentru a retrimite</a>
-    </div>
-</div>
-
-<div class="reset-modal reset-modal--second ">
-    <div class="reset-modal__header reset-header">
-        <div class="reset-header__title">
-            <h3><button class="icon-chevron__long"></button>Recuperare parolă</h3>
-        </div>
-        <button class="icon-close reset-header__close"></button>
-    </div>
-    <div class="reset-modal__body">
-        <form action="#">
-            <label>
-                Codul de confirmare
-                <input type="tel">
-                <!-- <small class="error">Codul este gresit</small> -->
-            </label>
-            <button type="submit" class="button button__primary">Confirmați</button>
-        </form>
-    </div>
-</div>
-
-<div class="reset-modal reset-modal--third">
-    <div class="reset-modal__header reset-header">
-        <div class="reset-header__title">
-            <h3><button class="icon-chevron__long"></button>Creați parolă nouă</h3>
-        </div>
-        <button class="icon-close reset-header__close"></button>
-    </div>
-    <div class="reset-modal__body">
-        <form action="#">
-            <label>
-                Parola
-                <p class="form-password">
-                    <input type="password" class="input-field password-input">
-                    <span class="icon-eye change-type"></span>
-                </p>
-                <!-- <span>Parola Parolă greșită</span> -->
-            </label>
-            <div class="form-buttons">
-                <span>Ai deja cont? <button class="open-login">Loghează-te</button></span>
-                <button type="submit" class="button button__primary">Confirmați</button>
-            </div>
-        </form>
-    </div>
-</div>
-
-<div class="login">
+                    <div class="login">
     <a href="#" class="login-logo">
         <img src="img/logos/logo.svg" alt="">
     </a>
@@ -752,6 +587,177 @@
     </div>
 </div>
 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="upper-header--mobile">
+        <h4>Link-uri utile</h4>
+
+        <nav class="upper-header__nav">
+            <ul>
+                <li><a href="#">Clienții noștri</a></li>
+                <li><a href="#">Portfoliu</a></li>
+                <li><a href="../about.html">Companie</a></li>
+                <li><a href="#">Contacte</a></li>
+                <li><a href="#">Cataloage</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Evenimente</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../carrier.html">Carieră</a></li>
+                <li><a href="#">Constructor</a></li>
+            </ul>
+        </nav>
+
+        <div class="upper-header__row header-row">
+            <div class="header-row__block">
+                <h4>Rețele</h4>
+                <div class="upper-header__social">
+                    <a href="#">
+                        <img src="img/icons/facebook-black.svg" alt="facebook">
+                    </a>
+                    <a href="#">
+                        <img src="img/icons/instagram-black.svg" alt="instagram">
+                    </a>
+                    <a href="#">
+                        <img src="img/icons/youtube-black.svg" alt="youtube">
+                    </a>
+                </div>
+            </div>
+            <div class="header-row__block">
+                <h4>Limba</h4>
+                <ul>
+                    <li><button class="current">Română</button></li>
+                    <li><button>Rusă</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="upper-header__row header-row">
+            <div class="header-row__block">
+                <h4>Nr. de telefon</h4>
+                <a href="tel:+37322944955">+373 22 944 955</a>
+            </div>
+            <div class="header-row__block">
+                <button class="button button__gray get-call">Solicită apel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<svg class="checkbox-symbol">
+    <symbol id="check" viewbox="0 0 12 10">
+      <polyline
+        points="1.5 6 4.5 9 10.5 1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+      ></polyline>
+    </symbol>
+  </svg>
+
+    <main>
+        <div class="production">
+            <img src="img/production.jpg" alt="">
+        </div>
+    </main>
+    <div class="call-modal">
+    <div class="call-modal__header">
+        <p>Indicați datele personale și unul dintre operatorii noștri în scurt timp vă vor apela</p>
+        <button class="icon-close"></button>
+    </div>
+
+    <div class="call-modal__body">
+        <form action="#">
+            <label>
+                Numele:
+                <input type="text" placeholder="Numele/Prenumele">
+            </label>
+            <label>
+                Nr. de telefon:
+                <input type="tel" placeholder="+(373) ## ### ###">
+            </label>
+            <label>
+                Tema discuției:
+                <textarea name="theme" placeholder="Scriți tema discuției"></textarea>
+            </label>
+            <button type="submit" class="button button__primary">Solicită apel</button>
+        </form>
+    </div>
+</div>
+ 
+<div class="reset-modal reset-modal--first">
+    <div class="reset-modal__header reset-header">
+        <div class="reset-header__title">
+            <h3>Recuperare parolă</h3>
+            <p>Pe numărul vostru de telefon va fi trimis un cod unic pentru recuperarea parolei.</p>
+        </div>
+        <button class="icon-close reset-header__close"></button>
+    </div>
+    <div class="reset-modal__body">
+        <form action="#">
+            <label>
+                Nr. de telefon
+                <input type="tel" placeholder="+373********">
+                <!-- <small class="error">Nu exista asa numar de telefon</small> -->
+            </label>
+            <div class="form-buttons">
+                <span>Ai deja cont? <button class="open-login">Loghează-te</button></span>
+                <button type="submit" class="button button__primary">Recuperează</button>
+            </div>
+        </form>
+    </div>
+    <div class="reset-modal__footer">
+        N-ai primit nimic pe e-mail? <a href="#">Click pentru a retrimite</a>
+    </div>
+</div>
+
+<div class="reset-modal reset-modal--second ">
+    <div class="reset-modal__header reset-header">
+        <div class="reset-header__title">
+            <h3><button class="icon-chevron__long"></button>Recuperare parolă</h3>
+        </div>
+        <button class="icon-close reset-header__close"></button>
+    </div>
+    <div class="reset-modal__body">
+        <form action="#">
+            <label>
+                Codul de confirmare
+                <input type="tel">
+                <!-- <small class="error">Codul este gresit</small> -->
+            </label>
+            <button type="submit" class="button button__primary">Confirmați</button>
+        </form>
+    </div>
+</div>
+
+<div class="reset-modal reset-modal--third">
+    <div class="reset-modal__header reset-header">
+        <div class="reset-header__title">
+            <h3><button class="icon-chevron__long"></button>Creați parolă nouă</h3>
+        </div>
+        <button class="icon-close reset-header__close"></button>
+    </div>
+    <div class="reset-modal__body">
+        <form action="#">
+            <label>
+                Parola
+                <p class="form-password">
+                    <input type="password" class="input-field password-input">
+                    <span class="icon-eye change-type"></span>
+                </p>
+                <!-- <span>Parola Parolă greșită</span> -->
+            </label>
+            <div class="form-buttons">
+                <span>Ai deja cont? <button class="open-login">Loghează-te</button></span>
+                <button type="submit" class="button button__primary">Confirmați</button>
+            </div>
+        </form>
+    </div>
+</div>
+
 
 <div class="mobile-modals">
     <div class="fav-modal">
@@ -884,7 +890,7 @@
             </div>
             <a href="../profile.html" class="button button__gray transparent"><span class="icon-edit"></span></a>
         </div>
-        <button class="button button__outline">Ieși din cont</button>
+        <a href="../profile.html" class="button button__outline">Istoricul Cumpărăturilor</a>
     </div>
     <div class="profile-modal__info">
         <h5>Bonus acumulat:</h5>
@@ -899,10 +905,15 @@
             Prezentați qr codul în magazinul nostru fizic pentru a beneficia de reducere
         </p>
     </div>
+    
+    <button class="logout-button">Ieși din cont</button>
 </div>
 </div>
 
 <div class="overlay"></div>
+<div class="loader loading">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+</div>
 
 <div class="bottom-navigation">
     <button class="button button__gray bottom-navigation__account">

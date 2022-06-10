@@ -561,12 +561,12 @@ main {
 }
 .button__facebook {
   width: 205px;
-  background: #1877F2;
+  background: #1877f2;
   border-radius: 10px;
   padding: 15px 0;
   font-weight: 700;
   gap: 15px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .button__facebook:hover {
   background-color: #3588f4;
@@ -587,7 +587,7 @@ main {
 .button__google {
   padding: 15px 0;
   width: 206px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 10px;
   gap: 15px;
   font-weight: 500;
@@ -1028,6 +1028,24 @@ section [class*=__header] a span {
   margin-right: 30px;
 }
 
+.mobile-modals {
+  display: none;
+}
+
+@media (max-width: 61.99875rem) {
+  .mobile-modals {
+    display: block;
+  }
+}
+.logout-button {
+  font-size: 16px;
+  margin: 0 auto;
+  margin-top: 30px;
+  color: #bdbdbd;
+  text-decoration-line: underline;
+  display: block;
+}
+
 .footer {
   display: flex;
   align-items: center;
@@ -1148,6 +1166,65 @@ section [class*=__header] a span {
   opacity: 0.5;
 }
 
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  inset: 0;
+  z-index: 100000;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+.loader.loading {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #f15d22 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .upper-header {
   padding: 15px 0;
   background-color: #000;
@@ -1575,7 +1652,7 @@ section [class*=__header] a span {
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
-  max-height: 550px;
+  max-height: 630px;
   display: flex;
   justify-content: space-between;
   overflow-y: scroll;
@@ -3086,7 +3163,7 @@ section.filter {
   padding: 30px;
   background-color: #fff;
   position: fixed;
-  top: 80%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -3104,7 +3181,6 @@ section.filter {
 .call-modal.open {
   opacity: 1;
   visibility: visible;
-  top: 50%;
 }
 .call-modal__header {
   display: flex;
@@ -3528,6 +3604,11 @@ section.filter {
   opacity: 0;
   visibility: hidden;
 }
+@media (max-height: 950px) {
+  .profile-modal {
+    height: 600px;
+  }
+}
 .profile-modal.active {
   opacity: 1;
   visibility: visible;
@@ -3538,7 +3619,8 @@ section.filter {
     top: 0;
     right: -100%;
     height: 100%;
-    z-index: 7;
+    z-index: 6;
+    width: 100%;
   }
   .profile-modal.active {
     right: 0;
@@ -5581,6 +5663,10 @@ section.filter {
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
+  background-color: transparent;
+  padding: 10px;
+  color: #2b2b2b;
+  font-size: 24px;
 }
 .product-single .product-main .product-slider--mobile .page__mobile-slider .mobile-slider__body .mobile-slider__slider .slider-mobile-controls__arrows .slider-arrow__prev {
   left: 10px;

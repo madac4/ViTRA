@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const headerAccount = document.querySelector('.header-controls__user button');
     const bottomNavigationAccount = document.querySelector('.bottom-navigation__account');
-    const accountModal = document.querySelector('.profile-modal');
+    let accountModal = document.querySelector('.profile-modal');
 
     const tabsLogin = document.querySelector('.login-tabs__list');
     const tabsLoginButtons = document.querySelectorAll('.login-tabs__button');
@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const products = document.querySelectorAll('.product');
     const profileItem = document.querySelectorAll('.profile-history__item');
-    const user = document.querySelector('.header-controls__user');
     const formPassword = document.querySelectorAll('.form-password')
     var headerH = document.querySelector('.header').offsetHeight;
     const w = window.innerWidth;
@@ -355,6 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }else{
         cartModal = document.querySelector('.mobile-modals .cart-modal');
         favModal = document.querySelector('.mobile-modals .fav-modal');
+        accountModal = document.querySelector('.mobile-modals .profile-modal');
     }
 
     if (w <= 640) {
@@ -679,17 +679,18 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
     }
 
-    user.addEventListener('click', () => {
-        login.classList.toggle('open');
-        overlay.classList.toggle('active');
-        document.body.classList.toggle('lock');
-    })
-
     loginClose.addEventListener('click', () => {
         login.classList.remove('open');
         overlay.classList.remove('active');
         document.body.classList.remove('lock');
     })
+
+    headerAccount.addEventListener('click', () => {
+        login.classList.toggle('open');
+        overlay.classList.toggle('active');
+        document.body.classList.toggle('lock');
+    })
+
 
     if (tabsLogin) {
         tabsLogin.addEventListener('click', (e) => {
@@ -765,3 +766,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
 })
 
+const loader = document.querySelector('.loader');
+document.onreadystatechange = () => {
+    if (document.readyState !== 'complete') {
+        loader.classList.add('loading')
+        document.body.classList.add('lock')
+    }else{
+        loader.classList.remove('loading')
+        document.body.classList.remove('lock')
+    }
+  };

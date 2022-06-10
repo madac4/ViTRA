@@ -13,7 +13,9 @@
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
-
+    @media (max-height: 950px) {
+        height: 600px;
+    }
     &.active {
         opacity: 1;
         visibility: visible;
@@ -24,7 +26,8 @@
         top: 0;
         right: -100%;
         height: calc(100%);
-        z-index: 7;
+        z-index: 6;
+        width: 100%;
 
         &.active {
             right: 0;

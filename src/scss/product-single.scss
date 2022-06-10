@@ -180,7 +180,10 @@
                                     top: 50%;
                                     transform: translateY(-50%);
                                     z-index: 1;
-
+                                    background-color: transparent;
+                                    padding: 10px;
+                                    color: $maincolor;
+                                    font-size: 24px;
                                     &__prev {
                                         left: 10px;
                                     }
@@ -239,7 +242,6 @@
                     select {
                         color: $graycolor500;
                     }
-
                 }
             }
 
