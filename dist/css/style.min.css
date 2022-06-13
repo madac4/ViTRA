@@ -174,7 +174,6 @@
 }
 
 html {
-  line-height: 1.15;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -1758,6 +1757,7 @@ section [class*=__header] a span {
 }
 .header-info .language__option--current {
   font-weight: 600;
+  color: #f15d22;
 }
 .header .header-controls--mobile {
   display: block;
