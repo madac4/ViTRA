@@ -1,35 +1,35 @@
 @font-face {
-    font-family: Galano Grotesque;
+    font-family: GalanoGrotesque;
     font-display: swap;
-    src: url('../fonts/Galano Grotesque Bold.woff2') format('woff2'), url('../fonts/Galano Grotesque Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: Galano Grotesque;
-    font-display: swap;
-    src: url('../fonts/Galano Grotesque Semi Bold.woff2') format('woff2'), url('../fonts/Galano Grotesque Semi Bold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: Galano Grotesque;
-    font-display: swap;
-    src: url('../fonts/Galano Grotesque.woff2') format('woff2'), url('../fonts/Galano Grotesque.woff') format('woff');
+    src: url('../fonts/GalanoGrotesque.woff2') format('woff2'),
+        url('../fonts/GalanoGrotesque.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
-
 @font-face {
-    font-family: Galano Grotesque;
+    font-family: GalanoGrotesque;
     font-display: swap;
-    src: url('../fonts/Galano Grotesque Medium.woff2') format('woff2'), url('../fonts/Galano Grotesque Medium.woff') format('woff');
+    src: url('../fonts/GalanoGrotesqueBold.woff2') format('woff2'),
+        url('../fonts/GalanoGrotesqueBold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: GalanoGrotesque;
+    font-display: swap;
+    src: url('../fonts/GalanoGrotesqueMedium.woff2') format('woff2'),
+        url('../fonts/GalanoGrotesqueMedium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
 }
-
+@font-face {
+    font-family: GalanoGrotesque;
+    font-display: swap;
+    src: url('../fonts/GalanoGrotesqueSemiBold.woff2') format('woff2'),
+        url('../fonts/GalanoGrotesqueSemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
 @font-face {
     font-family: icomoon;
     font-display: swap;

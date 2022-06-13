@@ -3,11 +3,11 @@
 // Conectarea MIXINURILOR ==============================================================================================================
 @import 'base/mixin.scss';
 // Conectarea Fonturilor
-// @import 'fonts.scss';
+@import 'fonts.scss';
 // Conectarea Fonturilor pentru Iconite
 @import 'icons.scss';
 // Main Font =======================================================================================================================
-$fontFamily: '';
+$fontFamily: 'GalanoGrotesque';
 $fontSize: rem(16px); // 14 - marimea textului din maket
 // Culorile de baza ======================================================================================================================
 $maincolor: #2b2b2b;
