@@ -1,39 +1,4 @@
 @font-face {
-  font-family: Galano Grotesque;
-  font-display: swap;
-  src: url("../fonts/Galano Grotesque Bold.woff2") format("woff2"), url("../fonts/Galano Grotesque Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: Galano Grotesque;
-  font-display: swap;
-  src: url("../fonts/Galano Grotesque Semi Bold.woff2") format("woff2"), url("../fonts/Galano Grotesque Semi Bold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: Galano Grotesque;
-  font-display: swap;
-  src: url("../fonts/Galano Grotesque.woff2") format("woff2"), url("../fonts/Galano Grotesque.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Galano Grotesque;
-  font-display: swap;
-  src: url("../fonts/Galano Grotesque Medium.woff2") format("woff2"), url("../fonts/Galano Grotesque Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: icomoon;
-  font-display: swap;
-  src: url("../fonts/icomoon.woff2") format("woff2"), url("../fonts/icomoon.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "icomoon";
   src: url("fonts/icomoon.eot?aef8go");
   src: url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.woff2") format("woff2");
@@ -178,7 +143,7 @@ html {
 }
 
 body {
-  font-family: "Galano Grotesque", sans-serif;
+  font-family: "", sans-serif;
   font-size: 1rem;
   color: #2b2b2b;
   overflow-x: hidden;
@@ -234,7 +199,7 @@ label,
 optgroup,
 select,
 textarea {
-  font-family: "Galano Grotesque";
+  font-family: "";
   font-size: 100%;
   line-height: 1.15;
 }
