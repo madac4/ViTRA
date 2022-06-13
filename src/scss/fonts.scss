@@ -23,17 +23,17 @@
     font-style: normal;
 }
 @font-face {
+    font-family: icomoon;
+    font-display: swap;
+    src: url('../fonts/icomoon.woff2') format('woff2'), url('../fonts/icomoon.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
     font-family: GalanoGrotesque;
     font-display: swap;
     src: url('../fonts/GalanoGrotesqueSemiBold.woff2') format('woff2'),
         url('../fonts/GalanoGrotesqueSemiBold.woff') format('woff');
     font-weight: 600;
-    font-style: normal;
-}
-@font-face {
-    font-family: icomoon;
-    font-display: swap;
-    src: url('../fonts/icomoon.woff2') format('woff2'), url('../fonts/icomoon.woff') format('woff');
-    font-weight: 400;
     font-style: normal;
 }
