@@ -173,10 +173,6 @@
   box-sizing: border-box;
 }
 
-html {
-  -webkit-text-size-adjust: 100%;
-}
-
 body {
   font-family: "GalanoGrotesque", sans-serif;
   font-size: 1rem;
