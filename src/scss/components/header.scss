@@ -357,6 +357,7 @@
             img {
                 @include adaptiv-value('width', 176, 100, 1);
                 height: auto;
+                margin-bottom: 8px;
             }
         }
 
@@ -486,7 +487,6 @@
                 font-size: 14px;
 
                 &--current {
-                    font-weight: 600;
                     color: $orangecolor;
                 }
             }
