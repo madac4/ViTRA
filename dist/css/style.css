@@ -1920,6 +1920,7 @@ section [class*=__header] a span {
   justify-content: center;
   flex-direction: column;
   gap: 10px;
+  text-align: center;
   color: #fff;
 }
 @media (max-width: 1420px) {
@@ -2345,25 +2346,16 @@ section.filter {
   background-color: rgba(247, 252, 254, 0.8);
   transition: 0.3s;
   position: relative;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 8px;
-  letter-spacing: 1.8px;
-  padding: 30px 40px;
+  padding: 35px 40px;
 }
-.category-secondary__content svg {
-  display: block;
-  margin: 0 auto;
-  max-width: 117px;
+.category-secondary__content img {
+  position: relative;
   width: 100%;
-  margin-bottom: 5px;
-  transition: 0.3;
-}
-@media (max-width: 29.99875rem) {
-  .category-secondary__content svg {
-    max-width: 70px;
-  }
+  height: auto;
 }
 @media (max-width: 39.99875rem) {
   .category-secondary__content {

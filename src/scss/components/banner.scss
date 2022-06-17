@@ -11,6 +11,7 @@
         justify-content: center;
         flex-direction: column;
         gap: 10px;
+        text-align: center;
         color: #fff;
         h1 {
             @include adaptiv-value('font-size', 48, 32, 1);
