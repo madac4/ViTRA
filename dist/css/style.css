@@ -2127,7 +2127,6 @@ section.filter {
 .scroll-category__body {
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(4px);
   padding: 10px;
   display: flex;
   align-items: center;

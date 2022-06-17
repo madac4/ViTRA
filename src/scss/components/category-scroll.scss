@@ -14,7 +14,7 @@
     &__body {
         @include adaptiv-value('border-radius', 8, 4, 1);
         background: rgba(0, 0, 0, 0.05);
-        backdrop-filter: blur(4px);
+        // backdrop-filter: blur(4px);
         padding: 10px;
         display: flex;
         align-items: center;
