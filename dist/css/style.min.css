@@ -1391,9 +1391,11 @@ section [class*=__header] a span {
   opacity: 0;
   visibility: hidden;
   top: 200%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 .upper-header .upper-info__hours .hours-info__top {
   padding: 30px;
+  display: block;
   padding: 30px;
   padding-bottom: 20px;
 }
