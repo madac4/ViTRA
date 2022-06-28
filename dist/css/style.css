@@ -5603,12 +5603,17 @@ section.filter {
   grid-template-columns: minmax(400px, 600px) 1fr;
 }
 .product-single .product-main.no-options .product-meta .product-buy .product-controls .button-add {
-  width: fit-content;
-  padding: 24px 48px;
+  max-width: 210px;
 }
 @media (max-width: 1000px) {
   .product-single .product-main {
     grid-template-columns: minmax(400px, 600px) minmax(280px, 460px);
+  }
+  .product-single .product-main.no-options {
+    grid-template-columns: 1fr;
+  }
+  .product-single .product-main.no-options .product-main__slider {
+    justify-content: center;
   }
 }
 @media (max-width: 47.99875rem) {
