@@ -6,6 +6,9 @@
         max-width: 100%;
         margin: 0 auto;
     }
+    &__container {
+        padding-right: 0;
+    }
     &-body {
         display: flex;
         align-items: center;
@@ -30,13 +33,13 @@
                 text-align: center;
                 padding: 14px 10px;
                 min-width: 44px;
-                background-color: #F1F1F1;
+                background-color: #f1f1f1;
                 border-radius: 6px;
-                transition: .3s;
+                transition: 0.3s;
                 a {
                     line-height: 100%;
                     &::after {
-                        content: "";
+                        content: '';
                         position: absolute;
                         inset: 0;
                         width: 100%;
@@ -45,7 +48,7 @@
                 }
                 &:hover,
                 &.active {
-                    background-color: #DBDBDB;
+                    background-color: #dbdbdb;
                 }
             }
         }

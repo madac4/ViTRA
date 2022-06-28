@@ -1,181 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('./components/head.html', {'title': 'ViTRA - Profile'})
+    @@include('./components/head.html', {'title': 'ViTRA - Profile'})
 
-<body>
-    @@include('./components/header.html') @@include('./components/check.html')
-    <main>
-        <div class="profile">
-            <div class="profile__container">
-                <div class="profile-body">
-                    <div class="profile-mobile__tabs">
-                        <ul class="tabs__list">
-                            <li class="tabs__item">
-                                <button class="tabs__button tabs__button--active" data-tabs-path="tab1">Date
-                                    personale</button>
-                            </li>
-                            <li class="tabs__item">
-                                <button class="tabs__button" data-tabs-path="tab2">Istoricul cumpărăturilor</button>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="profile-form tabs__content tabs__content--active" data-tabs-target="tab1">
-                        <h3>Date personale</h3>
-                        <form action="#">
-                            <label for="name">
-                                Nume
-                                <input type="text" name="name" id="name" placeholder="Alexandru">
-                            </label>
-                            <label for="password">
-                                Schimbare parolă
-                                <input type="password" name="password" id="password" placeholder="Parola veche">
-                                <input type="password" name="new-password" id="new-password" placeholder="Parola nouă">
-                                <input type="password" name="confirm-password" id="confirm-password"
-                                    placeholder="Confirmare parolă">
-                            </label>
-                            <label for="num">
-                                Nr. de telefon
-                                <input type="number" name="tel" id="num" placeholder="+ (373) 69 352 170">
-                            </label>
-                            <button type="button" class="forget">Ai uitat parola?</button>
+    <body>
+        @@include('./components/header.html') @@include('./components/check.html')
+        <main>
+            <div class="profile">
+                <div class="profile__container">
+                    <h3>Date personale</h3>
 
-                            <p class="form-btns">
-                                <button type="submit" class="button form-btn button__primary">
-                                    Salvează modificări
-                                </button>
-                                <button class="button form-btn button__outline button__outline--gray rounded">
-                                    Înapoi la cumpărături
-                                </button>
-                            </p>
-                        </form>
-                    </div>
-                    <div class="profile-history tabs__content" data-tabs-target="tab2">
-                        <h3>Istoricul cumpărăturilor</h3>
-                        <div class="profile-history__body">
-                            <div class="profile-history__item">
-                                <div class="history-item__header">
-                                    <time datetime="2021-11-10">10 noiembrie 2021</time>
-                                    <img src="@img/history.png" alt="">
-                                    <p>1 produs în sumă de: <span>1400 mdl</span></p>
-                                    <span class="icon-chevron--down item-header__control"></span>
-                                </div>
-                                <div class="history-item__content">
-                                    <table>
-                                        <tr>
-                                            <td><img src="@img/history.png" alt=""></td>
-                                            <td>
-                                                <span class="history-product__name">1x Scaun bla bla</span>
-                                                <div class="history-product__code">Cod produs: <span>2103dc12</span>
-                                                </div>
-                                            </td>
-                                            <!-- <td>1000 mdl</td> -->
-                                        </tr>
-                                    </table>
-                                    <div class="item-content__desc">
-                                        <div class="content-desc__block">
-                                            <h5>Livrarea:</h5>
-                                            <p>Livrare prin curier <span>(50 mdl)</span></p>
-                                        </div>
-                                        <div class="content-desc__block">
-                                            <h5>Adresa livrării:</h5>
-                                            <p>or. Chișinău, str. Calea Orheiului, 113/1</p>
-                                        </div>
+                    <div class="profile-body">
+                        <!-- <div class="profile-mobile__tabs">
+                            <ul class="tabs__list">
+                                <li class="tabs__item">
+                                    <button
+                                        class="tabs__button tabs__button--active"
+                                        data-tabs-path="tab1"
+                                    >
+                                        Date personale
+                                    </button>
+                                </li>
+                                <li class="tabs__item">
+                                    <button class="tabs__button" data-tabs-path="tab2">
+                                        Istoricul cumpărăturilor
+                                    </button>
+                                </li>
+                            </ul>
+                        </div> -->
+                        <div class="profile-form">
+                            <form action="#">
+                                <label for="name">
+                                    Nume
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        placeholder="Alexandru"
+                                    />
+                                </label>
+                                <label for="password">
+                                    Schimbare parolă
+                                    <input
+                                        type="password"
+                                        name="password"
+                                        id="password"
+                                        placeholder="Parola veche"
+                                    />
+                                    <input
+                                        type="password"
+                                        name="new-password"
+                                        id="new-password"
+                                        placeholder="Parola nouă"
+                                    />
+                                    <input
+                                        type="password"
+                                        name="confirm-password"
+                                        id="confirm-password"
+                                        placeholder="Confirmare parolă"
+                                    />
+                                </label>
+                                <label for="num">
+                                    Nr. de telefon
+                                    <input
+                                        type="number"
+                                        name="tel"
+                                        id="num"
+                                        placeholder="+ (373) 69 352 170"
+                                    />
+                                </label>
+                                <!-- <button type="button" class="forget">Ai uitat parola?</button> -->
 
-                                    </div>
-                                    <div class="item-content__desc">
-                                        <div class="content-desc__block">
-                                            <h5>Achitarea:</h5>
-                                            <p>Achitare cu cardul bancar</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="profile-history__item">
-                                <div class="history-item__header">
-                                    <time datetime="2021-11-10">10 noiembrie 2021</time>
-                                    <img src="@img/history.png" alt="">
-                                    <p>1 produs în sumă de: <span>1400 mdl</span></p>
-                                    <span class="icon-chevron--down item-header__control"></span>
-                                </div>
-                                <div class="history-item__content">
-                                    <table>
-                                        <tr>
-                                            <td><img src="@img/history.png" alt=""></td>
-                                            <td>
-                                                <span class="history-product__name">1x Scaun bla bla</span>
-                                                <div class="history-product__code">Cod produs: <span>2103dc12</span>
-                                                </div>
-                                            </td>
-                                            <!-- <td>1000 mdl</td> -->
-                                        </tr>
-                                    </table>
-                                    <div class="item-content__desc">
-                                        <div class="content-desc__block">
-                                            <h5>Livrarea:</h5>
-                                            <p>Livrare prin curier <span>(50 mdl)</span></p>
-                                        </div>
-                                        <div class="content-desc__block">
-                                            <h5>Adresa livrării:</h5>
-                                            <p>or. Chișinău, str. Calea Orheiului, 113/1</p>
-                                        </div>
-
-                                    </div>
-                                    <div class="item-content__desc">
-                                        <div class="content-desc__block">
-                                            <h5>Achitarea:</h5>
-                                            <p>Achitare cu cardul bancar</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="profile-history__item">
-                                <div class="history-item__header">
-                                    <time datetime="2021-11-10">10 noiembrie 2021</time>
-                                    <img src="@img/history.png" alt="">
-                                    <p>1 produs în sumă de: <span>1400 mdl</span></p>
-                                    <span class="icon-chevron--down item-header__control"></span>
-                                </div>
-                                <div class="history-item__content">
-                                    <table>
-                                        <tr>
-                                            <td><img src="@img/history.png" alt=""></td>
-                                            <td>
-                                                <span class="history-product__name">1x Scaun bla bla</span>
-                                                <div class="history-product__code">Cod produs: <span>2103dc12</span>
-                                                </div>
-                                            </td>
-                                            <!-- <td>1000 mdl</td> -->
-                                        </tr>
-                                    </table>
-                                    <div class="item-content__desc">
-                                        <div class="content-desc__block">
-                                            <h5>Livrarea:</h5>
-                                            <p>Livrare prin curier <span>(50 mdl)</span></p>
-                                        </div>
-                                        <div class="content-desc__block">
-                                            <h5>Adresa livrării:</h5>
-                                            <p>or. Chișinău, str. Calea Orheiului, 113/1</p>
-                                        </div>
-
-                                    </div>
-                                    <div class="item-content__desc">
-                                        <div class="content-desc__block">
-                                            <h5>Achitarea:</h5>
-                                            <p>Achitare cu cardul bancar</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
+                                <p class="form-btns">
+                                    <button type="submit" class="button form-btn button__primary">
+                                        Salvează modificări
+                                    </button>
+                                    <button
+                                        class="button form-btn button__outline button__outline--gray rounded"
+                                    >
+                                        Înapoi la cumpărături
+                                    </button>
+                                </p>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-    @@include('./components/footer.html')
-</body>
-
+        </main>
+        @@include('./components/footer.html')
+    </body>
 </html>

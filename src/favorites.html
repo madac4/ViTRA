@@ -1,28 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    @@include('./components/head.html', {'title': 'ViTRA - Producere'})
+    @@include('./components/head.html', {'title': 'ViTRA - Home'})
 
     <body>
-        @@include('./components/header.html')
+        @@include('./components/header.html') @@include('./components/check.html')
         <main>
-            @@include('./components/page-title.html', {'title': 'Producere'})
-            <div class="production-information">
-                <div class="production-information__container">
-                    <p>
-                        Producerea noastră este dotată cu echipamente performante, ce oferă
-                        posibilitatea realizării unei game largi de produse complexe și exclusive.
-                        Dezvoltăm mereu soluții potrivite cerințelor clienților noștri, proiectând
-                        și realizând produse inovative. Producem totul de o calitate înaltă și
-                        concentrăm atenția chiar și la cele mai mici detalii, pentru a crea articole
-                        competitive și eficiente în utilizare.
-                    </p>
-
-                    <a href="" class="button button__primary">Cumpără acum</a>
+            <div class="page-title">
+                <div class="page-title__container">
+                    <h1>Favorite</h1>
                 </div>
             </div>
-
-            <div class="production-products">
-                <div class="production-products__container">
+            <div class="product-page">
+                <div class="product-page__container">
                     <div class="product-page__main product-grid">
                         <div class="product">
                             <div class="product__labels">
@@ -57,7 +46,7 @@
                                 </div>
                                 <div class="product-footer__controls">
                                     <button
-                                        class="button button__control icon-heart__filled"
+                                        class="button button__control icon-heart__filled added"
                                     ></button>
                                     <button class="button button__control icon-cart"></button>
                                 </div>
@@ -96,7 +85,7 @@
                                 </div>
                                 <div class="product-footer__controls">
                                     <button
-                                        class="button button__control icon-heart__filled"
+                                        class="button button__control icon-heart__filled added"
                                     ></button>
                                     <button class="button button__control icon-cart"></button>
                                 </div>
@@ -135,7 +124,7 @@
                                 </div>
                                 <div class="product-footer__controls">
                                     <button
-                                        class="button button__control icon-heart__filled"
+                                        class="button button__control icon-heart__filled added"
                                     ></button>
                                     <button class="button button__control icon-cart"></button>
                                 </div>
@@ -174,26 +163,55 @@
                                 </div>
                                 <div class="product-footer__controls">
                                     <button
-                                        class="button button__control icon-heart__filled"
+                                        class="button button__control icon-heart__filled added"
+                                    ></button>
+                                    <button class="button button__control icon-cart"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product__labels">
+                                <span class="label" style="background-color: #ee2924">SALE </span>
+                                <span class="label" style="background-color: #fea800"
+                                    >Top vânzări</span
+                                >
+                            </div>
+
+                            <div class="product__images product-images">
+                                <img
+                                    class="product-images__image product-images__image--active"
+                                    src="@img/product1.png"
+                                    alt=""
+                                />
+                                <img class="product-images__image" src="@img/product2.png" alt="" />
+                                <img class="product-images__image" src="@img/product3.png" alt="" />
+                            </div>
+
+                            <div class="product__pagination"></div>
+
+                            <div class="product__footer product-footer">
+                                <div class="product-footer__info">
+                                    <a href="./product-single.html" class="product-name">
+                                        Optio qui sequi consequatur quia quod
+                                    </a>
+                                    <small class="product-code">Cod produs: 2103dc12</small>
+                                    <h3 class="product-price">
+                                        12 410 MDL
+                                        <span class="product-price--old">14 210 MDL</span>
+                                    </h3>
+                                </div>
+                                <div class="product-footer__controls">
+                                    <button
+                                        class="button button__control icon-heart__filled added"
                                     ></button>
                                     <button class="button button__control icon-cart"></button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="production-video">
-                <div class="production-video__container">
-                    <h3>Exemplu denumire video</h3>
-                    <iframe
-                        src="https://www.youtube.com/embed/EJxeMbDTkVI"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                    ></iframe>
+                    <div class="product-page__footer">
+                        @@include('./components/pagination.html')
+                    </div>
                 </div>
             </div>
         </main>

@@ -1,360 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('./components/head.html', {'title': 'ViTRA - Home'})
+    @@include('./components/head.html', {'title': 'ViTRA - Home'})
 
-<body>
-    @@include('./components/header.html') @@include('./components/check.html')
-    <main>
-        @@include('./components/page-title.html', {'title': 'Scaune birou'})
-        <div class="product-page">
-            <div class="product-page__container">
-                @@include('./components/filters.html')
+    <body>
+        @@include('./components/header.html') @@include('./components/check.html')
+        <main>
+            @@include('./components/page-title.html', {'title': 'Scaune birou'})
+            <div class="product-page">
+                <div class="product-page__container">
+                    @@include('./components/filters.html')
 
-                <div class="product-page__main product-grid">
-                    <div class="product">
-                        <div class="product__labels">
-                            <span class="label" style="background-color: #EE2924;">SALE </span>
-                            <span class="label" style="background-color: #FEA800;">Top vânzări</span>
-                        </div>
-
-                        <div class="product__images product-images">
-                            <img class="product-images__image product-images__image--active" src="@img/product1.png" alt="">
-                            <img class="product-images__image" src="@img/product2.png" alt="">
-                            <img class="product-images__image" src="@img/product3.png" alt="">
-                        </div>
-
-                        <div class="product__pagination"></div>
-
-                        <div class="product__footer product-footer">
-                            <div class="product-footer__info">
-                                <a href="./product-single.html" class="product-name">
-                                    Optio qui sequi consequatur quia quod
-                                </a>
-                                <small class="product-code">Cod produs: 2103dc12</small>
-                                <h3 class="product-price">12 410 MDL <span class="product-price--old">14 210 MDL</span></h3>
+                    <div class="product-page__main product-grid">
+                        <div class="product">
+                            <div class="product__labels">
+                                <span class="label" style="background-color: #ee2924">SALE </span>
+                                <span class="label" style="background-color: #fea800"
+                                    >Top vânzări</span
+                                >
                             </div>
-                            <div class="product-footer__controls">
-                                <button class="button button__control icon-heart__filled"></button>
-                                <button class="button button__control icon-cart"></button>
+
+                            <div class="product__images product-images">
+                                <img
+                                    class="product-images__image product-images__image--active"
+                                    src="@img/product1.png"
+                                    alt=""
+                                />
+                                <img class="product-images__image" src="@img/product2.png" alt="" />
+                                <img class="product-images__image" src="@img/product3.png" alt="" />
+                            </div>
+
+                            <div class="product__pagination"></div>
+
+                            <div class="product__footer product-footer">
+                                <div class="product-footer__info">
+                                    <a href="./product-single-no-option.html" class="product-name">
+                                        Optio qui sequi consequatur quia quod
+                                    </a>
+                                    <small class="product-code">Cod produs: 2103dc12</small>
+                                    <h3 class="product-price">
+                                        12 410 MDL
+                                        <span class="product-price--old">14 210 MDL</span>
+                                    </h3>
+                                </div>
+                                <div class="product-footer__controls">
+                                    <button
+                                        class="button button__control icon-heart__filled"
+                                    ></button>
+                                    <button class="button button__control icon-cart"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product__labels">
+                                <span class="label" style="background-color: #ee2924">SALE </span>
+                                <span class="label" style="background-color: #fea800"
+                                    >Top vânzări</span
+                                >
+                            </div>
+
+                            <div class="product__images product-images">
+                                <img
+                                    class="product-images__image product-images__image--active"
+                                    src="@img/product1.png"
+                                    alt=""
+                                />
+                                <img class="product-images__image" src="@img/product2.png" alt="" />
+                                <img class="product-images__image" src="@img/product3.png" alt="" />
+                            </div>
+
+                            <div class="product__pagination"></div>
+
+                            <div class="product__footer product-footer">
+                                <div class="product-footer__info">
+                                    <a href="./product-single.html" class="product-name">
+                                        Optio qui sequi consequatur quia quod
+                                    </a>
+                                    <small class="product-code">Cod produs: 2103dc12</small>
+                                    <h3 class="product-price">
+                                        12 410 MDL
+                                        <span class="product-price--old">14 210 MDL</span>
+                                    </h3>
+                                </div>
+                                <div class="product-footer__controls">
+                                    <button
+                                        class="button button__control icon-heart__filled"
+                                    ></button>
+                                    <button class="button button__control icon-cart"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product__labels">
+                                <span class="label" style="background-color: #ee2924">SALE </span>
+                                <span class="label" style="background-color: #fea800"
+                                    >Top vânzări</span
+                                >
+                            </div>
+
+                            <div class="product__images product-images">
+                                <img
+                                    class="product-images__image product-images__image--active"
+                                    src="@img/product1.png"
+                                    alt=""
+                                />
+                                <img class="product-images__image" src="@img/product2.png" alt="" />
+                                <img class="product-images__image" src="@img/product3.png" alt="" />
+                            </div>
+
+                            <div class="product__pagination"></div>
+
+                            <div class="product__footer product-footer">
+                                <div class="product-footer__info">
+                                    <a href="./product-single.html" class="product-name">
+                                        Optio qui sequi consequatur quia quod
+                                    </a>
+                                    <small class="product-code">Cod produs: 2103dc12</small>
+                                    <h3 class="product-price">
+                                        12 410 MDL
+                                        <span class="product-price--old">14 210 MDL</span>
+                                    </h3>
+                                </div>
+                                <div class="product-footer__controls">
+                                    <button
+                                        class="button button__control icon-heart__filled"
+                                    ></button>
+                                    <button class="button button__control icon-cart"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product__labels">
+                                <span class="label" style="background-color: #ee2924">SALE </span>
+                                <span class="label" style="background-color: #fea800"
+                                    >Top vânzări</span
+                                >
+                            </div>
+
+                            <div class="product__images product-images">
+                                <img
+                                    class="product-images__image product-images__image--active"
+                                    src="@img/product1.png"
+                                    alt=""
+                                />
+                                <img class="product-images__image" src="@img/product2.png" alt="" />
+                                <img class="product-images__image" src="@img/product3.png" alt="" />
+                            </div>
+
+                            <div class="product__pagination"></div>
+
+                            <div class="product__footer product-footer">
+                                <div class="product-footer__info">
+                                    <a href="./product-single.html" class="product-name">
+                                        Optio qui sequi consequatur quia quod
+                                    </a>
+                                    <small class="product-code">Cod produs: 2103dc12</small>
+                                    <h3 class="product-price">
+                                        12 410 MDL
+                                        <span class="product-price--old">14 210 MDL</span>
+                                    </h3>
+                                </div>
+                                <div class="product-footer__controls">
+                                    <button
+                                        class="button button__control icon-heart__filled"
+                                    ></button>
+                                    <button class="button button__control icon-cart"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product__labels">
+                                <span class="label" style="background-color: #ee2924">SALE </span>
+                                <span class="label" style="background-color: #fea800"
+                                    >Top vânzări</span
+                                >
+                            </div>
+
+                            <div class="product__images product-images">
+                                <img
+                                    class="product-images__image product-images__image--active"
+                                    src="@img/product1.png"
+                                    alt=""
+                                />
+                                <img class="product-images__image" src="@img/product2.png" alt="" />
+                                <img class="product-images__image" src="@img/product3.png" alt="" />
+                            </div>
+
+                            <div class="product__pagination"></div>
+
+                            <div class="product__footer product-footer">
+                                <div class="product-footer__info">
+                                    <a href="./product-single.html" class="product-name">
+                                        Optio qui sequi consequatur quia quod
+                                    </a>
+                                    <small class="product-code">Cod produs: 2103dc12</small>
+                                    <h3 class="product-price">
+                                        12 410 MDL
+                                        <span class="product-price--old">14 210 MDL</span>
+                                    </h3>
+                                </div>
+                                <div class="product-footer__controls">
+                                    <button
+                                        class="button button__control icon-heart__filled"
+                                    ></button>
+                                    <button class="button button__control icon-cart"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product__labels">
+                                <span class="label" style="background-color: #ee2924">SALE </span>
+                                <span class="label" style="background-color: #fea800"
+                                    >Top vânzări</span
+                                >
+                            </div>
+
+                            <div class="product__images product-images">
+                                <img
+                                    class="product-images__image product-images__image--active"
+                                    src="@img/product1.png"
+                                    alt=""
+                                />
+                                <img class="product-images__image" src="@img/product2.png" alt="" />
+                                <img class="product-images__image" src="@img/product3.png" alt="" />
+                            </div>
+
+                            <div class="product__pagination"></div>
+
+                            <div class="product__footer product-footer">
+                                <div class="product-footer__info">
+                                    <a href="./product-single.html" class="product-name">
+                                        Optio qui sequi consequatur quia quod
+                                    </a>
+                                    <small class="product-code">Cod produs: 2103dc12</small>
+                                    <h3 class="product-price">
+                                        12 410 MDL
+                                        <span class="product-price--old">14 210 MDL</span>
+                                    </h3>
+                                </div>
+                                <div class="product-footer__controls">
+                                    <button
+                                        class="button button__control icon-heart__filled"
+                                    ></button>
+                                    <button class="button button__control icon-cart"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product__labels">
+                                <span class="label" style="background-color: #ee2924">SALE </span>
+                                <span class="label" style="background-color: #fea800"
+                                    >Top vânzări</span
+                                >
+                            </div>
+
+                            <div class="product__images product-images">
+                                <img
+                                    class="product-images__image product-images__image--active"
+                                    src="@img/product1.png"
+                                    alt=""
+                                />
+                                <img class="product-images__image" src="@img/product2.png" alt="" />
+                                <img class="product-images__image" src="@img/product3.png" alt="" />
+                            </div>
+
+                            <div class="product__pagination"></div>
+
+                            <div class="product__footer product-footer">
+                                <div class="product-footer__info">
+                                    <a href="./product-single.html" class="product-name">
+                                        Optio qui sequi consequatur quia quod
+                                    </a>
+                                    <small class="product-code">Cod produs: 2103dc12</small>
+                                    <h3 class="product-price">
+                                        12 410 MDL
+                                        <span class="product-price--old">14 210 MDL</span>
+                                    </h3>
+                                </div>
+                                <div class="product-footer__controls">
+                                    <button
+                                        class="button button__control icon-heart__filled"
+                                    ></button>
+                                    <button class="button button__control icon-cart"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product__labels">
+                                <span class="label" style="background-color: #ee2924">SALE </span>
+                                <span class="label" style="background-color: #fea800"
+                                    >Top vânzări</span
+                                >
+                            </div>
+
+                            <div class="product__images product-images">
+                                <img
+                                    class="product-images__image product-images__image--active"
+                                    src="@img/product1.png"
+                                    alt=""
+                                />
+                                <img class="product-images__image" src="@img/product2.png" alt="" />
+                                <img class="product-images__image" src="@img/product3.png" alt="" />
+                            </div>
+
+                            <div class="product__pagination"></div>
+
+                            <div class="product__footer product-footer">
+                                <div class="product-footer__info">
+                                    <a href="./product-single.html" class="product-name">
+                                        Optio qui sequi consequatur quia quod
+                                    </a>
+                                    <small class="product-code">Cod produs: 2103dc12</small>
+                                    <h3 class="product-price">
+                                        12 410 MDL
+                                        <span class="product-price--old">14 210 MDL</span>
+                                    </h3>
+                                </div>
+                                <div class="product-footer__controls">
+                                    <button
+                                        class="button button__control icon-heart__filled"
+                                    ></button>
+                                    <button class="button button__control icon-cart"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product__labels">
+                                <span class="label" style="background-color: #ee2924">SALE </span>
+                                <span class="label" style="background-color: #fea800"
+                                    >Top vânzări</span
+                                >
+                            </div>
+
+                            <div class="product__images product-images">
+                                <img
+                                    class="product-images__image product-images__image--active"
+                                    src="@img/product1.png"
+                                    alt=""
+                                />
+                                <img class="product-images__image" src="@img/product2.png" alt="" />
+                                <img class="product-images__image" src="@img/product3.png" alt="" />
+                            </div>
+
+                            <div class="product__pagination"></div>
+
+                            <div class="product__footer product-footer">
+                                <div class="product-footer__info">
+                                    <a href="./product-single.html" class="product-name">
+                                        Optio qui sequi consequatur quia quod
+                                    </a>
+                                    <small class="product-code">Cod produs: 2103dc12</small>
+                                    <h3 class="product-price">
+                                        12 410 MDL
+                                        <span class="product-price--old">14 210 MDL</span>
+                                    </h3>
+                                </div>
+                                <div class="product-footer__controls">
+                                    <button
+                                        class="button button__control icon-heart__filled"
+                                    ></button>
+                                    <button class="button button__control icon-cart"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product__labels">
+                                <span class="label" style="background-color: #ee2924">SALE </span>
+                                <span class="label" style="background-color: #fea800"
+                                    >Top vânzări</span
+                                >
+                            </div>
+
+                            <div class="product__images product-images">
+                                <img
+                                    class="product-images__image product-images__image--active"
+                                    src="@img/product1.png"
+                                    alt=""
+                                />
+                                <img class="product-images__image" src="@img/product2.png" alt="" />
+                                <img class="product-images__image" src="@img/product3.png" alt="" />
+                            </div>
+
+                            <div class="product__pagination"></div>
+
+                            <div class="product__footer product-footer">
+                                <div class="product-footer__info">
+                                    <a href="./product-single.html" class="product-name">
+                                        Optio qui sequi consequatur quia quod
+                                    </a>
+                                    <small class="product-code">Cod produs: 2103dc12</small>
+                                    <h3 class="product-price">
+                                        12 410 MDL
+                                        <span class="product-price--old">14 210 MDL</span>
+                                    </h3>
+                                </div>
+                                <div class="product-footer__controls">
+                                    <button
+                                        class="button button__control icon-heart__filled"
+                                    ></button>
+                                    <button class="button button__control icon-cart"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product__labels">
+                                <span class="label" style="background-color: #ee2924">SALE </span>
+                                <span class="label" style="background-color: #fea800"
+                                    >Top vânzări</span
+                                >
+                            </div>
+
+                            <div class="product__images product-images">
+                                <img
+                                    class="product-images__image product-images__image--active"
+                                    src="@img/product1.png"
+                                    alt=""
+                                />
+                                <img class="product-images__image" src="@img/product2.png" alt="" />
+                                <img class="product-images__image" src="@img/product3.png" alt="" />
+                            </div>
+
+                            <div class="product__pagination"></div>
+
+                            <div class="product__footer product-footer">
+                                <div class="product-footer__info">
+                                    <a href="./product-single.html" class="product-name">
+                                        Optio qui sequi consequatur quia quod
+                                    </a>
+                                    <small class="product-code">Cod produs: 2103dc12</small>
+                                    <h3 class="product-price">
+                                        12 410 MDL
+                                        <span class="product-price--old">14 210 MDL</span>
+                                    </h3>
+                                </div>
+                                <div class="product-footer__controls">
+                                    <button
+                                        class="button button__control icon-heart__filled"
+                                    ></button>
+                                    <button class="button button__control icon-cart"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product__labels">
+                                <span class="label" style="background-color: #ee2924">SALE </span>
+                                <span class="label" style="background-color: #fea800"
+                                    >Top vânzări</span
+                                >
+                            </div>
+
+                            <div class="product__images product-images">
+                                <img
+                                    class="product-images__image product-images__image--active"
+                                    src="@img/product1.png"
+                                    alt=""
+                                />
+                                <img class="product-images__image" src="@img/product2.png" alt="" />
+                                <img class="product-images__image" src="@img/product3.png" alt="" />
+                            </div>
+
+                            <div class="product__pagination"></div>
+
+                            <div class="product__footer product-footer">
+                                <div class="product-footer__info">
+                                    <a href="./product-single.html" class="product-name">
+                                        Optio qui sequi consequatur quia quod
+                                    </a>
+                                    <small class="product-code">Cod produs: 2103dc12</small>
+                                    <h3 class="product-price">
+                                        12 410 MDL
+                                        <span class="product-price--old">14 210 MDL</span>
+                                    </h3>
+                                </div>
+                                <div class="product-footer__controls">
+                                    <button
+                                        class="button button__control icon-heart__filled"
+                                    ></button>
+                                    <button class="button button__control icon-cart"></button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="product">
-                        <div class="product__labels">
-                            <span class="label" style="background-color: #EE2924;">SALE </span>
-                            <span class="label" style="background-color: #FEA800;">Top vânzări</span>
-                        </div>
-
-                        <div class="product__images product-images">
-                            <img class="product-images__image product-images__image--active" src="@img/product1.png" alt="">
-                            <img class="product-images__image" src="@img/product2.png" alt="">
-                            <img class="product-images__image" src="@img/product3.png" alt="">
-                        </div>
-
-                        <div class="product__pagination"></div>
-
-                        <div class="product__footer product-footer">
-                            <div class="product-footer__info">
-                                <a href="./product-single.html" class="product-name">
-                                    Optio qui sequi consequatur quia quod
-                                </a>
-                                <small class="product-code">Cod produs: 2103dc12</small>
-                                <h3 class="product-price">12 410 MDL <span class="product-price--old">14 210 MDL</span></h3>
-                            </div>
-                            <div class="product-footer__controls">
-                                <button class="button button__control icon-heart__filled"></button>
-                                <button class="button button__control icon-cart"></button>
-                            </div>
-                        </div>
+                    <div class="product-page__footer">
+                        @@include('./components/pagination.html')
                     </div>
-                    <div class="product">
-                        <div class="product__labels">
-                            <span class="label" style="background-color: #EE2924;">SALE </span>
-                            <span class="label" style="background-color: #FEA800;">Top vânzări</span>
-                        </div>
-
-                        <div class="product__images product-images">
-                            <img class="product-images__image product-images__image--active" src="@img/product1.png" alt="">
-                            <img class="product-images__image" src="@img/product2.png" alt="">
-                            <img class="product-images__image" src="@img/product3.png" alt="">
-                        </div>
-
-                        <div class="product__pagination"></div>
-
-                        <div class="product__footer product-footer">
-                            <div class="product-footer__info">
-                                <a href="./product-single.html" class="product-name">
-                                    Optio qui sequi consequatur quia quod
-                                </a>
-                                <small class="product-code">Cod produs: 2103dc12</small>
-                                <h3 class="product-price">12 410 MDL <span class="product-price--old">14 210 MDL</span></h3>
-                            </div>
-                            <div class="product-footer__controls">
-                                <button class="button button__control icon-heart__filled"></button>
-                                <button class="button button__control icon-cart"></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="product__labels">
-                            <span class="label" style="background-color: #EE2924;">SALE </span>
-                            <span class="label" style="background-color: #FEA800;">Top vânzări</span>
-                        </div>
-
-                        <div class="product__images product-images">
-                            <img class="product-images__image product-images__image--active" src="@img/product1.png" alt="">
-                            <img class="product-images__image" src="@img/product2.png" alt="">
-                            <img class="product-images__image" src="@img/product3.png" alt="">
-                        </div>
-
-                        <div class="product__pagination"></div>
-
-                        <div class="product__footer product-footer">
-                            <div class="product-footer__info">
-                                <a href="./product-single.html" class="product-name">
-                                    Optio qui sequi consequatur quia quod
-                                </a>
-                                <small class="product-code">Cod produs: 2103dc12</small>
-                                <h3 class="product-price">12 410 MDL <span class="product-price--old">14 210 MDL</span></h3>
-                            </div>
-                            <div class="product-footer__controls">
-                                <button class="button button__control icon-heart__filled"></button>
-                                <button class="button button__control icon-cart"></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="product__labels">
-                            <span class="label" style="background-color: #EE2924;">SALE </span>
-                            <span class="label" style="background-color: #FEA800;">Top vânzări</span>
-                        </div>
-
-                        <div class="product__images product-images">
-                            <img class="product-images__image product-images__image--active" src="@img/product1.png" alt="">
-                            <img class="product-images__image" src="@img/product2.png" alt="">
-                            <img class="product-images__image" src="@img/product3.png" alt="">
-                        </div>
-
-                        <div class="product__pagination"></div>
-
-                        <div class="product__footer product-footer">
-                            <div class="product-footer__info">
-                                <a href="./product-single.html" class="product-name">
-                                    Optio qui sequi consequatur quia quod
-                                </a>
-                                <small class="product-code">Cod produs: 2103dc12</small>
-                                <h3 class="product-price">12 410 MDL <span class="product-price--old">14 210 MDL</span></h3>
-                            </div>
-                            <div class="product-footer__controls">
-                                <button class="button button__control icon-heart__filled"></button>
-                                <button class="button button__control icon-cart"></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="product__labels">
-                            <span class="label" style="background-color: #EE2924;">SALE </span>
-                            <span class="label" style="background-color: #FEA800;">Top vânzări</span>
-                        </div>
-
-                        <div class="product__images product-images">
-                            <img class="product-images__image product-images__image--active" src="@img/product1.png" alt="">
-                            <img class="product-images__image" src="@img/product2.png" alt="">
-                            <img class="product-images__image" src="@img/product3.png" alt="">
-                        </div>
-
-                        <div class="product__pagination"></div>
-
-                        <div class="product__footer product-footer">
-                            <div class="product-footer__info">
-                                <a href="./product-single.html" class="product-name">
-                                    Optio qui sequi consequatur quia quod
-                                </a>
-                                <small class="product-code">Cod produs: 2103dc12</small>
-                                <h3 class="product-price">12 410 MDL <span class="product-price--old">14 210 MDL</span></h3>
-                            </div>
-                            <div class="product-footer__controls">
-                                <button class="button button__control icon-heart__filled"></button>
-                                <button class="button button__control icon-cart"></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="product__labels">
-                            <span class="label" style="background-color: #EE2924;">SALE </span>
-                            <span class="label" style="background-color: #FEA800;">Top vânzări</span>
-                        </div>
-
-                        <div class="product__images product-images">
-                            <img class="product-images__image product-images__image--active" src="@img/product1.png" alt="">
-                            <img class="product-images__image" src="@img/product2.png" alt="">
-                            <img class="product-images__image" src="@img/product3.png" alt="">
-                        </div>
-
-                        <div class="product__pagination"></div>
-
-                        <div class="product__footer product-footer">
-                            <div class="product-footer__info">
-                                <a href="./product-single.html" class="product-name">
-                                    Optio qui sequi consequatur quia quod
-                                </a>
-                                <small class="product-code">Cod produs: 2103dc12</small>
-                                <h3 class="product-price">12 410 MDL <span class="product-price--old">14 210 MDL</span></h3>
-                            </div>
-                            <div class="product-footer__controls">
-                                <button class="button button__control icon-heart__filled"></button>
-                                <button class="button button__control icon-cart"></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="product__labels">
-                            <span class="label" style="background-color: #EE2924;">SALE </span>
-                            <span class="label" style="background-color: #FEA800;">Top vânzări</span>
-                        </div>
-
-                        <div class="product__images product-images">
-                            <img class="product-images__image product-images__image--active" src="@img/product1.png" alt="">
-                            <img class="product-images__image" src="@img/product2.png" alt="">
-                            <img class="product-images__image" src="@img/product3.png" alt="">
-                        </div>
-
-                        <div class="product__pagination"></div>
-
-                        <div class="product__footer product-footer">
-                            <div class="product-footer__info">
-                                <a href="./product-single.html" class="product-name">
-                                    Optio qui sequi consequatur quia quod
-                                </a>
-                                <small class="product-code">Cod produs: 2103dc12</small>
-                                <h3 class="product-price">12 410 MDL <span class="product-price--old">14 210 MDL</span></h3>
-                            </div>
-                            <div class="product-footer__controls">
-                                <button class="button button__control icon-heart__filled"></button>
-                                <button class="button button__control icon-cart"></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="product__labels">
-                            <span class="label" style="background-color: #EE2924;">SALE </span>
-                            <span class="label" style="background-color: #FEA800;">Top vânzări</span>
-                        </div>
-
-                        <div class="product__images product-images">
-                            <img class="product-images__image product-images__image--active" src="@img/product1.png" alt="">
-                            <img class="product-images__image" src="@img/product2.png" alt="">
-                            <img class="product-images__image" src="@img/product3.png" alt="">
-                        </div>
-
-                        <div class="product__pagination"></div>
-
-                        <div class="product__footer product-footer">
-                            <div class="product-footer__info">
-                                <a href="./product-single.html" class="product-name">
-                                    Optio qui sequi consequatur quia quod
-                                </a>
-                                <small class="product-code">Cod produs: 2103dc12</small>
-                                <h3 class="product-price">12 410 MDL <span class="product-price--old">14 210 MDL</span></h3>
-                            </div>
-                            <div class="product-footer__controls">
-                                <button class="button button__control icon-heart__filled"></button>
-                                <button class="button button__control icon-cart"></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="product__labels">
-                            <span class="label" style="background-color: #EE2924;">SALE </span>
-                            <span class="label" style="background-color: #FEA800;">Top vânzări</span>
-                        </div>
-
-                        <div class="product__images product-images">
-                            <img class="product-images__image product-images__image--active" src="@img/product1.png" alt="">
-                            <img class="product-images__image" src="@img/product2.png" alt="">
-                            <img class="product-images__image" src="@img/product3.png" alt="">
-                        </div>
-
-                        <div class="product__pagination"></div>
-
-                        <div class="product__footer product-footer">
-                            <div class="product-footer__info">
-                                <a href="./product-single.html" class="product-name">
-                                    Optio qui sequi consequatur quia quod
-                                </a>
-                                <small class="product-code">Cod produs: 2103dc12</small>
-                                <h3 class="product-price">12 410 MDL <span class="product-price--old">14 210 MDL</span></h3>
-                            </div>
-                            <div class="product-footer__controls">
-                                <button class="button button__control icon-heart__filled"></button>
-                                <button class="button button__control icon-cart"></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="product__labels">
-                            <span class="label" style="background-color: #EE2924;">SALE </span>
-                            <span class="label" style="background-color: #FEA800;">Top vânzări</span>
-                        </div>
-
-                        <div class="product__images product-images">
-                            <img class="product-images__image product-images__image--active" src="@img/product1.png" alt="">
-                            <img class="product-images__image" src="@img/product2.png" alt="">
-                            <img class="product-images__image" src="@img/product3.png" alt="">
-                        </div>
-
-                        <div class="product__pagination"></div>
-
-                        <div class="product__footer product-footer">
-                            <div class="product-footer__info">
-                                <a href="./product-single.html" class="product-name">
-                                    Optio qui sequi consequatur quia quod
-                                </a>
-                                <small class="product-code">Cod produs: 2103dc12</small>
-                                <h3 class="product-price">12 410 MDL <span class="product-price--old">14 210 MDL</span></h3>
-                            </div>
-                            <div class="product-footer__controls">
-                                <button class="button button__control icon-heart__filled"></button>
-                                <button class="button button__control icon-cart"></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="product__labels">
-                            <span class="label" style="background-color: #EE2924;">SALE </span>
-                            <span class="label" style="background-color: #FEA800;">Top vânzări</span>
-                        </div>
-
-                        <div class="product__images product-images">
-                            <img class="product-images__image product-images__image--active" src="@img/product1.png" alt="">
-                            <img class="product-images__image" src="@img/product2.png" alt="">
-                            <img class="product-images__image" src="@img/product3.png" alt="">
-                        </div>
-
-                        <div class="product__pagination"></div>
-
-                        <div class="product__footer product-footer">
-                            <div class="product-footer__info">
-                                <a href="./product-single.html" class="product-name">
-                                    Optio qui sequi consequatur quia quod
-                                </a>
-                                <small class="product-code">Cod produs: 2103dc12</small>
-                                <h3 class="product-price">12 410 MDL <span class="product-price--old">14 210 MDL</span></h3>
-                            </div>
-                            <div class="product-footer__controls">
-                                <button class="button button__control icon-heart__filled"></button>
-                                <button class="button button__control icon-cart"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-page__footer">
-                    @@include('./components/pagination.html')
                 </div>
             </div>
-        </div>
-    </main>
-    @@include('./components/footer.html')
-</body>
-
+        </main>
+        @@include('./components/footer.html')
+    </body>
 </html>

@@ -10,7 +10,13 @@
         grid-template-columns: minmax(400px, 600px) minmax(280px, 460px) minmax(320px, 340px);
         @include adaptiv-value('grid-template-rows', 490, 380, 1);
         grid-gap: 10px;
-
+        &.no-options {
+            grid-template-columns: minmax(400px, 600px) 1fr;
+            .product-meta .product-buy .product-controls .button-add {
+                width: fit-content;
+                padding: 24px 48px;
+            }
+        }
         @media (max-width: 1000px) {
             grid-template-columns: minmax(400px, 600px) minmax(280px, 460px);
         }
@@ -231,7 +237,7 @@
             form {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                grid-gap: 20px;
+                grid-gap: 13px 20px;
 
                 label {
                     font-weight: 600;
@@ -400,7 +406,7 @@
                         list-style: disc;
 
                         &:not(:last-child) {
-                            margin-bottom: 15px;
+                            margin-bottom: 14px;
                         }
                     }
                 }
@@ -429,7 +435,11 @@
             overflow-y: auto;
             @include adaptiv-value('padding', 30, 15, 1);
             @include adaptiv-value('max-height', 600, 400, 1);
-
+            padding-top: 0;
+            .info-block__item {
+                margin-bottom: 20px;
+                position: relative;
+            }
             &::-webkit-scrollbar {
                 width: 10px;
             }
@@ -449,6 +459,12 @@
 
             h3 {
                 @include adaptiv-value('margin-bottom', 20, 10, 1);
+                background-color: #ffffff;
+                position: sticky;
+                top: 0;
+                left: 0;
+                padding-top: 20px;
+                padding-bottom: 10px;
             }
 
             p {
