@@ -3764,12 +3764,17 @@ section.filter {
   padding: 30px 15px;
   z-index: 4;
   transition: 0.3s;
-  max-height: 760px;
+  max-height: 800px;
   overflow-y: auto;
   opacity: 0;
   visibility: hidden;
 }
 @media (max-height: 950px) {
+  .profile-modal {
+    height: 666px;
+  }
+}
+@media (max-height: 820px) {
   .profile-modal {
     height: 600px;
   }
