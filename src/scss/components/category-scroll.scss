@@ -6,7 +6,7 @@
     transform: translateX(-50%);
     width: 100%;
     @media (max-width: $mobile) {
-        position: relative;
+        max-width: 90%;
     }
     &__container {
         overscroll-behavior-x: contain;

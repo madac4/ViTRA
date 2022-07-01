@@ -353,6 +353,11 @@
                 @media (max-width: 1100px) {
                     display: none;
                 }
+                @media (max-width: $mobileSmall) {
+                    display: block;
+                    font-size: 9px;
+                    line-height: 100%;
+                }
             }
 
             img {
@@ -546,7 +551,7 @@
                 ul {
                     li {
                         &:not(:last-child) {
-                            margin-bottom: 30px;
+                            margin-bottom: 20px;
                         }
 
                         a {

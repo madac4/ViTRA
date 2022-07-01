@@ -1695,6 +1695,13 @@ section [class*=__header] a span {
     display: none;
   }
 }
+@media (max-width: 29.99875rem) {
+  .header-left__logo span {
+    display: block;
+    font-size: 9px;
+    line-height: 100%;
+  }
+}
 .header-left__logo img {
   width: 176px;
   height: auto;
@@ -1892,7 +1899,7 @@ section [class*=__header] a span {
   margin-bottom: 30px;
 }
 .header .header-controls--mobile .menu-nav--mobile .menu-block ul li:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .header .header-controls--mobile .menu-nav--mobile .menu-block ul li a {
   line-height: 160%;
@@ -2121,7 +2128,7 @@ section.filter {
 }
 @media (max-width: 47.99875rem) {
   .scroll-category {
-    position: relative;
+    max-width: 90%;
   }
 }
 .scroll-category__container {
@@ -3869,7 +3876,7 @@ section.filter {
 @media (max-width: 1420px) {
   .page__main-slider .main-slider__body .main-slider__slider .slider-main__body .slider-main__slide {
     height: calc(
-                250px + 370 * ((100vw - 320px) / 1100)
+                350px + 270 * ((100vw - 320px) / 1100)
             );
   }
 }
@@ -3983,7 +3990,8 @@ section.filter {
 }
 @media (max-width: 39.99875rem) {
   .main-tabs .tabs-list {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 5px;
   }
 }
