@@ -10,17 +10,18 @@
         grid-template-columns: minmax(400px, 600px) minmax(280px, 460px) minmax(320px, 340px);
         @include adaptiv-value('grid-template-rows', 490, 380, 1);
         grid-gap: 10px;
+
         &.with-banner {
             @media (max-width: 1200px) {
-                grid-template-columns: minmax(400px, 600px) minmax(280px, 460px) minmax(
-                        210px,
-                        460px
-                    );
+                grid-template-columns: minmax(400px, 600px) minmax(280px, 460px) minmax(210px,
+                        460px);
             }
+
             @media (max-width: 1000px) {
                 grid-template-columns: 1fr;
             }
         }
+
         @media (max-width: 1000px) {
             grid-template-columns: minmax(400px, 600px) minmax(280px, 460px);
         }
@@ -34,9 +35,11 @@
             height: 100%;
             display: flex;
             gap: 10px;
+
             @media (max-width: 1000px) {
                 justify-content: center;
             }
+
             @media (max-width: $mobile) {
                 display: none;
             }
@@ -121,16 +124,20 @@
 
         &__banner {
             overflow: hidden;
+
             @media (max-width: 1000px) {
                 grid-column: 2 span;
             }
+
             @media (max-width: $mobile) {
                 grid-column: 1 span;
             }
+
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+
                 @media (max-width: 1000px) {
                     height: auto;
                 }
@@ -149,6 +156,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-direction: column;
             }
 
             .to-fav {
@@ -214,6 +222,7 @@
                                     padding: 10px;
                                     color: $maincolor;
                                     font-size: 24px;
+
                                     &__prev {
                                         left: 10px;
                                     }
@@ -227,89 +236,10 @@
                     }
                 }
             }
-        }
-
-        .product-options {
-            width: 100%;
-            height: 100%;
-            border: 1px solid #e4e4e4;
-            overflow-y: auto;
-            @include adaptiv-value('padding', 20, 10, 1);
-
-            @media (max-width: $mobile) {
-                max-height: 380px;
-                min-height: 380px;
-            }
-
-            &::-webkit-scrollbar {
-                width: 10px;
-            }
-
-            &::-webkit-scrollbar-track {
-                background: #f1f1f1;
-            }
-
-            &::-webkit-scrollbar-thumb {
-                background: #888;
-                border-radius: 20px;
-            }
-
-            &::-webkit-scrollbar-thumb:hover {
-                background: #555;
-            }
-
-            form {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-gap: 13px 20px;
-
-                label {
-                    font-weight: 600;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 10px;
-
-                    select {
-                        color: $graycolor500;
-                    }
-                }
-            }
-
-            &__group {
-                &:not(:last-child) {
-                    margin-bottom: 26px;
-                }
-
-                h5 {
-                    margin-bottom: 10px;
-                    color: #bdbdbd;
-                }
-
-                .options-buttons {
-                    display: flex;
-                    gap: 10px;
-                    flex-wrap: wrap;
-                }
-            }
-        }
-
-        .product-meta {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-
-            @media (max-width: 1000px) {
-                grid-column: 2 span;
-            }
-
-            @media (max-width: $mobile) {
-                grid-column: 1 span;
-            }
 
             .product-buy {
+                display: flex;
                 @include adaptiv-value('padding', 20, 15, 1);
-                border: 1px solid #e4e4e4;
-                border-radius: 4px;
 
                 &__price {
                     display: flex;
@@ -397,6 +327,81 @@
                     }
                 }
             }
+        }
+
+        .product-options {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #e4e4e4;
+            overflow-y: auto;
+            @include adaptiv-value('padding', 20, 10, 1);
+
+
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 20px;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+
+            form {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 13px 20px;
+
+                label {
+                    font-weight: 600;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    select {
+                        color: $graycolor500;
+                    }
+                }
+            }
+
+            &__group {
+                &:not(:last-child) {
+                    margin-bottom: 26px;
+                }
+
+                h5 {
+                    margin-bottom: 10px;
+                    color: #bdbdbd;
+                }
+
+                .options-buttons {
+                    display: flex;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+
+        .product-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            @media (max-width: 1000px) {
+                grid-column: 2 span;
+            }
+
+            @media (max-width: $mobile) {
+                grid-column: 1 span;
+            }
+
 
             &__info {
                 @include adaptiv-value('padding', 20, 15, 1);
@@ -460,10 +465,12 @@
             @include adaptiv-value('padding', 30, 15, 1);
             @include adaptiv-value('max-height', 600, 400, 1);
             padding-top: 0;
+
             .info-block__item {
                 margin-bottom: 20px;
                 position: relative;
             }
+
             &::-webkit-scrollbar {
                 width: 10px;
             }

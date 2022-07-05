@@ -37,7 +37,7 @@
         button {
             position: absolute;
             top: 50%;
-            color: $darkcolor !important;
+            color: $darkcolor  !important;
             transform: translateY(-50%);
             padding-top: 10px;
             padding-bottom: 10px;
@@ -117,6 +117,7 @@
                 visibility: hidden;
                 top: 200%;
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
                 &__top {
                     padding: 30px;
                     display: block;
@@ -353,7 +354,9 @@
                 @media (max-width: 1100px) {
                     display: none;
                 }
+
                 @media (max-width: $mobileSmall) {
+                    width: 100%;
                     display: block;
                     font-size: 9px;
                     line-height: 100%;
@@ -363,7 +366,6 @@
             img {
                 @include adaptiv-value('width', 176, 100, 1);
                 height: auto;
-                margin-bottom: 8px;
             }
         }
 
