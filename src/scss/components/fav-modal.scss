@@ -34,6 +34,11 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 25px;
+        a {
+            @include adaptiv-value('font-size', 24, 18, 1);
+            line-height: 140%;
+            font-weight: 600;
+        }
         button {
             width: fit-content;
         }

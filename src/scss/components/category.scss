@@ -144,8 +144,8 @@
         }
     }
     span {
+        position: absolute;
         display: none;
-        position: relative;
         z-index: 2;
         color: #ffffff;
         max-width: 80%;
