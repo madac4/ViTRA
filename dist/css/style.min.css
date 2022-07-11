@@ -1943,11 +1943,19 @@ form p small {
 .header-left__logo img {
   width: 176px;
   height: auto;
+  margin-bottom: 8px;
 }
 @media (max-width: 1420px) {
   .header-left__logo img {
     width: calc(
                 100px + 76 * ((100vw - 320px) / 1100)
+            );
+  }
+}
+@media (max-width: 1420px) {
+  .header-left__logo img {
+    margin-bottom: calc(
+                0px + 8 * ((100vw - 320px) / 1100)
             );
   }
 }

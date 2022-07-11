@@ -471,6 +471,7 @@
             img {
                 @include adaptiv-value('width', 176, 100, 1);
                 height: auto;
+                @include adaptiv-value('margin-bottom', 8, 0, 1);
             }
         }
     }
