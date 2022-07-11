@@ -2463,7 +2463,7 @@ section.filter {
   height: 100%;
   transition: 0.3s;
   border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 39.99875rem) {
   .category-secondary::after {
@@ -2471,11 +2471,7 @@ section.filter {
   }
 }
 @media (any-hover: hover) {
-  .category-secondary:hover::after {
-    background-color: rgba(0, 0, 0, 0.6);
-  }
   .category-secondary:hover .category-secondary__content {
-    background-color: #f3fbf6;
     opacity: 0;
     position: absolute;
   }
@@ -2498,7 +2494,6 @@ section.filter {
 }
 .category-secondary__content {
   z-index: 2;
-  background-color: rgba(247, 252, 254, 0.8);
   transition: 0.3s;
   position: relative;
   display: flex;
@@ -2522,7 +2517,8 @@ section.filter {
 }
 @media (max-width: 39.99875rem) {
   .category-secondary__content {
-    padding: 20px;
+    padding: 0;
+    border: none;
   }
 }
 .category-secondary__content::after {
