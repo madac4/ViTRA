@@ -14,8 +14,8 @@
 
             .slider-main__body {
                 .slider-main__slide {
-                    // @include adaptiv-value('height', 820, 350, 1);
-                    height: 78vh;
+                    @include adaptiv-value('height', 820, 350, 1);
+                    // height: 78vh;
                     border-radius: 8px;
                     position: relative;
 

@@ -4047,9 +4047,16 @@ section.filter {
   position: relative;
 }
 .page__main-slider .main-slider__body .main-slider__slider .slider-main__body .slider-main__slide {
-  height: 78vh;
+  height: 820px;
   border-radius: 8px;
   position: relative;
+}
+@media (max-width: 1420px) {
+  .page__main-slider .main-slider__body .main-slider__slider .slider-main__body .slider-main__slide {
+    height: calc(
+                350px + 470 * ((100vw - 320px) / 1100)
+            );
+  }
 }
 .page__main-slider .main-slider__body .main-slider__slider .slider-main__body .slider-main__slide a::after {
   content: "";
