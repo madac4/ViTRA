@@ -13,6 +13,7 @@
             flex-direction: column;
             max-width: 80%;
             margin: 0 auto;
+            margin-bottom: 40px;
         }
         @media (max-width: $mobileMedium) {
             max-width: 100%;
@@ -124,6 +125,14 @@
                     }
                     &:not(:last-child) {
                         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                    }
+                    .content-desc__block {
+                        &.controls {
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            gap: 20px;
+                        }
                     }
                 }
             }

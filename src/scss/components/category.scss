@@ -69,6 +69,8 @@
     flex-direction: column;
     text-align: center;
     position: relative;
+    border-radius: 8px;
+    overflow: hidden;
     @media (max-width: $mobileMedium) {
         padding: 0;
     }

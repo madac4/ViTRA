@@ -37,7 +37,7 @@
         button {
             position: absolute;
             top: 50%;
-            color: $darkcolor  !important;
+            color: $darkcolor !important;
             transform: translateY(-50%);
             padding-top: 10px;
             padding-bottom: 10px;
@@ -384,6 +384,8 @@
 }
 
 .full-header {
+    position: relative;
+    z-index: 4;
     &.sticky {
         position: fixed;
         width: 100%;

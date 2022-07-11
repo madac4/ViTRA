@@ -1,6 +1,6 @@
 .page__main-slider {
     position: relative;
-    margin-bottom: 20px;
+    @include adaptiv-value('margin-bottom', 50, 40, 1);
     margin-top: -20px;
 
     @media (max-width: $mobile) {
@@ -327,7 +327,7 @@
             @include adaptiv-value('height', 450, 180, 1);
 
             @media (max-width: $mobileSmall) {
-                height: 60vh
+                height: 60vh;
             }
 
             &::after {
@@ -429,9 +429,11 @@
                             .post-article__body {
                                 width: 100%;
                                 height: 50%;
-                                background: linear-gradient(180deg,
-                                        rgba(0, 0, 0, 0) 0%,
-                                        rgba(0, 0, 0, 0.83) 100%);
+                                background: linear-gradient(
+                                    180deg,
+                                    rgba(0, 0, 0, 0) 0%,
+                                    rgba(0, 0, 0, 0.83) 100%
+                                );
                                 backdrop-filter: blur(5px);
                                 border-radius: 0px 0px 8px 8px;
                                 @include adaptiv-value('padding', 25, 15, 1);

@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.full-header');
     flsFunctions.fixedHeader(header);
 
+    const registerButtons = document.querySelectorAll('.register-button');
+
     const burgerMobile = document.querySelector('.burger');
     const menuMobile = document.querySelector('.menu-nav--mobile');
 
@@ -36,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerFav = document.querySelector('.header-controls__favorite button');
     const bottomNavigationFav = document.querySelector('.bottom-navigation__fav');
     let favModal = document.querySelector('.fav-modal');
+    const favProducts = favModal.querySelectorAll('.cart-product--modal');
 
     const getCall = document.querySelectorAll('.get-call');
     const callModal = document.querySelector('.call-modal');
@@ -774,6 +777,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     uploaded.innerHTML = null;
                 });
         });
+
+    favProducts &&
+        favProducts.forEach((product) => {
+            product.addEventListener('click', () => {
+                product.classList.toggle('selected');
+            });
+        });
+
+    if (registerButtons.length > 0) {
+        registerButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                login.classList.toggle('open');
+                overlay.classList.toggle('active');
+                document.body.classList.toggle('lock');
+            });
+        });
+    }
 });
 
 const loader = document.querySelector('.loader');

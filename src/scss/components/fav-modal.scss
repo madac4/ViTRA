@@ -76,7 +76,9 @@
         &::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
-        .fav-product {
+        .cart-product {
+            transition: 0.3s;
+            cursor: pointer;
             .product-content {
                 margin: 0;
                 .product-meta {

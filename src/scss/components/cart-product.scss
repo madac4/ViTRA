@@ -3,14 +3,14 @@
     width: 100%;
     display: flex;
     align-items: center;
-    @include adaptiv-value('gap', 30, 15, 1);
+    @include adaptiv-value('gap', 20, 15, 1);
     padding: 5px 0;
     @media (max-width: $mobileSmall) {
         flex-direction: column;
     }
     &__image {
-        @include adaptiv-value('width', 120, 60, 1);
-        @include adaptiv-value('height', 120, 60, 1);
+        @include adaptiv-value('width', 160, 40, 1);
+        @include adaptiv-value('height', 160, 40, 1);
         @media (max-width: $mobileSmall) {
             width: 70%;
             height: auto;
@@ -74,21 +74,25 @@
         width: 100%;
         display: flex;
         align-items: center;
-        @include adaptiv-value('gap', 30, 15, 1);
+        @include adaptiv-value('gap', 20, 15, 1);
         padding: 5px;
+        background: #fff;
+        &.selected {
+            background: #e6e6e6;
+        }
         @media (max-width: $mobileSmall) {
             flex-direction: row;
         }
         .cart-product__image {
-            @include adaptiv-value('width', 160, 100, 1);
-            @include adaptiv-value('height', 160, 100, 1);
+            @include adaptiv-value('width', 120, 100, 1);
+            @include adaptiv-value('height', 120, 100, 1);
             @media (max-width: $mobileSmall) {
                 width: 100px;
                 height: auto;
             }
         }
         .product-content {
-            margin: 20px 0;
+            margin: 12px 0;
             padding-right: 0;
             width: 100%;
             @media (max-width: $mobileSmall) {
@@ -96,7 +100,7 @@
                 padding: 0;
             }
             &__name {
-                margin-bottom: 20px;
+                margin-bottom: 10px;
             }
             .product-meta {
                 display: flex;

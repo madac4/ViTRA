@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    @include adaptiv-value('gap', 40, 20, 1);
+    @include adaptiv-value('gap', 36, 20, 1);
     background-color: #000;
     padding: 40px 15px;
     @include adaptiv-value('margin-top', 50, 30, 1);

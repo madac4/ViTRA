@@ -223,12 +223,16 @@
                             <div class="sidebar-block__body">
                                 <form action="#" class="grid-2 single-form">
                                     <p>
-                                        <legend>Nume</legend>
+                                        <legend>Nume <small>*</small></legend>
                                         <input type="text">
                                     </p>
                                     <p>
-                                        <legend>Telefon de contact</legend>
+                                        <legend>Telefon de contact <small>*</small></legend>
                                         <input type="tel">
+                                    </p>
+                                    <p class="col-2">
+                                        <legend>Email</legend>
+                                        <input type="email">
                                     </p>
                                 </form>
                             </div>
@@ -241,7 +245,7 @@
                             
                             <div class="sidebar-block__body">
                                 <form action="#" class="radio-form">
-                                    <legend>Metodă:</legend>
+                                    <legend>Metodă: <small>*</small></legend>
                                     <label for="ridicare">
                                         <input type="radio" name="method" id="ridicare">
                                         Ridicarea din oficiu
@@ -253,22 +257,22 @@
                                 </form>
                                 <form action="#" class="grid-small-2">
                                     <legend>Adresa de livrare:</legend>
-                                    <label for="localitate">
-                                        Localitatea
+                                    <p>
+                                        Localitatea <small>*</small>
                                         <input type="text" id="localitatea" placeholder="Alegeți localitatea">
-                                    </label>
-                                    <label for="street">
-                                        Strada
-                                        <input type="text" id="street" placeholder="Alegeți localitatea">
-                                    </label>
-                                    <label for="home">
-                                        Casa
-                                        <input type="text" id="home" placeholder="Alegeți localitatea">
-                                    </label>
-                                    <label for="apartment">
-                                        Apartamentul
-                                        <input type="text" id="apartment" placeholder="Alegeți localitatea">
-                                    </label>
+                                    </p>
+                                    <p>
+                                        Strada <small>*</small>
+                                        <input type="text" id="street" placeholder="Alegeți strada">
+                                    </p>
+                                    <p>
+                                        Casa <small>*</small>
+                                        <input type="text" id="home" placeholder="Nr casei">
+                                    </p>
+                                    <p>
+                                        Apartamentul <small>*</small>
+                                        <input type="text" id="apartment" placeholder="Nr apartamentului">
+                                    </p>
                                 </form>
                             </div>
                         </div>
@@ -280,7 +284,7 @@
                             
                             <div class="sidebar-block__body">
                                 <form action="#" class="radio-form">
-                                    <legend>Metodă:</legend>
+                                    <legend>Metodă: <small>*</small></legend>
                                     <label for="card">
                                         <input type="radio" name="method1" id="card">
                                         Cu cardul bancar
@@ -328,6 +332,9 @@
                         </div>
                         
                         <div class="cart-sidebar__footer sidebar-footer">
+                            <div class="cart-register">
+                                <button class="register-button">Inregistreaza-te</button> si vezi Istoricul comenzilor
+                            </div>
                             <button class="button button__primary">Trimite comanda</button>
                             <div class="checkbox-container">
                                 <input class="checkbox-input" id="termeni" type="checkbox" />
