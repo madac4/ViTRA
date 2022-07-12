@@ -59,10 +59,10 @@ export function fixedHeader(header) {
         const scrollPos = window.scrollY;
         if (scrollPos > header.offsetHeight + 30) {
             header.classList.add('sticky')
-            document.querySelector('main').style.marginTop = `${header.offsetHeight}px`
+            // document.querySelector('main').style.marginTop = `${header.offsetHeight}px`
         } else {
             header.classList.remove('sticky');
-            document.querySelector('main').style.marginTop = null
+            // document.querySelector('main').style.marginTop = null
         }
     })
 }

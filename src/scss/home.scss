@@ -1,6 +1,6 @@
 .page__main-slider {
     position: relative;
-    @include adaptiv-value('margin-bottom', 40, 30, 1);
+    @include adaptiv-value('margin-bottom', 30, 20, 1);
     margin-top: -20px;
 
     @media (max-width: $mobile) {
@@ -14,11 +14,13 @@
 
             .slider-main__body {
                 .slider-main__slide {
-                    @include adaptiv-value('height', 820, 350, 1);
-                    // height: 78vh;
+                    // @include adaptiv-value('height', 820, 350, 1);
+                    height: calc(100vh - 255px);
                     border-radius: 8px;
                     position: relative;
-
+                    @media (max-width: $tablet) {
+                        @include adaptiv-value('height', 820, 350, 1);
+                    }
                     a {
                         &::after {
                             content: '';

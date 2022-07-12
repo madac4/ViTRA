@@ -108,9 +108,13 @@
                 width: 100%;
                 padding-bottom: 50px;
 
-                h5 {
+                h5, .cat-title {
                     text-transform: uppercase;
                     margin-bottom: 20px;
+                    display: block;
+                    font-size: 16px;
+                    line-height: 140%;
+                    font-weight: 600;
                 }
 
                 ul {
@@ -387,7 +391,7 @@
     position: relative;
     z-index: 4;
     &.sticky {
-        position: fixed;
+        position: sticky;
         width: 100%;
         left: 0;
         top: 0;
@@ -565,8 +569,12 @@
                     margin-bottom: 50px;
                 }
 
-                h5 {
+                h5, .cat-title {
+                    display: block;
                     margin-bottom: 30px;
+                    font-size: 16px;
+                    line-height: 140%;
+                    font-weight: 600;
                 }
 
                 ul {
