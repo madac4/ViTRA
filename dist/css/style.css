@@ -321,6 +321,7 @@ a.title-link {
 
 a.title-link {
   transition: 0.3s;
+  text-transform: none !important;
 }
 a.title-link:hover {
   color: #f15d22;
