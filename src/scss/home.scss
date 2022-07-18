@@ -16,7 +16,6 @@
                 .slider-main__slide {
                     // @include adaptiv-value('height', 820, 350, 1);
                     height: calc(100vh - 255px);
-                    border-radius: 8px;
                     position: relative;
                     @media (max-width: $tablet) {
                         @include adaptiv-value('height', 820, 350, 1);

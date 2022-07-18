@@ -4166,7 +4166,6 @@ section.filter {
 }
 .page__main-slider .main-slider__body .main-slider__slider .slider-main__body .slider-main__slide {
   height: calc(100vh - 255px);
-  border-radius: 8px;
   position: relative;
 }
 @media (max-width: 61.99875rem) {
