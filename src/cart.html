@@ -329,10 +329,8 @@
                         </div>
                         
                         <div class="cart-sidebar__footer sidebar-footer">
-                            <div class="cart-register">
-                                <button class="register-button">Inregistreaza-te</button> si vezi Istoricul comenzilor
-                            </div>
-                            <button class="button button__primary">Trimite comanda</button>
+                            
+                            <button class="button button__primary order-send">Trimite comanda</button>
                             <div class="checkbox-container">
                                 <input class="checkbox-input" id="termeni" type="checkbox" />
                                 <label class="checkbox" for="termeni">
@@ -523,6 +521,9 @@
         </div>
         
     </main>
+
+    
+    @@include('./components/success-modal.html')
     @@include('./components/footer.html')
 </body>
 

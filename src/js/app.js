@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     flsFunctions.fixedHeader(header);
 
     const registerButtons = document.querySelectorAll('.register-button');
+    const orderSuccess = document.querySelector('.order-send');
+    const successModal = document.querySelector('.success-modal');
+    const successModalClose = successModal.querySelector('.icon-close');
 
     const burgerMobile = document.querySelector('.burger');
     const menuMobile = document.querySelector('.menu-nav--mobile');
@@ -89,6 +92,26 @@ document.addEventListener('DOMContentLoaded', () => {
             callModal && callModal.classList.remove('open');
             login && login.classList.remove('open');
             resetModal && resetModal.classList.remove('open');
+        });
+    }
+
+    if (successModal && orderSuccess) {
+        orderSuccess.addEventListener('click', () => {
+            successModal.classList.add('open');
+            document.body.classList.toggle('lock');
+            menuDesktop && menuDesktop.classList.remove('menu-open');
+            overlay.classList.toggle('active');
+            cartModal && cartModal.classList.remove('active');
+            filters && filters.classList.remove('open');
+            favModal && favModal.classList.remove('active');
+            callModal && callModal.classList.remove('open');
+            login && login.classList.remove('open');
+            callModal && callModal.classList.remove('open');
+            resetModal && resetModal.classList.remove('open');
+        });
+        successModalClose.addEventListener('click', () => {
+            successModal.classList.remove('open');
+            overlay.classList.remove('active');
         });
     }
 
@@ -789,8 +812,9 @@ document.addEventListener('DOMContentLoaded', () => {
         registerButtons.forEach((button) => {
             button.addEventListener('click', () => {
                 login.classList.toggle('open');
-                overlay.classList.toggle('active');
                 document.body.classList.toggle('lock');
+
+                successModal.classList.remove('open');
             });
         });
     }

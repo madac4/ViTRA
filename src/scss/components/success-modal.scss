@@ -1,0 +1,54 @@
+.success-modal {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80vh;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    &.open {
+        opacity: 1;
+        visibility: visible;
+    }
+    @media (max-width: 1030px) {
+        max-width: 95%;
+    }
+    @media (max-width: $mobile) {
+        height: 70vh;
+    }
+    button.icon-close {
+        font-size: 32px;
+        position: absolute;
+        @include adaptiv-value('top', 30, 20, 1);
+        @include adaptiv-value('right', 50, 20, 1);
+    }
+    &__body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 15px;
+        img {
+            @include adaptiv-value('width', 120, 80, 1);
+            @include adaptiv-value('height', 120, 80, 1);
+            margin-bottom: 50px;
+        }
+        h3 {
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+        i {
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+    }
+}
