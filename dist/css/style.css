@@ -303,17 +303,27 @@ h2 {
   }
 }
 
-h3 {
+h3,
+a.title-link {
   font-size: 24px;
   line-height: 140%;
   font-weight: 600;
+  color: #2b2b2b;
 }
 @media (max-width: 1420px) {
-  h3 {
+  h3,
+a.title-link {
     font-size: calc(
                 18px + 6 * ((100vw - 320px) / 1100)
             );
   }
+}
+
+a.title-link {
+  transition: 0.3s;
+}
+a.title-link:hover {
+  color: #f15d22;
 }
 
 h5 {
@@ -1052,6 +1062,19 @@ section [class*=__header] {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
+}
+section [class*=__header] a.title-link {
+  font-size: 24px;
+  line-height: 140%;
+  font-weight: 600;
+  color: #2b2b2b;
+}
+@media (max-width: 1420px) {
+  section [class*=__header] a.title-link {
+    font-size: calc(
+                18px + 6 * ((100vw - 320px) / 1100)
+            );
+  }
 }
 section [class*=__header] a {
   font-size: 16px;

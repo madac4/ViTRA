@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const registerButtons = document.querySelectorAll('.register-button');
     const orderSuccess = document.querySelector('.order-send');
     const successModal = document.querySelector('.success-modal');
-    const successModalClose = successModal.querySelector('.icon-close');
+    const successModalClose = successModal && successModal.querySelector('.icon-close');
 
     const burgerMobile = document.querySelector('.burger');
     const menuMobile = document.querySelector('.menu-nav--mobile');
