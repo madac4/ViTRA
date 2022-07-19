@@ -100,7 +100,12 @@
                 padding: 0;
             }
             &__name {
+                font-size: 16px;
                 margin-bottom: 10px;
+                transition: 0.3s;
+                &:hover {
+                    color: $orangecolor;
+                }
             }
             .product-meta {
                 display: flex;

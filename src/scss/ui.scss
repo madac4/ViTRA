@@ -248,7 +248,9 @@ main {
         letter-spacing: 0.03em;
         color: #fff;
         font-weight: 600;
-
+        &--green {
+            background-color: #6ab974;
+        }
         &:hover {
             background-color: darken($orangecolor, 5);
         }

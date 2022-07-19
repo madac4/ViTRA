@@ -43,15 +43,15 @@
         .sidebar-block {
             border: 1px solid #e4e4e4;
             height: fit-content;
-            &.no-body{
-                .sidebar-block__title{
+            &.no-body {
+                .sidebar-block__title {
                     border-bottom: none;
                     justify-content: flex-start;
                     gap: 20px;
-                    h3{
+                    h3 {
                         flex: 1;
                     }
-                    form{
+                    form {
                         width: 67%;
                     }
                 }
@@ -97,8 +97,8 @@
                         }
                     }
                     &.radio-form {
-                        &.legend-margin{
-                            legend{
+                        &.legend-margin {
+                            legend {
                                 margin-bottom: 25px;
                             }
                         }
@@ -137,11 +137,16 @@
             .checkbox-container span a {
                 color: #3362ab;
             }
+            .checkbox-container {
+                margin-bottom: 10px;
+            }
         }
     }
     &-register {
         button {
-            color: #3362ab;
+            padding-left: 20px;
+            padding-right: 20px;
+            // color: #3362ab;
         }
     }
     .product-slider {

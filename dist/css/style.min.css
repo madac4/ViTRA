@@ -526,6 +526,9 @@ main {
   color: #fff;
   font-weight: 600;
 }
+.button__primary--green {
+  background-color: #6ab974;
+}
 .button__primary:hover {
   background-color: #eb4e0f;
 }
@@ -3156,7 +3159,12 @@ section.filter {
   }
 }
 .cart-product--modal .product-content__name {
+  font-size: 16px;
   margin-bottom: 10px;
+  transition: 0.3s;
+}
+.cart-product--modal .product-content__name:hover {
+  color: #f15d22;
 }
 .cart-product--modal .product-content .product-meta {
   display: flex;
@@ -4960,8 +4968,12 @@ section.filter {
 .cart-sidebar .sidebar-footer .checkbox-container span a {
   color: #3362ab;
 }
+.cart-sidebar .sidebar-footer .checkbox-container {
+  margin-bottom: 10px;
+}
 .cart-register button {
-  color: #3362ab;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .cart .product-slider {
   display: none;

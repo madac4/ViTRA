@@ -161,6 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             grabCursor: true,
             effect: 'creative',
+            loop: true,
             creativeEffect: {
                 prev: {
                     shadow: true,
