@@ -58,6 +58,21 @@
             inset: 0;
         }
     }
+    time {
+        color: #fff;
+        position: absolute;
+        z-index: 2;
+        font-size: 14px;
+        top: 20px;
+        right: 20px;
+    }
+    .details-button {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        margin-bottom: 20px;
+        margin-top: -20px;
+        z-index: 2;
+    }
 }
 
 .category-secondary {

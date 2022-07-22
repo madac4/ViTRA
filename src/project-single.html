@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./components/head.html', {'title': 'ViTRA - Mese și scaune'})
+
+    <body>
+        @@include('./components/header.html') @@include('./components/check.html')
+        <main>
+            <div class="page-title">
+                <div class="page-title__container">
+                    @@include('./components/breadcrumbs.html')
+                    <time>29.09.2021</time>
+                    <h1>Magazin Cleber,or.Cricova</h1>
+
+                    <div class="tags">
+                        <a href="./product-filter.html" class="button button__light">#raft</a>
+                        <a href="./product-filter.html" class="button button__light">#moduline</a>
+                        <a href="./product-filter.html" class="button button__light">#depozitare</a>
+                    </div>
+
+                    <p>
+                        Un nou magazin Cleber din or.Cricova a fost amenajat cu mobilier comercial
+                        de la ViTRA. Pentru acest client am furnizat sisteme de rafturi metalice
+                        "Columbus".
+                    </p>
+                    <p>
+                        Acestea sunt o soluţie excelentă pentru toate felurile de hipermarket-uri,
+                        magazine de uz casnic, piese auto, utilaje pentru construcţii, echipamente
+                        sanitare, consumabile, papetărie, cărţi, vopsele etc.
+                    </p>
+                </div>
+            </div>
+            <div class="project-single">
+                <div class="project-single__container">
+                    <div class="project-single__gallery">
+                        <a data-fslightbox="gallery" href="@img/gallery1.jpg">
+                            <img src="@img/gallery1.jpg" alt="" />
+                        </a>
+                        <a data-fslightbox="gallery" href="@img/gallery2.jpg">
+                            <img src="@img/gallery2.jpg" alt="" />
+                        </a>
+                        <a data-fslightbox="gallery" href="@img/gallery3.jpg">
+                            <img src="@img/gallery3.jpg" alt="" />
+                        </a>
+                        <a data-fslightbox="gallery" href="@img/gallery4.jpg">
+                            <img src="@img/gallery4.jpg" alt="" />
+                        </a>
+                        <a data-fslightbox="gallery" href="@img/gallery5.jpg">
+                            <img src="@img/gallery5.jpg" alt="" />
+                        </a>
+                        <a data-fslightbox="gallery" href="@img/gallery6.jpg">
+                            <img src="@img/gallery6.jpg" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @@include('./components/footer.html')
+    </body>
+</html>

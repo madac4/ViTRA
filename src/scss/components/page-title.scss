@@ -1,3 +1,23 @@
 .page-title {
     margin-bottom: 20px;
+    p {
+        font-size: 20px;
+        line-height: 150%;
+        margin: 30px 0;
+        &:last-child {
+            margin-bottom: 50px;
+        }
+    }
+    .tags {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        a {
+            width: fit-content;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
 }

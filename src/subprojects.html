@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./components/head.html', {'title': 'ViTRA - Mese și scaune'})
+
+    <body>
+        @@include('./components/header.html') @@include('./components/check.html')
+        <main>
+            <div class="page-title">
+                <div class="page-title__container">
+                    @@include('./components/breadcrumbs.html')
+                    <h1>Proiectele noastre</h1>
+                    <p>
+                        În fiecare zi, echipa noastră de profesionişti dedică o deosebită atenţie
+                        nevoilor clienţilor, oferindu-le soluţii eficiente. Abordarea noastră
+                        privind cooperarea şi corectitudinea în activitatea zilnică este apreciată
+                        atât de marile lanţuri comerciale, cât şi de proprietarii de magazine mici.
+                        ViTRA datorează poziţia sa de lider în domeniu tuturor clienţilor săi.
+                    </p>
+                </div>
+            </div>
+            <div class="projects-page">
+                <div class="category-page__container">
+                    <div class="category-page__grid">
+                        <div class="category-primary project-card">
+                            <img src="@img/subcat1.jpg" alt="" />
+                            <a href="./project-single.html" class="category-primary__content">
+                                Magazin Cleber, or.Cricova
+                            </a>
+                            <time>29.09.2021</time>
+                        </div>
+                        <div class="category-primary project-card">
+                            <img src="@img/subcat1.jpg" alt="" />
+                            <a href="./project-single.html" class="category-primary__content">
+                                Magazin Cleber, or.Cricova
+                            </a>
+                            <time>29.09.2021</time>
+                        </div>
+                        <div class="category-primary project-card">
+                            <img src="@img/subcat1.jpg" alt="" />
+                            <a href="./project-single.html" class="category-primary__content">
+                                Magazin Cleber, or.Cricova
+                            </a>
+                            <time>29.09.2021</time>
+                        </div>
+                        <div class="category-primary project-card">
+                            <img src="@img/subcat1.jpg" alt="" />
+                            <a href="./project-single.html" class="category-primary__content">
+                                Magazin Cleber, or.Cricova
+                            </a>
+                            <time>29.09.2021</time>
+                        </div>
+                    </div>
+                    @@include('./components/pagination.html')
+                </div>
+            </div>
+        </main>
+        @@include('./components/footer.html')
+    </body>
+</html>
