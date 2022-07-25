@@ -69,7 +69,12 @@
 }
 
 .cart-product {
-    &--modal {
+    &.fav-product--modal {
+        width: 95% !important;
+        margin-left: auto;
+    }
+    &--modal,
+    &.fav-product--modal {
         border: 1px solid #e4e4e4;
         width: 100%;
         display: flex;
@@ -77,9 +82,6 @@
         @include adaptiv-value('gap', 20, 15, 1);
         padding: 5px;
         background: #fff;
-        &.selected {
-            background: #e6e6e6;
-        }
         @media (max-width: $mobileSmall) {
             flex-direction: row;
         }

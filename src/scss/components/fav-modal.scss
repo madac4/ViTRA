@@ -76,6 +76,10 @@
         &::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
+        .fav-product {
+            display: flex;
+            align-items: center;
+        }
         .cart-product {
             transition: 0.3s;
             cursor: pointer;

@@ -802,13 +802,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
         });
 
-    favProducts &&
-        favProducts.forEach((product) => {
-            product.addEventListener('click', () => {
-                product.classList.toggle('selected');
-            });
-        });
-
     if (registerButtons.length > 0) {
         registerButtons.forEach((button) => {
             button.addEventListener('click', () => {
