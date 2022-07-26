@@ -1214,6 +1214,10 @@ form p small {
   color: #ee2924;
 }
 
+.montare-check {
+  margin-top: -10px;
+}
+
 .footer {
   display: flex;
   align-items: center;
