@@ -40,8 +40,12 @@
             }
             .product-controls {
                 display: flex;
-                align-items: center;
-                gap: 5px;
+                flex-direction: column;
+                &__main {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
                 &__counter {
                     display: flex;
                     align-items: center;

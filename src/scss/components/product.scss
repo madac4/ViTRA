@@ -181,6 +181,7 @@
     transition: 0.3s;
     display: block;
     text-transform: uppercase;
+    background-color: #e4e4e4;
     position: relative;
     @include adaptiv-value('font-size', 18, 16, 1);
     display: flex;

@@ -1215,7 +1215,7 @@ form p small {
 }
 
 .montare-check {
-  margin-top: -10px;
+  margin-top: 5px;
 }
 
 .footer {
@@ -2851,6 +2851,7 @@ section.filter {
   transition: 0.3s;
   display: block;
   text-transform: uppercase;
+  background-color: #e4e4e4;
   position: relative;
   font-size: 18px;
   display: flex;
@@ -3112,6 +3113,10 @@ section.filter {
   font-weight: normal;
 }
 .cart-product .product-content .product-meta .product-controls {
+  display: flex;
+  flex-direction: column;
+}
+.cart-product .product-content .product-meta .product-controls__main {
   display: flex;
   align-items: center;
   gap: 5px;
