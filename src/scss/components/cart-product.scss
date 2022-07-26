@@ -40,11 +40,15 @@
             }
             .product-controls {
                 display: flex;
-                flex-direction: column;
-                &__main {
-                    display: flex;
-                    align-items: center;
-                    gap: 5px;
+                align-items: center;
+                &--cart {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    .product-controls__main {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                    }
                 }
                 &__counter {
                     display: flex;

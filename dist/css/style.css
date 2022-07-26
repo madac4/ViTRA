@@ -1216,6 +1216,23 @@ form p small {
 
 .montare-check {
   margin-top: 5px;
+  font-size: 14px;
+}
+
+.montare-check span:first-child {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.montare-check span:first-child svg {
+  top: 2px;
+  left: 1px;
+}
+
+.montare-check .checkbox span:last-child {
+  padding-top: 3px;
+  padding-left: 5px;
 }
 
 .footer {
@@ -3114,9 +3131,13 @@ section.filter {
 }
 .cart-product .product-content .product-meta .product-controls {
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
-.cart-product .product-content .product-meta .product-controls__main {
+.cart-product .product-content .product-meta .product-controls--cart {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.cart-product .product-content .product-meta .product-controls--cart .product-controls__main {
   display: flex;
   align-items: center;
   gap: 5px;

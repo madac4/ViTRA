@@ -836,4 +836,21 @@ form p small {
 
 .montare-check {
     margin-top: 5px;
+    font-size: 14px;
+}
+
+.montare-check span:first-child {
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.montare-check span:first-child svg {
+    top: 2px;
+    left: 1px;
+}
+
+.montare-check .checkbox span:last-child {
+    padding-top: 3px;
+    padding-left: 5px;
 }
